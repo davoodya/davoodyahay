@@ -129,16 +129,17 @@ if (hamburger) {
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
     if (preloader) {
+        // Wait a bit for a more dramatic effect
         setTimeout(() => {
             preloader.style.opacity = '0';
             setTimeout(() => {
                 preloader.style.display = 'none';
-                
-                // Start animations after preloader
+
+                // Trigger animations after preloader
                 typeEffect();
                 checkScroll();
-            }, 500);
-        }, 1000);
+            }, 600); // matches CSS transition
+        }, 1500); // total visible duration
     }
 });
 
@@ -147,7 +148,7 @@ window.addEventListener('scroll', checkScroll);
 
 /* Initialize on load */
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize animations if no preloader
+    // Fallback if preloader is removed
     if (!document.querySelector('.preloader')) {
         typeEffect();
         checkScroll();
