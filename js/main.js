@@ -1,73 +1,145 @@
-/* Matrix Animation Effect */
+
+
+// /* Matrix Animation Effect */
+// const canvas = document.getElementById('matrix-canvas');
+// const ctx = canvas.getContext('2d');
+//
+// // Set canvas dimensions
+// function setCanvasDimensions() {
+//     canvas.width = window.innerWidth;
+//     canvas.height = window.innerHeight;
+// }
+//
+// // Initialize on load and resize
+// window.addEventListener('load', setCanvasDimensions);
+// window.addEventListener('resize', setCanvasDimensions);
+//
+// // Characters for matrix effect
+// const persian = 'ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی۱۲۳۴۵۶۷۸۹۰';
+// const english = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+// const symbols = '!@#$%^&*()_+-=[]{}|;:,.<>/?\\\'\"';
+// const characters = persian + english + symbols;
+//
+// // Matrix effect settings
+// const fontSize = 14;
+// const columns = [];
+// const drops = [];
+//
+// function initMatrix() {
+//     // Calculate number of columns
+//     const columnsCount = Math.floor(canvas.width / fontSize);
+//
+//     // Initialize columns and drops
+//     for (let i = 0; i < columnsCount; i++) {
+//         columns[i] = 1;
+//         drops[i] = Math.random() * -100;
+//     }
+// }
+//
+// function drawMatrix() {
+//     // Semi-transparent black to create fade effect
+//     ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+//     ctx.fillRect(0, 0, canvas.width, canvas.height);
+//
+//     // Set text color and font
+//     ctx.fillStyle = '#00ff41';
+//     ctx.font = `${fontSize}px monospace`;
+//
+//     // Draw characters
+//     for (let i = 0; i < columns.length; i++) {
+//         // Get random character
+//         const text = characters.charAt(Math.floor(Math.random() * characters.length));
+//
+//         // Calculate position
+//         const x = i * fontSize;
+//         const y = drops[i] * fontSize;
+//
+//         // Draw the character
+//         ctx.fillText(text, x, y);
+//
+//         // Reset position if it's at the bottom or randomly
+//         if (y > canvas.height && Math.random() > 0.975) {
+//             drops[i] = 0;
+//         }
+//
+//         // Move drop down
+//         drops[i]++;
+//     }
+// }
+//
+// // Initialize and start animation
+// initMatrix();
+// setInterval(drawMatrix, 50);
 const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
 
-// Set canvas dimensions
+// Responsive Canvas Size
 function setCanvasDimensions() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 }
+window.addEventListener('load', () => {
+    setCanvasDimensions();
+    initMatrix();
+});
+window.addEventListener('resize', () => {
+    setCanvasDimensions();
+    initMatrix();
+});
 
-// Initialize on load and resize
-window.addEventListener('load', setCanvasDimensions);
-window.addEventListener('resize', setCanvasDimensions);
-
-// Characters for matrix effect
+// Matrix Config
 const persian = 'ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی۱۲۳۴۵۶۷۸۹۰';
 const english = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 const symbols = '!@#$%^&*()_+-=[]{}|;:,.<>/?\\\'\"';
-const characters = persian + english + symbols;
+const characters = (persian + english + symbols).split('');
 
-// Matrix effect settings
-const fontSize = 14;
-const columns = [];
-const drops = [];
+const fontSize = 16;
+let columns = [];
+let drops = [];
 
 function initMatrix() {
-    // Calculate number of columns
     const columnsCount = Math.floor(canvas.width / fontSize);
-    
-    // Initialize columns and drops
-    for (let i = 0; i < columnsCount; i++) {
-        columns[i] = 1;
-        drops[i] = Math.random() * -100;
-    }
+    columns = new Array(columnsCount).fill(0);
+    drops = columns.map(() => Math.random() * -50);
 }
 
+const logoImage = new Image();
+logoImage.src = 'images/favicon2.ico';
+
 function drawMatrix() {
-    // Semi-transparent black to create fade effect
     ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
-    // Set text color and font
+
+    // Draw logo at center (faded)
+    const logoSize = 120;
+    const logoX = canvas.width / 2 - logoSize / 2;
+    const logoY = canvas.height / 2 - logoSize / 2;
+    ctx.globalAlpha = 0.03; // very faint
+    ctx.drawImage(logoImage, logoX, logoY, logoSize, logoSize);
+    ctx.globalAlpha = 1;
+
     ctx.fillStyle = '#00ff41';
     ctx.font = `${fontSize}px monospace`;
-    
-    // Draw characters
+
     for (let i = 0; i < columns.length; i++) {
-        // Get random character
         const text = characters.charAt(Math.floor(Math.random() * characters.length));
-        
-        // Calculate position
         const x = i * fontSize;
         const y = drops[i] * fontSize;
-        
-        // Draw the character
+
         ctx.fillText(text, x, y);
-        
-        // Reset position if it's at the bottom or randomly
+
         if (y > canvas.height && Math.random() > 0.975) {
             drops[i] = 0;
         }
-        
-        // Move drop down
         drops[i]++;
     }
 }
 
-// Initialize and start animation
-initMatrix();
-setInterval(drawMatrix, 50);
+// initMatrix();
+setInterval(drawMatrix, 45);
+
+
+
 
 /* Typing Effect */
 const typingElements = document.querySelectorAll('.typing-effect');
