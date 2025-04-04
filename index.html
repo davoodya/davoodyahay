@@ -470,5 +470,20 @@
 
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+
+    <!-- Configure RTL for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+            },
+            corePlugins: {
+                preflight: false,
+            },
+            plugins: [],
+        }
+    </script>
+
+
 </body>
 </html>
