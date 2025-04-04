@@ -111,8 +111,12 @@ function drawMatrix() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Draw logo at center (faded)
-    const logoSize = 120;
-    const logoX = canvas.width / 2 - logoSize / 2;
+    const logoSize = 400;
+    // X position for Center of Screen
+    // const logoX = canvas.width / 2 - logoSize / 2;
+
+    // X position for Left Side
+    const logoX = 270;
     const logoY = canvas.height / 2 - logoSize / 2;
     ctx.globalAlpha = 0.03; // very faint
     ctx.drawImage(logoImage, logoX, logoY, logoSize, logoSize);

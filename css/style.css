@@ -217,9 +217,31 @@ nav {
   z-index: -1;
   mix-blend-mode: screen;
   pointer-events: none;
-  transition: opacity 0.5s ease;
-  filter: blur(1px) brightness(1.5);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  filter: brightness(2); /* حذف blur برای وضوح بیشتر */
 }
+
+/* انیمیشن بزرگ شدن و چرخش لوگو */
+@keyframes logoAnimation {
+  0% {
+    transform: scale(0.9) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1) rotate(15deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+}
+
+/* اعمال انیمیشن */
+#matrix-canvas {
+  animation: logoAnimation 5s infinite ease-in-out;
+}
+
 
 /* Section Styles */
 section {
