@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="دوره‌های آموزشی امنیت سایبری، شبکه، لینوکس و مجازی‌سازی توسط داوود یاحی - متخصص امنیت سایبری و مدرس دوره‌های تخصصی">
+    <meta name="keywords" content="آموزش امنیت سایبری, دوره CEH, آموزش شبکه, آموزش لینوکس, مجازی‌سازی, Network+, CEH++">
+    <meta name="author" content="داوود یاحی">
+    <meta name="robots" content="index, follow">
+    
+    <title>دوره‌های آموزشی | داوود یاحی</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        .courses-section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 3rem;
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            text-shadow: var(--glow-shadow);
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--main-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .courses-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .course-card {
+            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 255, 65, 0.1);
+        }
+        
+        .course-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .course-card:hover .course-image img {
+            transform: scale(1.1);
+        }
+        
+        .course-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--accent-green);
+            color: var(--darker-bg);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        
+        .course-badge.premium {
+            background-color: var(--accent-orange);
+        }
+        
+        .course-content {
+            padding: 25px;
+        }
+        
+        .course-content h3 {
+            font-size: 1.5rem;
+            color: var(--accent-green);
+            margin-bottom: 10px;
+        }
+        
+        .course-content p {
+            color: var(--main-text);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            height: 80px;
+            overflow: hidden;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .course-meta-item {
+            display: flex;
+            align-items: center;
+            color: var(--main-text);
+            font-size: 0.9rem;
+        }
+        
+        .course-meta-item i {
+            color: var(--accent-green);
+            margin-left: 5px;
+        }
+        
+        .course-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .course-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgba(0, 255, 65, 0.1);
+            color: var(--accent-green);
+            border: 1px solid var(--accent-green);
+            border-radius: 5px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .course-btn:hover {
+            background-color: var(--accent-green);
+            color: var(--darker-bg);
+        }
+        
+        .course-btn.youtube {
+            background-color: rgba(255, 0, 0, 0.1);
+            color: #ff0000;
+            border-color: #ff0000;
+        }
+        
+        .course-btn.youtube:hover {
+            background-color: #ff0000;
+            color: white;
+        }
+        
+        .course-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background-color: transparent;
+            color: var(--main-text);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            padding: 8px 20px;
+            margin: 0 5px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--accent-green);
+            color: var(--darker-bg);
+            border-color: var(--accent-green);
+        }
+        
+        .page-header {
+            height: 40vh;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--darker-bg);
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 119, 255, 0.1));
+            z-index: 0;
+        }
+        
+        .page-header-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-header-content h1 {
+            font-size: 3rem;
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            text-shadow: var(--glow-shadow);
+        }
+        
+        .page-header-content p {
+            font-size: 1.2rem;
+            color: var(--main-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .breadcrumb a {
+            color: var(--main-text);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s ease, color 0.3s ease;
+        }
+        
+        .breadcrumb a:hover {
+            opacity: 1;
+            color: var(--accent-green);
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            color: var(--main-text);
+            opacity: 0.5;
+        }
+        
+        .breadcrumb .active {
+            color: var(--accent-green);
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .courses-container {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .course-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .course-btn {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>DAVOOD<span>_</span>YAHI</h1>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">خانه</a></li>
+                    <li><a href="../index.html#about">درباره من</a></li>
+                    <li><a href="services.html">خدمات</a></li>
+                    <li><a href="portfolio.html">نمونه کارها</a></li>
+                    <li><a href="courses.html" class="active">دوره‌های آموزشی</a></li>
+                    <li><a href="../index.html#contact">تماس با من</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <canvas id="matrix-canvas" class="matrix-animation"></canvas>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>دوره‌های آموزشی</h1>
+                <p>دوره‌های تخصصی امنیت سایبری، شبکه، لینوکس و مجازی‌سازی</p>
+                
+                <div class="breadcrumb">
+                    <a href="../index.html">خانه</a>
+                    <span>/</span>
+                    <span class="active">دوره‌های آموزشی</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>دوره‌های آموزشی</h2>
+                <p>دوره‌های تخصصی در زمینه امنیت سایبری، شبکه، لینوکس و مجازی‌سازی برای تمام سطوح از مبتدی تا پیشرفته</p>
+            </div>
+            
+            <div class="course-filters">
+                <button class="filter-btn active" data-filter="all">همه دوره‌ها</button>
+                <button class="filter-btn" data-filter="free">دوره‌های رایگان</button>
+                <button class="filter-btn" data-filter="premium">دوره‌های غیر رایگان</button>
+                <button class="filter-btn" data-filter="network">شبکه</button>
+                <button class="filter-btn" data-filter="security">امنیت</button>
+                <button class="filter-btn" data-filter="linux">لینوکس</button>
+                <button class="filter-btn" data-filter="virtualization">مجازی‌سازی</button>
+            </div>
+            
+            <div class="courses-container">
+                <!-- Course 1 -->
+                <div class="course-card" data-category="free network security">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/350x200/0a0a0a/00ff41?text=Network+" alt="دوره شبکه Network+">
+                        <span class="course-badge">رایگان</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>دوره شبکه Network+</h3>
+                        <p>آموزش جامع مفاهیم شبکه مطابق با سرفصل‌های Network+ که بخشی از دوره کلی CEH++ می‌باشد.</p>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="fas fa-video"></i>
+                                <span>۲۵ ویدیو</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>۱۵ ساعت</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span>متوسط</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <a href="courses/network-plus.html" class="course-btn">مشاهده جزئیات</a>
+                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUIqGE-eiEekWpzQdXphmKQq" target="_blank" class="course-btn youtube">مشاهده در یوتیوب</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card" data-category="free virtualization">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/350x200/0a0a0a/00ff41?text=Virtualization" alt="مینی دوره مجازی سازی">
+                        <span class="course-badge">رایگان</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>مینی دوره مجازی سازی</h3>
+                        <p>آموزش مفاهیم مجازی‌سازی و پیاده‌سازی آن که بخشی از دوره کلی CEH++ می‌باشد.</p>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="fas fa-video"></i>
+                                <span>۱۲ ویدیو</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>۸ ساعت</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span>متوسط</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <a href="courses/virtualization.html" class="course-btn">مشاهده جزئیات</a>
+                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUL1jVCLqt4u9HdQ1Z9SpCEb" target="_blank" class="course-btn youtube">مشاهده در یوتیوب</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card" data-category="free linux">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/350x200/0a0a0a/00ff41?text=Linux+LPIC1" alt="دوره لینوکس الپیک 1">
+                        <span class="course-badge">رایگان</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>دوره لینوکس الپیک 1</h3>
+                        <p>آموزش جامع لینوکس مطابق با سرفصل‌های LPIC-1 که بخشی از دوره کلی CEH++ می‌باشد.</p>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="fas fa-video"></i>
+                                <span>۳۰ ویدیو</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>۲۰ ساعت</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span>متوسط</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <a href="courses/linux-lpic1.html" class="course-btn">مشاهده جزئیات</a>
+                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="course-btn youtube">مشاهده در یوتیوب</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 4 -->
+                <div class="course-card" data-category="free security network linux virtualization">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/350x200/0a0a0a/00ff41?text=CEH++" alt="دوره CEH++ کامل">
+                        <span class="course-badge">رایگان</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>دوره CEH++ کامل</h3>
+                        <p>دوره جامع هک قانونی شامل مباحث شبکه، لینوکس، مجازی‌سازی و امنیت سایبری.</p>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="fas fa-video"></i>
+                                <span>۱۰۰+ ویدیو</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>۶۰+ ساعت</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span>پیشرفته</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <a href="courses/ceh-plus-plus.html" class="course-btn">مشاهده جزئیات</a>
+                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUIhsVRW9XUfijKsYaPR3hZC" target="_blank" class="course-btn youtube">مشاهده در یوتیوب</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 5 -->
+                <div class="course-card" data-category="premium security">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/350x200/0a0a0a/ff9900?text=Advanced+CEH" alt="دوره CEH پیشرفته">
+                        <span class="course-badge premium">غیر رایگان</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>دوره CEH پیشرفته</h3>
+                        <p>دوره پیشرفته هک قانونی با تمرکز بر تکنیک‌های پیشرفته تست نفوذ و امنیت سایبری.</p>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="fas fa-video"></i>
+                                <span>۵۰+ ویدیو</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>۴۰+ ساعت</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span>پیشرفته</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <a href="courses/advanced-ceh.html" class="course-btn">مشاهده جزئیات</a>
+                            <a href="#" class="course-btn youtube">بزودی</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>آماده یادگیری هستید؟</h2>
+                <p>برای مشاوره رایگان در مورد دوره‌های آموزشی و مسیر یادگیری مناسب با من در تماس باشید.</p>
+                <a href="../index.html#contact" class="cta-button">تماس با من</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>DAVOOD<span>_</span>YAHI</h3>
+                    <p>متخصص امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://t.me/yakuzacybersec" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.instagram.com/yakuzalearn" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/davoodya" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>لینک‌های سریع</h4>
+                    <ul>
+                        <li><a href="../index.html">خانه</a></li>
+                        <li><a href="../index.html#about">درباره من</a></li>
+                        <li><a href="services.html">خدمات</a></li>
+                        <li><a href="portfolio.html">نمونه کارها</a></li>
+                        <li><a href="courses.html">دوره‌های آموزشی</a></li>
+                        <li><a href="../index.html#contact">تماس با من</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>خدمات</h4>
+                    <ul>
+                        <li><a href="services.html">امنیت سایبری</a></li>
+                        <li><a href="services.html">شبکه‌های کامپیوتری</a></li>
+                        <li><a href="services.html">تست نفوذ</a></li>
+                        <li><a href="services.html">آموزش</a></li>
+                        <li><a href="services.html">مشاوره</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; ۱۴۰۴ تمامی حقوق محفوظ است | طراحی و توسعه توسط داوود یاحی</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    
+    <script>
+        // Course filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const courseCards = document.querySelectorAll('.course-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filter courses
+                    courseCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category').includes(filterValue)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

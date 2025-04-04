@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="خدمات تخصصی امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی توسط داوود یاحی - متخصص با بیش از ده سال تجربه">
+    <meta name="keywords" content="امنیت سایبری, برنامه نویسی, شبکه کامپیوتری, تست نفوذ, هوش مصنوعی, فایروال, IDS, IPS, میکروتیک">
+    <meta name="author" content="داوود یاحی">
+    <meta name="robots" content="index, follow">
+    
+    <title>خدمات و تخصص‌ها | داوود یاحی</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        .service-detail {
+            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-detail:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 65, 0.2);
+        }
+        
+        .service-detail::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0, 255, 65, 0.05), rgba(0, 119, 255, 0.05));
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .service-detail:hover::before {
+            opacity: 1;
+        }
+        
+        .service-detail-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .service-detail-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 255, 65, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            color: var(--accent-green);
+            font-size: 1.8rem;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .service-detail:hover .service-detail-icon {
+            transform: rotateY(180deg);
+            background-color: var(--accent-green);
+            color: var(--darker-bg);
+        }
+        
+        .service-detail-title h3 {
+            font-size: 1.8rem;
+            color: var(--accent-green);
+            margin-bottom: 5px;
+        }
+        
+        .service-detail-title p {
+            color: var(--main-text);
+            opacity: 0.8;
+            font-size: 1rem;
+        }
+        
+        .service-detail-content {
+            color: var(--main-text);
+            line-height: 1.8;
+        }
+        
+        .service-detail-content p {
+            margin-bottom: 15px;
+        }
+        
+        .service-detail-content ul {
+            list-style-type: none;
+            padding-right: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .service-detail-content ul li {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .service-detail-content ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            color: var(--accent-green);
+        }
+        
+        .page-header {
+            height: 40vh;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--darker-bg);
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 119, 255, 0.1));
+            z-index: 0;
+        }
+        
+        .page-header-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-header-content h1 {
+            font-size: 3rem;
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            text-shadow: var(--glow-shadow);
+        }
+        
+        .page-header-content p {
+            font-size: 1.2rem;
+            color: var(--main-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .breadcrumb a {
+            color: var(--main-text);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s ease, color 0.3s ease;
+        }
+        
+        .breadcrumb a:hover {
+            opacity: 1;
+            color: var(--accent-green);
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            color: var(--main-text);
+            opacity: 0.5;
+        }
+        
+        .breadcrumb .active {
+            color: var(--accent-green);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>DAVOOD<span>_</span>YAHAY</h1>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">خانه</a></li>
+                    <li><a href="../index.html#about">درباره من</a></li>
+                    <li><a href="../index.html#services">خدمات</a></li>
+                    <li><a href="../index.html#portfolio">نمونه کارها</a></li>
+                    <li><a href="courses.html">دوره‌های آموزشی</a></li>
+                    <li><a href="../index.html#contact">تماس با من</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <canvas id="matrix-canvas" class="matrix-animation"></canvas>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>خدمات و تخصص‌ها</h1>
+                <p>خدمات تخصصی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی</p>
+                
+                <div class="breadcrumb">
+                    <a href="../index.html">خانه</a>
+                    <span>/</span>
+                    <span class="active">خدمات و تخصص‌ها</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Detail Section -->
+    <section class="services-detail">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدمات تخصصی</h2>
+                <p>جزئیات خدمات و تخصص‌های ارائه شده در زمینه امنیت سایبری، شبکه و برنامه‌نویسی</p>
+            </div>
+            
+            <!-- Service 1 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>ساخت و توسعه ابزارهای امنیتی</h3>
+                        <p>طراحی و توسعه ابزارهای امنیتی شخصی‌سازی شده</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>با بیش از یک دهه تجربه در زمینه امنیت سایبری، خدمات طراحی و توسعه ابزارهای امنیتی سفارشی را متناسب با نیازهای خاص سازمان‌ها و کسب‌وکارها ارائه می‌دهم. این ابزارها با هدف افزایش سطح امنیت و شناسایی آسیب‌پذیری‌های احتمالی طراحی می‌شوند.</p>
+                    
+                    <p>خدمات ساخت و توسعه ابزارهای امنیتی شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>طراحی و توسعه ابزارهای تست نفوذ سفارشی</li>
+                        <li>ساخت اسکنرهای آسیب‌پذیری اختصاصی</li>
+                        <li>توسعه سیستم‌های تشخیص و پیشگیری از نفوذ (IDS/IPS)</li>
+                        <li>ایجاد ابزارهای مانیتورینگ و تحلیل امنیتی</li>
+                        <li>طراحی سیستم‌های هشدار و پاسخ به حوادث امنیتی</li>
+                        <li>توسعه ابزارهای رمزنگاری و حفاظت از داده‌ها</li>
+                        <li>ساخت ابزارهای تحلیل لاگ و شناسایی رفتارهای مشکوک</li>
+                    </ul>
+                    
+                    <p>تمامی ابزارهای توسعه داده شده با استفاده از تکنیک‌های پیشرفته برنامه‌نویسی و با رعایت استانداردهای امنیتی طراحی می‌شوند تا بالاترین سطح کارایی و امنیت را برای مشتریان فراهم کنند.</p>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>راه‌اندازی شبکه‌های کامپیوتری</h3>
+                        <p>پیاده‌سازی و راه‌اندازی انواع شبکه‌های کامپیوتری در مقیاس‌های مختلف</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>خدمات جامع راه‌اندازی و پیکربندی انواع شبکه‌های کامپیوتری در مقیاس‌های مختلف را ارائه می‌دهم. از شبکه‌های کوچک داخلی تا شبکه‌های گسترده بین‌شهری و رادیویی، با استفاده از تجهیزات پیشرفته و تکنیک‌های مدرن، بهترین راهکارها را برای نیازهای ارتباطی سازمان‌ها فراهم می‌کنم.</p>
+                    
+                    <p>خدمات راه‌اندازی شبکه‌های کامپیوتری شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>طراحی و پیاده‌سازی شبکه‌های محلی (LAN)</li>
+                        <li>راه‌اندازی شبکه‌های گسترده (WAN)</li>
+                        <li>پیاده‌سازی شبکه‌های بی‌سیم و رادیویی</li>
+                        <li>طراحی و اجرای شبکه‌های بین‌شهری</li>
+                        <li>راه‌اندازی شبکه‌های شرکتی و سازمانی</li>
+                        <li>پیکربندی روترها، سوئیچ‌ها و تجهیزات شبکه</li>
+                        <li>بهینه‌سازی عملکرد و کارایی شبکه</li>
+                        <li>پیاده‌سازی پروتکل‌های مسیریابی و سوئیچینگ</li>
+                        <li>راه‌اندازی VPN و تونل‌های امن</li>
+                    </ul>
+                    
+                    <p>تمامی خدمات شبکه با رعایت استانداردهای صنعتی و با تمرکز بر امنیت، پایداری و کارایی ارائه می‌شوند تا بهترین تجربه کاربری را برای مشتریان فراهم کنند.</p>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-fire-alt"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>راه‌اندازی سیستم‌های فایروال</h3>
+                        <p>نصب و پیکربندی سیستم‌های فایروال، IDS و IPS</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>با استفاده از دانش تخصصی و تجربه عملی در زمینه امنیت شبکه، خدمات راه‌اندازی و پیکربندی سیستم‌های فایروال، سیستم‌های تشخیص نفوذ (IDS) و سیستم‌های پیشگیری از نفوذ (IPS) را ارائه می‌دهم. این سیستم‌ها لایه‌های دفاعی قدرتمندی برای محافظت از شبکه‌ها و سیستم‌ها در برابر تهدیدات سایبری فراهم می‌کنند.</p>
+                    
+                    <p>خدمات راه‌اندازی سیستم‌های فایروال، IDS و IPS شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>نصب و پیکربندی فایروال‌های سخت‌افزاری و نرم‌افزاری</li>
+                        <li>راه‌اندازی سیستم‌های تشخیص نفوذ شبکه (NIDS)</li>
+                        <li>پیاده‌سازی سیستم‌های تشخیص نفوذ میزبان (HIDS)</li>
+                        <li>نصب و تنظیم سیستم‌های پیشگیری از نفوذ (IPS)</li>
+                        <li>پیکربندی قوانین و سیاست‌های امنیتی</li>
+                        <li>تنظیم فیلترینگ بسته‌ها و کنترل دسترسی</li>
+                        <li>راه‌اندازی سیستم‌های بازرسی عمیق بسته‌ها (DPI)</li>
+                        <li>پیاده‌سازی سیستم‌های مدیریت یکپارچه تهدیدات (UTM)</li>
+                        <li>آموزش کارکنان برای مدیریت و نگهداری سیستم‌ها</li>
+                    </ul>
+                    
+                    <p>تمامی سیستم‌های امنیتی با توجه به نیازهای خاص هر سازمان پیکربندی می‌شوند و به صورت دوره‌ای بروزرسانی و بهینه‌سازی می‌شوند تا در برابر تهدیدات جدید محافظت کافی را فراهم کنند.</p>
+                </div>
+            </div>
+            
+            <!-- Service 4 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>راه‌اندازی شبکه میکروتیک</h3>
+                        <p>راه‌اندازی حرفه‌ای و اصولی انواع شبکه بر مبنای میکروتیک</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>به عنوان متخصص در زمینه تجهیزات میکروتیک، خدمات راه‌اندازی حرفه‌ای و اصولی انواع شبکه بر مبنای میکروتیک را با بهترین کارایی و امنیت ارائه می‌دهم. میکروتیک با قابلیت‌های پیشرفته و انعطاف‌پذیری بالا، راهکاری مقرون به صرفه و قدرتمند برای پیاده‌سازی شبکه‌های مختلف است.</p>
+                    
+                    <p>خدمات راه‌اندازی شبکه میکروتیک شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>نصب و پیکربندی روترهای میکروتیک (RouterOS)</li>
+                        <li>راه‌اندازی سوئیچ‌های میکروتیک (SwOS)</li>
+                        <li>پیاده‌سازی شبکه‌های بی‌سیم با تجهیزات میکروتیک</li>
+                        <li>تنظیم و مدیریت پهنای باند (QoS)</li>
+                        <li>پیکربندی فایروال و قوانین امنیتی</li>
+                        <li>راه‌اندازی VPN و تونل‌های امن</li>
+                        <li>پیاده‌سازی سیستم‌های احراز هویت و کنترل دسترسی</li>
+                        <li>تنظیم سیستم‌های مانیتورینگ و گزارش‌گیری</li>
+                        <li>بهینه‌سازی عملکرد و کارایی شبکه</li>
+                        <li>آموزش کارکنان برای مدیریت و نگهداری سیستم‌ها</li>
+                    </ul>
+                    
+                    <p>با استفاده از تجهیزات میکروتیک، راهکارهای شبکه‌ای پایدار، امن و مقیاس‌پذیر را برای سازمان‌ها و کسب‌وکارها فراهم می‌کنم که قابلیت توسعه و بهبود در آینده را نیز دارند.</p>
+                </div>
+            </div>
+            
+            <!-- Service 5 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>امن‌سازی (Hardening)</h3>
+                        <p>امن‌سازی شبکه‌ها، مجموعه‌ها و نرم‌افزارها</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>خدمات جامع امن‌سازی (Hardening) شبکه‌ها، سیستم‌ها و نرم‌افزارها را با هدف کاهش سطح آسیب‌پذیری و افزایش امنیت ارائه می‌دهم. این فرآیند شامل اعمال تنظیمات امنیتی، بستن درگاه‌های غیرضروری، محدود کردن دسترسی‌ها و پیاده‌سازی کنترل‌های امنیتی مناسب است.</p>
+                    
+                    <p>خدمات امن‌سازی شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>امن‌سازی سیستم‌عامل‌ها (Windows، Linux، macOS)</li>
+                        <li>امن‌سازی سرورها و خدمات شبکه</li>
+                        <li>امن‌سازی پایگاه‌های داده</li>
+                        <li>امن‌سازی وب‌سرورها و برنامه‌های تحت وب</li>
+                        <li>امن‌سازی تجهیزات شبکه (روترها، سوئیچ‌ها، فایروال‌ها)</li>
+                        <li>امن‌سازی سیستم‌های مجازی‌سازی</li>
+                        <li>امن‌سازی سرویس‌های ابری</li>
+                        <li>پیاده‌سازی سیاست‌های امنیتی و کنترل دسترسی</li>
+                        <li>حذف سرویس‌ها و نرم‌افزارهای غیرضروری</li>
+                        <li>به‌روزرسانی و وصله‌های امنیتی</li>
+                    </ul>
+                    
+                    <p>فرآیند امن‌سازی بر اساس استانداردها و بهترین شیوه‌های صنعتی انجام می‌شود و با توجه به نیازهای خاص هر سازمان، راهکارهای امنیتی مناسب پیاده‌سازی می‌شوند تا سطح امنیت به میزان قابل توجهی افزایش یابد.</p>
+                </div>
+            </div>
+            
+            <!-- Service 6 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>تصحیح امنیتی کدنویسی</h3>
+                        <p>بررسی و تصحیح امنیتی کدنویسی نرم‌افزارهای منتشر شده</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>با استفاده از تخصص در زمینه برنامه‌نویسی امن و شناسایی آسیب‌پذیری‌های نرم‌افزاری، خدمات بررسی و تصحیح امنیتی کدنویسی نرم‌افزارهای موجود را ارائه می‌دهم. این خدمات به شناسایی و رفع مشکلات امنیتی در کد برنامه‌ها کمک می‌کند و از نشت اطلاعات و حملات سایبری جلوگیری می‌کند.</p>
+                    
+                    <p>خدمات تصحیح امنیتی کدنویسی شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>تحلیل استاتیک و دینامیک کد</li>
+                        <li>شناسایی آسیب‌پذیری‌های امنیتی در کد</li>
+                        <li>رفع مشکلات تزریق کد (SQL Injection، XSS، CSRF)</li>
+                        <li>بهبود مدیریت احراز هویت و مجوزها</li>
+                        <li>اصلاح مشکلات رمزنگاری و مدیریت کلیدها</li>
+                        <li>بهینه‌سازی مدیریت خطاها و استثناها</li>
+                        <li>رفع مشکلات امنیتی در API‌ها</li>
+                        <li>بهبود امنیت در لایه‌های مختلف نرم‌افزار</li>
+                        <li>پیاده‌سازی اصول برنامه‌نویسی امن</li>
+                        <li>آموزش تیم توسعه برای جلوگیری از مشکلات مشابه در آینده</li>
+                    </ul>
+                    
+                    <p>این خدمات برای انواع نرم‌افزارها از جمله برنامه‌های تحت وب، برنامه‌های موبایل، نرم‌افزارهای دسکتاپ و سیستم‌های تعبیه شده ارائه می‌شود و به بهبود قابل توجه سطح امنیت نرم‌افزارها منجر می‌شود.</p>
+                </div>
+            </div>
+            
+            <!-- Service 7 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>ساخت ربات‌های معامله‌گر</h3>
+                        <p>طراحی و توسعه ربات‌های معامله‌گر مجهز به هوش مصنوعی</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>با ترکیب دانش برنامه‌نویسی، هوش مصنوعی و تحلیل بازارهای مالی، خدمات طراحی و توسعه ربات‌های معامله‌گر هوشمند را ارائه می‌دهم. این ربات‌ها با استفاده از الگوریتم‌های پیشرفته و یادگیری ماشین، قادر به تحلیل بازار و انجام معاملات خودکار در بازارهای مالی و ارزهای دیجیتال هستند.</p>
+                    
+                    <p>خدمات ساخت ربات‌های معامله‌گر شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>طراحی استراتژی‌های معاملاتی الگوریتمی</li>
+                        <li>توسعه ربات‌های معامله‌گر برای بازارهای مختلف (ارز، سهام، ارز دیجیتال)</li>
+                        <li>پیاده‌سازی الگوریتم‌های تحلیل تکنیکال</li>
+                        <li>استفاده از هوش مصنوعی و یادگیری ماشین برای پیش‌بینی روندها</li>
+                        <li>بهینه‌سازی پارامترهای معاملاتی با استفاده از الگوریتم‌های ژنتیک</li>
+                        <li>پیاده‌سازی سیستم‌های مدیریت ریسک و سرمایه</li>
+                        <li>توسعه داشبوردهای مانیتورینگ و گزارش‌گیری</li>
+                        <li>اتصال به API‌های صرافی‌ها و کارگزاری‌ها</li>
+                        <li>تست و بهینه‌سازی عملکرد ربات‌ها</li>
+                        <li>آموزش کاربران برای استفاده و نگهداری از ربات‌ها</li>
+                    </ul>
+                    
+                    <p>ربات‌های معامله‌گر توسعه داده شده با توجه به نیازها و اهداف سرمایه‌گذاری هر مشتری شخصی‌سازی می‌شوند و قابلیت تطبیق با شرایط متغیر بازار را دارند.</p>
+                </div>
+            </div>
+            
+            <!-- Service 8 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>ادغام ابزارهای هوش مصنوعی</h3>
+                        <p>پیاده‌سازی و ادغام ابزارهای هوش مصنوعی در سازمان‌ها</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>با توجه به اهمیت روزافزون هوش مصنوعی در کسب‌وکارها، خدمات پیاده‌سازی و ادغام ابزارهای هوش مصنوعی را در تمام زمینه‌های مورد نیاز یک مجموعه ارائه می‌دهم. این خدمات به سازمان‌ها کمک می‌کند تا با استفاده از فناوری‌های نوین، کارایی و بهره‌وری خود را افزایش دهند.</p>
+                    
+                    <p>خدمات ادغام ابزارهای هوش مصنوعی شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>پیاده‌سازی سیستم‌های پردازش زبان طبیعی (NLP)</li>
+                        <li>توسعه چت‌بات‌ها و دستیارهای مجازی هوشمند</li>
+                        <li>پیاده‌سازی سیستم‌های بینایی ماشین و پردازش تصویر</li>
+                        <li>توسعه الگوریتم‌های یادگیری ماشین برای تحلیل داده‌ها</li>
+                        <li>پیاده‌سازی سیستم‌های پیش‌بینی و تشخیص الگو</li>
+                        <li>ادغام هوش مصنوعی در فرآیندهای کسب‌وکار</li>
+                        <li>توسعه سیستم‌های توصیه‌گر هوشمند</li>
+                        <li>پیاده‌سازی راهکارهای تحلیل احساسات و نظرات</li>
+                        <li>ادغام هوش مصنوعی در سیستم‌های امنیتی</li>
+                        <li>آموزش کارکنان برای استفاده از ابزارهای هوش مصنوعی</li>
+                    </ul>
+                    
+                    <p>با استفاده از تکنولوژی‌های پیشرفته هوش مصنوعی، راهکارهای نوآورانه و کاربردی را برای چالش‌های کسب‌وکارها ارائه می‌دهم که منجر به بهبود تصمیم‌گیری، افزایش کارایی و ایجاد مزیت رقابتی می‌شود.</p>
+                </div>
+            </div>
+            
+            <!-- Service 9 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>تست نفوذ قانونی</h3>
+                        <p>انجام تست‌های نفوذ قانونی (Black, Gray, White Boxes)</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>خدمات تخصصی تست نفوذ قانونی را با هدف شناسایی و رفع آسیب‌پذیری‌های امنیتی در سیستم‌ها و شبکه‌ها ارائه می‌دهم. این تست‌ها به روش‌های مختلف از جمله جعبه سیاه (Black Box)، جعبه خاکستری (Gray Box) و جعبه سفید (White Box) انجام می‌شوند تا دیدگاه جامعی از وضعیت امنیتی سازمان فراهم شود.</p>
+                    
+                    <p>خدمات تست نفوذ قانونی شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>تست نفوذ شبکه (داخلی و خارجی)</li>
+                        <li>تست نفوذ برنامه‌های تحت وب</li>
+                        <li>تست نفوذ برنامه‌های موبایل</li>
+                        <li>تست نفوذ API‌ها</li>
+                        <li>تست نفوذ سیستم‌های کنترل صنعتی</li>
+                        <li>تست نفوذ زیرساخت‌های ابری</li>
+                        <li>تست نفوذ سیستم‌های بی‌سیم</li>
+                        <li>تست نفوذ اجتماعی (Social Engineering)</li>
+                        <li>تست نفوذ فیزیکی</li>
+                        <li>ارائه گزارش‌های جامع و راهکارهای رفع آسیب‌پذیری‌ها</li>
+                    </ul>
+                    
+                    <p>تمامی تست‌های نفوذ با رعایت اصول اخلاقی و قانونی و با هدف بهبود وضعیت امنیتی سازمان‌ها انجام می‌شوند. پس از انجام تست‌ها، گزارش‌های دقیق و جامعی از آسیب‌پذیری‌های شناسایی شده به همراه راهکارهای عملی برای رفع آن‌ها ارائه می‌شود.</p>
+                </div>
+            </div>
+            
+            <!-- Service 10 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>مشاوره امنیت سایبری</h3>
+                        <p>ارائه مشاوره تخصصی در زمینه امنیت سایبری</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>با بیش از یک دهه تجربه در زمینه امنیت سایبری، خدمات مشاوره تخصصی را به سازمان‌ها و کسب‌وکارها ارائه می‌دهم. این مشاوره‌ها به شناسایی نیازهای امنیتی، ارزیابی ریسک‌ها و ارائه راهکارهای مناسب برای بهبود وضعیت امنیتی کمک می‌کنند.</p>
+                    
+                    <p>خدمات مشاوره امنیت سایبری شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>ارزیابی وضعیت امنیتی فعلی سازمان</li>
+                        <li>شناسایی و ارزیابی ریسک‌های امنیتی</li>
+                        <li>تدوین استراتژی‌ها و سیاست‌های امنیتی</li>
+                        <li>طراحی معماری امنیتی</li>
+                        <li>مشاوره در زمینه انطباق با استانداردها و مقررات</li>
+                        <li>برنامه‌ریزی و مدیریت حوادث امنیتی</li>
+                        <li>مشاوره در زمینه امنیت داده‌ها و حریم خصوصی</li>
+                        <li>ارائه راهکارهای امنیتی مقرون به صرفه</li>
+                        <li>مشاوره در زمینه آموزش و آگاهی‌رسانی امنیتی</li>
+                        <li>ارزیابی و انتخاب راهکارها و محصولات امنیتی</li>
+                    </ul>
+                    
+                    <p>خدمات مشاوره با توجه به نیازها و چالش‌های خاص هر سازمان ارائه می‌شوند و هدف آن‌ها ایجاد یک رویکرد جامع و لایه‌ای به امنیت سایبری است که تمام جنبه‌های فنی، انسانی و فرآیندی را پوشش می‌دهد.</p>
+                </div>
+            </div>
+            
+            <!-- Service 11 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>جرم‌یابی و بازیابی سیستم</h3>
+                        <p>انجام جرم‌یابی (Forensic) و بازیابی (Recovery) سیستم پس از حملات سایبری</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>خدمات تخصصی جرم‌یابی دیجیتال (Digital Forensics) و بازیابی سیستم‌ها پس از حملات سایبری را ارائه می‌دهم. این خدمات به شناسایی نحوه نفوذ، ارزیابی خسارات، جمع‌آوری شواهد و بازگرداندن سیستم‌ها به حالت عادی کمک می‌کنند.</p>
+                    
+                    <p>خدمات جرم‌یابی و بازیابی سیستم شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>جمع‌آوری و حفظ شواهد دیجیتال</li>
+                        <li>تحلیل لاگ‌ها و رویدادهای امنیتی</li>
+                        <li>شناسایی روش‌های نفوذ و مسیرهای حمله</li>
+                        <li>تحلیل بدافزارها و کدهای مخرب</li>
+                        <li>بررسی آسیب‌پذیری‌های مورد استفاده در حمله</li>
+                        <li>ارزیابی میزان خسارت و داده‌های به خطر افتاده</li>
+                        <li>پاکسازی سیستم‌ها از کدهای مخرب</li>
+                        <li>بازیابی داده‌ها و سیستم‌های آسیب‌دیده</li>
+                        <li>بازسازی و امن‌سازی مجدد سیستم‌ها</li>
+                        <li>ارائه گزارش‌های جامع و توصیه‌های پیشگیرانه</li>
+                    </ul>
+                    
+                    <p>این خدمات با استفاده از ابزارها و تکنیک‌های پیشرفته جرم‌یابی دیجیتال انجام می‌شوند و به سازمان‌ها کمک می‌کنند تا پس از حملات سایبری، علاوه بر بازیابی سیستم‌ها، از تکرار حملات مشابه در آینده جلوگیری کنند.</p>
+                </div>
+            </div>
+            
+            <!-- Service 12 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>تدریس علوم امنیت سایبری</h3>
+                        <p>آموزش و تدریس علوم امنیت سایبری در تمام سطوح</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>با استفاده از تجربه عملی و دانش تخصصی در زمینه امنیت سایبری، خدمات آموزشی و تدریس را در تمام سطوح از مبتدی تا پیشرفته ارائه می‌دهم. این آموزش‌ها به افراد و سازمان‌ها کمک می‌کنند تا دانش و مهارت‌های لازم برای مقابله با تهدیدات سایبری را کسب کنند.</p>
+                    
+                    <p>خدمات تدریس علوم امنیت سایبری شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>آموزش مفاهیم پایه امنیت سایبری</li>
+                        <li>تدریس تکنیک‌های تست نفوذ و هک قانونی</li>
+                        <li>آموزش امنیت شبکه و زیرساخت</li>
+                        <li>تدریس برنامه‌نویسی امن</li>
+                        <li>آموزش تحلیل بدافزار و مهندسی معکوس</li>
+                        <li>تدریس جرم‌یابی دیجیتال</li>
+                        <li>آموزش امنیت وب و برنامه‌های کاربردی</li>
+                        <li>تدریس رمزنگاری و امنیت اطلاعات</li>
+                        <li>آموزش مدیریت امنیت و ارزیابی ریسک</li>
+                        <li>برگزاری کارگاه‌های عملی و تمرین‌های واقعی</li>
+                    </ul>
+                    
+                    <p>آموزش‌ها به صورت فردی یا گروهی و به شکل حضوری یا آنلاین ارائه می‌شوند و با تمرکز بر جنبه‌های عملی و کاربردی، به فراگیران کمک می‌کنند تا علاوه بر یادگیری مفاهیم تئوری، مهارت‌های عملی لازم را نیز کسب کنند.</p>
+                </div>
+            </div>
+            
+            <!-- Service 13 -->
+            <div class="service-detail slide-up">
+                <div class="service-detail-header">
+                    <div class="service-detail-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="service-detail-title">
+                        <h3>پیاده‌سازی مجازی‌سازی و دیتاسنتر</h3>
+                        <p>طراحی، پیاده‌سازی و پیکربندی سیستم‌های مجازی‌سازی و دیتاسنتر</p>
+                    </div>
+                </div>
+                
+                <div class="service-detail-content">
+                    <p>خدمات تخصصی در زمینه طراحی، پیاده‌سازی و پیکربندی سیستم‌های مجازی‌سازی و دیتاسنتر را ارائه می‌دهم. این خدمات به سازمان‌ها کمک می‌کنند تا با استفاده از فناوری‌های مجازی‌سازی، کارایی و انعطاف‌پذیری زیرساخت‌های خود را افزایش دهند و هزینه‌ها را کاهش دهند.</p>
+                    
+                    <p>خدمات پیاده‌سازی مجازی‌سازی و دیتاسنتر شامل موارد زیر است:</p>
+                    
+                    <ul>
+                        <li>طراحی معماری مجازی‌سازی و دیتاسنتر</li>
+                        <li>پیاده‌سازی پلتفرم‌های مجازی‌سازی (VMware، Hyper-V، KVM)</li>
+                        <li>راه‌اندازی زیرساخت‌های ابری خصوصی</li>
+                        <li>پیاده‌سازی راهکارهای ذخیره‌سازی (SAN، NAS)</li>
+                        <li>راه‌اندازی سیستم‌های کانتینری (Docker، Kubernetes)</li>
+                        <li>پیکربندی سیستم‌های پشتیبان‌گیری و بازیابی</li>
+                        <li>پیاده‌سازی راهکارهای تداوم کسب‌وکار و بازیابی از فاجعه</li>
+                        <li>بهینه‌سازی عملکرد و کارایی دیتاسنتر</li>
+                        <li>پیاده‌سازی سیستم‌های مانیتورینگ و مدیریت</li>
+                        <li>آموزش کارکنان برای مدیریت و نگهداری سیستم‌ها</li>
+                    </ul>
+                    
+                    <p>با استفاده از تکنولوژی‌های پیشرفته مجازی‌سازی و بهترین شیوه‌های طراحی دیتاسنتر، راهکارهای مقیاس‌پذیر، انعطاف‌پذیر و مقرون به صرفه را برای سازمان‌ها فراهم می‌کنم که قابلیت توسعه و بهبود در آینده را نیز دارند.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>آماده همکاری با شما هستم</h2>
+                <p>برای دریافت مشاوره و استفاده از خدمات تخصصی در زمینه امنیت سایبری، با من در تماس باشید.</p>
+                <a href="../index.html#contact" class="cta-button">تماس با من</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>DAVOOD<span>_</span>YAHI</h3>
+                    <p>متخصص امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://t.me/yakuzacybersec" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.instagram.com/yakuzalearn" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/davoodya" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>لینک‌های سریع</h4>
+                    <ul>
+                        <li><a href="../index.html">خانه</a></li>
+                        <li><a href="../index.html#about">درباره من</a></li>
+                        <li><a href="../index.html#services">خدمات</a></li>
+                        <li><a href="../index.html#portfolio">نمونه کارها</a></li>
+                        <li><a href="../index.html#contact">تماس با من</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>خدمات</h4>
+                    <ul>
+                        <li><a href="#services">امنیت سایبری</a></li>
+                        <li><a href="#services">شبکه‌های کامپیوتری</a></li>
+                        <li><a href="#services">تست نفوذ</a></li>
+                        <li><a href="#services">آموزش</a></li>
+                        <li><a href="#services">مشاوره</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; ۱۴۰۴ تمامی حقوق محفوظ است | طراحی و توسعه توسط داوود یاحی</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

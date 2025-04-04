@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="دوره لینوکس الپیک 1 - آموزش جامع لینوکس مطابق با سرفصل‌های LPIC-1 توسط داوود یاحی">
+    <meta name="keywords" content="آموزش لینوکس, LPIC-1, CEH++, آموزش امنیت سایبری, لینوکس">
+    <meta name="author" content="داوود یاحی">
+    <meta name="robots" content="index, follow">
+    
+    <title>دوره لینوکس الپیک 1 | داوود یاحی</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+    
+    <style>
+        .course-detail {
+            padding: 100px 0;
+        }
+        
+        .course-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 50px;
+        }
+        
+        .course-icon {
+            width: 120px;
+            height: 120px;
+            background-color: rgba(0, 255, 65, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 30px;
+            color: var(--accent-green);
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+        
+        .course-title h1 {
+            font-size: 2.5rem;
+            color: var(--accent-green);
+            margin-bottom: 10px;
+            text-shadow: var(--glow-shadow);
+        }
+        
+        .course-title p {
+            color: var(--main-text);
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+        
+        .course-badge {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: var(--darker-bg);
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        
+        .course-badge.premium {
+            background-color: var(--accent-orange);
+        }
+        
+        .course-links {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .course-links a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-blue);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .course-links a:hover {
+            color: var(--accent-green);
+        }
+        
+        .course-links a i {
+            margin-left: 5px;
+        }
+        
+        .course-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .course-description {
+            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 10px;
+            padding: 30px;
+        }
+        
+        .course-description h2 {
+            font-size: 1.8rem;
+            color: var(--accent-green);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .course-description h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-green);
+        }
+        
+        .course-description p {
+            color: var(--main-text);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .course-description ul {
+            list-style-type: none;
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .course-description ul li {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 10px;
+            color: var(--main-text);
+        }
+        
+        .course-description ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            color: var(--accent-green);
+        }
+        
+        .course-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .course-info, .course-instructor, .course-related {
+            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 10px;
+            padding: 25px;
+        }
+        
+        .course-info h3, .course-instructor h3, .course-related h3 {
+            font-size: 1.5rem;
+            color: var(--accent-green);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .course-info h3::after, .course-instructor h3::after, .course-related h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-green);
+        }
+        
+        .course-info-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .course-info-item i {
+            color: var(--accent-green);
+            margin-left: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .course-info-item span {
+            color: var(--main-text);
+        }
+        
+        .course-instructor-profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .instructor-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 15px;
+        }
+        
+        .instructor-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .instructor-info h4 {
+            font-size: 1.2rem;
+            color: var(--main-text);
+            margin-bottom: 5px;
+        }
+        
+        .instructor-info p {
+            color: var(--main-text);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        .instructor-bio {
+            color: var(--main-text);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .course-related-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .course-related-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .course-related-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 255, 65, 0.1);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            color: var(--accent-green);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .course-related-info h4 {
+            font-size: 1rem;
+            color: var(--main-text);
+            margin-bottom: 5px;
+        }
+        
+        .course-related-info a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .course-related-info a:hover {
+            color: var(--accent-green);
+        }
+        
+        .course-cta {
+            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .course-cta h3 {
+            font-size: 1.5rem;
+            color: var(--accent-green);
+            margin-bottom: 15px;
+        }
+        
+        .course-cta p {
+            color: var(--main-text);
+            margin-bottom: 20px;
+        }
+        
+        .course-cta-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-green);
+            color: var(--darker-bg);
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .course-cta-btn:hover {
+            background-color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+        
+        .course-curriculum {
+            margin-top: 50px;
+        }
+        
+        .curriculum-section {
+            margin-bottom: 30px;
+        }
+        
+        .curriculum-section-header {
+            background: linear-gradient(145deg, rgba(15, 15, 15, 0.8), rgba(10, 10, 10, 1));
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 10px 10px 0 0;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .curriculum-section-header h3 {
+            font-size: 1.3rem;
+            color: var(--accent-green);
+            margin: 0;
+        }
+        
+        .curriculum-section-header .toggle-icon {
+            color: var(--accent-green);
+            transition: transform 0.3s ease;
+        }
+        
+        .curriculum-section-header.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+        
+        .curriculum-section-content {
+            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .curriculum-section-header.active + .curriculum-section-content {
+            max-height: 1000px;
+            padding: 20px;
+        }
+        
+        .curriculum-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .curriculum-item:last-child {
+            border-bottom: none;
+        }
+        
+        .curriculum-item-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .curriculum-item-icon {
+            color: var(--accent-green);
+            margin-left: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .curriculum-item-title {
+            color: var(--main-text);
+            font-size: 1rem;
+        }
+        
+        .curriculum-item-right {
+            display: flex;
+            align-items: center;
+        }
+        
+        .curriculum-item-duration {
+            color: var(--main-text);
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-left: 15px;
+        }
+        
+        .curriculum-item-preview {
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .curriculum-item-preview:hover {
+            color: var(--accent-green);
+        }
+        
+        .page-header {
+            height: 40vh;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--darker-bg);
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 119, 255, 0.1));
+            z-index: 0;
+        }
+        
+        .page-header-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-header-content h1 {
+            font-size: 3rem;
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            text-shadow: var(--glow-shadow);
+        }
+        
+        .page-header-content p {
+            font-size: 1.2rem;
+            color: var(--main-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .breadcrumb a {
+            color: var(--main-text);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s ease, color 0.3s ease;
+        }
+        
+        .breadcrumb a:hover {
+            opacity: 1;
+            color: var(--accent-green);
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            color: var(--main-text);
+            opacity: 0.5;
+        }
+        
+        .breadcrumb .active {
+            color: var(--accent-green);
+            opacity: 1;
+        }
+        
+        .course-video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin-bottom: 30px;
+        }
+        
+        .course-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 992px) {
+            .course-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .course-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .course-icon {
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+            
+            .course-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>DAVOOD<span>_</span>YAHAY</h1>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="../../index.html">خانه</a></li>
+                    <li><a href="../../index.html#about">درباره من</a></li>
+                    <li><a href="../services.html">خدمات</a></li>
+                    <li><a href="../portfolio.html">نمونه کارها</a></li>
+                    <li><a href="../courses.html" class="active">دوره‌های آموزشی</a></li>
+                    <li><a href="../../index.html#contact">تماس با من</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <canvas id="matrix-canvas" class="matrix-animation"></canvas>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>دوره لینوکس الپیک 1</h1>
+                <p>آموزش جامع لینوکس مطابق با سرفصل‌های LPIC-1</p>
+                
+                <div class="breadcrumb">
+                    <a href="../../index.html">خانه</a>
+                    <span>/</span>
+                    <a href="../courses.html">دوره‌های آموزشی</a>
+                    <span>/</span>
+                    <span class="active">دوره لینوکس الپیک 1</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Course Detail Section -->
+    <section class="course-detail">
+        <div class="container">
+            <div class="course-header">
+                <div class="course-icon">
+                    <i class="fab fa-linux"></i>
+                </div>
+                
+                <div class="course-title">
+                    <h1>دوره لینوکس الپیک 1</h1>
+                    <p>آموزش جامع لینوکس مطابق با سرفصل‌های LPIC-1 که بخشی از دوره کلی CEH++ می‌باشد.</p>
+                    <span class="course-badge">رایگان</span>
+                    
+                    <div class="course-links">
+                        <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank"><i class="fab fa-youtube"></i> مشاهده در یوتیوب</a>
+                        <a href="#curriculum"><i class="fas fa-list"></i> سرفصل‌ها</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="course-video-container">
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" title="دوره لینوکس الپیک 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="course-content">
+                <div class="course-description">
+                    <h2>معرفی دوره</h2>
+                    <p>دوره لینوکس الپیک 1 یک دوره جامع و کاربردی برای آشنایی با سیستم عامل لینوکس است. این دوره بخشی از دوره کلی CEH++ می‌باشد و مفاهیم پایه و اساسی لینوکس را به صورت کامل پوشش می‌دهد.</p>
+                    
+                    <p>در این دوره، شما با مفاهیم اساسی لینوکس، دستورات پایه، مدیریت فایل‌ها و پوشه‌ها، مدیریت کاربران و گروه‌ها، مدیریت پروسه‌ها، شبکه در لینوکس و بسیاری از موضوعات دیگر آشنا خواهید شد. این دوره برای افرادی که قصد دارند در زمینه امنیت سایبری فعالیت کنند، بسیار ضروری است، زیرا تسلط بر لینوکس یکی از پیش‌نیازهای اصلی برای ورود به دنیای امنیت سایبری است.</p>
+                    
+                    <h2>چه چیزهایی یاد خواهید گرفت؟</h2>
+                    <ul>
+                        <li>مفاهیم اساسی سیستم عامل لینوکس</li>
+                        <li>نصب و پیکربندی توزیع‌های مختلف لینوکس</li>
+                        <li>کار با ترمینال و دستورات پایه</li>
+                        <li>مدیریت فایل‌ها و پوشه‌ها</li>
+                        <li>مدیریت کاربران و گروه‌ها</li>
+                        <li>مدیریت پروسه‌ها و سرویس‌ها</li>
+                        <li>مدیریت بسته‌ها و نرم‌افزارها</li>
+                        <li>پیکربندی شبکه در لینوکس</li>
+                        <li>اسکریپت‌نویسی در Bash</li>
+                        <li>مفاهیم امنیت در لینوکس</li>
+                    </ul>
+                    
+                    <h2>پیش‌نیازهای دوره</h2>
+                    <p>این دوره برای افراد مبتدی طراحی شده است و نیاز به دانش قبلی خاصی ندارد. با این حال، آشنایی اولیه با مفاهیم کامپیوتر می‌تواند به درک بهتر مطالب کمک کند.</p>
+                    
+                    <h2>مخاطبان دوره</h2>
+                    <ul>
+                        <li>دانشجویان و علاقه‌مندان به حوزه لینوکس و امنیت</li>
+                        <li>متخصصان IT که قصد دارند دانش خود را در زمینه لینوکس تقویت کنند</li>
+                        <li>افرادی که قصد دارند وارد حوزه امنیت سایبری شوند</li>
+                        <li>کارشناسان شبکه که می‌خواهند برای آزمون LPIC-1 آماده شوند</li>
+                        <li>مدیران سیستم که نیاز به درک عمیق‌تری از مفاهیم لینوکس دارند</li>
+                    </ul>
+                    
+                    <div id="curriculum" class="course-curriculum">
+                        <h2>سرفصل‌های دوره</h2>
+                        
+                        <div class="curriculum-section">
+                            <div class="curriculum-section-header active">
+                                <h3>فصل 1: مقدمه و آشنایی با لینوکس</h3>
+                                <i class="fas fa-chevron-down toggle-icon"></i>
+                            </div>
+                            <div class="curriculum-section-content">
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">معرفی دوره و تاریخچه لینوکس</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">30 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">توزیع‌های مختلف لینوکس</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">35 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">نصب لینوکس اوبونتو</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">45 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="curriculum-section">
+                            <div class="curriculum-section-header">
+                                <h3>فصل 2: کار با ترمینال و دستورات پایه</h3>
+                                <i class="fas fa-chevron-down toggle-icon"></i>
+                            </div>
+                            <div class="curriculum-section-content">
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">آشنایی با ترمینال و شل</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">40 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">دستورات پایه و ساختار آن‌ها</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">50 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">کار با فایل‌ها و پوشه‌ها</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">45 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="curriculum-section">
+                            <div class="curriculum-section-header">
+                                <h3>فصل 3: مدیریت کاربران و گروه‌ها</h3>
+                                <i class="fas fa-chevron-down toggle-icon"></i>
+                            </div>
+                            <div class="curriculum-section-content">
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">مفهوم کاربران و گروه‌ها در لینوکس</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">35 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">ایجاد، ویرایش و حذف کاربران</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">40 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">مدیریت گروه‌ها و مجوزها</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">45 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="curriculum-section">
+                            <div class="curriculum-section-header">
+                                <h3>فصل 4: مدیریت پروسه‌ها و سرویس‌ها</h3>
+                                <i class="fas fa-chevron-down toggle-icon"></i>
+                            </div>
+                            <div class="curriculum-section-content">
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">مفهوم پروسه‌ها در لینوکس</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">30 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">مدیریت پروسه‌ها با دستورات مختلف</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">45 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">مدیریت سرویس‌ها با systemd</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">50 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="curriculum-section">
+                            <div class="curriculum-section-header">
+                                <h3>فصل 5: اسکریپت‌نویسی در Bash</h3>
+                                <i class="fas fa-chevron-down toggle-icon"></i>
+                            </div>
+                            <div class="curriculum-section-content">
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">مقدمه‌ای بر اسکریپت‌نویسی در Bash</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">40 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">متغیرها و عملگرها</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">45 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                                <div class="curriculum-item">
+                                    <div class="curriculum-item-left">
+                                        <i class="fas fa-play-circle curriculum-item-icon"></i>
+                                        <span class="curriculum-item-title">ساختارهای کنترلی و حلقه‌ها</span>
+                                    </div>
+                                    <div class="curriculum-item-right">
+                                        <span class="curriculum-item-duration">50 دقیقه</span>
+                                        <a href="https://www.youtube.com/watch?v=videoseries?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="curriculum-item-preview">پیش‌نمایش</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-cta">
+                        <h3>آماده یادگیری هستید؟</h3>
+                        <p>این دوره به صورت رایگان در یوتیوب در دسترس است. همین حالا شروع کنید!</p>
+                        <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="course-cta-btn">شروع یادگیری</a>
+                    </div>
+                </div>
+                
+                <div class="course-sidebar">
+                    <div class="course-info">
+                        <h3>اطلاعات دوره</h3>
+                        
+                        <div class="course-info-item">
+                            <i class="fas fa-video"></i>
+                            <span>تعداد ویدیوها: ۳۰ ویدیو</span>
+                        </div>
+                        
+                        <div class="course-info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>مدت زمان: ۲۰ ساعت</span>
+                        </div>
+                        
+                        <div class="course-info-item">
+                            <i class="fas fa-signal"></i>
+                            <span>سطح: متوسط</span>
+                        </div>
+                        
+                        <div class="course-info-item">
+                            <i class="fas fa-language"></i>
+                            <span>زبان: فارسی</span>
+                        </div>
+                        
+                        <div class="course-info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>آخرین به‌روزرسانی: ۱۴۰۲/۰۹/۲۰</span>
+                        </div>
+                        
+                        <div class="course-info-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>گواهی: ندارد</span>
+                        </div>
+                        
+                        <div class="course-info-item">
+                            <i class="fas fa-tag"></i>
+                            <span>قیمت: رایگان</span>
+                        </div>
+                    </div>
+                    
+                    <div class="course-instructor">
+                        <h3>مدرس دوره</h3>
+                        
+                        <div class="course-instructor-profile">
+                            <div class="instructor-avatar">
+                                <img src="https://via.placeholder.com/70x70/0a0a0a/00ff41?text=DY" alt="داوود یاحی">
+                            </div>
+                            <div class="instructor-info">
+                                <h4>داوود یاحی</h4>
+                                <p>متخصص امنیت سایبری</p>
+                            </div>
+                        </div>
+                        
+                        <p class="instructor-bio">داوود یاحی با بیش از ده سال سابقه در حوزه امنیت سایبری، برنامه نویسی، شبکه‌های کامپیوتری و سیستم عامل، یکی از مدرسان برجسته در این زمینه‌ها است.</p>
+                        
+                        <div class="social-links">
+                            <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://t.me/yakuzacybersec" target="_blank"><i class="fab fa-telegram"></i></a>
+                            <a href="https://www.instagram.com/yakuzalearn" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/davoodya" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-related">
+                        <h3>دوره‌های مرتبط</h3>
+                        
+                        <div class="course-related-item">
+                            <div class="course-related-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="course-related-info">
+                                <h4>دوره شبکه Network+</h4>
+                                <a href="network-plus.html">مشاهده دوره</a>
+                            </div>
+                        </div>
+                        
+                        <div class="course-related-item">
+                            <div class="course-related-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="course-related-info">
+                                <h4>مینی دوره مجازی سازی</h4>
+                                <a href="virtualization.html">مشاهده دوره</a>
+                            </div>
+                        </div>
+                        
+                        <div class="course-related-item">
+                            <div class="course-related-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="course-related-info">
+                                <h4>دوره CEH++ کامل</h4>
+                                <a href="ceh-plus-plus.html">مشاهده دوره</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>آماده یادگیری هستید؟</h2>
+                <p>برای مشاوره رایگان در مورد دوره‌های آموزشی و مسیر یادگیری مناسب با من در تماس باشید.</p>
+                <a href="../../index.html#contact" class="cta-button">تماس با من</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>DAVOOD<span>_</span>YAHAY</h3>
+                    <p>متخصص امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://t.me/yakuzacybersec" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.instagram.com/yakuzalearn" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/davoodya" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>لینک‌های سریع</h4>
+                    <ul>
+                        <li><a href="../../index.html">خانه</a></li>
+                        <li><a href="../../index.html#about">درباره من</a></li>
+                        <li><a href="../services.html">خدمات</a></li>
+                        <li><a href="../portfolio.html">نمونه کارها</a></li>
+                        <li><a href="../courses.html">دوره‌های آموزشی</a></li>
+                        <li><a href="../../index.html#contact">تماس با من</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>خدمات</h4>
+                    <ul>
+                        <li><a href="../services.html">امنیت سایبری</a></li>
+                        <li><a href="../services.html">شبکه‌های کامپیوتری</a></li>
+                        <li><a href="../services.html">تست نفوذ</a></li>
+                        <li><a href="../services.html">آموزش</a></li>
+                        <li><a href="../services.html">مشاوره</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; ۱۴۰۴ تمامی حقوق محفوظ است | طراحی و توسعه توسط داوود یاحی</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Custom JS -->
+    <script src="../../js/main.js"></script>
+    
+    <script>
+        // Curriculum section toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const sectionHeaders = document.querySelectorAll('.curriculum-section-header');
+            
+            sectionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

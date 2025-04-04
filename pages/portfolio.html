@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نمونه کارها و ابزارهای امنیتی توسعه داده شده توسط داوود یاحی - متخصص امنیت سایبری با بیش از ده سال تجربه">
+    <meta name="keywords" content="امنیت سایبری, ابزارهای امنیتی, بک‌دور, تست نفوذ, هک قانونی, کرکر رمز عبور, اسکریپت پایتون">
+    <meta name="author" content="داوود یاحی">
+    <meta name="robots" content="index, follow">
+    
+    <title>نمونه کارها و ابزارها | داوود یاحی</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        .portfolio-page {
+            padding: 100px 0;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .portfolio-item {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            background: rgba(10, 10, 10, 0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 255, 65, 0.2);
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 250px;
+            background-color: rgba(0, 255, 65, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .portfolio-img i {
+            font-size: 5rem;
+            color: var(--accent-green);
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-img i {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .portfolio-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0, 255, 65, 0.1), rgba(0, 119, 255, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-img::after {
+            opacity: 1;
+        }
+        
+        .portfolio-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .portfolio-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-green);
+        }
+        
+        .portfolio-content p {
+            color: var(--main-text);
+            opacity: 0.8;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        
+        .portfolio-tech {
+            margin-bottom: 20px;
+        }
+        
+        .portfolio-tech span {
+            display: inline-block;
+            background-color: rgba(0, 255, 65, 0.1);
+            color: var(--accent-green);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .portfolio-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+        
+        .portfolio-links a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .portfolio-links a i {
+            margin-left: 5px;
+        }
+        
+        .portfolio-links a:hover {
+            color: var(--accent-green);
+            transform: translateX(-5px);
+        }
+        
+        .page-header {
+            height: 40vh;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--darker-bg);
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 119, 255, 0.1));
+            z-index: 0;
+        }
+        
+        .page-header-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-header-content h1 {
+            font-size: 3rem;
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            text-shadow: var(--glow-shadow);
+        }
+        
+        .page-header-content p {
+            font-size: 1.2rem;
+            color: var(--main-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .breadcrumb a {
+            color: var(--main-text);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s ease, color 0.3s ease;
+        }
+        
+        .breadcrumb a:hover {
+            opacity: 1;
+            color: var(--accent-green);
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            color: var(--main-text);
+            opacity: 0.5;
+        }
+        
+        .breadcrumb .active {
+            color: var(--accent-green);
+            opacity: 1;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+            background-color: rgba(0, 255, 65, 0.1);
+            color: var(--main-text);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            padding: 8px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--accent-green);
+            color: var(--darker-bg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>DAVOOD<span>_</span>YAHAY</h1>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html">خانه</a></li>
+                    <li><a href="../index.html#about">درباره من</a></li>
+                    <li><a href="services.html">خدمات</a></li>
+                    <li><a href="portfolio.html">نمونه کارها</a></li>
+                    <li><a href="courses.html">دوره‌های آموزشی</a></li>
+                    <li><a href="../index.html#contact">تماس با من</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <canvas id="matrix-canvas" class="matrix-animation"></canvas>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>نمونه کارها و ابزارها</h1>
+                <p>ابزارها و پروژه‌های امنیتی توسعه داده شده برای تست نفوذ قانونی و امنیت سایبری</p>
+                
+                <div class="breadcrumb">
+                    <a href="../index.html">خانه</a>
+                    <span>/</span>
+                    <span class="active">نمونه کارها</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section class="portfolio-page">
+        <div class="container">
+            <div class="section-title">
+                <h2>ابزارهای امنیتی</h2>
+                <p>مجموعه ابزارهای امنیتی توسعه داده شده برای تست نفوذ قانونی و ارزیابی امنیت</p>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">همه</button>
+                <button class="filter-btn" data-filter="penetration">تست نفوذ</button>
+                <button class="filter-btn" data-filter="malware">تحلیل بدافزار</button>
+                <button class="filter-btn" data-filter="script">اسکریپت‌نویسی</button>
+                <button class="filter-btn" data-filter="cracking">کرکینگ</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Tool 1 -->
+                <div class="portfolio-item slide-up" data-category="penetration">
+                    <div class="portfolio-img">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Yakuza Undetectable Backdoor</h3>
+                        <p>بک‌دور پیشرفته و غیرقابل تشخیص برای اهداف تست نفوذ قانونی که قابلیت دور زدن آنتی‌ویروس‌ها و سیستم‌های امنیتی را دارد.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span>C++</span>
+                            <span>Assembly</span>
+                            <span>Windows API</span>
+                            <span>Anti-Detection</span>
+                        </div>
+                        
+                        <div class="portfolio-links">
+                            <a href="tools/backdoor.html"><i class="fas fa-info-circle"></i> اطلاعات بیشتر</a>
+                            <a href="https://github.com/davoodya/YakuzaBackdoor_Undetectable" target="_blank"><i class="fab fa-github"></i> گیت‌هاب</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tool 2 -->
+                <div class="portfolio-item slide-up" data-category="penetration">
+                    <div class="portfolio-img">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>C&C Yakuza Design</h3>
+                        <p>سیستم فرماندهی و کنترل (C2) پیشرفته برای مدیریت عملیات تست نفوذ با قابلیت کنترل از راه دور و مدیریت چندین سیستم به صورت همزمان.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>WebSocket</span>
+                            <span>Encryption</span>
+                        </div>
+                        
+                        <div class="portfolio-links">
+                            <a href="tools/c2.html"><i class="fas fa-info-circle"></i> اطلاعات بیشتر</a>
+                            <a href="https://github.com/davoodya/C2-YakuzaDesign" target="_blank"><i class="fab fa-github"></i> گیت‌هاب</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tool 3 -->
+                <div class="portfolio-item slide-up" data-category="cracking">
+                    <div class="portfolio-img">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Yakuza Password Cracker</h3>
+                        <p>ابزار پیشرفته برای تست امنیت رمزهای عبور و شکستن رمزهای ضعیف با استفاده از الگوریتم‌های بهینه‌سازی شده و تکنیک‌های پیشرفته.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span>C</span>
+                            <span>CUDA</span>
+                            <span>OpenCL</span>
+                            <span>Multi-threading</span>
+                        </div>
+                        
+                        <div class="portfolio-links">
+                            <a href="tools/cracker.html"><i class="fas fa-info-circle"></i> اطلاعات بیشتر</a>
+                            <a href="https://github.com/davoodya/YakuzaCracker" target="_blank"><i class="fab fa-github"></i> گیت‌هاب</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tool 4 -->
+                <div class="portfolio-item slide-up" data-category="script">
+                    <div class="portfolio-img">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Python in Black Scripts</h3>
+                        <p>مجموعه‌ای از اسکریپت‌های پایتون برای عملیات امنیتی و تست نفوذ که شامل ابزارهای متنوع برای اسکن، استخراج اطلاعات و تست آسیب‌پذیری‌ها است.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span>Python</span>
+                            <span>Scapy</span>
+                            <span>Requests</span>
+                            <span>BeautifulSoup</span>
+                        </div>
+                        
+                        <div class="portfolio-links">
+                            <a href="tools/python.html"><i class="fas fa-info-circle"></i> اطلاعات بیشتر</a>
+                            <a href="https://github.com/davoodya/pythonInBlack" target="_blank"><i class="fab fa-github"></i> گیت‌هاب</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tool 5 -->
+                <div class="portfolio-item slide-up" data-category="malware">
+                    <div class="portfolio-img">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>YakuzaMalware Arsenal</h3>
+                        <p>مجموعه ابزارهای تحلیل بدافزار و مطالعه رفتار آن‌ها برای اهداف آموزشی و پژوهشی در زمینه امنیت سایبری (در حال توسعه).</p>
+                        
+                        <div class="portfolio-tech">
+                            <span>C++</span>
+                            <span>Python</span>
+                            <span>Assembly</span>
+                            <span>Reverse Engineering</span>
+                        </div>
+                        
+                        <div class="portfolio-links">
+                            <a href="tools/malware.html"><i class="fas fa-info-circle"></i> اطلاعات بیشتر</a>
+                            <a href="https://github.com/davoodya/Yakuza_Malwares_Arsenal" target="_blank"><i class="fab fa-github"></i> گیت‌هاب</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Tool 6 -->
+                <div class="portfolio-item slide-up" data-category="penetration">
+                    <div class="portfolio-img">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Yakuza WiFi Auditor</h3>
+                        <p>ابزار تست امنیت شبکه‌های بی‌سیم با قابلیت شناسایی آسیب‌پذیری‌ها، تست نفوذ و ارزیابی امنیت شبکه‌های WiFi.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span>Python</span>
+                            <span>Aircrack-ng</span>
+                            <span>Scapy</span>
+                            <span>Linux</span>
+                        </div>
+                        
+                        <div class="portfolio-links">
+                            <a href="#"><i class="fas fa-info-circle"></i> اطلاعات بیشتر</a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> گیت‌هاب</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>نیاز به ابزار امنیتی سفارشی دارید؟</h2>
+                <p>برای سفارش ابزارهای امنیتی سفارشی متناسب با نیازهای خاص خود، با من در تماس باشید.</p>
+                <a href="../index.html#contact" class="cta-button">تماس با من</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>DAVOOD<span>_</span>YAHI</h3>
+                    <p>متخصص امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
+                    
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://t.me/yakuzacybersec" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.instagram.com/yakuzalearn" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/davoodya" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>لینک‌های سریع</h4>
+                    <ul>
+                        <li><a href="../index.html">خانه</a></li>
+                        <li><a href="../index.html#about">درباره من</a></li>
+                        <li><a href="services.html">خدمات</a></li>
+                        <li><a href="portfolio.html">نمونه کارها</a></li>
+                        <li><a href="../index.html#contact">تماس با من</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>خدمات</h4>
+                    <ul>
+                        <li><a href="services.html">امنیت سایبری</a></li>
+                        <li><a href="services.html">شبکه‌های کامپیوتری</a></li>
+                        <li><a href="services.html">تست نفوذ</a></li>
+                        <li><a href="services.html">آموزش</a></li>
+                        <li><a href="services.html">مشاوره</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; ۱۴۰۴ تمامی حقوق محفوظ است | طراحی و توسعه توسط داوود یاحی</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    
+    <!-- Portfolio Filter JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            // Filter items on button click
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide items based on filter
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'flex';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

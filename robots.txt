@@ -1,0 +1,5 @@
+/* robots.txt file for Davood Yahi's website */
+User-agent: *
+Allow: /
+
+Sitemap: https://www.davoodyahi.com/sitemap.xml
