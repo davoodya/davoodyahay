@@ -964,14 +964,14 @@ footer {
   left: 2px;
   text-shadow: -2px 0 var(--accent-green);
   clip: rect(24px, 550px, 90px, 0);
-  animation: glitch-anim 2s infinite linear alternate-reverse;
+  animation: glitch-anim 6s infinite linear alternate-reverse;
 }
 
 .glitch::after {
   left: -2px;
   text-shadow: -2px 0 var(--accent-blue);
   clip: rect(85px, 550px, 140px, 0);
-  animation: glitch-anim2 2s infinite linear alternate-reverse;
+  animation: glitch-anim2 8s infinite linear alternate-reverse;
 }
 
 @keyframes glitch {
