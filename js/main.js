@@ -148,32 +148,75 @@ setInterval(drawMatrix, 45);
 /* Typing Effect */
 const typingElements = document.querySelectorAll('.typing-effect');
 
-function typeEffect() {
-    typingElements.forEach(element => {
-        const text = element.getAttribute('data-text');
-        const delay = parseInt(element.getAttribute('data-delay') || '0');
-        const speed = parseInt(element.getAttribute('data-speed') || '50');
-        
-        if (!element.classList.contains('typing-started')) {
-            element.classList.add('typing-started');
-            
-            setTimeout(() => {
-                let i = 0;
-                element.textContent = '';
-                
-                const typing = setInterval(() => {
-                    if (i < text.length) {
-                        element.textContent += text.charAt(i);
-                        i++;
-                    } else {
-                        clearInterval(typing);
-                        element.classList.add('typing-done');
-                    }
-                }, speed);
-            }, delay);
+/* Old version Optimized Typing Effect */
+// function typeEffect() {
+//     const typingElements = document.querySelectorAll('.typing-effect');
+//
+//     typingElements.forEach(element => {
+//         const text = element.getAttribute('data-text') || '';
+//         const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
+//         const speed = parseInt(element.getAttribute('data-speed') || '50', 10);
+//
+//         if (!element.classList.contains('typing-started')) {
+//             element.classList.add('typing-started');
+//
+//             setTimeout(() => {
+//                 let i = 0;
+//                 element.textContent = '';
+//
+//                 const typingInterval = setInterval(() => {
+//                     if (i < text.length) {
+//                         element.textContent += text[i++];
+//                     } else {
+//                         clearInterval(typingInterval);
+//                         element.classList.add('typing-done');
+//                     }
+//                 }, speed);
+//             }, delay);
+//         }
+//     });
+// }
+
+/* New Version Advanced Typing Effect */
+function advancedTypingEffect() {
+    const elements = document.querySelectorAll('.typing-effect');
+
+    elements.forEach(element => {
+        const fullText = element.getAttribute('data-text') || '';
+        const delay = parseInt(element.getAttribute('data-delay') || '1000', 10);
+        const speed = parseInt(element.getAttribute('data-speed') || '100', 10);
+        const loop = element.hasAttribute('data-loop');
+
+        let index = 0;
+        let isDeleting = false;
+
+        function type() {
+            const current = fullText.substring(0, index);
+            element.textContent = current;
+
+            if (!isDeleting && index < fullText.length) {
+                index++;
+                setTimeout(type, speed);
+            } else if (isDeleting && index > 0) {
+                index--;
+                setTimeout(type, speed / 2);
+            } else if (!isDeleting && index === fullText.length) {
+                if (loop) {
+                    setTimeout(() => {
+                        isDeleting = true;
+                        type();
+                    }, delay);
+                }
+            } else if (isDeleting && index === 0) {
+                isDeleting = false;
+                setTimeout(type, delay);
+            }
         }
+
+        setTimeout(type, delay);
     });
 }
+
 
 /* Scroll Animations */
 const animatedElements = document.querySelectorAll('.fade-in, .slide-up, .slide-right, .slide-left');
@@ -212,7 +255,7 @@ window.addEventListener('load', () => {
                 preloader.style.display = 'none';
 
                 // Trigger animations after preloader
-                typeEffect();
+                advancedTypingEffect();
                 checkScroll();
             }, 600); // matches CSS transition
         }, 1500); // total visible duration

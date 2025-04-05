@@ -660,14 +660,16 @@ footer {
 
 /* Terminal Effect */
 .terminal {
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   border: 1px solid var(--accent-green);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
   border-radius: 10px;
   padding: 20px;
   font-family: var(--terminal-font);
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(2px);
 }
 
 .terminal::before {
@@ -683,22 +685,28 @@ footer {
 
 .terminal-header {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  background-color: rgba(0, 255, 65, 0.05);
+  height: 30px;
+  border-bottom: 1px solid var(--accent-green);
   position: relative;
-  z-index: 1;
+  top: -19px;
 }
 
 .terminal-buttons {
+  position: absolute;
+  left: 15px;
   display: flex;
-  margin-right: 15px;
 }
 
 .terminal-button {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 6px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
 }
 
 .terminal-button.red {
@@ -714,11 +722,11 @@ footer {
 }
 
 .terminal-title {
-  color: var(--main-text);
-  font-size: 0.9rem;
-  opacity: 0.8;
+  font-size: 0.85rem;
+  color: var(--accent-green);
+  font-weight: bold;
+  opacity: 0.9;
 }
-
 .terminal-content {
   color: var(--accent-green);
   line-height: 1.5;
@@ -746,6 +754,14 @@ footer {
   animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
   white-space: nowrap;
   overflow: hidden;
+}
+/* debug */
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--accent-green);
+  animation: blinkCaret 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -1109,3 +1125,51 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(var(--accent-green), var(--accent-blue));
 }
+
+/* === NEW TERMINAL ANIMATIONS AND EFFECTS === */
+/* Entrance animation for terminal */
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-terminal {
+  animation: slideUpFadeIn 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+/* Pulse effect for terminal buttons */
+.pulse {
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(1); box-shadow: 0 0 4px #fff4; }
+  50% { transform: scale(1.1); box-shadow: 0 0 10px #fff9; }
+  100% { transform: scale(1); box-shadow: 0 0 4px #fff4; }
+}
+
+/* Typing caret blink */
+@keyframes blinkCaret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/*!* Cursor blink for whoami *!*/
+/*cursor-blink {*/
+/*  border-right: 2px solid var(--accent-green);*/
+/*  animation: blink-caret 0.75s step-end infinite;*/
+/*}*/
+
+/*!* چشمک‌زن *!*/
+/*@keyframes blink-caret {*/
+/*  from, to { border-color: transparent; }*/
+/*  50% { border-color: var(--accent-green); }*/
+/*}*/
