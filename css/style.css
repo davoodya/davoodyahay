@@ -727,6 +727,14 @@ footer {
   font-weight: bold;
   opacity: 0.9;
 }
+
+.terminal-title-aboutme {
+  font-size: 0.85rem;
+  color: #eff264;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
 .terminal-content {
   color: var(--accent-green);
   line-height: 1.5;
@@ -736,7 +744,7 @@ footer {
 
 .terminal-line {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding: 0 5px;
 }
 
@@ -744,9 +752,24 @@ footer {
   color: var(--accent-orange);
   margin-right: 10px;
 }
+.terminal-cmd {
+  color: var(--accent-green);
+  font-weight: bolder;
+  flex: 1;
+}
 
 .terminal-text {
+  color: #f1f1f1; /* رنگ سفید برای توضیحات */
   flex: 1;
+}
+.terminal-list-item {
+  color: #64b5f6; /* رنگ آبی ملایم برای سر لیست‌ها */
+  font-weight: bold;
+}
+/* رنگ‌بندی برای توضیحات (توضیحات به رنگ سفید یا زرد کم رنگ) */
+.terminal-description {
+  color: #f1f1f1; /* رنگ سفید برای توضیحات */
+  font-weight: normal;
 }
 
 .typing {
