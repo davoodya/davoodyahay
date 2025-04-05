@@ -1,44 +1,7 @@
-# وبسایت داوود یاحی - لیست کارها
-
-## ساختار پروژه
-- [x] ایجاد ساختار پوشه‌های پروژه
-- [x] ایجاد فایل‌های اصلی HTML
-- [x] ایجاد فایل‌های CSS
-- [x] ایجاد فایل‌های JavaScript
-
-## طراحی و قالب
-- [x] طراحی قالب کلی با سبک هکری و تم تاریک
-- [x] طراحی منوی ناوبری
-- [x] طراحی فوتر
-- [x] طراحی انیمیشن‌های تعاملی
-
-## صفحات وبسایت
-- [x] صفحه اصلی با معرفی شخصی
-- [x] صفحه تخصص‌ها و خدمات
-- [x] صفحه نمونه کارها و ابزارها
-  - [x] Yakuza Undectable backdoor
-  - [x] C&C(Command & Control) Yakuza Design
-  - [x] Yakuza Password Cracker
-  - [x] Python in Black Scripts
-  - [x] YakuzaMalware Arsenal
-- [x] صفحه دوره‌های آموزشی
-  - [x] دوره شبکه Network+
-  - [x] مینی دوره مجازی سازی
-  - [x] دوره لینوکس الپیک 1
-  - [x] دوره CEH++ کامل
-  - [x] دوره CEH پیشرفته
-- [x] صفحه تماس با من
-
-## بهینه‌سازی SEO
-- [x] تنظیم متاتگ‌ها
-- [x] بهینه‌سازی سرعت بارگذاری
-- [x] ساختار URL مناسب
-- [x] محتوای متنی بهینه‌شده
-
-## تست و استقرار
-- [x] اصلاح نام از "Yahi" به "Yahay" در تمام صفحات
-- [x] رفع مشکلات فاصله‌گذاری و چیدمان
-- [x] به‌روزرسانی منوی ناوبری در تمام صفحات
-- [x] تست عملکرد در مرورگرهای مختلف
-- [x] تست سازگاری با دستگاه‌های مختلف
-- [x] استقرار نهایی وبسایت
+0. Change Matrix of Courses Page(courses.html) same as Home Page
+1. Developing courses.html from line: 359 Course Section
+2. goto Developing Other pages
+   0. services
+   1. portfolio
+   2. each tool pages
+   3. each courses pages
