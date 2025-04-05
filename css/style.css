@@ -669,6 +669,7 @@ footer {
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
+  overflow-y: auto;
   backdrop-filter: blur(2px);
 }
 
@@ -692,6 +693,7 @@ footer {
   border-bottom: 1px solid var(--accent-green);
   position: relative;
   top: -19px;
+  font-size: 36px;
 }
 
 .terminal-buttons {
@@ -728,17 +730,19 @@ footer {
   opacity: 0.9;
 }
 
+
 .terminal-title-aboutme {
-  font-size: 0.85rem;
+  font-size: 24px;
   color: #eff264;
-  font-weight: bold;
+  font-weight: bolder;
   opacity: 0.9;
 }
 
 .terminal-content {
-  color: var(--accent-green);
-  line-height: 1.5;
-  padding: 15px;
+  font-size: 22px; /* تنظیم فونت متناسب با فضای جدید */
+  font-weight: bold;
+  line-height: 1.8;
+  padding: 10px;
   margin-top: 10px;
 }
 
@@ -755,10 +759,16 @@ footer {
 .terminal-cmd {
   color: var(--accent-green);
   font-weight: bolder;
+  font-size: 22px;
   flex: 1;
 }
 
-.terminal-text {
+.terminal-text{
+  color: var(--accent-green);
+  flex: 1;
+}
+
+.terminal-text-white {
   color: #f1f1f1; /* رنگ سفید برای توضیحات */
   flex: 1;
 }
@@ -770,6 +780,10 @@ footer {
 .terminal-description {
   color: #f1f1f1; /* رنگ سفید برای توضیحات */
   font-weight: normal;
+}
+
+.about-text {
+  margin-bottom: 20px; /* کاهش فاصله زیر ترمینال برای بیشتر دیده شدن */
 }
 
 .typing {
@@ -1198,3 +1212,4 @@ footer {
 /*  from, to { border-color: transparent; }*/
 /*  50% { border-color: var(--accent-green); }*/
 /*}*/
+

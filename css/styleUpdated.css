@@ -68,5 +68,21 @@
 }
 /* Preloader Style End */
 
-/* Style for whoami in terminal Home page */
+/* Style for Fonts */
+.font-title {
+    font-family: 'Vazir', sans-serif;
+    font-weight: bold;
+}
 
+/* برای توضیحات مانند معرفی یا شرح مهارت‌ها */
+.font-description {
+    font-family: 'Shabnam', sans-serif;
+}
+
+.font-description {
+    font-family: 'Shabnam', sans-serif;
+}
+.font-button {
+    font-family: 'Shabnam', sans-serif;
+    font-weight: bolder;
+}

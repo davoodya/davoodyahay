@@ -22,6 +22,25 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Google Farsi Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IranSans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Shabnam&display=swap" rel="stylesheet">
+
+        <!-- Other fonts -->
+        <!-- فونت Vazir برای عنوان‌ها -->
+        <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+
+        <!-- فونت Shabnam برای توضیحات -->
+        <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />
+
+        <!-- فونت YekanBakh برای توضیحات -->
+        <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css" rel="stylesheet" type="text/css" />
+
+        <!-- فونت Sahel برای توضیحات -->
+        <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css" rel="stylesheet" type="text/css" />
+
+
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -46,7 +65,7 @@
                         <h1>DAVOOD<span>_</span>YAHAY</h1>
                     </div>
 
-                    <ul class="nav-links">
+                    <ul class="nav-links font-title">
                         <li><a href="#home">خانه</a></li>
                         <li><a href="#about">درباره من</a></li>
                         <li><a href="#services">خدمات</a></li>
@@ -88,7 +107,7 @@
                             <div class="terminal-line">
                                 <span class="terminal-prompt">> </span>
                                 <span> $ </span>
-                                <span class="terminal-text  typing-effect"
+                                <span class="terminal-text-white  typing-effect font-title"
                                       data-text='[ "داوود یاحی","مشاور و مدرس امنیت سایبری","ایران اصفهان زیبا"]'
                                       data-delay="1900" data-speed="50" data-loop>
                                     داوود یاحی - مشاور و مدرس امنیت سایبری
@@ -98,18 +117,18 @@
                     </div>
 
                     <!-- Main Title in Home Page -->
-                    <h1 class="glitch" data-text="امنیت سایبری، برنامه نویسی، شبکه">
+                    <h1 class="glitch font-title" data-text="امنیت سایبری، برنامه نویسی، شبکه">
                         متخصص <span>شبکه‌های کامپیوتری</span> امنیت سایبری
                     </h1>
 
-                    <p>
+                    <p class="font-description">
                         من داوود یاحی مدرس و مشاور؛<br>
                         با بیش از ۱۰ سال تجربهٔ تخصصی در حوزه‌های امنیت سایبری، برنامه‌نویسی، شبکه‌های کامپیوتری و سیستم‌عامل،
                         در زمینهٔ تدریس دوره های تخصصی ، اجرای پروژه‌های تست نفوذ (Penetration Testing)،
                         امن‌سازی (Hardening) سیستم‌ها و شبکه‌ها، و ارائهٔ مشاورهٔ حرفه‌ای در حوزهٔ
                         امنیت اطلاعات و زیرساخت‌های فناوری فعالیت می‌کنم.
                     </p>
-                    <a href="#contact" class="cta-button">راه های ارتباطی</a>
+                    <a href="#contact" class="cta-button font-button">راه های ارتباطی</a>
                 </div>
             </div>
         </section>
@@ -118,13 +137,13 @@
         <section id="about" class="about">
             <div class="container">
                 <div class="section-title">
-                    <h2>من کی هستم؟</h2>
-                    <p>متخصص امنیت سایبری با بیش از ده سال تجربه عملی و دانشگاهی
+                    <h2 class="font-title">من کی هستم؟</h2>
+                    <p class="font-description">متخصص امنیت سایبری با بیش از ده سال تجربه عملی و دانشگاهی
                         در زمینه‌های امنیت سایبری، شبکه های کامپیوتری، برنامه نویسی، سیستم عامل و فناوری های اطلاعات
                     </p>
                 </div>
 
-                <div class="about-content">
+                <div class="about-content about-text">
                     <div class="row">
                         <div class="about-text slide-right">
                             <div class="terminal">
@@ -139,55 +158,41 @@
                                 <div class="terminal-content">
                                     <div class="terminal-line">
                                         <span class="terminal-prompt">$</span>
-                                        <span class="terminal-cmd typing-effect" data-text="cat profile.txt" data-delay="500" data-speed="100">cat profile.txt</span>
+                                        <span class="terminal-cmd typing-effect" data-text="cat profile.txt"
+                                              data-delay="500" data-speed="100">cat profile.txt</span>
                                     </div>
                                     <div class="terminal-line">
                                         <span class="terminal-text">
-                                            <p><span class="terminal-title-aboutme">برنامه نویسی:</span> <span class="terminal-description">تسلط به زبان‌های مختلف برنامه‌نویسی از جمله Python، C++ و JavaScript. توسعه ابزارهای سفارشی برای حل مشکلات امنیتی و بهینه‌سازی عملکرد سیستم‌ها.</span></p>
-                                            <p><span class="terminal-title-aboutme">شبکه‌های کامپیوتری:</span> <span class="terminal-description">تخصص در طراحی، پیاده‌سازی و مدیریت شبکه‌های ایمن. بررسی آسیب‌پذیری‌ها و مقابله با حملات مختلف به شبکه‌ها.</span></p>
-                                            <p><span class="terminal-title-aboutme">امنیت سایبری:</span> <span class="terminal-description">ارائه مشاوره‌های امنیتی به سازمان‌ها و شرکت‌ها. تحلیل و ارزیابی تهدیدات و محافظت از داده‌ها در برابر حملات سایبری.</span></p>
-                                            <p><span class="terminal-title-aboutme">تست نفوذ:</span> <span class="terminal-description">اجرای تست‌های نفوذ برای شبیه‌سازی حملات و شناسایی آسیب‌پذیری‌ها. ارزیابی سیستم‌ها و شبکه‌ها از نظر امنیتی و ارائه راهکارهای اصلاحی.</span></p>
-                                            <p><span class="terminal-title-aboutme">هوش مصنوعی:</span> <span class="terminal-description">تسلط به مفاهیم و الگوریتم‌های هوش مصنوعی. پیاده‌سازی راه‌حل‌های مبتنی بر هوش مصنوعی برای بهبود امنیت و شناسایی تهدیدات.</span></p>
+                                            <p><span class="terminal-title-aboutme font-title">برنامه نویسی:</span>
+                                                <span class="terminal-description font-description">
+                                                    تسلط به زبان‌های مختلف برنامه‌نویسی از جمله Python، C++ و C# و Rust و VB. توسعه ابزارهای سفارشی برای حل مشکلات امنیتی و بهینه‌سازی عملکرد سیستم‌ها.
+                                                </span></p>
+                                            <p><span class="terminal-title-aboutme font-title">شبکه‌های کامپیوتری:</span>
+                                                <span class="terminal-description font-description">
+                                                    تخصص در طراحی، پیاده‌سازی، مدیریت، عیب یابی و پشتیبانی شبکه‌های ایمن. بررسی آسیب‌پذیری‌ها و مقابله با حملات مختلف به شبکه‌ها و ایمن سازی آنها.
+                                                </span></p>
+                                            <p><span class="terminal-title-aboutme font-title">امنیت سایبری:</span>
+                                                <span class="terminal-description font-description">
+                                                    ارائه مشاوره‌های امنیتی به سازمان‌ها، شرکت‌ها، ارگان ها و افراد. تحلیل و ارزیابی تهدیدات و محافظت از داده‌ها در برابر حملات سایبری.
+                                                </span></p>
+                                            <p><span class="terminal-title-aboutme font-title">تست نفوذ:</span>
+                                                <span class="terminal-description font-description">
+                                                    اجرای تست‌های نفوذ برای شبیه‌سازی حملات ممکن به منظور شناسایی آسیب‌پذیری‌ها و ارزش گذاری دارایی ها. ارزیابی و آنالیز سیستم‌ها، شبکه‌ها و کدهای نرم افزارها از نظر امنیتی و ارائه راهکارهای اصلاحی.
+                                                </span></p>
+                                            <p><span class="terminal-title-aboutme font-title">هوش مصنوعی:</span>
+                                                <span class="terminal-description font-description">
+                                                    تسلط به مفاهیم و الگوریتم‌های هوش مصنوعی. پیاده‌سازی راه‌حل‌های مبتنی بر هوش مصنوعی و ادغام ابزار ها با ابزارهای محیط کارشما برای بهبود عملکرد، هوشمندسازی کارها، تسریع امور و افزایش امنیت و شناسایی تهدیدات بصورت خودکار.
+                                                </span></p>
+                                            <p><span class="terminal-title-aboutme font-title">ربات های معامله گر:</span>
+                                                <span class="terminal-description font-description">
+                                                            طراحی و پیاده‌سازی ربات‌های معامله‌گر مبتنی بر هوش مصنوعی با هدف خودکارسازی فرآیندهای تجاری. این ربات‌ها قادر به تحلیل بازار، شناسایی فرصت‌های معاملاتی و انجام معامله در زمان مناسب صورت خودکار هستند. استفاده از الگوریتم‌های پیشرفته هوش مصنوعی و یادگیری ماشین به منظور بهینه‌سازی تصمیمات و فرصت های تجاری و افزایش بهره‌وری در معاملات.
+                                                </span></p>
                                         </span>
                                     </div>
                                     <!-- old terminal line codes !-->
 <!--                                    <div class="terminal-line">-->
 <!--                                        <span class="terminal-text">هدف من ارتقای سطح امنیت سایبری و آموزش مفاهیم پیشرفته به علاقه‌مندان این حوزه است. با ترکیب دانش تئوری و تجربه عملی، راهکارهای جامع و کاربردی برای چالش‌های امنیتی ارائه می‌دهم.</span>-->
 <!--                                    </div>-->
-                                </div>
-                            </div>
-
-                            <div class="skills">
-                                <h3>مهارت‌های تخصصی</h3>
-                                <div class="skill-item">
-                                    <span>امنیت سایبری</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 95%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span>برنامه نویسی</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 90%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span>شبکه‌های کامپیوتری</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 92%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span>هوش مصنوعی</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 85%;"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <span>تست نفوذ</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 95%;"></div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -452,8 +457,8 @@
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-logo">
-                        <h3>DAVOOD<span>_</span>YAHI</h3>
-                        <p>متخصص امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
+                        <h3>DAVOOD<span>_</span>YAHAY</h3>
+                        <p class="font-title">متخصص امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
 
                         <div class="social-links">
                             <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -463,7 +468,7 @@
                         </div>
                     </div>
 
-                    <div class="footer-links">
+                    <div class="footer-links font-title">
                         <h4>لینک‌های سریع</h4>
                         <ul>
                             <li><a href="#home">خانه</a></li>
@@ -474,7 +479,7 @@
                         </ul>
                     </div>
 
-                    <div class="footer-links">
+                    <div class="footer-links font-title">
                         <h4>خدمات</h4>
                         <ul>
                             <li><a href="#services">امنیت سایبری</a></li>
