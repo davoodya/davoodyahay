@@ -104,23 +104,28 @@ function initMatrix() {
 }
 
 const logoImage = new Image();
-logoImage.src = 'images/favicon2.ico';
+logoImage.src = 'images/davoodya.png';
 
 function drawMatrix() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Draw logo at center (faded)
-    const logoSize = 400;
+    const logoSize = 500;
     // X position for Center of Screen
     // const logoX = canvas.width / 2 - logoSize / 2;
 
     // X position for Left Side
-    const logoX = 270;
+    const logoX = 220;
     const logoY = canvas.height / 2 - logoSize / 2;
-    ctx.globalAlpha = 0.03; // very faint
+
+    // تنظیمات کیفیت و شفافیت
+    ctx.globalAlpha = 1.0; // شفافیت کامل
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+
     ctx.drawImage(logoImage, logoX, logoY, logoSize, logoSize);
-    ctx.globalAlpha = 1;
+
 
     ctx.fillStyle = '#00ff41';
     ctx.font = `${fontSize}px monospace`;
