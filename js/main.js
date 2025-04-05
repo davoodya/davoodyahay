@@ -182,40 +182,56 @@ function advancedTypingEffect() {
     const elements = document.querySelectorAll('.typing-effect');
 
     elements.forEach(element => {
-        const fullText = element.getAttribute('data-text') || '';
+        let texts = element.getAttribute('data-text') || '';
+        let textArray;
+
+        // بررسی آرایه بودن یا تک رشته
+        try {
+            textArray = JSON.parse(texts);
+            if (!Array.isArray(textArray)) textArray = [texts];
+        } catch (e) {
+            textArray = [texts];
+        }
+
         const delay = parseInt(element.getAttribute('data-delay') || '1000', 10);
         const speed = parseInt(element.getAttribute('data-speed') || '100', 10);
         const loop = element.hasAttribute('data-loop');
 
-        let index = 0;
+        let currentTextIndex = 0;
+        let charIndex = 0;
         let isDeleting = false;
 
         function type() {
-            const current = fullText.substring(0, index);
+            const fullText = textArray[currentTextIndex];
+            const current = fullText.substring(0, charIndex);
             element.textContent = current;
 
-            if (!isDeleting && index < fullText.length) {
-                index++;
+            if (!isDeleting && charIndex < fullText.length) {
+                charIndex++;
                 setTimeout(type, speed);
-            } else if (isDeleting && index > 0) {
-                index--;
+            } else if (isDeleting && charIndex > 0) {
+                charIndex--;
                 setTimeout(type, speed / 2);
-            } else if (!isDeleting && index === fullText.length) {
-                if (loop) {
-                    setTimeout(() => {
-                        isDeleting = true;
-                        type();
-                    }, delay);
+            } else {
+                if (!isDeleting && charIndex === fullText.length) {
+                    if (loop) {
+                        setTimeout(() => {
+                            isDeleting = true;
+                            type();
+                        }, delay);
+                    }
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    currentTextIndex = (currentTextIndex + 1) % textArray.length;
+                    setTimeout(type, delay);
                 }
-            } else if (isDeleting && index === 0) {
-                isDeleting = false;
-                setTimeout(type, delay);
             }
         }
 
         setTimeout(type, delay);
     });
 }
+
 
 
 /* Scroll Animations */
