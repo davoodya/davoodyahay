@@ -73,6 +73,9 @@
     font-family: 'Vazir', sans-serif;
     font-weight: bold;
 }
+label.font-title{
+    color: #00ff41;
+}
 
 /* برای توضیحات مانند معرفی یا شرح مهارت‌ها */
 .font-description {
@@ -85,4 +88,12 @@
 .font-button {
     font-family: 'Shabnam', sans-serif;
     font-weight: bolder;
+}
+
+.padding-5px {
+    padding: 5px;
+}
+
+.padding-10px {
+    padding: 10px;
 }

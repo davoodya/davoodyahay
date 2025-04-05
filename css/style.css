@@ -520,6 +520,10 @@ textarea.form-control {
   min-height: 120px;
 }
 
+input.form-control{
+  color: #0a0a0a;
+}
+
 .submit-btn {
   background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
   color: var(--darker-bg);
@@ -621,8 +625,8 @@ footer {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 50px;
+  right: 0;
+  width: 120px;
   height: 2px;
   background-color: var(--accent-green);
 }
