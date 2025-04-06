@@ -41,7 +41,8 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/style-index.css">
+    <!--    <link rel="stylesheet" href="../css/style-index.css">-->
+    <link rel="stylesheet" href="../css/style-courses.css">
     
     <style>
         .courses-section {
@@ -356,12 +357,12 @@
         </div>
     </section>
     
-    <!-- Courses Section -->
+    <!-- Courses Section - checked -->
     <section class="courses-section">
         <div class="container">
             <div class="section-title">
                 <h2 class="font-title">دوره‌های آموزشی</h2>
-                <p class="font-description">دوره‌های تخصصی در زمینه امنیت سایبری، شبکه، لینوکس و مجازی‌سازی برای تمام سطوح از مبتدی تا پیشرفته</p>
+                <p class="font-description">دوره‌های تخصصی در زمینه های امنیت سایبری، شبکه، برنامه نویسی، لینوکس، مجازی‌سازی و ... برای تمام سطوح از مبتدی تا پیشرفته</p>
             </div>
 
             <!-- Course Filters - checked -->
@@ -375,154 +376,184 @@
                 <button class="filter-btn font-button" data-filter="virtualization">مجازی‌سازی</button>
             </div>
             
-
+            <!-- Courses Cards - checked -->
             <div class="courses-container">
-                <!-- Course 1 -->
+                <!-- Course 1 - Network+ -->
                 <div class="course-card" data-category="free network security">
                     <div class="course-image">
                         <img src="https://via.placeholder.com/350x200/0a0a0a/00ff41?text=Network+" alt="دوره شبکه Network+">
                         <span class="course-badge">رایگان</span>
                     </div>
                     <div class="course-content">
-                        <h3>دوره شبکه Network+</h3>
-                        <p>آموزش جامع مفاهیم شبکه مطابق با سرفصل‌های Network+ که بخشی از دوره کلی CEH++ می‌باشد.</p>
+                        <h3 class="font-title">دوره شبکه Network+</h3>
+                        <p class="font-description">آموزش جامع مفاهیم شبکه مطابق با سرفصل‌های Network+ که بخشی از دوره کلی CEH++ می‌باشد.</p>
                         <div class="course-meta">
                             <div class="course-meta-item">
                                 <i class="fas fa-video"></i>
-                                <span>۲۵ ویدیو</span>
+                                <span class="font-badges">۲۵ ویدیو</span>
                             </div>
                             <div class="course-meta-item">
                                 <i class="fas fa-clock"></i>
-                                <span>۱۵ ساعت</span>
+                                <span class="font-badges">۱۵ ساعت</span>
                             </div>
                             <div class="course-meta-item">
                                 <i class="fas fa-signal"></i>
-                                <span>متوسط</span>
+                                <span class="font-badges">متوسط</span>
                             </div>
                         </div>
                         <div class="course-actions">
-                            <a href="courses/network-plus.html" class="course-btn">مشاهده جزئیات</a>
-                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUIqGE-eiEekWpzQdXphmKQq" target="_blank" class="course-btn youtube">مشاهده در یوتیوب</a>
+                            <a href="courses/network-plus.html" class="course-btn font-button">مشاهده جزئیات</a>
+                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUIqGE-eiEekWpzQdXphmKQq" target="_blank" class="course-btn youtube font-button">مشاهده در یوتیوب</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Course 2 -->
+                <!-- Mini Course 2 - Virtualization -->
                 <div class="course-card" data-category="free virtualization">
                     <div class="course-image">
                         <img src="https://via.placeholder.com/350x200/0a0a0a/00ff41?text=Virtualization" alt="مینی دوره مجازی سازی">
                         <span class="course-badge">رایگان</span>
                     </div>
                     <div class="course-content">
-                        <h3>مینی دوره مجازی سازی</h3>
-                        <p>آموزش مفاهیم مجازی‌سازی و پیاده‌سازی آن که بخشی از دوره کلی CEH++ می‌باشد.</p>
+                        <h3 class="font-title">مینی دوره مجازی سازی</h3>
+                        <p class="font-description">آموزش مفاهیم مجازی‌سازی و پیاده‌سازی آن که بخشی از دوره کلی CEH++ می‌باشد.</p>
                         <div class="course-meta">
                             <div class="course-meta-item">
                                 <i class="fas fa-video"></i>
-                                <span>۱۲ ویدیو</span>
+                                <span class="font-badges">۱۲ ویدیو</span>
                             </div>
                             <div class="course-meta-item">
                                 <i class="fas fa-clock"></i>
-                                <span>۸ ساعت</span>
+                                <span class="font-badges">۸ ساعت</span>
                             </div>
                             <div class="course-meta-item">
                                 <i class="fas fa-signal"></i>
-                                <span>متوسط</span>
+                                <span class="font-badges">متوسط</span>
                             </div>
                         </div>
                         <div class="course-actions">
-                            <a href="courses/virtualization.html" class="course-btn">مشاهده جزئیات</a>
-                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUL1jVCLqt4u9HdQ1Z9SpCEb" target="_blank" class="course-btn youtube">مشاهده در یوتیوب</a>
+                            <a href="courses/virtualization.html" class="course-btn font-button">مشاهده جزئیات</a>
+                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUL1jVCLqt4u9HdQ1Z9SpCEb" target="_blank" class="course-btn youtube font-button">مشاهده در یوتیوب</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Course 3 -->
+                <!-- Course 3 - Linux Lpic 1 -->
                 <div class="course-card" data-category="free linux">
                     <div class="course-image">
                         <img src="https://via.placeholder.com/350x200/0a0a0a/00ff41?text=Linux+LPIC1" alt="دوره لینوکس الپیک 1">
                         <span class="course-badge">رایگان</span>
                     </div>
                     <div class="course-content">
-                        <h3>دوره لینوکس الپیک 1</h3>
-                        <p>آموزش جامع لینوکس مطابق با سرفصل‌های LPIC-1 که بخشی از دوره کلی CEH++ می‌باشد.</p>
+                        <h3 class="font-title">دوره لینوکس الپیک 1</h3>
+                        <p class="font-description">آموزش جامع لینوکس مطابق با سرفصل‌های LPIC-1 که بخشی از دوره کلی CEH++ می‌باشد.</p>
                         <div class="course-meta">
                             <div class="course-meta-item">
                                 <i class="fas fa-video"></i>
-                                <span>۳۰ ویدیو</span>
+                                <span class="font-badges">۳۰ ویدیو</span>
                             </div>
                             <div class="course-meta-item">
                                 <i class="fas fa-clock"></i>
-                                <span>۲۰ ساعت</span>
+                                <span class="font-badges">۲۰ ساعت</span>
                             </div>
                             <div class="course-meta-item">
                                 <i class="fas fa-signal"></i>
-                                <span>متوسط</span>
+                                <span class="font-badges">متوسط</span>
                             </div>
                         </div>
                         <div class="course-actions">
-                            <a href="courses/linux-lpic1.html" class="course-btn">مشاهده جزئیات</a>
-                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="course-btn youtube">مشاهده در یوتیوب</a>
+                            <a href="courses/linux-lpic1.html" class="course-btn font-button">مشاهده جزئیات</a>
+                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUJxO5mizjego3HDUHSh6LuQ" target="_blank" class="course-btn youtube font-button">مشاهده در یوتیوب</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Course 4 -->
+                <!-- Course 4 - CEH++ Pre-Requires -->
                 <div class="course-card" data-category="free security network linux virtualization">
                     <div class="course-image">
                         <img src="https://via.placeholder.com/350x200/0a0a0a/00ff41?text=CEH++" alt="دوره CEH++ کامل">
                         <span class="course-badge">رایگان</span>
                     </div>
                     <div class="course-content">
-                        <h3>دوره CEH++ کامل</h3>
-                        <p>دوره جامع هک قانونی شامل مباحث شبکه، لینوکس، مجازی‌سازی و امنیت سایبری.</p>
+                        <h3 class="font-title">پیش نیازهای دوره دوره CEH++ کامل</h3>
+                        <p class="font-description">دوره جامع هک قانونی شامل مباحث شبکه، لینوکس، مجازی‌سازی و امنیت سایبری.</p>
                         <div class="course-meta">
                             <div class="course-meta-item">
                                 <i class="fas fa-video"></i>
-                                <span>۱۰۰+ ویدیو</span>
+                                <span class="font-badges">۱۰۰+ ویدیو</span>
                             </div>
                             <div class="course-meta-item">
                                 <i class="fas fa-clock"></i>
-                                <span>۶۰+ ساعت</span>
+                                <span class="font-badges">۶۰+ ساعت</span>
                             </div>
                             <div class="course-meta-item">
                                 <i class="fas fa-signal"></i>
-                                <span>پیشرفته</span>
+                                <span class="font-badges">مبتدی تا پیشرفته</span>
                             </div>
                         </div>
                         <div class="course-actions">
-                            <a href="courses/ceh-plus-plus.html" class="course-btn">مشاهده جزئیات</a>
-                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUIhsVRW9XUfijKsYaPR3hZC" target="_blank" class="course-btn youtube">مشاهده در یوتیوب</a>
+                            <a href="courses/ceh-plus-plus.html" class="course-btn font-button">مشاهده جزئیات</a>
+                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmUIhsVRW9XUfijKsYaPR3hZC" target="_blank" class="course-btn youtube font-button">مشاهده در یوتیوب</a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Course 5 -->
+
+                <!-- Course 5 - CEH Beginner -->
                 <div class="course-card" data-category="premium security">
                     <div class="course-image">
                         <img src="https://via.placeholder.com/350x200/0a0a0a/ff9900?text=Advanced+CEH" alt="دوره CEH پیشرفته">
-                        <span class="course-badge premium">غیر رایگان</span>
+                        <span class="course-badge premium">غیر رایگان - انتشار جدید</span>
                     </div>
                     <div class="course-content">
-                        <h3>دوره CEH پیشرفته</h3>
-                        <p>دوره پیشرفته هک قانونی با تمرکز بر تکنیک‌های پیشرفته تست نفوذ و امنیت سایبری.</p>
+                        <h3 class="font-title">دوره CEH مقدماتی تا متوسط</h3>
+                        <p class="font-description">دوره پیشرفته هک قانونی با تمرکز بر روی جمع آوری اطلاعات، یافتن آسیب پذیری ها و بهره برداری از آنها</p>
                         <div class="course-meta">
                             <div class="course-meta-item">
                                 <i class="fas fa-video"></i>
-                                <span>۵۰+ ویدیو</span>
+                                <span class="font-badges">۵۰+ ویدیو</span>
                             </div>
                             <div class="course-meta-item">
                                 <i class="fas fa-clock"></i>
-                                <span>۴۰+ ساعت</span>
+                                <span class="font-badges">۴۰+ ساعت</span>
                             </div>
                             <div class="course-meta-item">
                                 <i class="fas fa-signal"></i>
-                                <span>پیشرفته</span>
+                                <span class="font-badges">مبتدی تا متوسط</span>
                             </div>
                         </div>
                         <div class="course-actions">
-                            <a href="courses/advanced-ceh.html" class="course-btn">مشاهده جزئیات</a>
-                            <a href="#" class="course-btn youtube">بزودی</a>
+                            <a href="courses/advanced-ceh.html" class="course-btn font-button">مشاهده جزئیات</a>
+                            <a href="https://www.youtube.com/playlist?list=PL9wbLtw4qmULfXUjurxWwLvs34RWCh3oM" class="course-btn youtube font-button">مشاهده در یوتیوب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 6 - CEH Advanced -->
+                <div class="course-card" data-category="premium security">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/350x200/0a0a0a/ff9900?text=Advanced+CEH" alt="دوره CEH پیشرفته">
+                        <span class="course-badge premium">غیر رایگان - در دست ضبط</span>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="font-title">دوره CEH پیشرفته</h3>
+                        <p class="font-description">دوره پیشرفته هک قانونی با تمرکز بر تکنیک‌های پیشرفته تست نفوذ و امنیت سایبری.</p>
+                        <div class="course-meta">
+                            <div class="course-meta-item">
+                                <i class="fas fa-video"></i>
+                                <span class="font-badges">۵۰+ ویدیو</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span class="font-badges">۴۰+ ساعت</span>
+                            </div>
+                            <div class="course-meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span class="font-badges">پیشرفته</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <a href="courses/advanced-ceh.html" class="course-btn font-button">مشاهده جزئیات</a>
+                            <a href="#" class="course-btn youtube font-button">بزودی</a>
                         </div>
                     </div>
                 </div>
@@ -534,9 +565,9 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content text-center">
-                <h2>آماده یادگیری هستید؟</h2>
-                <p>برای مشاوره رایگان در مورد دوره‌های آموزشی و مسیر یادگیری مناسب با من در تماس باشید.</p>
-                <a href="../index.html#contact" class="cta-button">تماس با من</a>
+                <h1 class="font-title2">آماده یادگیری هستید؟</h1>
+                <h3 class="font-description2">برای مشاوره رایگان در مورد انتخاب دوره‌های آموزشی و مشخص کردن مسیر یادگیری و نقشه راه مناسب با من در تماس باشید.</h3>
+                <a href="../index.html#contact" class="cta-button font-button2" style="margin-top: 25px">تماس با من</a>
             </div>
         </div>
     </section>
