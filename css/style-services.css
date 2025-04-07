@@ -147,12 +147,15 @@
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
+    /*transition: max-height 0.5s ease, opacity 0.5s ease;*/
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
 }
 
 .service-detail.active .service-detail-content {
     max-height: 1000px; /* مقدار بالا برای باز شدن کامل */
     opacity: 1;
+    transform: translateY(0);
 }
 
 
