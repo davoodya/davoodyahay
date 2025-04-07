@@ -133,12 +133,16 @@
     font-size: 1.8rem;
     color: var(--accent-green);
     margin-bottom: 5px;
+    font-family: Vazir, sans-serif;
+    font-weight: bold;
 }
 
 .service-detail-title p {
     color: var(--main-text);
     opacity: 0.8;
     font-size: 1rem;
+    font-family: Shabnam, sans-serif;
+    font-weight: bold;
 }
 
 .service-detail-content {
@@ -158,6 +162,18 @@
     transform: translateY(0);
 }
 
+.service-detail-content p {
+    font-family: Shabnam, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.service-detail-content li {
+    font-family: Shabnam, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fdffb5;
+
+}
 
 .toggle-arrow {
     margin-right: auto;
