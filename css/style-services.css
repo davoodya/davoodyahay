@@ -1,0 +1,176 @@
+/* Original CSS Styles move from HTML<Style> Codes */
+.service-detail {
+    background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-detail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 65, 0.2);
+}
+
+.service-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 255, 65, 0.05), rgba(0, 119, 255, 0.05));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-detail:hover::before {
+    opacity: 1;
+}
+
+.service-detail-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.service-detail-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 255, 65, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    color: var(--accent-green);
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-detail:hover .service-detail-icon {
+    transform: rotateY(180deg);
+    background-color: var(--accent-green);
+    color: var(--darker-bg);
+}
+
+.service-detail-title h3 {
+    font-size: 1.8rem;
+    color: var(--accent-green);
+    margin-bottom: 5px;
+}
+
+.service-detail-title p {
+    color: var(--main-text);
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+.service-detail-content {
+    color: var(--main-text);
+    line-height: 1.8;
+}
+
+.service-detail-content p {
+    margin-bottom: 15px;
+}
+
+.service-detail-content ul {
+    list-style-type: none;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+
+.service-detail-content ul li {
+    position: relative;
+    padding-right: 25px;
+    margin-bottom: 10px;
+}
+
+.service-detail-content ul li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 0;
+    color: var(--accent-green);
+}
+
+.page-header {
+    height: 40vh;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--darker-bg);
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 119, 255, 0.1));
+    z-index: 0;
+}
+
+.page-header-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.page-header-content h1 {
+    font-size: 3rem;
+    color: var(--accent-green);
+    margin-bottom: 15px;
+    text-shadow: var(--glow-shadow);
+}
+
+.page-header-content p {
+    font-size: 1.2rem;
+    color: var(--main-text);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.breadcrumb a {
+    color: var(--main-text);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    opacity: 1;
+    color: var(--accent-green);
+}
+
+.breadcrumb span {
+    margin: 0 10px;
+    color: var(--main-text);
+    opacity: 0.5;
+}
+
+.breadcrumb .active {
+    color: var(--accent-green);
+    opacity: 1;
+}
+
+
+/* New Styles for services Page */
+
