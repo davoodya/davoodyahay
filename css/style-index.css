@@ -128,7 +128,7 @@ label.font-title {
     justify-content: center;
     padding: 15px 25px;
     background: linear-gradient(45deg, #00a82d, #00ff6a);
-    color: white;
+    color: black;
     font-family: Shabnam, sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -156,6 +156,9 @@ label.font-title {
     margin-top: 20px;
     color: var(--accent-orange);
 }
+.Orange {
+    color:var(--accent-orange);
+}
 .btn-icon:hover {
     color: var(--accent-orange);
 }
@@ -177,7 +180,7 @@ label.font-title {
     0 0 15px rgba(255, 165, 0, 0.9); /* Changed to orange glow on hover */
 }
 a.btn-magic:hover {
-    color: black;
+    color: white;
 }
 
 
