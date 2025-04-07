@@ -144,6 +144,27 @@
 .service-detail-content {
     color: var(--main-text);
     line-height: 1.8;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.service-detail.active .service-detail-content {
+    max-height: 1000px; /* مقدار بالا برای باز شدن کامل */
+    opacity: 1;
+}
+
+
+.toggle-arrow {
+    margin-right: auto;
+    font-size: 1.2rem;
+    color: var(--accent-green);
+    transition: transform 0.3s ease;
+}
+
+.service-detail.active .toggle-arrow {
+    transform: rotate(180deg);
 }
 
 .service-detail-content p {
