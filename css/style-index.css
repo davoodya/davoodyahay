@@ -151,7 +151,7 @@ label.font-title {
 .btn-icon {
     font-size: 1.2rem;
     transition: transform 0.3s ease;
-    order: -1; /* This will place the icon before other elements */
+    order: 1; /* This will place the icon before other elements */
     margin-right: 8px; /* Add some space between icon and text */
     margin-top: 20px;
     color: var(--accent-orange);
