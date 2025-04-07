@@ -480,6 +480,7 @@ section {
 .section-title h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
+  font-family: Shabnam, sans-serif;
   animation: text-glow 3s ease-in-out infinite alternate;
   position: relative;
   display: inline-block;
@@ -509,6 +510,7 @@ section {
 .section-title p {
   color: var(--main-text);
   font-size: 1.1rem;
+  font-family: Shabnam, sans-serif;
   max-width: 700px;
   margin: 0 auto;
   opacity: 0.8;

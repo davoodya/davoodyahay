@@ -1,3 +1,19 @@
+:root {
+    --dark-bg: #0a0a0a;
+    --darker-bg: #050505;
+    --main-text: #e0e0e0;
+    --accent-green: #00ff41;
+    --accent-blue: #0077ff;
+    --accent-orange: #ff7700;
+    --glow-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
+    --terminal-font: 'Fira Code', 'Courier New', monospace;
+    --content-font: 'Rajdhani', 'Segoe UI', sans-serif;
+    --Shabnam: 'Shabnam', sans-serif;
+    --Vazir: 'Vazir', sans-serif;
+    --Consolas: 'Consolas', 'Courier New', monospace;
+}
+
+
 /* Preloader Style Start */
 /* Preloader Container */
 .preloader {
@@ -166,10 +182,12 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+
 }
 
 .portfolio-content h3 {
     font-size: 1.5rem;
+    font-family: var(--Consolas);
     margin-bottom: 15px;
     color: var(--accent-green);
 }
@@ -177,6 +195,7 @@
 .portfolio-content p {
     color: var(--main-text);
     opacity: 0.8;
+    font-family: Shabnam, sans-serif;
     margin-bottom: 20px;
     flex: 1;
 }
@@ -188,6 +207,7 @@
 .portfolio-tech span {
     display: inline-block;
     background-color: rgba(0, 255, 65, 0.1);
+    font-family: var(--terminal-font);
     color: var(--accent-green);
     padding: 5px 10px;
     border-radius: 5px;
@@ -296,6 +316,7 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 30px;
+
 }
 
 .filter-btn {
@@ -304,6 +325,8 @@
     border: 1px solid rgba(0, 255, 65, 0.2);
     padding: 8px 20px;
     margin: 5px;
+    font-family: Shabnam, sans-serif;
+    font-size: 1.2rem;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -311,5 +334,7 @@
 
 .filter-btn:hover, .filter-btn.active {
     background-color: var(--accent-green);
+    font-size: 1.6rem;
+    font-weight: bold;
     color: var(--darker-bg);
 }
