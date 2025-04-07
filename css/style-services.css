@@ -242,6 +242,31 @@
     opacity: 1;
 }
 
+/*Fonts Styles*/
+/* Style for Fonts */
+.font-title-service {
+    font-family: 'Vazir', sans-serif;
+    font-weight: bold;
+}
+
+/* برای توضیحات مانند معرفی یا شرح مهارت‌ها */
+.font-description-service {
+    font-family: 'Shabnam', sans-serif;
+}
+
+.font-button-service {
+    font-family: 'Shabnam', sans-serif;
+    font-weight: bold;
+}
+
+.padding-5px {
+    padding: 5px;
+}
+
+.padding-10px {
+    padding: 10px;
+}
+
 
 /* New Styles for services Page */
 
