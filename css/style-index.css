@@ -69,20 +69,20 @@
 /* Preloader Style End */
 
 /* Style for Fonts */
-.font-title-course {
+.font-title {
     font-family: 'Vazir', sans-serif;
     font-weight: bold;
 }
-label.font-title-course{
+label.font-title {
     color: #00ff41;
 }
 
 /* برای توضیحات مانند معرفی یا شرح مهارت‌ها */
-.font-description-course {
+.font-description {
     font-family: 'Shabnam', sans-serif;
 }
 
-.font-button-course {
+.font-button {
     font-family: 'Shabnam', sans-serif;
     font-weight: bold;
 }
