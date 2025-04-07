@@ -259,6 +259,15 @@ a.btn-magic:hover {
 .btn-pulse {
     animation: pulse 2s infinite;
 }
+.btn-simple-github {
+    margin-top: 15px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+}
 
 .btn-simple {
     margin-top: 15px;
@@ -290,3 +299,50 @@ a.btn-magic:hover {
     align-items: center;
 }
 /* End: style for Goto Services page  */
+
+.cta-button-card {
+    display: inline-block;
+    align-self: center;
+    font-family: Shabnam, sans-serif;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
+    color: var(--darker-bg);
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--glow-shadow);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease; /* اضافه شده برای افکت‌ها */
+}
+
+/* استایل‌های hover و active را حفظ کنید */
+.cta-button-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 168, 45, 0.4);
+}
+
+.cta-button-card:active {
+    transform: translateY(1px);
+}
+
+/* افکت پس‌زمینه متحرک */
+.cta-button-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--accent-blue), var(--accent-green));
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.cta-button-card:hover::before {
+    left: 0;
+}
