@@ -7,9 +7,9 @@
     <meta name="keywords" content="امنیت سایبری, پایتون, اسکریپت, تست نفوذ, هک قانونی, اسکن آسیب‌پذیری">
     <meta name="author" content="داوود یاحی">
     <meta name="robots" content="index, follow">
-    
+
     <title>Python in Black Scripts | داوود یاحی</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
     
@@ -20,352 +20,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
+    <!-- Other fonts -->
+    <!-- فونت Vazir برای عنوان‌ها -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Shabnam برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت YekanBakh برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Sahel برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css" rel="stylesheet" type="text/css" />
+
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/style.css">
-    
-    <style>
-        .tool-detail {
-            padding: 100px 0;
-        }
-        
-        .tool-header {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 50px;
-        }
-        
-        .tool-icon {
-            width: 120px;
-            height: 120px;
-            background-color: rgba(0, 255, 65, 0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 30px;
-            color: var(--accent-green);
-            font-size: 3rem;
-            flex-shrink: 0;
-        }
-        
-        .tool-title h1 {
-            font-size: 2.5rem;
-            color: var(--accent-green);
-            margin-bottom: 10px;
-            text-shadow: var(--glow-shadow);
-        }
-        
-        .tool-title p {
-            color: var(--main-text);
-            opacity: 0.8;
-            font-size: 1.1rem;
-        }
-        
-        .tool-links {
-            display: flex;
-            margin-top: 15px;
-        }
-        
-        .tool-links a {
-            display: inline-flex;
-            align-items: center;
-            color: var(--accent-blue);
-            text-decoration: none;
-            margin-left: 20px;
-            transition: color 0.3s ease;
-        }
-        
-        .tool-links a:hover {
-            color: var(--accent-green);
-        }
-        
-        .tool-links a i {
-            margin-left: 5px;
-        }
-        
-        .tool-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-        
-        .tool-description {
-            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            border-radius: 10px;
-            padding: 30px;
-        }
-        
-        .tool-description h2 {
-            font-size: 1.8rem;
-            color: var(--accent-green);
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .tool-description h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent-green);
-        }
-        
-        .tool-description p {
-            color: var(--main-text);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        .tool-description ul {
-            list-style-type: none;
-            padding-right: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .tool-description ul li {
-            position: relative;
-            padding-right: 25px;
-            margin-bottom: 10px;
-            color: var(--main-text);
-        }
-        
-        .tool-description ul li::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            position: absolute;
-            right: 0;
-            color: var(--accent-green);
-        }
-        
-        .tool-description pre {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            border-radius: 5px;
-            padding: 15px;
-            overflow-x: auto;
-            margin-bottom: 20px;
-            font-family: var(--terminal-font);
-            color: var(--accent-green);
-        }
-        
-        .tool-description code {
-            font-family: var(--terminal-font);
-            color: var(--accent-green);
-        }
-        
-        .tool-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        
-        .tool-info, .tool-tech, .tool-related {
-            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            border-radius: 10px;
-            padding: 25px;
-        }
-        
-        .tool-info h3, .tool-tech h3, .tool-related h3 {
-            font-size: 1.5rem;
-            color: var(--accent-green);
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .tool-info h3::after, .tool-tech h3::after, .tool-related h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--accent-green);
-        }
-        
-        .tool-info-item {
-            display: flex;
-            margin-bottom: 15px;
-        }
-        
-        .tool-info-item i {
-            color: var(--accent-green);
-            margin-left: 10px;
-            width: 20px;
-            text-align: center;
-        }
-        
-        .tool-info-item span {
-            color: var(--main-text);
-        }
-        
-        .tool-tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .tool-tech-tags span {
-            display: inline-block;
-            background-color: rgba(0, 255, 65, 0.1);
-            color: var(--accent-green);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            margin-left: 5px;
-            margin-bottom: 5px;
-        }
-        
-        .tool-related-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .tool-related-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        
-        .tool-related-icon {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(0, 255, 65, 0.1);
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 15px;
-            color: var(--accent-green);
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-        
-        .tool-related-info h4 {
-            font-size: 1rem;
-            color: var(--main-text);
-            margin-bottom: 5px;
-        }
-        
-        .tool-related-info a {
-            color: var(--accent-blue);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-        
-        .tool-related-info a:hover {
-            color: var(--accent-green);
-        }
-        
-        .page-header {
-            height: 40vh;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            background-color: var(--darker-bg);
-        }
-        
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 119, 255, 0.1));
-            z-index: 0;
-        }
-        
-        .page-header-content {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .page-header-content h1 {
-            font-size: 3rem;
-            color: var(--accent-green);
-            margin-bottom: 15px;
-            text-shadow: var(--glow-shadow);
-        }
-        
-        .page-header-content p {
-            font-size: 1.2rem;
-            color: var(--main-text);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .breadcrumb {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .breadcrumb a {
-            color: var(--main-text);
-            text-decoration: none;
-            opacity: 0.7;
-            transition: opacity 0.3s ease, color 0.3s ease;
-        }
-        
-        .breadcrumb a:hover {
-            opacity: 1;
-            color: var(--accent-green);
-        }
-        
-        .breadcrumb span {
-            margin: 0 10px;
-            color: var(--main-text);
-            opacity: 0.5;
-        }
-        
-        .breadcrumb .active {
-            color: var(--accent-green);
-            opacity: 1;
-        }
-        
-        @media (max-width: 992px) {
-            .tool-content {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .tool-header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            
-            .tool-icon {
-                margin-left: 0;
-                margin-bottom: 20px;
-            }
-            
-            .tool-links {
-                justify-content: center;
-            }
-        }
-    </style>
+<!--    <link rel="stylesheet" href="../../css/courses/netplus.css">-->
+    <link rel="stylesheet" href="../../css/tools/backdoor.css">
+
 </head>
 <body>
-    <!-- Preloader -->
+<!-- Preloader - Updated Element - checked -->
     <div class="preloader">
-        <div class="loader"></div>
+        <div class="spinner">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
     </div>
     
     <!-- Header -->
@@ -393,13 +76,13 @@
     </header>
     
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header contact">
         <canvas id="matrix-canvas" class="matrix-animation"></canvas>
         <div class="container">
             <div class="page-header-content">
                 <h1>Python in Black Scripts</h1>
                 <p>مجموعه‌ای از اسکریپت‌های پایتون برای عملیات امنیتی و تست نفوذ</p>
-                
+
                 <div class="breadcrumb">
                     <a href="../../index.html">خانه</a>
                     <span>/</span>
@@ -418,28 +101,28 @@
                 <div class="tool-icon">
                     <i class="fab fa-python"></i>
                 </div>
-                
+
                 <div class="tool-title">
                     <h1>Python in Black Scripts</h1>
                     <p>مجموعه‌ای از اسکریپت‌های پایتون برای عملیات امنیتی و تست نفوذ که شامل ابزارهای متنوع برای اسکن، استخراج اطلاعات و تست آسیب‌پذیری‌ها است.</p>
-                    
+
                     <div class="tool-links">
                         <a href="https://github.com/davoodya/pythonInBlack" target="_blank"><i class="fab fa-github"></i> مشاهده در گیت‌هاب</a>
                         <a href="#"><i class="fas fa-download"></i> دانلود مستندات</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="tool-content">
                 <div class="tool-description">
                     <h2>معرفی</h2>
                     <p>Python in Black Scripts مجموعه‌ای از اسکریپت‌های پایتون است که برای عملیات امنیتی و تست نفوذ قانونی توسعه داده شده است. این مجموعه شامل ابزارهای متنوعی برای اسکن، استخراج اطلاعات، تست آسیب‌پذیری‌ها و سایر فعالیت‌های مرتبط با امنیت سایبری است.</p>
-                    
+
                     <p>این مجموعه با هدف ارائه ابزارهای کاربردی و قدرتمند برای متخصصان امنیت سایبری و تست نفوذ توسعه داده شده است و به آن‌ها کمک می‌کند تا فرآیندهای امنیتی را به صورت خودکار انجام دهند و کارایی خود را افزایش دهند.</p>
-                    
+
                     <h2>دسته‌بندی اسکریپت‌ها</h2>
                     <p>اسکریپت‌های موجود در این مجموعه در دسته‌بندی‌های زیر قرار می‌گیرند:</p>
-                    
+
                     <ul>
                         <li><strong>اسکن و شناسایی:</strong> ابزارهایی برای اسکن شبکه، شناسایی سیستم‌ها و سرویس‌ها</li>
                         <li><strong>استخراج اطلاعات:</strong> ابزارهایی برای جمع‌آوری اطلاعات از منابع مختلف</li>
@@ -448,45 +131,45 @@
                         <li><strong>پس از نفوذ:</strong> ابزارهایی برای فعالیت‌های پس از نفوذ</li>
                         <li><strong>تحلیل و گزارش:</strong> ابزارهایی برای تحلیل داده‌ها و تولید گزارش‌ها</li>
                     </ul>
-                    
+
                     <h2>اسکریپت‌های اصلی</h2>
                     <p>برخی از اسکریپت‌های اصلی موجود در این مجموعه عبارتند از:</p>
-                    
+
                     <h3>1. NetScanner</h3>
                     <p>ابزاری قدرتمند برای اسکن شبکه و شناسایی سیستم‌ها، سرویس‌ها و پورت‌های باز. این ابزار از تکنیک‌های مختلف اسکن استفاده می‌کند و قابلیت تشخیص سیستم عامل و نسخه سرویس‌ها را نیز دارد.</p>
-                    
+
                     <pre><code>python netscanner.py --target 192.168.1.0/24 --ports 1-1000 --os-detection</code></pre>
-                    
+
                     <h3>2. WebVulnScanner</h3>
                     <p>ابزاری برای اسکن آسیب‌پذیری‌های وب‌سایت‌ها و برنامه‌های تحت وب. این ابزار قادر به شناسایی آسیب‌پذیری‌های رایج مانند SQL Injection، XSS، CSRF و غیره است.</p>
-                    
+
                     <pre><code>python webvulnscanner.py --url https://example.com --crawl --xss --sqli --csrf</code></pre>
-                    
+
                     <h3>3. InfoGatherer</h3>
                     <p>ابزاری برای جمع‌آوری اطلاعات از منابع مختلف مانند DNS، Whois، شبکه‌های اجتماعی و موتورهای جستجو. این ابزار به شناسایی اطلاعات مرتبط با یک دامنه یا سازمان کمک می‌کند.</p>
-                    
+
                     <pre><code>python infogatherer.py --domain example.com --whois --dns --social --search</code></pre>
-                    
+
                     <h3>4. PacketSniffer</h3>
                     <p>ابزاری برای شنود و تحلیل ترافیک شبکه. این ابزار قادر به ضبط و تحلیل بسته‌های شبکه و استخراج اطلاعات مفید از آن‌ها است.</p>
-                    
+
                     <pre><code>python packetsniffer.py --interface eth0 --filter "port 80" --output capture.pcap</code></pre>
-                    
+
                     <h3>5. PasswordAnalyzer</h3>
                     <p>ابزاری برای تحلیل و ارزیابی امنیت رمزهای عبور. این ابزار می‌تواند قدرت رمزهای عبور را ارزیابی کند و آسیب‌پذیری‌های آن‌ها را شناسایی کند.</p>
-                    
+
                     <pre><code>python passwordanalyzer.py --file passwords.txt --rules common --output report.txt</code></pre>
-                    
+
                     <h3>6. WifiAuditor</h3>
                     <p>ابزاری برای ارزیابی امنیت شبکه‌های بی‌سیم. این ابزار قادر به شناسایی شبکه‌های بی‌سیم، تحلیل پروتکل‌های امنیتی و شناسایی آسیب‌پذیری‌های آن‌ها است.</p>
-                    
+
                     <pre><code>python wifiauditor.py --interface wlan0 --scan --wps --wpa</code></pre>
-                    
+
                     <h3>7. SocialEngineer</h3>
                     <p>ابزاری برای شبیه‌سازی حملات مهندسی اجتماعی. این ابزار به ایجاد کمپین‌های فیشینگ، ایمیل‌های جعلی و سایر تکنیک‌های مهندسی اجتماعی کمک می‌کند.</p>
-                    
+
                     <pre><code>python socialengineer.py --template phishing --target employees.txt --sender hr@company.com</code></pre>
-                    
+
                     <h2>ویژگی‌های کلیدی</h2>
                     <ul>
                         <li>طراحی ماژولار و قابل توسعه</li>
@@ -497,35 +180,35 @@
                         <li>قابلیت ادغام با سایر ابزارها و سیستم‌ها</li>
                         <li>بهینه‌سازی شده برای عملکرد بالا</li>
                     </ul>
-                    
+
                     <h2>نحوه استفاده</h2>
                     <p>برای استفاده از Python in Black Scripts، ابتدا باید مخزن را از گیت‌هاب دانلود کنید:</p>
-                    
+
                     <pre><code>git clone https://github.com/davoodya/pythonInBlack.git
 cd pythonInBlack
 pip install -r requirements.txt</code></pre>
-                    
+
                     <p>سپس می‌توانید اسکریپت مورد نظر خود را اجرا کنید:</p>
-                    
+
                     <pre><code>python scripts/netscanner.py --help</code></pre>
-                    
+
                     <p>همچنین می‌توانید از اسکریپت اصلی برای اجرای تمام ابزارها استفاده کنید:</p>
-                    
+
                     <pre><code>python pib.py --tool netscanner --target 192.168.1.0/24</code></pre>
-                    
+
                     <h2>توسعه و مشارکت</h2>
                     <p>Python in Black Scripts یک پروژه متن‌باز است و از مشارکت‌های جامعه استقبال می‌کند. برای مشارکت در توسعه این پروژه، می‌توانید:</p>
-                    
+
                     <ul>
                         <li>گزارش باگ‌ها و مشکلات در بخش Issues گیت‌هاب</li>
                         <li>ارسال درخواست‌های Pull برای اضافه کردن ویژگی‌های جدید یا رفع مشکلات</li>
                         <li>بهبود مستندات و راهنماها</li>
                         <li>اضافه کردن اسکریپت‌های جدید به مجموعه</li>
                     </ul>
-                    
+
                     <h2>هشدارهای امنیتی</h2>
                     <p>استفاده از این ابزارها نیازمند رعایت نکات امنیتی و قانونی زیر است:</p>
-                    
+
                     <ul>
                         <li>استفاده از این ابزارها تنها با مجوز کتبی از مالک سیستم هدف مجاز است</li>
                         <li>تمامی فعالیت‌ها باید در چارچوب قوانین و مقررات انجام شود</li>
@@ -533,45 +216,51 @@ pip install -r requirements.txt</code></pre>
                         <li>مسئولیت هرگونه سوء استفاده از این ابزارها بر عهده کاربر است</li>
                     </ul>
                 </div>
-                
+
                 <div class="tool-sidebar">
                     <div class="tool-info">
                         <h3>اطلاعات ابزار</h3>
-                        
+
                         <div class="tool-info-item">
                             <i class="fas fa-code-branch"></i>
-                            <span>نسخه: 2.3.0</span>
+                            <span class="tool-info-item-title">نسخه:</span>
+                            <span class="tool-info-item-describe">2.5.0</span>
                         </div>
-                        
+
                         <div class="tool-info-item">
                             <i class="fas fa-calendar-alt"></i>
-                            <span>آخرین به‌روزرسانی: ۱۴۰۳/۰۴/۱۵</span>
+                            <span class="tool-info-item-title">آخرین به‌روزرسانی:</span>
+                            <span class="tool-info-item-describe"> ۱۴۰۳/۰۶/۱۵</span>
                         </div>
-                        
+
                         <div class="tool-info-item">
                             <i class="fas fa-file-code"></i>
-                            <span>زبان: Python</span>
+                            <span class="tool-info-item-title">زبان: </span>
+                            <span class="tool-info-item-describe">python, c++, assembly</span>
                         </div>
-                        
+
                         <div class="tool-info-item">
                             <i class="fas fa-laptop-code"></i>
-                            <span>پلتفرم: Cross-Platform</span>
+                            <span class="tool-info-item-title">پلتفرم:</span>
+                            <span class="tool-info-item-describe">Windows, Linux, Mac</span>
                         </div>
-                        
+
                         <div class="tool-info-item">
                             <i class="fas fa-shield-alt"></i>
-                            <span>دسته: اسکریپت‌نویسی، تست نفوذ</span>
+                            <span class="tool-info-item-title">دسته:</span>
+                            <span class="tool-info-item-describe">تست نفوذ، تروجان</span>
                         </div>
-                        
+
                         <div class="tool-info-item">
                             <i class="fas fa-user"></i>
-                            <span>توسعه‌دهنده: داوود یاحی</span>
+                            <span class="tool-info-item-title">توسعه دهنده/ها:</span>
+                            <span class="tool-info-item-describe">داوود یاحی</span>
                         </div>
                     </div>
-                    
+
                     <div class="tool-tech">
                         <h3>تکنولوژی‌ها</h3>
-                        
+
                         <div class="tool-tech-tags">
                             <span>Python</span>
                             <span>Scapy</span>
@@ -584,10 +273,10 @@ pip install -r requirements.txt</code></pre>
                             <span>Flask</span>
                         </div>
                     </div>
-                    
+
                     <div class="tool-related">
                         <h3>ابزارهای مرتبط</h3>
-                        
+
                         <div class="tool-related-item">
                             <div class="tool-related-icon">
                                 <i class="fas fa-user-secret"></i>
@@ -597,7 +286,7 @@ pip install -r requirements.txt</code></pre>
                                 <a href="backdoor.html">مشاهده جزئیات</a>
                             </div>
                         </div>
-                        
+
                         <div class="tool-related-item">
                             <div class="tool-related-icon">
                                 <i class="fas fa-terminal"></i>
@@ -607,7 +296,7 @@ pip install -r requirements.txt</code></pre>
                                 <a href="c2.html">مشاهده جزئیات</a>
                             </div>
                         </div>
-                        
+
                         <div class="tool-related-item">
                             <div class="tool-related-icon">
                                 <i class="fas fa-key"></i>
@@ -633,51 +322,63 @@ pip install -r requirements.txt</code></pre>
             </div>
         </div>
     </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>DAVOOD<span>_</span>YAHI</h3>
-                    <p>متخصص امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
-                    
-                    <div class="social-links">
-                        <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://t.me/yakuzacybersec" target="_blank"><i class="fab fa-telegram"></i></a>
-                        <a href="https://www.instagram.com/yakuzalearn" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://github.com/davoodya" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>لینک‌های سریع</h4>
-                    <ul>
-                        <li><a href="../../index.html">خانه</a></li>
-                        <li><a href="../../index.html#about">درباره من</a></li>
-                        <li><a href="../services.html">سرویس ها</a></li>
-                        <li><a href="../portfolio.html">نمونه ابزارها</a></li>
-                        <li><a href="../../index.html#contact">تماس با من</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>سرویس ها</h4>
-                    <ul>
-                        <li><a href="../services.html">امنیت سایبری</a></li>
-                        <li><a href="../services.html">شبکه‌های کامپیوتری</a></li>
-                        <li><a href="../services.html">تست نفوذ</a></li>
-                        <li><a href="../services.html">آموزش</a></li>
-                        <li><a href="../services.html">مشاوره</a></li>
-                    </ul>
+
+<!-- Footer -->
+<footer class="footer-animate dark-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3 class="logo-glitch">DAVOOD<span>_</span>YAHAY</h3>
+                <p class="footer-desc">مشاور و مدرس امنیت سایبری، برنامه نویسی، شبکه‌های کامپیوتری و سیستم های عامل</p>
+
+                <div class="social-links">
+                    <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                        <span class="social-tooltip">یوتیوب</span>
+                    </a>
+                    <a href="https://t.me/yakuzacybersec" target="_blank" class="social-icon">
+                        <i class="fab fa-telegram"></i>
+                        <span class="social-tooltip">تلگرام</span>
+                    </a>
+                    <a href="https://www.instagram.com/yakuzalearn" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                        <span class="social-tooltip">اینستاگرام</span>
+                    </a>
+                    <a href="https://github.com/davoodya" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                        <span class="social-tooltip">گیت‌هاب</span>
+                    </a>
                 </div>
             </div>
-            
-            <div class="copyright">
-                <p>&copy; ۱۴۰۴ تمامی حقوق محفوظ است | طراحی و توسعه توسط داوود یاحی</p>
+
+            <div class="footer-links">
+                <h4 class="links-title">لینک‌های سریع</h4>
+                <ul>
+                    <li><a href="../index.html" class="link-item">خانه</a></li>
+                    <li><a href="../index.html#about" class="link-item">درباره من</a></li>
+                    <li><a href="../index.html#services" class="link-item">سرویس ها</a></li>
+                    <li><a href="../index.html#portfolio" class="link-item">نمونه ابزارها</a></li>
+                    <li><a href="../index.html#contact" class="link-item">تماس با من</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="links-title">سرویس ها</h4>
+                <ul>
+                    <li><a href="#services" class="link-item">امنیت سایبری</a></li>
+                    <li><a href="#services" class="link-item">شبکه‌های کامپیوتری</a></li>
+                    <li><a href="#services" class="link-item">تست نفوذ</a></li>
+                    <li><a href="#services" class="link-item">آموزش</a></li>
+                    <li><a href="#services" class="link-item">مشاوره</a></li>
+                </ul>
             </div>
         </div>
-    </footer>
+
+        <div class="copyright">
+            <p class="copyright-text">&copy; تمامی حقوق محفوظ است | طراحی و توسعه توسط <span>داوود یاحی</span></p>
+        </div>
+    </div>
+</footer>
     
     <!-- Custom JS -->
     <script src="../../js/main.js"></script>
