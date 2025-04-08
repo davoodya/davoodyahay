@@ -20,532 +20,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
+
+    <!-- Other fonts -->
+    <!-- فونت Vazir برای عنوان‌ها -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Shabnam برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت YekanBakh برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Sahel برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css" rel="stylesheet" type="text/css" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/courses/netplus.css">
     
-    <style>
-        .course-detail {
-            padding: 100px 0;
-        }
-        
-        .course-header {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 50px;
-        }
-        
-        .course-icon {
-            width: 120px;
-            height: 120px;
-            background-color: rgba(0, 255, 65, 0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 30px;
-            color: var(--accent-green);
-            font-size: 3rem;
-            flex-shrink: 0;
-        }
-        
-        .course-title h1 {
-            font-size: 2.5rem;
-            color: var(--accent-green);
-            margin-bottom: 10px;
-            text-shadow: var(--glow-shadow);
-        }
-        
-        .course-title p {
-            color: var(--main-text);
-            opacity: 0.8;
-            font-size: 1.1rem;
-        }
-        
-        .course-badge {
-            display: inline-block;
-            background-color: var(--accent-green);
-            color: var(--darker-bg);
-            font-size: 0.9rem;
-            font-weight: 600;
-            padding: 5px 15px;
-            border-radius: 5px;
-            margin-top: 15px;
-        }
-        
-        .course-badge.premium {
-            background-color: var(--accent-orange);
-        }
-        
-        .course-links {
-            display: flex;
-            margin-top: 20px;
-        }
-        
-        .course-links a {
-            display: inline-flex;
-            align-items: center;
-            color: var(--accent-blue);
-            text-decoration: none;
-            margin-left: 20px;
-            transition: color 0.3s ease;
-        }
-        
-        .course-links a:hover {
-            color: var(--accent-green);
-        }
-        
-        .course-links a i {
-            margin-left: 5px;
-        }
-        
-        .course-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-        
-        .course-description {
-            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            border-radius: 10px;
-            padding: 30px;
-        }
-        
-        .course-description h2 {
-            font-size: 1.8rem;
-            color: var(--accent-green);
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .course-description h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent-green);
-        }
-        
-        .course-description p {
-            color: var(--main-text);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        .course-description ul {
-            list-style-type: none;
-            padding-right: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .course-description ul li {
-            position: relative;
-            padding-right: 25px;
-            margin-bottom: 10px;
-            color: var(--main-text);
-        }
-        
-        .course-description ul li::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            position: absolute;
-            right: 0;
-            color: var(--accent-green);
-        }
-        
-        .course-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        
-        .course-info, .course-instructor, .course-related {
-            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            border-radius: 10px;
-            padding: 25px;
-        }
-        
-        .course-info h3, .course-instructor h3, .course-related h3 {
-            font-size: 1.5rem;
-            color: var(--accent-green);
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .course-info h3::after, .course-instructor h3::after, .course-related h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--accent-green);
-        }
-        
-        .course-info-item {
-            display: flex;
-            margin-bottom: 15px;
-        }
-        
-        .course-info-item i {
-            color: var(--accent-green);
-            margin-left: 10px;
-            width: 20px;
-            text-align: center;
-        }
-        
-        .course-info-item span {
-            color: var(--main-text);
-        }
-        
-        .course-instructor-profile {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .instructor-avatar {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-left: 15px;
-        }
-        
-        .instructor-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .instructor-info h4 {
-            font-size: 1.2rem;
-            color: var(--main-text);
-            margin-bottom: 5px;
-        }
-        
-        .instructor-info p {
-            color: var(--main-text);
-            opacity: 0.8;
-            font-size: 0.9rem;
-        }
-        
-        .instructor-bio {
-            color: var(--main-text);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        
-        .course-related-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .course-related-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        
-        .course-related-icon {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(0, 255, 65, 0.1);
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 15px;
-            color: var(--accent-green);
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-        
-        .course-related-info h4 {
-            font-size: 1rem;
-            color: var(--main-text);
-            margin-bottom: 5px;
-        }
-        
-        .course-related-info a {
-            color: var(--accent-blue);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-        
-        .course-related-info a:hover {
-            color: var(--accent-green);
-        }
-        
-        .course-cta {
-            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            border-radius: 10px;
-            padding: 25px;
-            text-align: center;
-            margin-top: 30px;
-        }
-        
-        .course-cta h3 {
-            font-size: 1.5rem;
-            color: var(--accent-green);
-            margin-bottom: 15px;
-        }
-        
-        .course-cta p {
-            color: var(--main-text);
-            margin-bottom: 20px;
-        }
-        
-        .course-cta-btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--accent-green);
-            color: var(--darker-bg);
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .course-cta-btn:hover {
-            background-color: var(--accent-blue);
-            transform: translateY(-3px);
-        }
-        
-        .course-curriculum {
-            margin-top: 50px;
-        }
-        
-        .curriculum-section {
-            margin-bottom: 30px;
-        }
-        
-        .curriculum-section-header {
-            background: linear-gradient(145deg, rgba(15, 15, 15, 0.8), rgba(10, 10, 10, 1));
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            border-radius: 10px 10px 0 0;
-            padding: 15px 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .curriculum-section-header h3 {
-            font-size: 1.3rem;
-            color: var(--accent-green);
-            margin: 0;
-        }
-        
-        .curriculum-section-header .toggle-icon {
-            color: var(--accent-green);
-            transition: transform 0.3s ease;
-        }
-        
-        .curriculum-section-header.active .toggle-icon {
-            transform: rotate(180deg);
-        }
-        
-        .curriculum-section-content {
-            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            border-top: none;
-            border-radius: 0 0 10px 10px;
-            padding: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        
-        .curriculum-section-header.active + .curriculum-section-content {
-            max-height: 1000px;
-            padding: 20px;
-        }
-        
-        .curriculum-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .curriculum-item:last-child {
-            border-bottom: none;
-        }
-        
-        .curriculum-item-left {
-            display: flex;
-            align-items: center;
-        }
-        
-        .curriculum-item-icon {
-            color: var(--accent-green);
-            margin-left: 15px;
-            font-size: 1.2rem;
-        }
-        
-        .curriculum-item-title {
-            color: var(--main-text);
-            font-size: 1rem;
-        }
-        
-        .curriculum-item-right {
-            display: flex;
-            align-items: center;
-        }
-        
-        .curriculum-item-duration {
-            color: var(--main-text);
-            opacity: 0.7;
-            font-size: 0.9rem;
-            margin-left: 15px;
-        }
-        
-        .curriculum-item-preview {
-            color: var(--accent-blue);
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .curriculum-item-preview:hover {
-            color: var(--accent-green);
-        }
-        
-        .page-header {
-            height: 40vh;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            background-color: var(--darker-bg);
-        }
-        
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 119, 255, 0.1));
-            z-index: 0;
-        }
-        
-        .page-header-content {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .page-header-content h1 {
-            font-size: 3rem;
-            color: var(--accent-green);
-            margin-bottom: 15px;
-            text-shadow: var(--glow-shadow);
-        }
-        
-        .page-header-content p {
-            font-size: 1.2rem;
-            color: var(--main-text);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .breadcrumb {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .breadcrumb a {
-            color: var(--main-text);
-            text-decoration: none;
-            opacity: 0.7;
-            transition: opacity 0.3s ease, color 0.3s ease;
-        }
-        
-        .breadcrumb a:hover {
-            opacity: 1;
-            color: var(--accent-green);
-        }
-        
-        .breadcrumb span {
-            margin: 0 10px;
-            color: var(--main-text);
-            opacity: 0.5;
-        }
-        
-        .breadcrumb .active {
-            color: var(--accent-green);
-            opacity: 1;
-        }
-        
-        .course-video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            margin-bottom: 30px;
-        }
-        
-        .course-video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 10px;
-        }
-        
-        @media (max-width: 992px) {
-            .course-content {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .course-header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            
-            .course-icon {
-                margin-left: 0;
-                margin-bottom: 20px;
-            }
-            
-            .course-links {
-                justify-content: center;
-            }
-        }
-    </style>
+
 </head>
 <body>
-    <!-- Preloader -->
+    <!-- Preloader - Updated Element - checked -->
     <div class="preloader">
-        <div class="loader"></div>
+        <div class="spinner">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
     </div>
-    
+
     <!-- Header -->
     <header>
         <div class="container">
@@ -858,7 +363,7 @@
                         
                         <div class="course-instructor-profile">
                             <div class="instructor-avatar">
-                                <img src="https://via.placeholder.com/70x70/0a0a0a/00ff41?text=DY" alt="داوود یاحی">
+                                <img src="../../images/davoodya.png" alt="داوود یاحی">
                             </div>
                             <div class="instructor-info">
                                 <h4>داوود یاحی</h4>
@@ -918,59 +423,71 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content text-center">
-                <h2>آماده یادگیری هستید؟</h2>
-                <p>برای مشاوره رایگان در مورد دوره‌های آموزشی و مسیر یادگیری مناسب با من در تماس باشید.</p>
+                <h2>نمیدونی از کجا شروع کنی؟</h2>
+                <p>برای مشاوره رایگان در مورد دوره‌های آموزشی و انتخاب نقشه راه مناسب با من در تماس باشید.</p>
                 <a href="../../index.html#contact" class="cta-button">تماس با من</a>
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
-    <footer>
+    <footer class="footer-animate dark-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3>DAVOOD<span>_</span>YAHAY</h3>
-                    <p>متخصص امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
-                    
+                    <h3 class="logo-glitch">DAVOOD<span>_</span>YAHAY</h3>
+                    <p class="footer-desc">مشاور و مدرس امنیت سایبری، برنامه نویسی، شبکه‌های کامپیوتری و سیستم های عامل</p>
+
                     <div class="social-links">
-                        <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://t.me/yakuzacybersec" target="_blank"><i class="fab fa-telegram"></i></a>
-                        <a href="https://www.instagram.com/yakuzalearn" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://github.com/davoodya" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                            <span class="social-tooltip">یوتیوب</span>
+                        </a>
+                        <a href="https://t.me/yakuzacybersec" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram"></i>
+                            <span class="social-tooltip">تلگرام</span>
+                        </a>
+                        <a href="https://www.instagram.com/yakuzalearn" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-tooltip">اینستاگرام</span>
+                        </a>
+                        <a href="https://github.com/davoodya" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                            <span class="social-tooltip">گیت‌هاب</span>
+                        </a>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
-                    <h4>لینک‌های سریع</h4>
+                    <h4 class="links-title">لینک‌های سریع</h4>
                     <ul>
-                        <li><a href="../../index.html">خانه</a></li>
-                        <li><a href="../../index.html#about">درباره من</a></li>
-                        <li><a href="../services.html">خدمات</a></li>
-                        <li><a href="../portfolio.html">نمونه کارها</a></li>
-                        <li><a href="../courses.html">دوره‌های آموزشی</a></li>
-                        <li><a href="../../index.html#contact">تماس با من</a></li>
+                        <li><a href="../index.html" class="link-item">خانه</a></li>
+                        <li><a href="../index.html#about" class="link-item">درباره من</a></li>
+                        <li><a href="../index.html#services" class="link-item">خدمات</a></li>
+                        <li><a href="../index.html#portfolio" class="link-item">نمونه ابزارها</a></li>
+                        <li><a href="../index.html#contact" class="link-item">تماس با من</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-links">
-                    <h4>خدمات</h4>
+                    <h4 class="links-title">خدمات</h4>
                     <ul>
-                        <li><a href="../services.html">امنیت سایبری</a></li>
-                        <li><a href="../services.html">شبکه‌های کامپیوتری</a></li>
-                        <li><a href="../services.html">تست نفوذ</a></li>
-                        <li><a href="../services.html">آموزش</a></li>
-                        <li><a href="../services.html">مشاوره</a></li>
+                        <li><a href="#services" class="link-item">امنیت سایبری</a></li>
+                        <li><a href="#services" class="link-item">شبکه‌های کامپیوتری</a></li>
+                        <li><a href="#services" class="link-item">تست نفوذ</a></li>
+                        <li><a href="#services" class="link-item">آموزش</a></li>
+                        <li><a href="#services" class="link-item">مشاوره</a></li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="copyright">
-                <p>&copy; ۱۴۰۴ تمامی حقوق محفوظ است | طراحی و توسعه توسط داوود یاحی</p>
+                <p class="copyright-text">&copy; تمامی حقوق محفوظ است | طراحی و توسعه توسط <span>داوود یاحی</span></p>
             </div>
         </div>
     </footer>
-    
+
+
     <!-- Custom JS -->
     <script src="../../js/main.js"></script>
     

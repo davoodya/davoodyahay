@@ -94,6 +94,7 @@ nav {
 .nav-links a {
   color: var(--main-text);
   text-decoration: none;
+  font-family: Vazir, sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
   position: relative;
@@ -111,7 +112,7 @@ nav {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--accent-green);
+  background-color: var(--accent-orange);
   transition: width 0.3s ease;
 }
 
@@ -293,12 +294,14 @@ nav {
 }
 
 .cta-content h2 {
-  color: var(--accent-green);
+  color: #eff264;
   font-family: Vazir, sans-serif;
+  font-size: 175%;
 }
 
 .cta-content p {
   font-family: Shabnam, sans-serif;
+  font-size: 140%;
 }
 
 .cta-title {
@@ -323,12 +326,12 @@ nav {
   background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
   color: var(--darker-bg);
   padding: 15px 35px;
+  margin-top: 10px;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2rem;
-  font-family: Vazir, sans-serif;
-  letter-spacing: 0.9px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-family: Shabnam, sans-serif;
   border: none;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0, 168, 45, 0.4),

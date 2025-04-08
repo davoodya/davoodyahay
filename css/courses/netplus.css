@@ -533,8 +533,9 @@
     font-weight: bold;
 }
 
+
 .page-header-content p {
-    font-size: 1.2rem;
+    font-size: 200%;
     color: var(--main-text);
     max-width: 700px;
     margin: 0 auto;
