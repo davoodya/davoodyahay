@@ -20,352 +20,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
+    <!-- Other fonts -->
+    <!-- فونت Vazir برای عنوان‌ها -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Shabnam برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت YekanBakh برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Sahel برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css" rel="stylesheet" type="text/css" />
+
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/style.css">
-    
-    <style>
-        .tool-detail {
-            padding: 100px 0;
-        }
-        
-        .tool-header {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 50px;
-        }
-        
-        .tool-icon {
-            width: 120px;
-            height: 120px;
-            background-color: rgba(0, 255, 65, 0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 30px;
-            color: var(--accent-green);
-            font-size: 3rem;
-            flex-shrink: 0;
-        }
-        
-        .tool-title h1 {
-            font-size: 2.5rem;
-            color: var(--accent-green);
-            margin-bottom: 10px;
-            text-shadow: var(--glow-shadow);
-        }
-        
-        .tool-title p {
-            color: var(--main-text);
-            opacity: 0.8;
-            font-size: 1.1rem;
-        }
-        
-        .tool-links {
-            display: flex;
-            margin-top: 15px;
-        }
-        
-        .tool-links a {
-            display: inline-flex;
-            align-items: center;
-            color: var(--accent-blue);
-            text-decoration: none;
-            margin-left: 20px;
-            transition: color 0.3s ease;
-        }
-        
-        .tool-links a:hover {
-            color: var(--accent-green);
-        }
-        
-        .tool-links a i {
-            margin-left: 5px;
-        }
-        
-        .tool-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-        
-        .tool-description {
-            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            border-radius: 10px;
-            padding: 30px;
-        }
-        
-        .tool-description h2 {
-            font-size: 1.8rem;
-            color: var(--accent-green);
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .tool-description h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent-green);
-        }
-        
-        .tool-description p {
-            color: var(--main-text);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        .tool-description ul {
-            list-style-type: none;
-            padding-right: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .tool-description ul li {
-            position: relative;
-            padding-right: 25px;
-            margin-bottom: 10px;
-            color: var(--main-text);
-        }
-        
-        .tool-description ul li::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            position: absolute;
-            right: 0;
-            color: var(--accent-green);
-        }
-        
-        .tool-description pre {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            border-radius: 5px;
-            padding: 15px;
-            overflow-x: auto;
-            margin-bottom: 20px;
-            font-family: var(--terminal-font);
-            color: var(--accent-green);
-        }
-        
-        .tool-description code {
-            font-family: var(--terminal-font);
-            color: var(--accent-green);
-        }
-        
-        .tool-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        
-        .tool-info, .tool-tech, .tool-related {
-            background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
-            border: 1px solid rgba(0, 255, 65, 0.2);
-            border-radius: 10px;
-            padding: 25px;
-        }
-        
-        .tool-info h3, .tool-tech h3, .tool-related h3 {
-            font-size: 1.5rem;
-            color: var(--accent-green);
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .tool-info h3::after, .tool-tech h3::after, .tool-related h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--accent-green);
-        }
-        
-        .tool-info-item {
-            display: flex;
-            margin-bottom: 15px;
-        }
-        
-        .tool-info-item i {
-            color: var(--accent-green);
-            margin-left: 10px;
-            width: 20px;
-            text-align: center;
-        }
-        
-        .tool-info-item span {
-            color: var(--main-text);
-        }
-        
-        .tool-tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .tool-tech-tags span {
-            display: inline-block;
-            background-color: rgba(0, 255, 65, 0.1);
-            color: var(--accent-green);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            margin-left: 5px;
-            margin-bottom: 5px;
-        }
-        
-        .tool-related-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .tool-related-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        
-        .tool-related-icon {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(0, 255, 65, 0.1);
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 15px;
-            color: var(--accent-green);
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-        
-        .tool-related-info h4 {
-            font-size: 1rem;
-            color: var(--main-text);
-            margin-bottom: 5px;
-        }
-        
-        .tool-related-info a {
-            color: var(--accent-blue);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-        
-        .tool-related-info a:hover {
-            color: var(--accent-green);
-        }
-        
-        .page-header {
-            height: 40vh;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            background-color: var(--darker-bg);
-        }
-        
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 119, 255, 0.1));
-            z-index: 0;
-        }
-        
-        .page-header-content {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .page-header-content h1 {
-            font-size: 3rem;
-            color: var(--accent-green);
-            margin-bottom: 15px;
-            text-shadow: var(--glow-shadow);
-        }
-        
-        .page-header-content p {
-            font-size: 1.2rem;
-            color: var(--main-text);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .breadcrumb {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .breadcrumb a {
-            color: var(--main-text);
-            text-decoration: none;
-            opacity: 0.7;
-            transition: opacity 0.3s ease, color 0.3s ease;
-        }
-        
-        .breadcrumb a:hover {
-            opacity: 1;
-            color: var(--accent-green);
-        }
-        
-        .breadcrumb span {
-            margin: 0 10px;
-            color: var(--main-text);
-            opacity: 0.5;
-        }
-        
-        .breadcrumb .active {
-            color: var(--accent-green);
-            opacity: 1;
-        }
-        
-        @media (max-width: 992px) {
-            .tool-content {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .tool-header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            
-            .tool-icon {
-                margin-left: 0;
-                margin-bottom: 20px;
-            }
-            
-            .tool-links {
-                justify-content: center;
-            }
-        }
-    </style>
+<!--    <link rel="stylesheet" href="../../css/courses/netplus.css">-->
+    <link rel="stylesheet" href="../../css/tools/backdoor.css">
+
 </head>
 <body>
-    <!-- Preloader -->
+<!-- Preloader - Updated Element - checked -->
     <div class="preloader">
-        <div class="loader"></div>
+        <div class="spinner">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
     </div>
     
     <!-- Header -->
@@ -393,7 +76,7 @@
     </header>
     
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header contact">
         <canvas id="matrix-canvas" class="matrix-animation"></canvas>
         <div class="container">
             <div class="page-header-content">
