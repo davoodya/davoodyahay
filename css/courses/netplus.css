@@ -444,6 +444,8 @@
     color: var(--accent-green);
     margin-bottom: 15px;
     text-shadow: var(--glow-shadow);
+    font-family: Vazir, sans-serif;
+    font-weight: bold;
 }
 
 .page-header-content p {
@@ -451,6 +453,8 @@
     color: var(--main-text);
     max-width: 700px;
     margin: 0 auto;
+    font-family: Shabnam, sans-serif;
+    font-weight: normal;
 }
 
 .breadcrumb {
@@ -464,11 +468,15 @@
     text-decoration: none;
     opacity: 0.7;
     transition: opacity 0.3s ease, color 0.3s ease;
+    font-family: Shabnam, sans-serif;
+    font-weight: bold;
 }
 
 .breadcrumb a:hover {
     opacity: 1;
     color: var(--accent-green);
+    font-weight: bolder;
+    font-size: 110%;
 }
 
 .breadcrumb span {
@@ -480,6 +488,8 @@
 .breadcrumb .active {
     color: var(--accent-green);
     opacity: 1;
+    font-family: Shabnam, sans-serif;
+    font-weight: bold;
 }
 
 .course-video-container {
