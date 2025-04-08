@@ -1,0 +1,339 @@
+/*Original Styles moved from html file*/
+.tool-detail {
+    padding: 100px 0;
+}
+
+.tool-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.tool-icon {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 255, 65, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    color: var(--accent-green);
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.tool-title h1 {
+    font-size: 2.5rem;
+    color: var(--accent-green);
+    margin-bottom: 10px;
+    text-shadow: var(--glow-shadow);
+    font-family: Vazir, sans-serif;
+    font-weight: bold;
+}
+
+.tool-title p {
+    color: var(--main-text);
+    opacity: 0.9;
+    font-size: 125%;
+    font-family: Shabnam, sans-serif;
+}
+
+.tool-links a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent-blue);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+    font-family: Vazir, sans-serif;
+    font-weight: bold;
+}
+
+.tool-links a:hover {
+    color: var(--accent-orange);
+    font-size: 110%;
+}
+
+.tool-links a i {
+    margin-left: 5px;
+}
+
+.tool-links {
+    display: flex;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+.tool-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.tool-description {
+    background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.tool-description h2 {
+    font-size: 1.8rem;
+    font-family: Vazir, sans-serif;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.tool-description h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-orange);
+}
+
+.tool-description p {
+    color: var(--main-text);
+    line-height: 1.8;
+    font-family: Shabnam, sans-serif;
+    margin-bottom: 20px;
+}
+
+.tool-description ul {
+    list-style-type: none;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.tool-description ul li {
+    position: relative;
+    padding-right: 25px;
+    margin-bottom: 10px;
+    font-family: Shabnam, sans-serif;
+    color: var(--main-text);
+}
+
+.tool-description ul li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 0;
+    color: var(--accent-blue);
+}
+
+.tool-description pre {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 5px;
+    padding: 15px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    font-family: var(--terminal-font);
+    color: var(--accent-green);
+}
+
+.tool-description code {
+    font-family: var(--terminal-font);
+    color: #fdffb5;
+}
+
+.tool-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tool-info, .tool-tech, .tool-related {
+    background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.tool-info h3, .tool-tech h3, .tool-related h3 {
+    font-size: 1.5rem;
+    font-family: Vazir, sans-serif;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid rgb(224, 108, 17);
+}
+
+
+
+.tool-info h3::after, .tool-tech h3::after, .tool-related h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 90px;
+    height: 2px;
+    background-color: var(--accent-orange);
+}
+
+
+
+.tool-info-item {
+    display: flex;
+
+    margin-bottom: 15px;
+    line-height: 1.6;
+
+    /*برای پشت سرهم قرار گرفتن متن ها*/
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.tool-info-item i {
+    color: var(--accent-green);
+    margin-left: 10px;
+    min-width: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.tool-info-item-title {
+    color: var(--accent-orange);
+    font-family: Shabnam, sans-serif;
+    font-weight: bold;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+
+.tool-info-item-describe {
+    color: var(--main-text);
+    font-family: Shabnam, sans-serif;
+    font-weight: normal;
+    margin-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* افکت‌های تعاملی برای بهبود تجربه کاربری */
+.tool-info-item:hover i {
+    transform: scale(1.1);
+    box-shadow: #e06c11 0px 5px 7px -5px;
+    transition: transform 0.2s ease;
+}
+
+.tool-info-item:hover .tool-info-item-title {
+    text-shadow: 0 0 5px rgba(255, 165, 0, 0.3);
+}
+
+.tool-info-item:hover .tool-info-item-describe {
+    color: #fff;
+}
+
+.tool-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tool-tech-tags span {
+    display: inline-block;
+    background-color: rgba(0, 255, 65, 0.1);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.tool-tech-tags span:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+    color: #eff264;
+}
+
+.tool-related-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tool-related-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.tool-related-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 255, 65, 0.1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    color: var(--accent-green);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.tool-related-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+    box-shadow: #e06c11 0px 5px 7px -5px;
+}
+
+.tool-related-info h4 {
+    font-size: 1rem;
+    color: var(--main-text);
+    margin-bottom: 5px;
+}
+
+.tool-related-info a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    font-family: Vazir, sans-serif;
+}
+
+.tool-related-info a:hover {
+    color: var(--accent-orange);
+    transform: scale(1.3);
+    transition: transform 0.2s ease;
+
+}
+
+
+@media (max-width: 992px) {
+    .tool-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .tool-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tool-icon {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .tool-links {
+        justify-content: center;
+    }
+}
