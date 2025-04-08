@@ -10,7 +10,7 @@
    5. تصحیح زبان های استفاده شده برای هر ابزار tech tags
    6. تصحیح لینک دانلود مستندات هر ابزار
    7. تصحیح  Tools Information در سایدبار صفحه ابزارها
-   8. 
+   8. تصحیح اطلاعات meta صفحه Yakuza Cracker
 4. Other pages for Developing
    2. each tool pages
 
