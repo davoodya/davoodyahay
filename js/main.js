@@ -339,3 +339,24 @@ document.addEventListener('DOMContentLoaded', function() {
         particles.appendChild(particle);
     }
 });
+
+// Change Glitch Texts
+document.addEventListener('DOMContentLoaded', function() {
+    const skills = document.querySelectorAll('.skill');
+    let currentSkill = 0;
+
+    function rotateSkills() {
+        skills[currentSkill].classList.remove('active');
+        currentSkill = (currentSkill + 1) % skills.length;
+        skills[currentSkill].classList.add('active');
+
+// فعال کردن افکت glitch هنگام تغییر
+        skills[currentSkill].style.animation = 'none';
+        void skills[currentSkill].offsetWidth; // Trigger reflow
+        skills[currentSkill].style.animation = 'glitch-switch 0.5s linear';
+
+        setTimeout(rotateSkills, 2000); // تغییر هر 2 ثانیه
+    }
+
+    setTimeout(rotateSkills, 2000); // شروع پس از 2 ثانیه
+});
