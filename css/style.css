@@ -67,6 +67,7 @@ header {
 }
 
 .logo span {
+  color: var(--accent-orange);
   animation: blink 1.5s infinite;
 }
 
@@ -1792,7 +1793,7 @@ footer::before {
 }
 
 .logo-glitch span {
-  color: white;
+  color: var(--accent-orange);
   animation: blink 1s infinite alternate;
 }
 
