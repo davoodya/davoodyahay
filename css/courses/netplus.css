@@ -37,12 +37,16 @@
     color: var(--accent-green);
     margin-bottom: 10px;
     text-shadow: var(--glow-shadow);
+    font-family: Vazir, sans-serif;
+    font-weight: bold;
 }
 
 .course-title p {
     color: var(--main-text);
     opacity: 0.8;
     font-size: 1.1rem;
+    font-family: Shabnam, sans-serif;
+    font-weight: bold;
 }
 
 .course-badge {
@@ -54,10 +58,13 @@
     padding: 5px 15px;
     border-radius: 5px;
     margin-top: 15px;
+    font-family: Shabnam, sans-serif;
+    letter-spacing: 0.9px;
 }
 
 .course-badge.premium {
     background-color: var(--accent-orange);
+    font-family: Shabnam, sans-serif;
 }
 
 .course-links {
@@ -72,10 +79,13 @@
     text-decoration: none;
     margin-left: 20px;
     transition: color 0.3s ease;
+    font-family: Vazir, sans-serif;
+    font-weight: bold;
 }
 
 .course-links a:hover {
     color: var(--accent-green);
+    font-size: 110%;
 }
 
 .course-links a i {
