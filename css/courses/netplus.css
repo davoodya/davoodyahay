@@ -299,29 +299,38 @@
     font-size: 1.5rem;
     color: var(--accent-green);
     margin-bottom: 15px;
+    font-family: Vazir, sans-serif;
 }
 
 .course-cta p {
     color: var(--main-text);
     margin-bottom: 20px;
+    font-family: Shabnam, sans-serif;
 }
 
 .course-cta-btn {
     display: inline-block;
     padding: 12px 30px;
-    background-color: var(--accent-green);
+    background-color: var(--accent-blue);
     color: var(--darker-bg);
     border: none;
     border-radius: 5px;
+    font-family: Shabnam, sans-serif;
+    letter-spacing: 1px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 650;
+    box-shadow: #ed7924 0px 20px 20px -7px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .course-cta-btn:hover {
-    background-color: var(--accent-blue);
+    background-color: var(--accent-orange);
     transform: translateY(-3px);
+    box-shadow: #00bc00 0px 20px 20px -5px;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 720;
 }
 
 .course-curriculum {
