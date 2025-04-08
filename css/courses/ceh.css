@@ -1,0 +1,185 @@
+.coming-soon-badge {
+    display: inline-block;
+    background-color: var(--accent-orange);
+    color: var(--darker-bg);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-family: Shabnam, sans-serif;
+    margin-right: 10px;
+}
+
+.course-pricing {
+    margin-top: 30px;
+    background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+
+}
+
+.course-pricing h3 {
+    font-size: 1.5rem;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    font-family: Vazir, sans-serif;
+}
+
+.course-pricing h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-orange);
+}
+
+.pricing-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pricing-option:last-child {
+    border-bottom: none;
+}
+
+.pricing-option-name {
+    font-size: 1.1rem;
+    font-family: Shabnam, sans-serif;
+    font-weight: bold;
+    color: var(--main-text);
+}
+
+.pricing-option-price {
+    font-size: 1.2rem;
+    font-family: Shabnam, sans-serif;
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+
+.pricing-features {
+    margin-top: 20px;
+}
+
+.pricing-features h4 {
+    font-size: 1.2rem;
+    color: var(--accent-green);
+    font-family: Vazir, sans-serif;
+    margin-bottom: 15px;
+}
+
+.pricing-feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pricing-feature-item i {
+    color: var(--accent-orange);
+    margin-left: 10px;
+}
+
+.pricing-feature-item span {
+    color: var(--main-text);
+    font-family: Shabnam, sans-serif;
+    font-size: 1.2rem;
+}
+
+.waitlist-form {
+    margin-top: 30px;
+}
+
+.waitlist-form h3 {
+    font-size: 1.5rem;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+    font-family: Vazir, sans-serif;
+}
+
+.waitlist-form p {
+    color: var(--main-text);
+    margin-bottom: 20px;
+    font-family: Shabnam, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--main-text);
+    margin-bottom: 8px;
+    font-family: Shabnam, sans-serif;
+    font-size: 0.95rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 5px;
+    color: var(--main-text);
+    font-size: 1rem;
+    font-family: Shabnam, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-green);
+    background-color: rgba(0, 255, 65, 0.05);
+}
+
+.waitlist-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent-green);
+    color: var(--darker-bg);
+    border: none;
+    font-family: Vazir, sans-serif;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: #ed7924 0px 10px 20px -5px;
+}
+
+.waitlist-btn:hover {
+    background-color: var(--accent-orange);
+    box-shadow: #00bc00 0px 10px 20px -4px;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+    .course-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .course-icon {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .course-links {
+        justify-content: center;
+    }
+}
