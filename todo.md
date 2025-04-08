@@ -4,7 +4,8 @@
 3. Other Tasks Reminds
    0. تصحیح لینک + عنوان هر ویدئو درون صفحات هر دوره
    1. تصحیح متون توضیحات دوره و جلسات
-   2. 
+   2. تصحیح عکس های دوره ها
+   3. 
 4. Other pages for Developing
    2. each tool pages
 
