@@ -84,7 +84,7 @@
 }
 
 .course-links a:hover {
-    color: var(--accent-green);
+    color: var(--accent-orange);
     font-size: 110%;
 }
 
@@ -100,7 +100,7 @@
 
 .course-description {
     background: linear-gradient(145deg, rgba(15, 15, 15, 0.6), rgba(10, 10, 10, 0.8));
-    border: 1px solid rgba(0, 255, 65, 0.2);
+    border: 1.5px solid rgba(0, 255, 65, 0.2);
     border-radius: 10px;
     padding: 30px;
 }
@@ -111,6 +111,7 @@
     margin-bottom: 20px;
     position: relative;
     padding-bottom: 10px;
+    font-family: Vazir, sans-serif;
 }
 
 .course-description h2::after {
@@ -127,12 +128,14 @@
     color: var(--main-text);
     line-height: 1.8;
     margin-bottom: 20px;
+    font-family: Shabnam, sans-serif;
 }
 
 .course-description ul {
     list-style-type: none;
     padding-right: 20px;
     margin-bottom: 20px;
+    font-family: Vazir, sans-serif;
 }
 
 .course-description ul li {
@@ -140,6 +143,7 @@
     padding-right: 25px;
     margin-bottom: 10px;
     color: var(--main-text);
+    font-family: Shabnam, sans-serif;
 }
 
 .course-description ul li::before {
@@ -343,6 +347,7 @@
     font-size: 1.3rem;
     color: var(--accent-green);
     margin: 0;
+    font-family: Vazir, sans-serif;
 }
 
 .curriculum-section-header .toggle-icon {
@@ -363,6 +368,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
+    font-family: Shabnam, sans-serif;
 }
 
 .curriculum-section-header.active + .curriculum-section-content {
