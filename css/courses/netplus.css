@@ -593,20 +593,17 @@
 /* Preloader Style End */
 
 /* Style for Fonts */
-.font-title {
+.font-title-netplus {
     font-family: 'Vazir', sans-serif;
     font-weight: bold;
 }
-label.font-title {
-    color: #00ff41;
-}
 
 /*Yakuza Fonts*/
-.font-description {
+.font-description-netplus {
     font-family: 'Shabnam', sans-serif;
 }
 
-.font-button {
+.font-button-netplus {
     font-family: 'Shabnam', sans-serif;
     font-weight: bold;
 }
