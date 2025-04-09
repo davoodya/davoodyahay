@@ -5,7 +5,7 @@
   --main-text: #e0e0e0;
   --accent-green: #00ff41;
   --accent-blue: #e06c11;
-  --accent-orange: #eff264;
+  --accent-orange: #e06c11;
   --glow-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
   --terminal-font: 'Fira Code', 'Courier New', monospace;
   --content-font: 'Rajdhani', 'Segoe UI', sans-serif;
@@ -659,7 +659,7 @@ section {
 }
 /* Link Styles */
 #show-certificate {
-  color: #0c9cd0;
+  color: #eff264;
   text-decoration: none;
   font-family: Shabnam, sans-serif;
   font-size: 1.3rem;
@@ -671,8 +671,8 @@ section {
 }
 
 #show-certificate:hover {
-  text-shadow: 0 0 20px #00bc00,
-  0 0 30px #41ee16;
+  text-shadow: 0 0 20px #0c9cd0,
+  0 0 30px #2d87ea;
 }
 
 #show-certificate::after {
@@ -682,7 +682,7 @@ section {
   height: 2px;
   bottom: 0;
   right: 0; /* تغییر از left به right */
-  background: linear-gradient(to left, #e06c11, transparent); /* تغییر جهت گرادیان */
+  background: linear-gradient(to left, #41ee16, transparent); /* تغییر جهت گرادیان */
   transform: scaleX(0);
   transform-origin: bottom left; /* نقطه شروع transform از چپ */
   transition: transform 0.3s ease;
@@ -1670,14 +1670,14 @@ footer::before {
 
 
 .terminal-title-aboutme {
-  font-size: 24px;
+  font-size: 22px;
   color: #eff264;
   font-weight: bolder;
   opacity: 0.9;
 }
 
 .terminal-content {
-  font-size: 22px; /* تنظیم فونت متناسب با فضای جدید */
+  font-size: 20px; /* تنظیم فونت متناسب با فضای جدید */
   font-weight: bold;
   line-height: 1.8;
   padding: 10px;
