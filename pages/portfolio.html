@@ -98,15 +98,202 @@
                 <p>مجموعه ابزارهای امنیتی توسعه داده شده برای تست نفوذ قانونی و ارزیابی امنیت</p>
             </div>
             
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">همه</button>
-                <button class="filter-btn" data-filter="penetration">تست نفوذ</button>
-                <button class="filter-btn" data-filter="malware">تحلیل بدافزار</button>
-                <button class="filter-btn" data-filter="script">اسکریپت‌نویسی</button>
-                <button class="filter-btn" data-filter="cracking">کرکینگ</button>
-            </div>
-            
-            <div class="portfolio-grid">
+            <!-- Portfolio Layout with Sidebar -->
+            <div class="portfolio-layout">
+                <!-- Sidebar -->
+                <div class="portfolio-sidebar">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-search"></i>
+                            <h3 class="font-title-portfolio">جستجو</h3>
+                        </div>
+                        <div class="sidebar-search">
+                            <input type="text" id="sidebar-search-input" class="sidebar-search-input" placeholder="جستجو در ابزارها...">
+                            <button id="sidebar-search-btn" class="sidebar-search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-folder"></i>
+                            <h3 class="font-title-portfolio">دسته‌بندی‌ها</h3>
+                        </div>
+                        <ul class="categories-list">
+                            <!-- Penetration Testing Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-user-secret"></i>
+                                        تست نفوذ
+                                    </div>
+                                    <div class="category-count">3</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="tools/backdoor.html" class="tool-link">Yakuza Undetectable Backdoor</a>
+                                    <a href="tools/c2.html" class="tool-link">C&C Yakuza Design</a>
+                                    <a href="#" class="tool-link">Yakuza WiFi Auditor</a>
+                                </div>
+                            </li>
+                            
+                            <!-- Malware Analysis Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-virus"></i>
+                                        تحلیل بدافزار
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="tools/malware.html" class="tool-link">YakuzaMalware Arsenal</a>
+                                </div>
+                            </li>
+                            
+                            <!-- Scripting Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-code"></i>
+                                        اسکریپت‌نویسی
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="tools/python.html" class="tool-link">Python in Black Scripts</a>
+                                </div>
+                            </li>
+                            
+                            <!-- Cracking Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-key"></i>
+                                        کرکینگ
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="tools/cracker.html" class="tool-link">Yakuza Password Cracker</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Filter Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-filter"></i>
+                            <h3 class="font-title-portfolio">فیلترها</h3>
+                        </div>
+                        <ul class="filter-options">
+                            <li class="filter-option active" data-filter="all">
+                                <div class="filter-name">
+                                    <i class="fas fa-th-large"></i>
+                                    همه ابزارها
+                                </div>
+                                <div class="filter-count">6</div>
+                            </li>
+                            <li class="filter-option" data-filter="penetration">
+                                <div class="filter-name">
+                                    <i class="fas fa-user-secret"></i>
+                                    تست نفوذ
+                                </div>
+                                <div class="filter-count">3</div>
+                            </li>
+                            <li class="filter-option" data-filter="malware">
+                                <div class="filter-name">
+                                    <i class="fas fa-virus"></i>
+                                    تحلیل بدافزار
+                                </div>
+                                <div class="filter-count">1</div>
+                            </li>
+                            <li class="filter-option" data-filter="script">
+                                <div class="filter-name">
+                                    <i class="fas fa-code"></i>
+                                    اسکریپت‌نویسی
+                                </div>
+                                <div class="filter-count">1</div>
+                            </li>
+                            <li class="filter-option" data-filter="cracking">
+                                <div class="filter-name">
+                                    <i class="fas fa-key"></i>
+                                    کرکینگ
+                                </div>
+                                <div class="filter-count">1</div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Technology Filter Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3 class="font-title-portfolio">تکنولوژی‌ها</h3>
+                        </div>
+                        <div class="tech-options">
+                            <div class="tech-option">
+                                <input type="checkbox" id="tech-python" class="tech-checkbox" checked>
+                                <label for="tech-python" class="tech-label">Python</label>
+                            </div>
+                            <div class="tech-option">
+                                <input type="checkbox" id="tech-cpp" class="tech-checkbox" checked>
+                                <label for="tech-cpp" class="tech-label">C++</label>
+                            </div>
+                            <div class="tech-option">
+                                <input type="checkbox" id="tech-c" class="tech-checkbox" checked>
+                                <label for="tech-c" class="tech-label">C</label>
+                            </div>
+                            <div class="tech-option">
+                                <input type="checkbox" id="tech-assembly" class="tech-checkbox" checked>
+                                <label for="tech-assembly" class="tech-label">Assembly</label>
+                            </div>
+                            <div class="tech-option">
+                                <input type="checkbox" id="tech-web" class="tech-checkbox" checked>
+                                <label for="tech-web" class="tech-label">Web Technologies</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="portfolio-main-content">
+                    <!-- Search and Filter Container -->
+                    <div class="search-filter-container">
+                        <div class="search-bar">
+                            <input type="text" id="search-input" class="search-input" placeholder="جستجو در ابزارها...">
+                            <button id="search-btn" class="search-btn font-button-portfolio">جستجو</button>
+                        </div>
+                        
+                        <div id="active-filters" class="active-filters">
+                            <!-- Active filters will be added here dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- Filter Buttons -->
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">همه</button>
+                        <button class="filter-btn" data-filter="penetration">تست نفوذ</button>
+                        <button class="filter-btn" data-filter="malware">تحلیل بدافزار</button>
+                        <button class="filter-btn" data-filter="script">اسکریپت‌نویسی</button>
+                        <button class="filter-btn" data-filter="cracking">کرکینگ</button>
+                    </div>
+                    
+                    <!-- Portfolio Grid -->
+                    <div class="portfolio-grid">
                 <!-- Tool 1 - Undectable Backdoor -->
                 <div class="portfolio-item slide-up" data-category="penetration" style="--delay:1">
                     <div class="portfolio-img">
@@ -318,44 +505,6 @@
     
     <!-- Custom JS -->
     <script src="../js/main.js"></script>
-    
-    <!-- Portfolio Filter JS -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
-            
-            // Filter items on button click
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Get filter value
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    // Show/hide items based on filter
-                    portfolioItems.forEach(item => {
-                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            item.style.display = 'flex';
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'translateY(0)';
-                            }, 100);
-                        } else {
-                            item.style.opacity = '0';
-                            item.style.transform = 'translateY(20px)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="../js/portfolio.js"></script>
 </body>
 </html>
