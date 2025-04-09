@@ -624,11 +624,11 @@ section {
 @keyframes modal-fade-out {
   from {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0) rotate3d(10, 10, 0,90deg) scale(1);
   }
   to {
     opacity: 0;
-    transform: translateY(100px) scale(0.8);
+    transform: translateY(100px) translateX(90px) rotate3d(20, -5, 10,90deg) scale(0.8);
     filter: blur(5px);
   }
 }
@@ -662,8 +662,8 @@ section {
   color: #0c9cd0;
   text-decoration: none;
   font-family: Shabnam, sans-serif;
-  font-size: 1.1rem;
-  margin: 15px 0;
+  font-size: 1.3rem;
+  margin: 3px 0;
   display: inline-block;
   position: relative;
   padding: 5px 10px;
