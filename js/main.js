@@ -360,3 +360,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(rotateSkills, 2000); // شروع پس از 2 ثانیه
 });
+
+// Show and Close Certificate Modal
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('certificate-modal');
+    const btn = document.getElementById('show-certificate');
+    const closeBtn = document.querySelector('.close-modal');
+
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        // اضافه کردن کلاس closing قبل از بستن
+        modal.classList.add('closing');
+
+        // بعد از اتمام انیمیشن، مودال بسته شود
+        setTimeout(() => {
+            modal.classList.remove('show', 'closing');
+            document.body.style.overflow = 'auto';
+        }, 400); // مطابق با مدت زمان انیمیشن
+    });
+
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.add('closing');
+            setTimeout(() => {
+                modal.classList.remove('show', 'closing');
+                document.body.style.overflow = 'auto';
+            }, 400);
+        }
+    });
+});
