@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "داوود یاحی",
+  "alternateName": "Davood Yahay",
+  "url": "https://davoodya.com",
+  "image": "https://davoodya.com/images/davood-yahay.jpg",
+  "jobTitle": "متخصص امنیت سایبری و برنامه‌نویسی",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "داوود یاحی"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/davoodya/",
+    "https://github.com/davoodya",
+    "https://twitter.com/davoodya",
+    "https://instagram.com/davoodya"
+  ],
+  "knowsAbout": [
+    "امنیت سایبری",
+    "برنامه‌نویسی",
+    "شبکه‌های کامپیوتری",
+    "لینوکس",
+    "تست نفوذ",
+    "میکروتیک",
+    "سیسکو"
+  ],
+  "description": "داوود یاحی، متخصص و مشاور امنیت سایبری، برنامه‌نویسی و شبکه‌های کامپیوتری با بیش از ده سال تجربه در زمینه‌های مختلف فناوری اطلاعات و امنیت سایبری"
+}

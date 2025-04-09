@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "عنوان مقاله",
+  "author": {
+    "@type": "Person",
+    "name": "داوود یاحی",
+    "url": "https://davoodya.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "داوود یاحی",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://davoodya.com/images/logo.png"
+    }
+  },
+  "datePublished": "2025-04-09",
+  "dateModified": "2025-04-09",
+  "image": "https://davoodya.com/images/article-image.jpg",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://davoodya.com/pages/articles/article-title.html"
+  },
+  "description": "مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی",
+  "keywords": "داوود یاحی, امنیت سایبری, داوود یا, davoodya, برنامه نویسی, شبکه, لینوکس"
+}
