@@ -276,31 +276,41 @@ function initArticlesFiltering() {
 function initPagination() {
     const prevPageBtn = document.getElementById('prev-page');
     const nextPageBtn = document.getElementById('next-page');
-    const paginationBtns = document.querySelectorAll('.pagination-btn:not(#prev-page):not(#next-page)');
+    const paginationContainer = document.getElementById('pagination-numbers');
     const articlesContainer = document.getElementById('articles-container');
 
-    if (!prevPageBtn || !nextPageBtn || !articlesContainer) return;
+    if (!prevPageBtn || !nextPageBtn || !paginationContainer || !articlesContainer) return;
 
     const ARTICLES_PER_PAGE = 4;
     let currentPage = 1;
     let currentArticles = [];
+
+    function renderPaginationButtons(totalPages) {
+        paginationContainer.innerHTML = ''; // پاک کردن دکمه‌های قبلی
+
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'pagination-btn';
+            btn.textContent = i;
+            if (i === currentPage) btn.classList.add('active');
+
+            btn.addEventListener('click', function () {
+                currentPage = i;
+                updatePagination();
+            });
+
+            paginationContainer.appendChild(btn);
+        }
+    }
 
     function updatePagination(articles = null) {
         if (articles) currentArticles = articles;
 
         const totalPages = Math.max(1, Math.ceil(currentArticles.length / ARTICLES_PER_PAGE));
 
-        paginationBtns.forEach((btn, index) => {
-            const pageNum = index + 1;
-            if (pageNum <= totalPages) {
-                btn.style.display = 'inline-block';
-                btn.classList.toggle('active', pageNum === currentPage);
-                btn.textContent = pageNum;
-            } else {
-                btn.style.display = 'none';
-            }
-        });
+        renderPaginationButtons(totalPages);
 
+        // نمایش فقط مقالات مربوط به صفحه فعلی
         document.querySelectorAll('.article-card').forEach(article => {
             article.style.display = 'none';
         });
@@ -314,6 +324,7 @@ function initPagination() {
             }
         }
 
+        // دکمه‌های قبلی و بعدی
         prevPageBtn.classList.toggle('disabled', currentPage <= 1);
         nextPageBtn.classList.toggle('disabled', currentPage >= totalPages);
 
@@ -323,15 +334,8 @@ function initPagination() {
         });
     }
 
-    paginationBtns.forEach(btn => {
-        btn.addEventListener('click', function () {
-            currentPage = parseInt(this.textContent);
-            updatePagination();
-        });
-    });
-
     prevPageBtn.addEventListener('click', function () {
-        if (!this.classList.contains('disabled')) {
+        if (!this.classList.contains('disabled') && currentPage > 1) {
             currentPage--;
             updatePagination();
         }
@@ -349,10 +353,10 @@ function initPagination() {
         updatePagination(e.detail.filteredArticles);
     });
 
-    // init with all articles
     const initialArticles = Array.from(articlesContainer.querySelectorAll('.article-card'));
     updatePagination(initialArticles);
 }
+
 
 
 // در تابع applyFilters، بعد از اعمال فیلترها این خط را اضافه کنید:
