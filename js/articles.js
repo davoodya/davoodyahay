@@ -344,3 +344,17 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.classList.toggle('active');
     });
 });
+// اضافه کردن این کد به فایل JS موجود
+document.addEventListener('DOMContentLoaded', function() {
+    const selectElements = document.querySelectorAll('.filter-select');
+
+    selectElements.forEach(select => {
+        // Highlight selected option
+        select.addEventListener('change', function() {
+            this.style.color = this.value === 'all' ? 'var(--main-text)' : 'var(--accent-green)';
+        });
+
+        // Initialize color based on current value
+        select.style.color = select.value === 'all' ? 'var(--main-text)' : 'var(--accent-green)';
+    });
+});
