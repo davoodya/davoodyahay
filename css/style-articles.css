@@ -83,6 +83,7 @@
   border: 1px solid rgba(0, 255, 65, 0.2);
   border-radius: 10px;
   padding: 20px;
+  overflow: hidden;
   margin-bottom: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -93,9 +94,10 @@
   font-size: 1.3rem;
   margin-bottom: 15px;
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+  border-bottom: 1px solid rgb(224, 108, 17);
   display: flex;
   align-items: center;
+  /*gap: 10px;*/
 }
 
 .sidebar-widget-title i {
@@ -312,19 +314,24 @@
 /* Search Bar */
 .search-bar {
   display: flex;
+  align-items: stretch;
   margin-bottom: 20px;
   position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 65, 0.3);
 }
 
 .search-input {
   flex: 1;
   background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(0, 255, 65, 0.3);
+  /*border: 1px solid rgba(0, 255, 65, 0.3);*/
+  border: none;
   border-radius: 5px;
   padding: 12px 15px;
   color: var(--main-text);
   font-family: var(--Shabnam);
   font-size: 1rem;
+  min-width: 0;
   transition: all 0.3s ease;
 }
 
@@ -346,15 +353,18 @@
   padding: 0 20px;
   margin-right: 10px;
   cursor: pointer;
+  white-space: nowrap;
   font-family: var(--Shabnam);
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .search-btn:hover {
-  background-color: #00cc33;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 255, 65, 0.3);
+  background-color: #e06c11;
+  transform: translateX(2px);
+  text-blink: #2d87ea;
+  font-size: 110%;
+  box-shadow: 0 10px 15px rgb(65, 238, 22);
 }
 
 /* Filter Options */
@@ -363,6 +373,15 @@
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
+}
+
+[dir="rtl"] .search-bar {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .search-btn {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .filter-group {
