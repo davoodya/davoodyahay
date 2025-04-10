@@ -47,16 +47,16 @@ function initArticlesFiltering() {
     // Apply filters function
     function applyFilters() {
         const articles = Array.from(articlesContainer.querySelectorAll('.article-card'));
-        
+
         // Filter articles based on current filters
         articles.forEach(article => {
             let visible = true;
-            
+
             // Category filter
             if (filters.category !== 'all' && article.dataset.category !== filters.category) {
                 visible = false;
             }
-            
+
             // Tag filter
             if (filters.tag !== 'all') {
                 const articleTags = article.dataset.tags ? article.dataset.tags.split(',') : [];
@@ -64,27 +64,49 @@ function initArticlesFiltering() {
                     visible = false;
                 }
             }
-            
+
             // Search filter
             if (filters.search !== '') {
                 const articleTitle = article.querySelector('h3').textContent.toLowerCase();
                 const articleContent = article.querySelector('p').textContent.toLowerCase();
+                const articleTags = article.dataset.tags ? article.dataset.tags.split(',').join(' ') : '';
                 const searchTerm = filters.search.toLowerCase();
-                
-                if (!articleTitle.includes(searchTerm) && !articleContent.includes(searchTerm)) {
+
+                if (!articleTitle.includes(searchTerm) &&
+                    !articleContent.includes(searchTerm) &&
+                    !articleTags.includes(searchTerm)) {
                     visible = false;
                 }
             }
-            
+
             // Show or hide article
             article.style.display = visible ? 'block' : 'none';
         });
-        
+
         // Sort articles
         sortArticles(filters.sort);
-        
+
         // Update active filters display
         updateActiveFilters();
+
+        // Update active tags in cloud
+        updateActiveTags();
+    }
+
+// تابع جدید برای برجسته کردن تگ‌های فعال
+    function updateActiveTags() {
+        const tagCloudItems = document.querySelectorAll('.tag-cloud-item');
+        const currentSearch = filters.search.toLowerCase();
+
+        tagCloudItems.forEach(item => {
+            const tagText = item.dataset.tag.toLowerCase();
+
+            if (currentSearch === tagText) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
     }
     
     // Sort articles function
@@ -227,6 +249,35 @@ function initArticlesFiltering() {
             applyFilters();
         });
     }
+
+    // Tag cloud click handler
+    const tagCloudItems = document.querySelectorAll('.tag-cloud-item');
+    tagCloudItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const tagText = this.dataset.tag;
+
+            // Set search input value
+            if (searchInput) searchInput.value = tagText;
+            if (sidebarSearchInput) sidebarSearchInput.value = tagText;
+
+            // Update filters
+            filters.search = tagText;
+            filters.category = 'all';
+            filters.tag = 'all';
+
+            // Reset dropdowns
+            if (categoryFilter) categoryFilter.value = 'all';
+            if (tagFilter) tagFilter.value = 'all';
+
+            // Apply filters
+            applyFilters();
+
+            // Scroll to articles section
+            document.querySelector('.articles-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 }
 
 // Pagination

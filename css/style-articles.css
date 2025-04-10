@@ -206,6 +206,7 @@
 }
 
 /* Popular Tags Widget */
+/* Popular Tags Widget */
 .tags-cloud {
   display: flex;
   flex-wrap: wrap;
@@ -222,13 +223,19 @@
   font-size: 0.9rem;
   transition: all 0.3s ease;
   cursor: pointer;
+  user-select: none;
 }
 
 .tag-cloud-item:hover {
+  background-color: rgba(0, 255, 65, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 255, 65, 0.2);
+}
+
+.tag-cloud-item.active {
   background-color: var(--accent-green);
   color: var(--darker-bg);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(0, 255, 65, 0.3);
+  font-weight: bold;
 }
 
 /* Recent Articles Widget */
