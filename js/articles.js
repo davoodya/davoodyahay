@@ -29,13 +29,13 @@ function initArticlesFiltering() {
     const sortFilter = document.getElementById('sort-filter');
     const articlesContainer = document.getElementById('articles-container');
     const activeFilters = document.getElementById('active-filters');
-    
+
     // Sidebar search
     const sidebarSearchInput = document.getElementById('sidebar-search-input');
     const sidebarSearchBtn = document.getElementById('sidebar-search-btn');
-    
+
     if (!searchInput || !articlesContainer) return;
-    
+
     // Current active filters
     let filters = {
         search: '',
@@ -43,21 +43,18 @@ function initArticlesFiltering() {
         tag: 'all',
         sort: 'newest'
     };
-    
+
     // Apply filters function
     function applyFilters() {
-        const articles = Array.from(articlesContainer.querySelectorAll('.article-card'));
+        const allArticles = Array.from(articlesContainer.querySelectorAll('.article-card'));
 
-        // Filter articles based on current filters
-        articles.forEach(article => {
+        let filteredArticles = allArticles.filter(article => {
             let visible = true;
 
-            // Category filter
             if (filters.category !== 'all' && article.dataset.category !== filters.category) {
                 visible = false;
             }
 
-            // Tag filter
             if (filters.tag !== 'all') {
                 const articleTags = article.dataset.tags ? article.dataset.tags.split(',') : [];
                 if (!articleTags.includes(filters.tag)) {
@@ -65,7 +62,6 @@ function initArticlesFiltering() {
                 }
             }
 
-            // Search filter
             if (filters.search !== '') {
                 const articleTitle = article.querySelector('h3').textContent.toLowerCase();
                 const articleContent = article.querySelector('p').textContent.toLowerCase();
@@ -79,19 +75,25 @@ function initArticlesFiltering() {
                 }
             }
 
-            // Show or hide article
-            article.style.display = visible ? 'block' : 'none';
+            return visible;
         });
 
-        // Sort articles
-        sortArticles(filters.sort);
+        // Hide all articles
+        allArticles.forEach(article => {
+            article.style.display = 'none';
+        });
 
-        // Update active filters display
+        // Sort filtered articles only
+        sortArticles(filters.sort, filteredArticles);
+
+        // Update active filters UI
         updateActiveFilters();
-
-        // Update active tags in cloud
         updateActiveTags();
+
+        // Fire event to update pagination
+        document.dispatchEvent(new CustomEvent('filtersUpdated', { detail: { filteredArticles } }));
     }
+
 
 // تابع جدید برای برجسته کردن تگ‌های فعال
     function updateActiveTags() {
@@ -108,43 +110,34 @@ function initArticlesFiltering() {
             }
         });
     }
-    
+
     // Sort articles function
-    function sortArticles(sortType) {
-        const articles = Array.from(articlesContainer.querySelectorAll('.article-card:not([style*="display: none"])'));
-        
-        articles.sort((a, b) => {
+    function sortArticles(sortType, articles = null) {
+        const list = articles || Array.from(articlesContainer.querySelectorAll('.article-card:not([style*="display: none"])'));
+
+        list.sort((a, b) => {
             const dateA = a.querySelector('.article-meta-item span').textContent;
             const dateB = b.querySelector('.article-meta-item span').textContent;
             const viewsA = parseInt(a.querySelectorAll('.article-meta-item span')[1].textContent.replace(/[^\d]/g, ''));
             const viewsB = parseInt(b.querySelectorAll('.article-meta-item span')[1].textContent.replace(/[^\d]/g, ''));
-            
-            if (sortType === 'newest') {
-                // Sort by date (newest first) - Note: This is simplified and assumes the date format is consistent
-                return dateB.localeCompare(dateA);
-            } else if (sortType === 'oldest') {
-                // Sort by date (oldest first)
-                return dateA.localeCompare(dateB);
-            } else if (sortType === 'popular') {
-                // Sort by views (most views first)
-                return viewsB - viewsA;
-            }
-            
+
+            if (sortType === 'newest') return dateB.localeCompare(dateA);
+            if (sortType === 'oldest') return dateA.localeCompare(dateB);
+            if (sortType === 'popular') return viewsB - viewsA;
+
             return 0;
         });
-        
-        // Reorder articles in the DOM
-        articles.forEach(article => {
-            articlesContainer.appendChild(article);
-        });
+
+        list.forEach(article => articlesContainer.appendChild(article));
     }
-    
+
+
     // Update active filters display
     function updateActiveFilters() {
         if (!activeFilters) return;
-        
+
         activeFilters.innerHTML = '';
-        
+
         // Add search filter tag
         if (filters.search !== '') {
             const filterTag = document.createElement('div');
@@ -152,7 +145,7 @@ function initArticlesFiltering() {
             filterTag.innerHTML = `جستجو: ${filters.search} <span class="remove-tag" data-filter="search">×</span>`;
             activeFilters.appendChild(filterTag);
         }
-        
+
         // Add category filter tag
         if (filters.category !== 'all') {
             const categoryName = categoryFilter.options[categoryFilter.selectedIndex].text;
@@ -161,7 +154,7 @@ function initArticlesFiltering() {
             filterTag.innerHTML = `دسته: ${categoryName} <span class="remove-tag" data-filter="category">×</span>`;
             activeFilters.appendChild(filterTag);
         }
-        
+
         // Add tag filter tag
         if (filters.tag !== 'all') {
             const tagName = tagFilter.options[tagFilter.selectedIndex].text;
@@ -170,13 +163,13 @@ function initArticlesFiltering() {
             filterTag.innerHTML = `برچسب: ${tagName} <span class="remove-tag" data-filter="tag">×</span>`;
             activeFilters.appendChild(filterTag);
         }
-        
+
         // Add event listeners to remove filter tags
         const removeTags = document.querySelectorAll('.remove-tag');
         removeTags.forEach(tag => {
             tag.addEventListener('click', function() {
                 const filterType = this.dataset.filter;
-                
+
                 if (filterType === 'search') {
                     filters.search = '';
                     searchInput.value = '';
@@ -188,12 +181,12 @@ function initArticlesFiltering() {
                     filters.tag = 'all';
                     tagFilter.value = 'all';
                 }
-                
+
                 applyFilters();
             });
         });
     }
-    
+
     // Event listeners for main search
     if (searchBtn && searchInput) {
         searchBtn.addEventListener('click', function() {
@@ -201,7 +194,7 @@ function initArticlesFiltering() {
             if (sidebarSearchInput) sidebarSearchInput.value = searchInput.value.trim();
             applyFilters();
         });
-        
+
         searchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 filters.search = searchInput.value.trim();
@@ -210,7 +203,7 @@ function initArticlesFiltering() {
             }
         });
     }
-    
+
     // Event listeners for sidebar search
     if (sidebarSearchBtn && sidebarSearchInput) {
         sidebarSearchBtn.addEventListener('click', function() {
@@ -218,7 +211,7 @@ function initArticlesFiltering() {
             if (searchInput) searchInput.value = sidebarSearchInput.value.trim();
             applyFilters();
         });
-        
+
         sidebarSearchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 filters.search = sidebarSearchInput.value.trim();
@@ -227,7 +220,7 @@ function initArticlesFiltering() {
             }
         });
     }
-    
+
     // Event listeners for filters
     if (categoryFilter) {
         categoryFilter.addEventListener('change', function() {
@@ -235,14 +228,14 @@ function initArticlesFiltering() {
             applyFilters();
         });
     }
-    
+
     if (tagFilter) {
         tagFilter.addEventListener('change', function() {
             filters.tag = this.value;
             applyFilters();
         });
     }
-    
+
     if (sortFilter) {
         sortFilter.addEventListener('change', function() {
             filters.sort = this.value;
@@ -280,57 +273,90 @@ function initArticlesFiltering() {
     });
 }
 
-// Pagination
 function initPagination() {
     const prevPageBtn = document.getElementById('prev-page');
     const nextPageBtn = document.getElementById('next-page');
     const paginationBtns = document.querySelectorAll('.pagination-btn:not(#prev-page):not(#next-page)');
-    
-    if (!prevPageBtn || !nextPageBtn || paginationBtns.length === 0) return;
-    
-    // Current page
+    const articlesContainer = document.getElementById('articles-container');
+
+    if (!prevPageBtn || !nextPageBtn || !articlesContainer) return;
+
+    const ARTICLES_PER_PAGE = 4;
     let currentPage = 1;
-    const totalPages = paginationBtns.length;
-    
-    // Update pagination buttons
-    function updatePagination() {
-        // Update page buttons
+    let currentArticles = [];
+
+    function updatePagination(articles = null) {
+        if (articles) currentArticles = articles;
+
+        const totalPages = Math.max(1, Math.ceil(currentArticles.length / ARTICLES_PER_PAGE));
+
         paginationBtns.forEach((btn, index) => {
-            btn.classList.toggle('active', index + 1 === currentPage);
+            const pageNum = index + 1;
+            if (pageNum <= totalPages) {
+                btn.style.display = 'inline-block';
+                btn.classList.toggle('active', pageNum === currentPage);
+                btn.textContent = pageNum;
+            } else {
+                btn.style.display = 'none';
+            }
         });
-        
-        // Update prev/next buttons
-        prevPageBtn.classList.toggle('disabled', currentPage === 1);
-        nextPageBtn.classList.toggle('disabled', currentPage === totalPages);
+
+        document.querySelectorAll('.article-card').forEach(article => {
+            article.style.display = 'none';
+        });
+
+        const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
+        const endIndex = Math.min(startIndex + ARTICLES_PER_PAGE, currentArticles.length);
+
+        for (let i = startIndex; i < endIndex; i++) {
+            if (currentArticles[i]) {
+                currentArticles[i].style.display = 'block';
+            }
+        }
+
+        prevPageBtn.classList.toggle('disabled', currentPage <= 1);
+        nextPageBtn.classList.toggle('disabled', currentPage >= totalPages);
+
+        window.scrollTo({
+            top: articlesContainer.offsetTop - 100,
+            behavior: 'smooth'
+        });
     }
-    
-    // Event listeners
-    paginationBtns.forEach((btn, index) => {
-        btn.addEventListener('click', function() {
-            currentPage = index + 1;
+
+    paginationBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            currentPage = parseInt(this.textContent);
             updatePagination();
-            // Here you would load the articles for the selected page
-            // For now, we'll just scroll to the top of the articles section
-            document.querySelector('.articles-section').scrollIntoView({ behavior: 'smooth' });
         });
     });
-    
-    prevPageBtn.addEventListener('click', function() {
-        if (currentPage > 1) {
+
+    prevPageBtn.addEventListener('click', function () {
+        if (!this.classList.contains('disabled')) {
             currentPage--;
             updatePagination();
-            document.querySelector('.articles-section').scrollIntoView({ behavior: 'smooth' });
         }
     });
-    
-    nextPageBtn.addEventListener('click', function() {
-        if (currentPage < totalPages) {
+
+    nextPageBtn.addEventListener('click', function () {
+        if (!this.classList.contains('disabled')) {
             currentPage++;
             updatePagination();
-            document.querySelector('.articles-section').scrollIntoView({ behavior: 'smooth' });
         }
     });
+
+    document.addEventListener('filtersUpdated', function (e) {
+        currentPage = 1;
+        updatePagination(e.detail.filteredArticles);
+    });
+
+    // init with all articles
+    const initialArticles = Array.from(articlesContainer.querySelectorAll('.article-card'));
+    updatePagination(initialArticles);
 }
+
+
+// در تابع applyFilters، بعد از اعمال فیلترها این خط را اضافه کنید:
+// dispatchEvent(new Event('filtersUpdated'));
 
 // Preloader
 
