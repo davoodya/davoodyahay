@@ -107,20 +107,230 @@
                 <p class="font-description-course">دوره‌های تخصصی در زمینه های امنیت سایبری، شبکه، برنامه نویسی، لینوکس، مجازی‌سازی و ... برای تمام سطوح از مبتدی تا پیشرفته</p>
             </div>
 
-            <!-- Course Filters - checked -->
-            <div class="course-filters">
-                <button class="filter-btn active font-title-course" data-filter="all">همه دوره‌ها</button>
-                <button class="filter-btn font-button-course" data-filter="free">دوره‌های رایگان</button>
-                <button class="filter-btn font-button-course" data-filter="premium">دوره‌های غیر رایگان</button>
-                <button class="filter-btn font-button-course" data-filter="network">شبکه</button>
-                <button class="filter-btn font-button-course" data-filter="security">امنیت</button>
-                <button class="filter-btn font-button-course" data-filter="linux">لینوکس</button>
-                <button class="filter-btn font-button-course" data-filter="virtualization">مجازی‌سازی</button>
-            </div>
+            <!-- Courses Layout with Sidebar -->
+            <div class="courses-layout">
+                <!-- Sidebar -->
+                <div class="courses-sidebar">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-search"></i>
+                            <h3 class="font-title-course">جستجو</h3>
+                        </div>
+                        <div class="sidebar-search">
+                            <input type="text" id="sidebar-search-input" class="sidebar-search-input" placeholder="جستجو در دوره‌ها...">
+                            <button id="sidebar-search-btn" class="sidebar-search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-folder"></i>
+                            <h3 class="font-title-course">دسته‌بندی‌ها</h3>
+                        </div>
+                        <ul class="categories-list">
+                            <!-- Security Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-shield-alt"></i>
+                                        امنیت سایبری
+                                    </div>
+                                    <div class="category-count">3</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="courses/ceh-plus-plus.html" class="course-link">دوره CEH++ کامل</a>
+                                    <a href="courses/beginner-ceh.html" class="course-link">دوره CEH مقدماتی تا متوسط</a>
+                                    <a href="courses/advanced-ceh.html" class="course-link">دوره CEH پیشرفته</a>
+                                </div>
+                            </li>
+                            
+                            <!-- Network Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-network-wired"></i>
+                                        شبکه‌های کامپیوتری
+                                    </div>
+                                    <div class="category-count">2</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="courses/network-plus.html" class="course-link">دوره شبکه Network+</a>
+                                    <a href="courses/mikrotik.html" class="course-link">دوره میکروتیک</a>
+                                </div>
+                            </li>
+                            
+                            <!-- Linux Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fab fa-linux"></i>
+                                        لینوکس
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="courses/linux-lpic1.html" class="course-link">دوره لینوکس الپیک 1</a>
+                                </div>
+                            </li>
+                            
+                            <!-- Virtualization Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-server"></i>
+                                        مجازی‌سازی
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="courses/virtualization.html" class="course-link">مینی دوره مجازی سازی</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Filter Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-filter"></i>
+                            <h3 class="font-title-course">فیلترها</h3>
+                        </div>
+                        <ul class="filter-options">
+                            <li class="filter-option active" data-filter="all">
+                                <div class="filter-name">
+                                    <i class="fas fa-th-large"></i>
+                                    همه دوره‌ها
+                                </div>
+                                <div class="filter-count">6</div>
+                            </li>
+                            <li class="filter-option" data-filter="free">
+                                <div class="filter-name">
+                                    <i class="fas fa-gift"></i>
+                                    دوره‌های رایگان
+                                </div>
+                                <div class="filter-count">4</div>
+                            </li>
+                            <li class="filter-option" data-filter="premium">
+                                <div class="filter-name">
+                                    <i class="fas fa-crown"></i>
+                                    دوره‌های غیر رایگان
+                                </div>
+                                <div class="filter-count">2</div>
+                            </li>
+                            <li class="filter-option" data-filter="security">
+                                <div class="filter-name">
+                                    <i class="fas fa-shield-alt"></i>
+                                    امنیت
+                                </div>
+                                <div class="filter-count">3</div>
+                            </li>
+                            <li class="filter-option" data-filter="network">
+                                <div class="filter-name">
+                                    <i class="fas fa-network-wired"></i>
+                                    شبکه
+                                </div>
+                                <div class="filter-count">2</div>
+                            </li>
+                            <li class="filter-option" data-filter="linux">
+                                <div class="filter-name">
+                                    <i class="fab fa-linux"></i>
+                                    لینوکس
+                                </div>
+                                <div class="filter-count">1</div>
+                            </li>
+                            <li class="filter-option" data-filter="virtualization">
+                                <div class="filter-name">
+                                    <i class="fas fa-server"></i>
+                                    مجازی‌سازی
+                                </div>
+                                <div class="filter-count">1</div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Level Filter Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-signal"></i>
+                            <h3 class="font-title-course">سطح دوره</h3>
+                        </div>
+                        <div class="level-options">
+                            <div class="level-option">
+                                <input type="checkbox" id="level-beginner" class="level-checkbox" checked>
+                                <label for="level-beginner" class="level-label">مبتدی</label>
+                            </div>
+                            <div class="level-option">
+                                <input type="checkbox" id="level-intermediate" class="level-checkbox" checked>
+                                <label for="level-intermediate" class="level-label">متوسط</label>
+                            </div>
+                            <div class="level-option">
+                                <input type="checkbox" id="level-advanced" class="level-checkbox" checked>
+                                <label for="level-advanced" class="level-label">پیشرفته</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Filter Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <h3 class="font-title-course">قیمت</h3>
+                        </div>
+                        <div class="price-options">
+                            <div class="price-option">
+                                <input type="checkbox" id="price-free" class="price-checkbox" checked>
+                                <label for="price-free" class="price-label">رایگان</label>
+                            </div>
+                            <div class="price-option">
+                                <input type="checkbox" id="price-paid" class="price-checkbox" checked>
+                                <label for="price-paid" class="price-label">غیر رایگان</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="courses-main-content">
+                    <!-- Search and Filter Container -->
+                    <div class="search-filter-container">
+                        <div class="search-bar">
+                            <input type="text" id="search-input" class="search-input" placeholder="جستجو در دوره‌ها...">
+                            <button id="search-btn" class="search-btn font-button-course">جستجو</button>
+                        </div>
+                        
+                        <div id="active-filters" class="active-filters">
+                            <!-- Active filters will be added here dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- Course Filters - checked -->
+                    <div class="course-filters">
+                        <button class="filter-btn active font-title-course" data-filter="all">همه دوره‌ها</button>
+                        <button class="filter-btn font-button-course" data-filter="free">دوره‌های رایگان</button>
+                        <button class="filter-btn font-button-course" data-filter="premium">دوره‌های غیر رایگان</button>
+                        <button class="filter-btn font-button-course" data-filter="network">شبکه</button>
+                        <button class="filter-btn font-button-course" data-filter="security">امنیت</button>
+                        <button class="filter-btn font-button-course" data-filter="linux">لینوکس</button>
+                        <button class="filter-btn font-button-course" data-filter="virtualization">مجازی‌سازی</button>
+                    </div>
             
-            <!-- Courses Cards - checked -->
-            <div class="courses-container">
-                <!-- Course 1 - Network+ -->
+                    <!-- Courses Cards - checked -->
+                    <div class="courses-container">
+                        <!-- Course 1 - Network+ -->
                 <div class="course-card" data-category="free network security">
                     <div class="course-image">
                         <img src="https://via.placeholder.com/350x200/0a0a0a/00ff41?text=Network+" alt="دوره شبکه Network+">
@@ -376,18 +586,9 @@
     
     <!-- Custom JS -->
     <script src="../js/main.js"></script>
-    
-    <script>
-        // Course filtering
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const courseCards = document.querySelectorAll('.course-card');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    
+    <script src="../js/courses.js"></script>
+</body>
+</html>
                     // Add active class to clicked button
                     this.classList.add('active');
                     
