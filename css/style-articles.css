@@ -165,6 +165,9 @@
   margin-top: 10px;
 }
 
+.category-toggle {
+  color: var(--accent-orange);
+}
 .category-item.active .category-toggle i {
   transform: rotate(180deg);
 }
