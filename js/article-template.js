@@ -208,18 +208,7 @@ function initImageLightbox() {
 }
 
 // Preloader
-function initPreloader() {
-    const preloader = document.querySelector('.preloader');
-    
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            preloader.style.opacity = '0';
-            setTimeout(function() {
-                preloader.style.display = 'none';
-            }, 600);
-        }, 500);
-    });
-}
+
 
 // Hamburger Menu
 document.addEventListener('DOMContentLoaded', function() {
