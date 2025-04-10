@@ -401,7 +401,7 @@
 
 .filter-group h4 {
   font-family: var(--Vazir);
-  color: var(--accent-green);
+  color: var(--accent-blue);
   margin-bottom: 10px;
   font-size: 1.1rem;
 }
@@ -426,7 +426,7 @@
 
 .filter-select option {
   background-color: var(--darker-bg);
-  color: var(--main-text);
+  color: var(--accent-green);
 }
 
 .filter-tags {
