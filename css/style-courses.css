@@ -94,7 +94,7 @@
   font-size: 1.3rem;
   margin-bottom: 15px;
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+  border-bottom: 1px solid rgb(224, 108, 17);
   display: flex;
   align-items: center;
 }
@@ -102,6 +102,7 @@
 .sidebar-widget-title i {
   margin-left: 10px;
   font-size: 1.1rem;
+  color: var(--accent-orange);
 }
 
 /* Categories Widget */
