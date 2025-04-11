@@ -500,7 +500,9 @@ nav {
 /* Animations */
 @keyframes pulse-opacity {
   0%, 100% { opacity: 0.8; }
-  50% { opacity: 1; }
+  25% { opacity: 0.3; color: green; }
+  50% { opacity: 1; color: orange; }
+  100% { opacity: 0.7; color: blue; }
 }
 
 @keyframes glow-pulse {
