@@ -242,6 +242,14 @@
   transition: all 0.3s ease;
 }
 
+.sidebar-search i {
+  color: var(--accent-green);
+}
+
+.sidebar-search i:hover {
+  transform: scaleY(125%) scaleX(125%);
+  color: var(--accent-orange);
+}
 .sidebar-search-btn:hover {
   color: #00cc33;
 }
@@ -618,8 +626,8 @@
 
 .search-btn:hover {
   background-color: #00cc33;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 255, 65, 0.3);
+  transform: translateY(-2px) scaleX(110%) scaleY(110%);
+  box-shadow: 0 5px 15px rgb(224, 108, 17);
 }
 
 /* Active Filters */
