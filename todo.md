@@ -2,6 +2,13 @@
    1. اضافه کردن عکس برای دوره ها در courses.html
    2. بررسی منو بالایی تمام صفحات(مهارتها، مقاله ها در همه جا نیست )
    3. 
+1. Continue from:
+   2. Apply Footer and Header in all pages from header-footer.css
+   3. Add Yakuza Articles in articles.html and article folders
+   4. Check and fix all Skills and skills percentages 
+   5. Check and Upload Certificates
+
+
 
 3. Other Tasks Reminds
    0. تصحیح لینک + عنوان هر ویدئو درون صفحات هر دوره
