@@ -1321,6 +1321,20 @@ footer::before {
   line-height: 1.8;
 }
 
+.footer-logo img {
+  border-radius: 50%;
+
+  margin-right: 20px;
+  margin-top: -20px;
+  width: 200px;
+  height: 200px;
+}
+
+
+.footer-logo img:hover {
+  transition: all 0.5s ease;
+  transform: scaleX(125%);
+}
 
 
 .footer-desc {
@@ -1391,6 +1405,7 @@ footer::before {
   border-radius: 5px;
   font-size: 0.8rem;
   opacity: 0;
+  font-family: var(--Shabnam);
   transition: all 0.3s ease;
   white-space: nowrap;
 }
