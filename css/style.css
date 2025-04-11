@@ -1985,6 +1985,21 @@ input.form-control{
   animation: glitch-switch 0.5s linear;
 }
 
+.reset-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #d32f2f;
+}
+
 /* انیمیشن‌ها */
 @keyframes scanline {
   0% { background-position: -100% 0; }
