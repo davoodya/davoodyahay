@@ -1,3 +1,20 @@
+// JS Codes moved from courses.html
+// Add active class to clicked button
+this.classList.add('active');
+
+// Get filter value
+const filterValue = this.getAttribute('data-filter');
+
+// Filter courses
+let courseCards;
+courseCards.forEach(card => {
+    if (filterValue === 'all' || card.getAttribute('data-category').includes(filterValue)) {
+        card.style.display = 'block';
+    } else {
+        card.style.display = 'none';
+    }
+});
+
 // Courses Page JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize sidebar category dropdowns
