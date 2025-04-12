@@ -38,6 +38,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/courses/netplus.css">
+    <link rel="stylesheet" href="../../css/header-footer.css">
     
 
 </head>
@@ -78,6 +79,7 @@
     <!-- Page Header -->
     <section class="page-header">
         <canvas id="matrix-canvas" class="matrix-animation"></canvas>
+        <div class="matrix-rain" id="matrix-rain"></div>
         <div class="container">
             <div class="page-header-content">
                 <h1>مینی دوره مجازی سازی</h1>
@@ -431,12 +433,35 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer-animate dark-footer">
+    <footer class="dark-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3 class="logo-glitch">DAVOOD<span>_</span>YAHAY</h3>
+                    <h3 class="logo-glitch-footer">DAVOOD<span>_</span>YAHAY</h3>
+                    <img src="../images/davoodya.png" alt="Davood Yahay Image">
                     <p class="footer-desc">مشاور و مدرس امنیت سایبری، برنامه نویسی، شبکه‌های کامپیوتری و سیستم های عامل</p>
+
+                </div>
+
+                <div class="footer-links">
+                    <h3>دسترسی سریع</h3>
+                    <ul>
+                        <li><a href="../index.html">خانه</a></li>
+                        <li><a href="../index.html#about">درباره من</a></li>
+                        <li><a href="../index.html#services">سرویس ها</a></li>
+                        <li><a href="../index.html#portfolio">نمونه ابزارها</a></li>
+                        <li><a href="courses.html">دوره‌های آموزشی</a></li>
+                        <li><a href="articles.html">مقالات</a></li>
+                        <li><a href="skills.html">مهارت‌ها و مدارک</a></li>
+                        <li><a href="../index.html#contact">تماس با من</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>اطلاعات تماس</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> ایران، اصفهان</p>
+                    <p><i class="fas fa-envelope"></i> info@davoodya.com</p>
+                    <p><i class="fas fa-phone"></i> +98 913 000 0000</p>
 
                     <div class="social-links">
                         <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank" class="social-icon">
@@ -457,32 +482,10 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="footer-links">
-                    <h4 class="links-title">لینک‌های سریع</h4>
-                    <ul>
-                        <li><a href="../index.html" class="link-item">خانه</a></li>
-                        <li><a href="../index.html#about" class="link-item">درباره من</a></li>
-                        <li><a href="../index.html#services" class="link-item">سرویس ها</a></li>
-                        <li><a href="../index.html#portfolio" class="link-item">نمونه ابزارها</a></li>
-                        <li><a href="../index.html#contact" class="link-item">تماس با من</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h4 class="links-title">سرویس ها</h4>
-                    <ul>
-                        <li><a href="#services" class="link-item">امنیت سایبری</a></li>
-                        <li><a href="#services" class="link-item">شبکه‌های کامپیوتری</a></li>
-                        <li><a href="#services" class="link-item">تست نفوذ</a></li>
-                        <li><a href="#services" class="link-item">آموزش</a></li>
-                        <li><a href="#services" class="link-item">مشاوره</a></li>
-                    </ul>
-                </div>
             </div>
 
-            <div class="copyright">
-                <p class="copyright-text">&copy; تمامی حقوق محفوظ است | طراحی و توسعه توسط <span>داوود یاحی</span></p>
+            <div class="footer-bottom">
+                <p>&copy; تمامی حقوق محفوظ است | طراحی و توسعه توسط <span> داوود یاحی </span></p>
             </div>
         </div>
     </footer>
@@ -490,7 +493,7 @@
 
     <!-- Custom JS -->
     <script src="../../js/main.js"></script>
-    
+    <script src="../../js/main2.js"></script>
     <script>
         // Curriculum section toggle
         document.addEventListener('DOMContentLoaded', function() {
