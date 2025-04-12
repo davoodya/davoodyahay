@@ -3,6 +3,8 @@
    2. بررسی منو بالایی تمام صفحات(مهارتها، مقاله ها در همه جا نیست )
    3. عکس گرفتن از مدارکی که میخواهم در وبسایت بگذارم
       4. در صفحه مدارک، قسمت ها را بر اساس مدارک تعبیه کن
+   5. درست کردن لینکهای بخش به اشتراک گذاری مقاله
+   6. 
 1. Continue from:
    2. Apply Footer and Header in all pages from header-footer.css
    3. Add Yakuza Articles in articles.html and article folders

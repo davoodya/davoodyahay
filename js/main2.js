@@ -48,139 +48,139 @@ function initMatrixAnimation() {
     });
 }
 
-function initMatrixAnimation2() {
-    const canvas = document.getElementById('matrix-canvas2');
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    let animationId;
-    let lastTime = 0;
-    const fps = 30;
-    const frameInterval = 1000 / fps;
-
-    // Persian/Arabic characters and numbers
-    const persian = 'ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی۰۱۲۳۴۵۶۷۸۹';
-    const chars = persian.split('');
-    const colors = ['#00ff41', '#00ff99', '#33ff00', '#66ff00', '#99ff00'];
-
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        initDrops();
-    }
-
-    const drops = [];
-    const speeds = [];
-    const opacities = [];
-
-    function initDrops() {
-        const fontSize = Math.max(14, window.innerWidth / 100);
-        const columns = Math.floor(canvas.width / fontSize);
-
-        drops.length = 0;
-        speeds.length = 0;
-        opacities.length = 0;
-
-        for (let i = 0; i < columns; i++) {
-            drops.push({
-                y: Math.random() * -100,
-                speed: 0.5 + Math.random() * 2,
-                length: 5 + Math.floor(Math.random() * 15),
-                chars: [],
-                lastChange: 0
-            });
-
-            // Initialize character positions
-            for (let j = 0; j < drops[i].length; j++) {
-                drops[i].chars.push({
-                    char: chars[Math.floor(Math.random() * chars.length)],
-                    opacity: 1 - (j / drops[i].length)
-                });
-            }
-        }
-    }
-
-    function draw(timestamp) {
-        if (!lastTime) lastTime = timestamp;
-        const deltaTime = timestamp - lastTime;
-
-        if (deltaTime > frameInterval) {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            const fontSize = Math.max(14, window.innerWidth / 100);
-            ctx.font = `${fontSize}px Vazir`;
-            ctx.textAlign = 'center';
-
-            for (let i = 0; i < drops.length; i++) {
-                const x = i * fontSize + fontSize / 2;
-                const drop = drops[i];
-
-                // Update drop position
-                drop.y += drop.speed;
-
-                // Change characters occasionally
-                if (timestamp - drop.lastChange > 100 + Math.random() * 900) {
-                    for (let j = 0; j < drop.chars.length; j++) {
-                        drop.chars[j].char = chars[Math.floor(Math.random() * chars.length)];
-                    }
-                    drop.lastChange = timestamp;
-                }
-
-                // Draw each character in the drop
-                for (let j = 0; j < drop.chars.length; j++) {
-                    const charY = drop.y - j * fontSize;
-
-                    if (charY > -fontSize && charY < canvas.height) {
-                        const colorIndex = Math.floor(j / drop.chars.length * colors.length);
-                        ctx.fillStyle = colors[colorIndex];
-                        ctx.globalAlpha = drop.chars[j].opacity;
-                        ctx.fillText(drop.chars[j].char, x, charY);
-                    }
-                }
-
-                // Reset drop when it goes off screen
-                if (drop.y - drop.length * fontSize > canvas.height) {
-                    drop.y = Math.random() * -100;
-                    drop.speed = 0.5 + Math.random() * 2;
-                }
-            }
-
-            lastTime = timestamp - (deltaTime % frameInterval);
-        }
-
-        animationId = requestAnimationFrame(draw);
-    }
-
-    function startAnimation() {
-        resizeCanvas();
-        animationId = requestAnimationFrame(draw);
-    }
-
-    function stopAnimation() {
-        cancelAnimationFrame(animationId);
-    }
-
-    // Initialize
-    startAnimation();
-
-    // Event listeners
-    window.addEventListener('resize', () => {
-        resizeCanvas();
-    });
-
-    // Pause animation when tab is not visible
-    document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-            stopAnimation();
-        } else {
-            startAnimation();
-        }
-    });
-
-    // Return cleanup function
-    return stopAnimation;
-}
+// function initMatrixAnimation2() {
+//     const canvas = document.getElementById('matrix-canvas2');
+//     if (!canvas) return;
+//
+//     const ctx = canvas.getContext('2d');
+//     let animationId;
+//     let lastTime = 0;
+//     const fps = 30;
+//     const frameInterval = 1000 / fps;
+//
+//     // Persian/Arabic characters and numbers
+//     const persian = 'ابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی۰۱۲۳۴۵۶۷۸۹';
+//     const chars = persian.split('');
+//     const colors = ['#00ff41', '#00ff99', '#33ff00', '#66ff00', '#99ff00'];
+//
+//     function resizeCanvas() {
+//         canvas.width = window.innerWidth;
+//         canvas.height = window.innerHeight;
+//         initDrops();
+//     }
+//
+//     const drops = [];
+//     const speeds = [];
+//     const opacities = [];
+//
+//     function initDrops() {
+//         const fontSize = Math.max(14, window.innerWidth / 100);
+//         const columns = Math.floor(canvas.width / fontSize);
+//
+//         drops.length = 0;
+//         speeds.length = 0;
+//         opacities.length = 0;
+//
+//         for (let i = 0; i < columns; i++) {
+//             drops.push({
+//                 y: Math.random() * -100,
+//                 speed: 0.5 + Math.random() * 2,
+//                 length: 5 + Math.floor(Math.random() * 15),
+//                 chars: [],
+//                 lastChange: 0
+//             });
+//
+//             // Initialize character positions
+//             for (let j = 0; j < drops[i].length; j++) {
+//                 drops[i].chars.push({
+//                     char: chars[Math.floor(Math.random() * chars.length)],
+//                     opacity: 1 - (j / drops[i].length)
+//                 });
+//             }
+//         }
+//     }
+//
+//     function draw(timestamp) {
+//         if (!lastTime) lastTime = timestamp;
+//         const deltaTime = timestamp - lastTime;
+//
+//         if (deltaTime > frameInterval) {
+//             ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+//             ctx.fillRect(0, 0, canvas.width, canvas.height);
+//
+//             const fontSize = Math.max(14, window.innerWidth / 100);
+//             ctx.font = `${fontSize}px Vazir`;
+//             ctx.textAlign = 'center';
+//
+//             for (let i = 0; i < drops.length; i++) {
+//                 const x = i * fontSize + fontSize / 2;
+//                 const drop = drops[i];
+//
+//                 // Update drop position
+//                 drop.y += drop.speed;
+//
+//                 // Change characters occasionally
+//                 if (timestamp - drop.lastChange > 100 + Math.random() * 900) {
+//                     for (let j = 0; j < drop.chars.length; j++) {
+//                         drop.chars[j].char = chars[Math.floor(Math.random() * chars.length)];
+//                     }
+//                     drop.lastChange = timestamp;
+//                 }
+//
+//                 // Draw each character in the drop
+//                 for (let j = 0; j < drop.chars.length; j++) {
+//                     const charY = drop.y - j * fontSize;
+//
+//                     if (charY > -fontSize && charY < canvas.height) {
+//                         const colorIndex = Math.floor(j / drop.chars.length * colors.length);
+//                         ctx.fillStyle = colors[colorIndex];
+//                         ctx.globalAlpha = drop.chars[j].opacity;
+//                         ctx.fillText(drop.chars[j].char, x, charY);
+//                     }
+//                 }
+//
+//                 // Reset drop when it goes off screen
+//                 if (drop.y - drop.length * fontSize > canvas.height) {
+//                     drop.y = Math.random() * -100;
+//                     drop.speed = 0.5 + Math.random() * 2;
+//                 }
+//             }
+//
+//             lastTime = timestamp - (deltaTime % frameInterval);
+//         }
+//
+//         animationId = requestAnimationFrame(draw);
+//     }
+//
+//     function startAnimation() {
+//         resizeCanvas();
+//         animationId = requestAnimationFrame(draw);
+//     }
+//
+//     function stopAnimation() {
+//         cancelAnimationFrame(animationId);
+//     }
+//
+//     // Initialize
+//     startAnimation();
+//
+//     // Event listeners
+//     window.addEventListener('resize', () => {
+//         resizeCanvas();
+//     });
+//
+//     // Pause animation when tab is not visible
+//     document.addEventListener('visibilitychange', () => {
+//         if (document.hidden) {
+//             stopAnimation();
+//         } else {
+//             startAnimation();
+//         }
+//     });
+//
+//     // Return cleanup function
+//     return stopAnimation;
+// }
 
 // // Initialize with auto-start
 // const stopMatrixAnimation = initMatrixAnimation2();

@@ -32,6 +32,7 @@ function initCodeHighlighting() {
     }
 }
 
+
 // Table of Contents Generation
 function initTableOfContents() {
     const articleBody = document.querySelector('.article-body');
@@ -126,7 +127,48 @@ function initImageLightbox() {
 }
 
 // Preloader
+function initCategoryDropdowns() {
+    const categoryItems = document.querySelectorAll('.category-item');
 
+    // Close all dropdowns initially
+    categoryItems.forEach(item => {
+        item.classList.remove('active');
+    });
+
+    categoryItems.forEach(item => {
+        const header = item.querySelector('.category-item-header');
+        const dropdown = item.querySelector('.category-dropdown');
+
+        header.addEventListener('click', function(e) {
+            e.stopPropagation();
+
+            // Check if clicked category is already active
+            const isActive = item.classList.contains('active');
+
+            // Close all dropdowns first
+            categoryItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+
+            // Open clicked category if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function() {
+        categoryItems.forEach(item => {
+            item.classList.remove('active');
+        });
+    });
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initCategoryDropdowns();
+});
 
 // Hamburger Menu
 document.addEventListener('DOMContentLoaded', function() {

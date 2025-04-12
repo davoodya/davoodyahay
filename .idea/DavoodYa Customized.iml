@@ -8,5 +8,6 @@
     <orderEntry type="library" name="Shabnam" level="application" />
     <orderEntry type="library" name="Sahel" level="application" />
     <orderEntry type="library" name="Yekan-Bakh" level="application" />
+    <orderEntry type="library" name="prism" level="application" />
   </component>
 </module>
