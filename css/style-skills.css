@@ -78,19 +78,20 @@
   transform: translateX(-50%);
   width: 100px;
   height: 3px;
-  background: linear-gradient(to right, transparent, var(--accent-green), transparent);
+  background: linear-gradient(to right, transparent, var(--accent-orange), transparent);
 }
 
 .section-subtitle h2 {
   color: var(--accent-green);
   font-size: 2.2rem;
   margin-bottom: 10px;
-  text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+  text-shadow: 0 0 10px rgb(224, 108, 17);
   animation: glow-pulse 3s infinite alternate;
 }
 
 .section-subtitle h2 i {
   margin-left: 10px;
+  color: var(--accent-orange);
   animation: rotate-icon 6s linear infinite;
   display: inline-block;
 }
@@ -564,6 +565,9 @@
     text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
   }
   50% {
+    text-shadow: 0 0 20px rgb(224, 108, 17);
+  }
+  100% {
     text-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
   }
 }

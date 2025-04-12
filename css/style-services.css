@@ -181,6 +181,10 @@
     color: var(--accent-green);
     transition: transform 0.3s ease;
 }
+.toggle-orange {
+    color: var(--accent-orange);
+}
+
 
 .service-detail.active .toggle-arrow {
     transform: rotate(180deg);
