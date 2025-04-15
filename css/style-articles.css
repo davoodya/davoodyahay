@@ -871,11 +871,13 @@
   margin: 30px 0 15px;
   font-family: var(--Vazir);
 }
+
 .article-body h5 {
   color: #00bc00;
   margin: 30px 0 15px;
   font-family: var(--Vazir);
 }
+
 .article-body h6 {
   color: #f1f1f1;
   margin: 30px 0 15px;
@@ -897,7 +899,7 @@
 
 .article-body img {
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 16px;
   margin: 20px 0;
 }
 
@@ -917,18 +919,184 @@
   font-size: 0.9em;
 }
 
-.article-body pre {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 15px;
-  border-radius: 5px;
-  overflow-x: auto;
-  margin: 20px 0;
-}
+/*.article-body pre {*/
+/*  background-color: rgba(0, 0, 0, 0.3);*/
+/*  color: #eff264;*/
+/*  padding: 15px;*/
+/*  border-radius: 5px;*/
+/*  overflow-x: auto;*/
+/*  margin: 20px 0;*/
+/*}*/
 
 .article-body pre code {
   background-color: transparent;
   padding: 0;
 }
+/*Start: new article pre styles*/
+.article-body pre {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 25px 0;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #4CAF50;
+  position: relative;
+}
+.article-body pre {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 25px 0;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #4CAF50;
+  position: relative;
+}
+
+.article-body pre::before {
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #4CAF50;
+  color: white;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-bottom-left-radius: 5px;
+  text-transform: uppercase;
+}
+
+/* Language-specific styling */
+.article-body pre code.language-python {
+  color: #d4d4d4;
+}
+
+.article-body pre code.language-python .keyword {
+  color: #569CD6;
+}
+
+.article-body pre code.language-python .string {
+  color: #CE9178;
+}
+
+.article-body pre code.language-python .comment {
+  color: #6A9955;
+}
+
+.article-body pre code.language-python .number {
+  color: #B5CEA8;
+}
+
+.article-body pre code.language-bash {
+  color: #d4d4d4;
+}
+
+.article-body pre code.language-bash .shebang {
+  color: #6A9955;
+}
+
+.article-body pre code.language-bash .comment {
+  color: #6A9955;
+}
+
+.article-body pre code.language-bash .string {
+  color: #CE9178;
+}
+
+.article-body pre code.language-bash .variable {
+  color: #9CDCFE;
+}
+
+.article-body pre code.language-bash .keyword {
+  color: #569CD6;
+}
+
+.article-body pre code.language-powershell {
+  color: #d4d4d4;
+}
+
+.article-body pre code.language-powershell .comment {
+  color: #6A9955;
+}
+
+.article-body pre code.language-powershell .string {
+  color: #CE9178;
+}
+
+.article-body pre code.language-powershell .cmdlet {
+  color: #569CD6;
+}
+
+.article-body pre code.language-powershell .parameter {
+  color: #9CDCFE;
+}
+
+.article-body pre code.language-powershell .operator {
+  color: #DCDCAA;
+}
+
+/* Line numbers */
+.article-body pre.line-numbers {
+  counter-reset: line;
+}
+
+.article-body pre.line-numbers code {
+  position: relative;
+}
+
+.article-body pre.line-numbers code .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 2em;
+  padding-right: 1em;
+  margin-right: 1em;
+  color: #6A9955;
+  text-align: right;
+  border-right: 1px solid #6A9955;
+}
+
+/* Copy button */
+.article-body pre {
+  position: relative;
+}
+
+.article-body pre .copy-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #d4d4d4;
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.article-body pre:hover .copy-btn {
+  opacity: 1;
+}
+
+.article-body pre .copy-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.article-body pre .copy-btn:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+/*END: articles pre styles*/
 
 .article-footer {
   margin-top: 50px;
