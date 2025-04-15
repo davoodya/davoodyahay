@@ -486,23 +486,23 @@
                                     <img src="../../../images/articles/hacking/pc16.png" alt="Decrypted file content">
                                 </li>
                                 <li class="ltr">
-                                    <strong>Cracking `test.zip` with created new Instance of Archive `-D`</strong>
-                                    <p>در این حمله از فایل آرشیو یک نمونه جدید بدون پسورد میسازیم.</p>
+                                    <strong class="cntr">Cracking `test.zip` with created new Instance of Archive `-D`</strong>
+                                    <p class="rtl">در این حمله از فایل آرشیو یک نمونه جدید بدون پسورد میسازیم.</p>
                                     <pre><code>bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -D Decrypt.zip</code></pre>
                                 </li>
                                 <li>
-                                    <strong>Cracking `test.zip` with created new Instance of Archive with Password `-U`</strong>
+                                    <strong class="cntr">Cracking `test.zip` with created new Instance of Archive with Password `-U`</strong>
                                     <p>در این حمله از فایل آرشیو یک نمونه جدید با پسورد دلخواه میسازیم.</p>
                                     <pre><code>bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked.zip d@vood129</code></pre>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630205714.png" alt="Creating new archive with password">
+                                    <img src="../../../images/articles/hacking/pc17.png" alt="Creating new archive with password">
                                     <p>فایل آرشیو جدید ما بنام `Unlocked.zip` از نمونه رمز نگاری خود `test.zip` در پوشه `bkcrack` ایجاد شده و با پسورد `d@vood129` میتوانیم آنرا *Extract* کنیم. در این فولدر هر دو فایل متنی `test1, test2` را میتوانیم مشاهده کنیم:</p>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630205923.png" alt="Unlocked archive contents">
+                                    <img src="../../../images/articles/hacking/pc18.png" alt="Unlocked archive contents">
                                 </li>
                             </ol>
 
                             <hr>
 
-                            <h3>Command Summary</h3>
+                            <h3>خلاصه کامندها | Command Summary</h3>
                             <pre><code class="language-powershell">cd C:\Downloads\Compressed\bkcrack-1.5.1-win64
 bkcrack.exe -L test.zip #List all files in Archive
 bkcrack -C test.zip -c test.txt -p pl.txt #Get Recovery Key
@@ -513,8 +513,8 @@ bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -D Unlocked.zip
 #Create new Archive with password
 bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked-Password.zip d@vood129</code></pre>
 
-                            <img src="../../../images/articles/hacking/Pasted_image_20240630203613.png" alt="Archive contents">
-                            <img src="../../../images/articles/hacking/Pasted_image_20240630205703.png" alt="Final result">
+                            <img src="../../../images/articles/hacking/pc19.png" alt="Archive contents">
+                            <img src="../../../images/articles/hacking/pc20.png" alt="Final result">
                         </div>
                         
                         <!-- Article Footer -->
