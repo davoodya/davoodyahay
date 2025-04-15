@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Article Share -->
+<div class="article-share">
+  <h3 class="share-title">این مقاله را به اشتراک بگذارید</h3>
+  <div class="share-buttons">
+    <!-- توییتر (X) -->
+    <a href="https://twitter.com/intent/tweet?url=ARTICLE_URL&text=ARTICLE_TITLE"
+       class="share-button twitter"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="اشتراک در توییتر">
+      <i class="fab fa-x-twitter"></i>
+      <span class="share-text">توییتر</span>
+    </a>
+
+    <!-- فیسبوک -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=ARTICLE_URL"
+       class="share-button facebook"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="اشتراک در فیسبوک">
+      <i class="fab fa-facebook-f"></i>
+      <span class="share-text">فیسبوک</span>
+    </a>
+
+    <!-- لینکدین -->
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=ARTICLE_URL"
+       class="share-button linkedin"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="اشتراک در لینکدین">
+      <i class="fab fa-linkedin-in"></i>
+      <span class="share-text">لینکدین</span>
+    </a>
+
+    <!-- تلگرام -->
+    <a href="https://t.me/share/url?url=ARTICLE_URL&text=ARTICLE_TITLE"
+       class="share-button telegram"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="اشتراک در تلگرام">
+      <i class="fab fa-telegram-plane"></i>
+      <span class="share-text">تلگرام</span>
+    </a>
+
+    <!-- واتس‌اپ -->
+    <a href="https://wa.me/?text=ARTICLE_TITLE%20ARTICLE_URL"
+       class="share-button whatsapp"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="اشتراک در واتس‌اپ">
+      <i class="fab fa-whatsapp"></i>
+      <span class="share-text">واتس‌اپ</span>
+    </a>
+
+    <!-- اینستاگرام -->
+    <a href="#"
+       class="share-button instagram"
+       onclick="shareToInstagram()"
+       aria-label="اشتراک در اینستاگرام">
+      <i class="fab fa-instagram"></i>
+      <span class="share-text">اینستاگرام</span>
+    </a>
+
+    <!-- یوتیوب -->
+    <a href="#"
+       class="share-button youtube"
+       onclick="shareToYouTube()"
+       aria-label="اشتراک در یوتیوب">
+      <i class="fab fa-youtube"></i>
+      <span class="share-text">یوتیوب</span>
+    </a>
+
+    <!-- ایمیل -->
+    <a href="mailto:?subject=ARTICLE_TITLE&body=ARTICLE_URL"
+       class="share-button email"
+       aria-label="اشتراک از طریق ایمیل">
+      <i class="fas fa-envelope"></i>
+      <span class="share-text">ایمیل</span>
+    </a>
+
+    <!-- کپی لینک -->
+    <a href="#"
+       class="share-button copy-link"
+       onclick="copyArticleLink()"
+       aria-label="کپی لینک مقاله">
+      <i class="fas fa-link"></i>
+      <span class="share-text">کپی لینک</span>
+    </a>
+  </div>
+
+  <!-- فیلد کپی لینک -->
+  <div class="copy-link-container">
+    <input type="text" id="article-link" value="ARTICLE_URL" readonly>
+    <button onclick="copyArticleLink()">کپی</button>
+  </div>
+</div>
+
+<script>
+  // تابع کپی لینک مقاله
+  function copyArticleLink() {
+    const linkInput = document.getElementById('article-link');
+    linkInput.select();
+    document.execCommand('copy');
+    alert('لینک مقاله کپی شد!');
+  }
+
+  // تابع اشتراک در اینستاگرام
+  function shareToInstagram() {
+    // اینستاگرام API رسمی برای اشتراک ندارد، این یک راهکار جایگزین است
+    alert('برای اشتراک در اینستاگرام، لینک مقاله را در استوری یا پست خود قرار دهید.');
+    return false;
+  }
+
+  // تابع اشتراک در یوتیوب
+  function shareToYouTube() {
+    alert('برای اشتراک در یوتیوب، لینک مقاله را در توضیحات ویدیو قرار دهید.');
+    return false;
+  }
+
+  // جایگزینی متغیرهای ARTICLE_URL و ARTICLE_TITLE با مقادیر واقعی
+  document.addEventListener('DOMContentLoaded', function() {
+    const articleUrl = encodeURIComponent(window.location.href);
+    const articleTitle = encodeURIComponent(document.title);
+
+    document.querySelectorAll('[href*="ARTICLE_URL"], [href*="ARTICLE_TITLE"]').forEach(link => {
+      link.href = link.href.replace('ARTICLE_URL', articleUrl).replace('ARTICLE_TITLE', articleTitle);
+    });
+
+    document.getElementById('article-link').value = window.location.href;
+  });
+</script>
+
+<style>
+  /* استایل‌های بخش اشتراک‌گذاری */
+  .article-share {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+  }
+
+  .share-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.2rem;
+  }
+
+  .share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .share-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .share-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .share-button i {
+    margin-left: 8px;
+    font-size: 1.2rem;
+  }
+
+  .share-text {
+    font-size: 0.9rem;
+  }
+
+  /* رنگ‌های دکمه‌های مختلف */
+  .twitter { background-color: #000000; } /* جدید برای X */
+  .facebook { background-color: #1877f2; }
+  .linkedin { background-color: #0a66c2; }
+  .telegram { background-color: #0088cc; }
+  .whatsapp { background-color: #25d366; }
+  .instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
+  .youtube { background-color: #ff0000; }
+  .email { background-color: #666666; }
+  .copy-link { background-color: #6c757d; }
+
+  .copy-link-container {
+    margin-top: 20px;
+    display: flex;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .copy-link-container input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 0.9rem;
+  }
+
+  .copy-link-container button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .copy-link-container button:hover {
+    background-color: #45a049;
+  }
+
+  /* واکنش‌گرایی */
+  @media (max-width: 768px) {
+    .share-buttons {
+      gap: 8px;
+    }
+
+    .share-button {
+      width: 100px;
+      padding: 8px;
+    }
+
+    .share-text {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .share-button {
+      width: 80px;
+      padding: 6px;
+    }
+
+    .share-text {
+      display: none;
+    }
+
+    .share-button i {
+      margin-left: 0;
+    }
+  }
+</style>
+</body>
+</html>
