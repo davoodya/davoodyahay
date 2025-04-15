@@ -324,7 +324,7 @@
                         </div>
                         
                         <!-- Article Featured Image -->
-                        <img src="../../../images/articles/hacking/CrackZipFiles1_1.png" alt="عنوان مقاله" class="article-featured-image">
+                        <img src="../../../images/articles/CrackZipFiles/CrackZipFiles1_1.png" alt="عنوان مقاله" class="article-featured-image">
 
                         <!-- Article Body -->
                         <div class="article-body">
@@ -338,13 +338,13 @@
 
                             <h3 class="yellow-h3">شماتیک حملات متن معمولی | Known Plain Text Attack</h3>
                             <p>  در تصویر زیر شماتیک حمله Plain Text Attack را میتوانید مشاهده کنید</p>
-                            <img src="../../../images/articles/hacking/CrackZipFiles1_1.png" alt="Plain Text Attack Schema">
+                            <img src="../../../images/articles/CrackZipFiles/CrackZipFiles1_1.png" alt="Plain Text Attack Schema">
 
                             <h3 class="yellow-h3">ساخت فایل فشرده آسیب پذیر | Create Vulnerable Archive</h3>
                             <p>برای تست این روش نیاز داریم که یک آرشیو ZIP آسیب پذیر ایجاد کنیم. برای ایجاد این فایل از نرم افزار `7z` استفاده میکنیم.</p>
                             <p>برای ساخت آرشیو ZIP آسیب پذیر، در هنگام ساخت ZIP تنظیمات آرشیو را ماننند تصویر زیر تنظیم میکنیم:</p>
 
-                            <img src="../../../images/articles/hacking/create-vuln-zip-1.png" alt="Archive settings in 7-Zip">
+                            <img src="../../../images/articles/CrackZipFiles/create-vuln-zip-1.png" alt="Archive settings in 7-Zip">
 
                             <ul class="ltr">
                                 <li><strong>Archive format:</strong> `ZIP`</li>
@@ -353,7 +353,7 @@
                                 <li><strong>Encryption method:</strong> `ZipCrypto`</li>
                             </ul>
 
-                            <img src="../../../images/articles/hacking/create-vuln-zip-2.png" alt="Encryption method selection">
+                            <img src="../../../images/articles/CrackZipFiles/create-vuln-zip-2.png" alt="Encryption method selection">
 
                             <h3 class="yellow-h3">دستورالعمل کرک الگوریتم ZIP-Crypto</h3>
                             <ol>
@@ -365,24 +365,24 @@
                                     <strong>بدست آوردن محتویات `test.zip`</strong>
                                     <p>فایل `test.zip` آسیب پذیر که ساختیم را به پوشه `Bkcrack` انتقال میدهیم و `CMD` را در آن پوشه باز میکنیم، سپس کامند زیر را برای کرک فایل `test.zip` اجرا میکنیم:</p>
                                     <pre><code>bkcrack -L test.zip</code></pre>
-                                    <img src="../../../images/articles/hacking/bkcrack1.png" alt="Listing archive contents">
+                                    <img src="../../../images/articles/CrackZipFiles/bkcrack1.png" alt="Listing archive contents">
                                     <p>با اجرای کامند بالا، ابزار محتویات درون `test.zip` را لیست میکند.</p>
                                 </li>
                                 <li>
                                     <strong>حال یک فایل متنی جدید میسازیم که شامل Content هایی که میدانیم در فایل های درون `test.zip` موجود است.</strong>
                                     <p>مثلا درون فایل `test.zip` یک فایل متنی `test.txt` وجود دارد، که میدانیم در آن فایل کدهای اجرای کانتینر Docker است.</p>
                                     <p>بنابراین فایل متنی بنام `pl.txt` ایجاد میکنیم که باید شامل محتویات زیر باشد:</p>
-                                    <img src="../../../images/articles/hacking/bkcrack2.png" alt="Plain text file content">
+                                    <img src="../../../images/articles/CrackZipFiles/bkcrack2.png" alt="Plain text file content">
                                     <p>در واقع از این فایل به عنوان Cipher text برای ورودی کرک استفاده میشود که در مکانیزم Bkcrack میتوانیم محل Cipher Text را مشاهده کنیم:</p>
-                                    <img src="../../../images/articles/hacking/CrackZipFiles1_1.png" alt="Cipher Text location">
+                                    <img src="../../../images/articles/CrackZipFiles/CrackZipFiles1_1.png" alt="Cipher Text location">
                                 </li>
                                 <li>
                                     <strong>حال برای بدست آوردن Recovery Key کامند زیر را اجرا میکنیم:</strong>
                                     <p>برای بدست آوردن Recovery Key نیازمند فایلی هستیم که محتویاتی داشته باشد که حدس میزنیم در فایل تارگت که میخواهیم کرک شود هم وجود دارد. این فایل با فلگ `p-` به عنوان *Plain Text* به ابزار *Bkcrack* معرفی میشود،</p>
                                     <pre><code>bkcrack -C test.zip -c Test/test.txt -p pl.txt</code></pre>
-                                    <img src="../../../images/articles/hacking/bkcrack4.png" alt="Getting recovery key">
+                                    <img src="../../../images/articles/CrackZipFiles/bkcrack4.png" alt="Getting recovery key">
                                     <pre><code>bkcrack -C VulnZip -c VulnZip/request.py -p pl.txt</code></pre>
-                                    <img src="../../../images/articles/hacking/bkcrack5.png" alt="Alternative recovery key command">
+                                    <img src="../../../images/articles/CrackZipFiles/bkcrack5.png" alt="Alternative recovery key command">
 
                                     <h4>توضیح پارامترها:</h4>
                                     <ul>
@@ -390,31 +390,31 @@
                                         <li><code>test.txt</code> => <code>-c</code>: فایلی درون آرشیو که هدف ماست و میخواهیم کرک شود. از فلگ `-c` برای معرفی فایل تارگت همان Cipher که میخواهیم کرک شود استفاده میکنیم.</li>
                                         <li><code>pl.txt</code> => <code>-p</code>: یک فایل متنی که شامل محتویاتی است که درون فایل تارگت هم وجود دارد. از فلگ `-p` برای معرفی فایل Plain Text که شامل مقداری از Content فایل تارگت است استفاده میشود.</li>
                                     </ul>
-                                    <img src="../../../images/articles/hacking/bkcrack6.png" alt="Command parameters explanation">
+                                    <img src="../../../images/articles/CrackZipFiles/bkcrack6.png" alt="Command parameters explanation">
                                 </li>
                                 <li>
                                     <strong>حال میتوانیم با استفاده از Recover Key فایل تارگت را Decrypt شده تحویل بگیریم:</strong>
                                     <pre><code>bkcrack -C test.zip -c test.txt -k f04945f4 3018d661 edc704a6 -d decrypt.txt</code></pre>
-                                    <img src="../../../images/articles/hacking/bkcrack7.png" alt="Decrypting file">
+                                    <img src="../../../images/articles/CrackZipFiles/bkcrack7.png" alt="Decrypting file">
                                     <h4>توضیح پارامترها:</h4>
                                     <ul>
                                         <li><code>decrypt.txt</code>: فایل خروجی که حاوی فایل کرک شده است.</li>
                                         <li><code>-k</code>: برای وارد کردن Recovery Key در جلوی کامند از ای فلگ استفاده میشود.</li>
                                         <li><code>-d</code>: از این فلگ برای مشخص کردن فایل Decrypt شده که همان نتیجه کرک است استفاده میکنیم.</li>
                                     </ul>
-                                    <img src="../../../images/articles/hacking/bkcrack8.png" alt="Decryption process">
+                                    <img src="../../../images/articles/CrackZipFiles/bkcrack8.png" alt="Decryption process">
                                 </li>
                                 <li>
                                     <strong>با استفاده از Recovery Key میتوانیم فایل آرشیو جدیدی با پسوردی جدید از فایل `test.zip` ایجاد کنیم:</strong>
                                     <p>با استفاده از Recovery Key میتوانیم یک فایل آرشیو جدید از فایل `test.zip` با پسورد جدید بسازیم.</p>
                                     <pre><code>bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked.zip NewPassword</code></pre>
-                                    <img src="../../../images/articles/hacking/bkcrack9.png" alt="Creating new archive with password">
+                                    <img src="../../../images/articles/CrackZipFiles/bkcrack9.png" alt="Creating new archive with password">
                                     <p>با اجرای کامند بالا از فایل `test.zip` یک نمونه جدید بنام `Unlocked.zip` ایجاد کردیم که پسورد آن `NewPassword` است و تمام فایل هایی که درون آرشیو `test.zip` وجود دارند درون آرشیو جدید `Unlocked.zip` هم وجود دارند.</p>
                                 </li>
                                 <li>
                                     <strong>همچنین با استفاده از Recovery Key میتوانیم فایل آرشیو جدید بدون رمز از فایل `test.zip` بسازیم:</strong>
                                     <pre><code>.\bkcrack.exe -C .\VulnZip.zip -k 348e6771 cecf3c76 51a09805 -D decrypt.zip</code></pre>
-                                    <img src="../../../images/articles/hacking/bkcrack10.png" alt="Creating new archive without password">
+                                    <img src="../../../images/articles/CrackZipFiles/bkcrack10.png" alt="Creating new archive without password">
                                     <p>با این کامند یک فایل آرشیو ZIP جدید بنام `decrypt.zip` ساخته میشود که حاوی تمام محتویات فایل `VulnZip.zip` میشود.</p>
                                 </li>
                             </ol>
@@ -425,12 +425,12 @@
                                     <strong>توضیحات سناریو | Scenario Description</strong>
                                     <p>در این سناریو 2 فایل متنی بنام `test, test2` داریم که فایل های کانفیگ Docker یک ایمیج هستند.</p>
                                     <p>فایل `test1.txt` دارای محتویات زیر است:</p>
-                                    <img src="../../../images/articles/hacking/pc1.png" alt="Test1.txt content">
+                                    <img src="../../../images/articles/CrackZipFiles/pc1.png" alt="Test1.txt content">
                                     <p>حال Attacker باید سعی کند حداقل محتویات درون این فایل را بفهمد، یعنی حداقل 2 یا سه خط اول فایل را بدست بیاورد و سپس درون فایل متنی جدیدی بریزد تا بتواند به عنوان ورودی Plain Text در جلوی فلگ `p-` آنرا وارد کرد.</p>
-                                    <img src="../../../images/articles/hacking/pc2.png" alt="Plain text content">
+                                    <img src="../../../images/articles/CrackZipFiles/pc2.png" alt="Plain text content">
                                     <p>در بسیاری از سناریو ها مشخص است درون فایل تارگت ما چه جیزی وجود دارد.</p>
                                     <p>فایل `test2.txt` حاوی یکسری متن معمولی است که درون آرشیو وجود دارد. در این سناریو فرض میکنیم Attacker هیچ اطلاعاتی از محتویات درون این فایل ندارد.</p>
-                                    <img src="../../../images/articles/hacking/pc3.png" alt="Test2.txt content">
+                                    <img src="../../../images/articles/CrackZipFiles/pc3.png" alt="Test2.txt content">
                                 </li>
                                 <li>
                                     <strong>پیش نیازها | Pre-Requires</strong>
@@ -438,53 +438,53 @@
                                     <ol class="ltr">
                                         <li>Install 7-Zip</li>
                                         <li><code>Select test1, test2 => Right-Click => 7-Zip => Add to Archive...</code></li>
-                                        <img src="../../../images/articles/hacking/pc4.png" alt="7-Zip context menu">
+                                        <img src="../../../images/articles/CrackZipFiles/pc4.png" alt="7-Zip context menu">
                                         <h4 class="rtl">آپشن های آرشیو | Archive Options</h4>
                                         <ul class="ltr">
                                             <li><strong>Compression Level:</strong> Store</li>
                                             <li><strong>Encryption Method:</strong> ZipCrypto</li>
                                             <li><strong>Encryption:</strong> Set Password `123`</li>
                                         </ul>
-                                        <img src="../../../images/articles/hacking/pc5.png" alt="Archive options">
+                                        <img src="../../../images/articles/CrackZipFiles/pc5.png" alt="Archive options">
                                         <p class="cntr">حال در دسکتاپ فایلی بنام `test.zip` داریم.</p>
-                                        <img src="../../../images/articles/hacking/pc6.png" alt="Created zip file">
+                                        <img src="../../../images/articles/CrackZipFiles/pc6.png" alt="Created zip file">
                                     </ol>
                                     <h4>دانلود و استفاده از BK-Crack</h4>
                                     <p>بر اساس سیستم عامل خودتان، BK-Crack را از لینک زیر دانلود کنید:</p>
                                     <a class="ltr" href="https://github.com/kimci86/bkcrack/releases" target="_blank">https://github.com/kimci86/bkcrack/releases</a>
-                                    <img src="../../../images/articles/hacking/pc7.png" alt="Bkcrack download">
+                                    <img src="../../../images/articles/CrackZipFiles/pc7.png" alt="Bkcrack download">
                                     <h4>کپی `test.zip` در دایرکتوری `bkcrack.exe` </h4>
-                                    <img src="../../../images/articles/hacking/pc8.png" alt="Bkcrack folder contents">
+                                    <img src="../../../images/articles/CrackZipFiles/pc8.png" alt="Bkcrack folder contents">
                                 </li>
                                 <li>
                                     <strong class="cntr">ساخت فایل های مورد نیاز | Create Requires file</strong>
                                     <p class="rtl">ساخت `pl.txt` در دایرکتوری `bkcrack.exe` و نوشتن محتویات زیر درون آن</p>
-                                    <img src="../../../images/articles/hacking/pc9.png" alt="Plain text file content">
+                                    <img src="../../../images/articles/CrackZipFiles/pc9.png" alt="Plain text file content">
                                     <p class="rtl">حال تمام فایلهای مورد نیاز را برای شروع فرآیند کرک در اختیار داریم.</p>
-                                    <img src="../../../images/articles/hacking/pc10.png" alt="All required files">
+                                    <img src="../../../images/articles/CrackZipFiles/pc10.png" alt="All required files">
                                 </li>
                                 <li class="ltr">
                                     <strong>Get Recovery Key</strong>
                                     <p>Open CMD and navigate to `bkcrack.exe` folder</p>
                                     <pre><code>cd C:\Downloads\Compressed\bkcrack-1.5.1-win64</code></pre>
-                                    <img src="../../../images/articles/hacking/pc11.png" alt="CMD navigation">
+                                    <img src="../../../images/articles/CrackZipFiles/pc11.png" alt="CMD navigation">
                                     <h5>List all content in `test.zip` and Encryption methods</h5>
                                     <pre><code>bkcrack.exe -L test.zip</code></pre>
-                                    <img src="../../../images/articles/hacking/pc12.png" alt="Archive contents listing">
+                                    <img src="../../../images/articles/CrackZipFiles/pc12.png" alt="Archive contents listing">
                                     <h5>Get Recovery Key of `test.txt`</h5>
                                     <pre><code>bkcrack -C test.zip -c test.txt -p pl.txt</code></pre>
-                                    <img src="../../../images/articles/hacking/pc13.png" alt="Recovery key process">
+                                    <img src="../../../images/articles/CrackZipFiles/pc13.png" alt="Recovery key process">
                                     <p class="rtl">پس از اجرای این کامند ابزار حمله ای Bruteforce را پیاده سازی میکند و پس از چند دقیقه Recovery Key فایل تارگت بدست می آید.</p>
                                 </li>
                                 <li class="ltr">
                                     <strong class="ltr">Cracking `test.txt` with plain text defined `-d`</strong>
                                     <h5>Cracking `test.txt` and save Decrypted file using Recovery key</h5>
                                     <pre><code>bkcrack -C test.zip -c test.txt -k f04945f4 3018d661 edc704a6 -d decrypt.txt</code></pre>
-                                    <img src="../../../images/articles/hacking/pc14.png" alt="Decryption process">
+                                    <img src="../../../images/articles/CrackZipFiles/pc14.png" alt="Decryption process">
                                     <p>Now Decrypted(Cracked) file save in `bkcrack.exe` folder</p>
-                                    <img src="../../../images/articles/hacking/pc15.png" alt="Decrypted file">
+                                    <img src="../../../images/articles/CrackZipFiles/pc15.png" alt="Decrypted file">
                                     <p class="rtl">فایل `decrypt.txt` در واقع فایل کرک شده همان `test.txt` است و تمام محتویات آنرا شامل میشود:</p>
-                                    <img src="../../../images/articles/hacking/pc16.png" alt="Decrypted file content">
+                                    <img src="../../../images/articles/CrackZipFiles/pc16.png" alt="Decrypted file content">
                                 </li>
                                 <li class="ltr">
                                     <strong class="cntr">Cracking `test.zip` with created new Instance of Archive `-D`</strong>
@@ -495,9 +495,9 @@
                                     <strong class="ltr">Cracking `test.zip` with created new Instance of Archive with Password `-U`</strong>
                                     <p class="rtl">در این حمله از فایل آرشیو یک نمونه جدید با پسورد دلخواه میسازیم.</p>
                                     <pre class="language-powershell"><code>bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked.zip d@vood129</code></pre>
-                                    <img src="../../../images/articles/hacking/pc17.png" alt="Creating new archive with password">
+                                    <img src="../../../images/articles/CrackZipFiles/pc17.png" alt="Creating new archive with password">
                                     <p class="rtl">فایل آرشیو جدید ما بنام `Unlocked.zip` از نمونه رمز نگاری خود `test.zip` در پوشه `bkcrack` ایجاد شده و با پسورد `d@vood129` میتوانیم آنرا *Extract* کنیم. در این فولدر هر دو فایل متنی `test1, test2` را میتوانیم مشاهده کنیم:</p>
-                                    <img src="../../../images/articles/hacking/pc18.png" alt="Unlocked archive contents">
+                                    <img src="../../../images/articles/CrackZipFiles/pc18.png" alt="Unlocked archive contents">
                                 </li>
                             </ol>
 
@@ -514,8 +514,8 @@ bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -D Unlocked.zip
 #Create new Archive with password
 bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked-Password.zip d@vood129</code></pre>
 
-                            <img src="../../../images/articles/hacking/pc19.png" alt="Archive contents">
-                            <img src="../../../images/articles/hacking/pc20.png" alt="Final result">
+                            <img src="../../../images/articles/CrackZipFiles/pc19.png" alt="Archive contents">
+                            <img src="../../../images/articles/CrackZipFiles/pc20.png" alt="Final result">
                         </div>
                         
                         <!-- Article Footer -->
