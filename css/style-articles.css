@@ -804,7 +804,12 @@
   margin-bottom: 15px;
   font-family: var(--Vazir);
 }
-
+.article-header h2 {
+  font-size: 2rem;
+  color: var(--accent-green);
+  margin-bottom: 15px;
+  font-family: var(--Vazir);
+}
 .article-header-meta {
   display: flex;
   flex-wrap: wrap;
@@ -1024,6 +1029,20 @@
   gap: 30px;
 }
 
+.ltr {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: embed;
+}
+
+.rtl {
+  direction: rtl;
+  text-align: justify;
+}
+.cntr {
+  text-align: center;
+  margin: 0 auto;
+}
 
 /* Animations */
 @keyframes pulse-opacity {
