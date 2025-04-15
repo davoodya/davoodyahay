@@ -328,35 +328,34 @@
 
                         <!-- Article Body -->
                         <div class="article-body">
-                            <h3 class="ltr">Definition & Instruction</h3>
-                            <h4 class="ltr">Old Zip File Encrypt Functionality</h4>
+                            <h2 class="ltr">Definition & Instruction</h2>
+                            <h3 class="yellow-h3">کرک فایل های زیپ قدیمی | Old Zip Files Encryption Functionality</h3>
                             <p>در رمزنگاری فایل های Zip قدیمی Encrypt بر روی داده صورت نمیگرفت و در واقع از متدی بنام `Store` برای ذخیره سازی فایل درون فایل Zip استفاده میشد.</p>
                             <ul>
                                 <li>نرم افزار های مدرن مانند `Winzip` و یا `Winrar` از روش های مدرن برای رمزنگاری استفاده میکنند که در این روش باید نمونه از این Archive Type را بصورت دستی ایجاد کنیم.</li>
                                 <li>حمله ای که برای کرک فایل های ZIP که از متد قدیمی Store برای رمز نگاری استفاده میکنند انجام میشود، به عنوان حمله *Plain Text Attack* شناخته میشود که در این نوع حمله باید دست کم اطلاعاتی از نوع و محتوای فایلی که میخواهیم درون آرشیو کرک شود را داشته باشیم، در واقع قسمتی از *Type & Content* فایل تارگت درون آرشیو ZIP را باید داشته باشیم.</li>
                             </ul>
 
+                            <h3 class="yellow-h3">شماتیک حملات متن معمولی | Known Plain Text Attack</h3>
+                            <p>  در تصویر زیر شماتیک حمله Plain Text Attack را میتوانید مشاهده کنید</p>
                             <img src="../../../images/articles/hacking/CrackZipFiles1_1.png" alt="Plain Text Attack Schema">
 
-                            <h5>Known Plain Text Attack Schema</h5>
-                            <img src="../../../images/articles/hacking/Pasted_image_20240630194406.png" alt="Known Plain Text Attack Schema">
-
-                            <h4>Create Vulnerable Archive</h4>
+                            <h3 class="yellow-h3">ساخت فایل فشرده آسیب پذیر | Create Vulnerable Archive</h3>
                             <p>برای تست این روش نیاز داریم که یک آرشیو ZIP آسیب پذیر ایجاد کنیم. برای ایجاد این فایل از نرم افزار `7z` استفاده میکنیم.</p>
                             <p>برای ساخت آرشیو ZIP آسیب پذیر، در هنگام ساخت ZIP تنظیمات آرشیو را ماننند تصویر زیر تنظیم میکنیم:</p>
 
-                            <img src="../../../images/articles/hacking/Pasted_image_20240630194718.png" alt="Archive settings in 7-Zip">
+                            <img src="../../../images/articles/hacking/create-vuln-zip-1.png" alt="Archive settings in 7-Zip">
 
-                            <ul>
+                            <ul class="ltr">
                                 <li><strong>Archive format:</strong> `ZIP`</li>
                                 <li><strong>Compression Level:</strong> `0 - Store`</li>
                                 <li><strong>Encryption:</strong> Set Password `123`</li>
                                 <li><strong>Encryption method:</strong> `ZipCrypto`</li>
                             </ul>
 
-                            <img src="../../../images/articles/hacking/Pasted_image_20240630194838.png" alt="Encryption method selection">
+                            <img src="../../../images/articles/hacking/create-vuln-zip-2.png" alt="Encryption method selection">
 
-                            <h4>Cracking/Breaking ZIPCrypto Instruction</h4>
+                            <h3 class="yellow-h3">دستورالعمل کرک الگوریتم ZIP-Crypto</h3>
                             <ol>
                                 <li>
                                     <strong>دانلود `Bkcrack` از گیت هاب</strong>
