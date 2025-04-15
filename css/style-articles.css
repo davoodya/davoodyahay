@@ -931,6 +931,9 @@
 .article-body pre code {
   background-color: transparent;
   padding: 0;
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: embed;
 }
 /*Start: new article pre styles*/
 .article-body pre {
@@ -946,21 +949,11 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-left: 4px solid #4CAF50;
   position: relative;
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: embed;
 }
-.article-body pre {
-  background-color: #1e1e1e;
-  color: #d4d4d4;
-  padding: 20px;
-  border-radius: 8px;
-  overflow-x: auto;
-  margin: 25px 0;
-  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #4CAF50;
-  position: relative;
-}
+
 
 .article-body pre::before {
   content: attr(class);
@@ -1090,7 +1083,10 @@
 }
 
 .article-body pre .copy-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(102, 235, 106);
+  text-shadow: 0 0 5px rgb(50, 50, 50);
+  color: #0f0f0f;
+  transform: translateX(4px) translateY(-4px) scaleY(125%);
 }
 
 .article-body pre .copy-btn:active {
