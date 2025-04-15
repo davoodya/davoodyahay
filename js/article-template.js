@@ -180,3 +180,17 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.classList.toggle('active');
     });
 });
+
+// Copy button for code blocks
+document.querySelectorAll('.article-body pre').forEach(pre => {
+    const button = document.createElement('button');
+    button.className = 'copy-btn';
+    button.textContent = 'Copy';
+    button.addEventListener('click', () => {
+        const code = pre.querySelector('code');
+        navigator.clipboard.writeText(code.textContent);
+        button.textContent = 'Copied!';
+        setTimeout(() => button.textContent = 'Copy', 2000);
+    });
+    pre.appendChild(button);
+});
