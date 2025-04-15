@@ -477,7 +477,7 @@
                                     <p class="rtl">پس از اجرای این کامند ابزار حمله ای Bruteforce را پیاده سازی میکند و پس از چند دقیقه Recovery Key فایل تارگت بدست می آید.</p>
                                 </li>
                                 <li class="ltr">
-                                    <strong class="cntr">Cracking `test.txt` with plain text defined `-d`</strong>
+                                    <strong class="ltr">Cracking `test.txt` with plain text defined `-d`</strong>
                                     <h5>Cracking `test.txt` and save Decrypted file using Recovery key</h5>
                                     <pre><code>bkcrack -C test.zip -c test.txt -k f04945f4 3018d661 edc704a6 -d decrypt.txt</code></pre>
                                     <img src="../../../images/articles/hacking/pc14.png" alt="Decryption process">
@@ -491,12 +491,12 @@
                                     <p class="rtl">در این حمله از فایل آرشیو یک نمونه جدید بدون پسورد میسازیم.</p>
                                     <pre><code>bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -D Decrypt.zip</code></pre>
                                 </li>
-                                <li>
-                                    <strong class="cntr">Cracking `test.zip` with created new Instance of Archive with Password `-U`</strong>
-                                    <p>در این حمله از فایل آرشیو یک نمونه جدید با پسورد دلخواه میسازیم.</p>
-                                    <pre><code>bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked.zip d@vood129</code></pre>
+                                <li class="ltr">
+                                    <strong class="ltr">Cracking `test.zip` with created new Instance of Archive with Password `-U`</strong>
+                                    <p class="rtl">در این حمله از فایل آرشیو یک نمونه جدید با پسورد دلخواه میسازیم.</p>
+                                    <pre class="language-powershell"><code>bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked.zip d@vood129</code></pre>
                                     <img src="../../../images/articles/hacking/pc17.png" alt="Creating new archive with password">
-                                    <p>فایل آرشیو جدید ما بنام `Unlocked.zip` از نمونه رمز نگاری خود `test.zip` در پوشه `bkcrack` ایجاد شده و با پسورد `d@vood129` میتوانیم آنرا *Extract* کنیم. در این فولدر هر دو فایل متنی `test1, test2` را میتوانیم مشاهده کنیم:</p>
+                                    <p class="rtl">فایل آرشیو جدید ما بنام `Unlocked.zip` از نمونه رمز نگاری خود `test.zip` در پوشه `bkcrack` ایجاد شده و با پسورد `d@vood129` میتوانیم آنرا *Extract* کنیم. در این فولدر هر دو فایل متنی `test1, test2` را میتوانیم مشاهده کنیم:</p>
                                     <img src="../../../images/articles/hacking/pc18.png" alt="Unlocked archive contents">
                                 </li>
                             </ol>
