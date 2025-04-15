@@ -456,36 +456,36 @@
                                     <img src="../../../images/articles/hacking/pc8.png" alt="Bkcrack folder contents">
                                 </li>
                                 <li>
-                                    <strong>Create Requires file</strong>
-                                    <p>Create `pl.txt` in `bkcrack.exe` folder and enter this content in this file</p>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630203049.png" alt="Plain text file content">
-                                    <p>Now we have all files we need for cracking zip file</p>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630203145.png" alt="All required files">
+                                    <strong class="cntr">ساخت فایل های مورد نیاز | Create Requires file</strong>
+                                    <p class="ltr">Create `pl.txt` in `bkcrack.exe` folder and enter this content in this file</p>
+                                    <img src="../../../images/articles/hacking/pc9.png" alt="Plain text file content">
+                                    <p class="ltr">Now we have all files we need for cracking zip file</p>
+                                    <img src="../../../images/articles/hacking/pc10.png" alt="All required files">
                                 </li>
-                                <li>
-                                    <strong>Get Recovery Key</strong>
+                                <li class="ltr">
+                                    <strong class="cntr">بدست آوردن کلید ریکاوری | Get Recovery Key</strong>
                                     <p>Open CMD and navigate to `bkcrack.exe` folder</p>
                                     <pre><code>cd C:\Downloads\Compressed\bkcrack-1.5.1-win64</code></pre>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630203436.png" alt="CMD navigation">
+                                    <img src="../../../images/articles/hacking/pc11.png" alt="CMD navigation">
                                     <h5>List all content in `test.zip` and Encryption methods</h5>
                                     <pre><code>bkcrack.exe -L test.zip</code></pre>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630203613.png" alt="Archive contents listing">
+                                    <img src="../../../images/articles/hacking/pc12.png" alt="Archive contents listing">
                                     <h5>Get Recovery Key of `test.txt`</h5>
                                     <pre><code>bkcrack -C test.zip -c test.txt -p pl.txt</code></pre>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630204038.png" alt="Recovery key process">
-                                    <p>پس از اجرای این کامند ابزار حمله ای Bruteforce را پیاده سازی میکند و پس از چند دقیقه Recovery Key فایل تارگت بدست می آید.</p>
+                                    <img src="../../../images/articles/hacking/pc13.png" alt="Recovery key process">
+                                    <p class="rtl">پس از اجرای این کامند ابزار حمله ای Bruteforce را پیاده سازی میکند و پس از چند دقیقه Recovery Key فایل تارگت بدست می آید.</p>
                                 </li>
-                                <li>
-                                    <strong>Cracking `test.txt` with plain text defined `-d`</strong>
+                                <li class="ltr">
+                                    <strong class="cntr">Cracking `test.txt` with plain text defined `-d`</strong>
                                     <h5>Cracking `test.txt` and save Decrypted file using Recovery key</h5>
                                     <pre><code>bkcrack -C test.zip -c test.txt -k f04945f4 3018d661 edc704a6 -d decrypt.txt</code></pre>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630204525.png" alt="Decryption process">
+                                    <img src="../../../images/articles/hacking/pc14.png" alt="Decryption process">
                                     <p>Now Decrypted(Cracked) file save in `bkcrack.exe` folder</p>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630204756.png" alt="Decrypted file">
-                                    <p>فایل `decrypt.txt` در واقع فایل کرک شده همان `test.txt` است و تمام محتویات آنرا شامل میشود:</p>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630204709.png" alt="Decrypted file content">
+                                    <img src="../../../images/articles/hacking/pc15.png" alt="Decrypted file">
+                                    <p class="rtl">فایل `decrypt.txt` در واقع فایل کرک شده همان `test.txt` است و تمام محتویات آنرا شامل میشود:</p>
+                                    <img src="../../../images/articles/hacking/pc16.png" alt="Decrypted file content">
                                 </li>
-                                <li>
+                                <li class="ltr">
                                     <strong>Cracking `test.zip` with created new Instance of Archive `-D`</strong>
                                     <p>در این حمله از فایل آرشیو یک نمونه جدید بدون پسورد میسازیم.</p>
                                     <pre><code>bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -D Decrypt.zip</code></pre>
