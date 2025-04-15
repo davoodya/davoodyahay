@@ -11,7 +11,16 @@
    4. Check and fix all Skills and skills percentages 
    5. Check and Upload Certificates
 
+2. Article adding Checklist
+   1. Article Title in <title>
+   2. Article Title + Description in <div class="page-header-content">
+   3. Add Image of Article in Article Featured Image <img>
+   4. Convert md to html(using ai) and paste it to Article Body <div class="article-body">
+   5. Fixed ltr, rtl & cntr of Article Body
+   6. Copy article images from obsidian attachment to images/articles/ folder
+   7. Apply images into article
 
+   
 3. Other Tasks Reminds
    0. تصحیح لینک + عنوان هر ویدئو درون صفحات هر دوره
    1. تصحیح متون توضیحات دوره و جلسات
