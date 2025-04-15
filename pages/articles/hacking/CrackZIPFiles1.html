@@ -419,41 +419,41 @@
                                 </li>
                             </ol>
 
-                            <h3>Practical Demo</h3>
+                            <h3 class="yellow-h3">مثال عملی | Practical Demo</h3>
                             <ol>
                                 <li>
-                                    <strong>Scenario Description</strong>
+                                    <strong>توضیحات سناریو | Scenario Description</strong>
                                     <p>در این سناریو 2 فایل متنی بنام `test, test2` داریم که فایل های کانفیگ Docker یک ایمیج هستند.</p>
                                     <p>فایل `test1.txt` دارای محتویات زیر است:</p>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630201807.png" alt="Test1.txt content">
+                                    <img src="../../../images/articles/hacking/pc1.png" alt="Test1.txt content">
                                     <p>حال Attacker باید سعی کند حداقل محتویات درون این فایل را بفهمد، یعنی حداقل 2 یا سه خط اول فایل را بدست بیاورد و سپس درون فایل متنی جدیدی بریزد تا بتواند به عنوان ورودی Plain Text در جلوی فلگ `p-` آنرا وارد کرد.</p>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630202021.png" alt="Plain text content">
+                                    <img src="../../../images/articles/hacking/pc2.png" alt="Plain text content">
                                     <p>در بسیاری از سناریو ها مشخص است درون فایل تارگت ما چه جیزی وجود دارد.</p>
                                     <p>فایل `test2.txt` حاوی یکسری متن معمولی است که درون آرشیو وجود دارد. در این سناریو فرض میکنیم Attacker هیچ اطلاعاتی از محتویات درون این فایل ندارد.</p>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630202141.png" alt="Test2.txt content">
+                                    <img src="../../../images/articles/hacking/pc3.png" alt="Test2.txt content">
                                 </li>
                                 <li>
-                                    <strong>Pre-Requires</strong>
-                                    <h5>Create Archive</h5>
-                                    <ol>
+                                    <strong>پیش نیازها | Pre-Requires</strong>
+                                    <h4>ساخت آرشیو | Create Archive</h4>
+                                    <ol class="ltr">
                                         <li>Install 7-Zip</li>
                                         <li><code>Select test1, test2 => Right-Click => 7-Zip => Add to Archive...</code></li>
-                                        <img src="../../../images/articles/hacking/Pasted_image_20240630202355.png" alt="7-Zip context menu">
-                                        <h5>Archive Options</h5>
-                                        <ul>
+                                        <img src="../../../images/articles/hacking/pc4.png" alt="7-Zip context menu">
+                                        <h4 class="rtl">آپشن های آرشیو | Archive Options</h4>
+                                        <ul class="ltr">
                                             <li><strong>Compression Level:</strong> Store</li>
                                             <li><strong>Encryption Method:</strong> ZipCrypto</li>
                                             <li><strong>Encryption:</strong> Set Password `123`</li>
                                         </ul>
-                                        <img src="../../../images/articles/hacking/Pasted_image_20240630202542.png" alt="Archive options">
-                                        <p>Now we have zip file in desktop in name `test.zip`</p>
-                                        <img src="../../../images/articles/hacking/Pasted_image_20240630202627.png" alt="Created zip file">
+                                        <img src="../../../images/articles/hacking/pc5.png" alt="Archive options">
+                                        <p class="rtl">حال در دسکتاپ فایلی بنام `test.zip` داریم.</p>
+                                        <img src="../../../images/articles/hacking/pc6.png" alt="Created zip file">
                                     </ol>
-                                    <h5>Download & Extracted `Bkcrack`</h5>
+                                    <h4>دانلود و استفاده از BK-Crack</h4>
                                     <p><a href="https://github.com/kimci86/bkcrack/releases" target="_blank">https://github.com/kimci86/bkcrack/releases</a> Base on Windows or Linux OS</p>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630202805.png" alt="Bkcrack download">
-                                    <h5>Copy `test.zip` to `bkcrack.exe` Folder</h5>
-                                    <img src="../../../images/articles/hacking/Pasted_image_20240630202848.png" alt="Bkcrack folder contents">
+                                    <img src="../../../images/articles/hacking/pc7.png" alt="Bkcrack download">
+                                    <h4>کپی `test.zip` در دایرکتوری `bkcrack.exe` </h4>
+                                    <img src="../../../images/articles/hacking/pc8.png" alt="Bkcrack folder contents">
                                 </li>
                                 <li>
                                     <strong>Create Requires file</strong>
