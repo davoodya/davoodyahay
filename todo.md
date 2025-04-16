@@ -1,57 +1,39 @@
-0. New Tasks
-   1. اضافه کردن عکس برای دوره ها در courses.html
-   2. بررسی منو بالایی تمام صفحات(مهارتها، مقاله ها در همه جا نیست )
-   3. عکس گرفتن از مدارکی که میخواهم در وبسایت بگذارم
-      4. در صفحه مدارک، قسمت ها را بر اساس مدارک تعبیه کن
-   5. درست کردن لینکهای بخش به اشتراک گذاری مقاله
-   6. 
-1. Continue from:
-   2. Apply Footer and Header in all pages from header-footer.css
-   3. Add Yakuza Articles in articles.html and article folders
-   4. Check and fix all Skills and skills percentages 
-   5. Check and Upload Certificates
 
-2. Article adding Checklist
+1. TODO(metric=0):
+   1. Add Other Articles
+   2. Check and fix all Certificates and Images
+   3. Check and Upload Certificates
+
+   
+1. Public and Deploy Website
+   1. on Public host on davoodya.ir
+
+2. Todos:
+   1. Articles Template:
+      1. goto Top button
+      2. back to article page button
+   2. Other Pages:
+      1. Navbar: Fix links and add (articles and certificates) pages
+      2. Courses: Image for all courses
+      3. Certificates: Image for all certificates
+      4. Tools: languages used tags, tools information
+      5. About me: Mohajer University Best Student certificate
+   3. SEO & Text Optimization:
+      1. page/courses/... => Fix title, links, description, keywords of Course Details for each course
+      2. CEH++ ⇒ Fix buying method and price
+      3. page/tools/... ⇒ Apply Readme for each tool + Documentation Download link(Readme.md)
+      4. YakuzaCracker => Fix meta info
+
+
+## **Checklists**
+1. Article adding Checklist
    1. Article Title in <title>
    2. Article Title + Description in <div class="page-header-content">
    3. Add Image of Article in Article Featured Image <img>
-   4. Convert md to html(using ai) and paste it to Article Body <div class="article-body">
+   4. Convert md to HTML(using AI) and paste it to Article Body <div class="article-body">
    5. Fixed ltr, rtl & cntr of Article Body
    6. Copy article images from obsidian attachment to images/articles/ folder
    7. Apply images into article
-
-   
-3. Other Tasks Reminds
-   0. تصحیح لینک + عنوان هر ویدئو درون صفحات هر دوره
-   1. تصحیح متون توضیحات دوره و جلسات
-   2. تصحیح عکس های دوره ها
-   3. تصحیح قیمت دوره ها
-   4. تصحیح Readme ابزارها - نوشتن readme جدید
-   5. تصحیح زبان های استفاده شده برای هر ابزار tech tags
-   6. تصحیح لینک دانلود مستندات هر ابزار
-   7. تصحیح  Tools Information در سایدبار صفحه ابزارها
-   8. تصحیح اطلاعات meta صفحه Yakuza Cracker
-   9. درست کردن فیلتر دوره ها و ابزارها
-   10. گذاشتن عکس مدرک با تصحیح پیوند
-   11. تصحیح روش فروش دوره ها
-2. Public and Deploy Website
-3. New Page should be fixed:
-   2. Articles
-      1. Add sidebar for showing categories & articles with drop/down menu for each category which user can easily going to favorite article page
-      2. ساخت صفحه اصلی برای هر مقاله که با کلیک بر روی ادامه مطلب به آن برویم و این صفحهه عنوان و بدنه داشته باشد و اصولا pre برای کدهم داشته باشد تا من فقط محتوا مقاله ها را اضافه کنم همچنین این صفحه هم باید سایدبار داشته باشد که بتوانیم به سادگی به صفحه مقاله مربوطه برویم
-      3. 
-   3. Skils & Certificates
-      4. رفع مشکل باز شدن کارت مهارت ها با یکدیگر
-      5. انتقال بخش مدارک حرفه ای از بقل مهارتها به زیر مهارت های تخصصی
-      6. در بخش هر مدرک هم ایراد باز شدن تمام کارت های یک سطر وجود دارد بجای اینکه فقط کارت باز شده باز شود. این مشکل هم باید برطرف شود
-      7. این صفحه باید بیشتر از این جذاب و حذفه ای باشد، با اضافه کردن افکت ها و انیمیشن ها اینکار را انجام بده
-   7. both Articles and Skills/Certificate
-      8. header صفحه زیر منو بالا باید اصلاح شود زیرا بک گراند مانند بقیه نیست
-      9. footer نیز باید اصلاح شود و dark footer استفاده شود
-      10. منوهای مقالات و مهارت ها و مدارک در تمام صفحات اضافه نشده اند
-
-
-- New Features/Sections:
-  - Article Section
-  - Section for Representation Programming Certificates
-  - Section for Representation of my skills by percentage
+   8. Link Article into pages/articles.html => <a>, <img>, <p> & <h3> + a ادامه مطلب
+   9. Fixed Tags and Categories of article
+   10. Fixed Related Articles
