@@ -1,0 +1,48 @@
+/* Generated for PhpStorm v242.23339.16 on  */
+@font-face {
+     font-family: "Sahel";
+     src: url("https://cdn.fontcdn.ir/Fonts/Sahel/b2d852de3483260e3b7fd41fb4ffd83ba0548ea15c189cdf02e5ef46575530a6.eot");
+     src: url("https://cdn.fontcdn.ir/Fonts/Sahel/8139e9fd0c48b1ec7e4088c3800568a148d2f7096e250db7a47f9591982b41bc.woff2") format("woff2"),
+          url("https://cdn.fontcdn.ir/Fonts/Sahel/f30db4907aee95b91669fd1eb93d7dfad7472fab04cc3b738eb3d33881783b06.woff") format("woff"),
+          url("https://cdn.fontcdn.ir/Fonts/Sahel/afc86cd2949756b29b764c0521a21e3bba164202c40a035c911f78cc695459b9.ttf") format("truetype");
+     font-weight: 300;
+     font-style: normal;
+}
+@font-face {
+     font-family: "Sahel";
+     src: url("https://cdn.fontcdn.ir/Fonts/Sahel/ff9ee374531a071a1f02ad2e44926da2927da208a135c698f6673dc9cf5a1ca8.eot");
+     src: url("https://cdn.fontcdn.ir/Fonts/Sahel/df74c625136d60e981abbd32cc75624007e5b36cc41cc5327dff190d22b21772.woff2") format("woff2"),
+          url("https://cdn.fontcdn.ir/Fonts/Sahel/d49bd6b79056e20f1622d82560bcb5c71ff639b2875db6b15ed092aa33aa81e7.woff") format("woff"),
+          url("https://cdn.fontcdn.ir/Fonts/Sahel/5de2fe8cd1995f10fb5a570b66e3ff40183f16bc8c692519b61e8c0281679675.ttf") format("truetype");
+     font-weight: 400;
+     font-style: normal;
+}
+@font-face {
+     font-family: "Sahel";
+     src: url("https://cdn.fontcdn.ir/Fonts/Sahel/3bdd761ede2b87f9b54946414e861822a8a678526e77b6cb2075d22287f4c41e.eot");
+     src: url("https://cdn.fontcdn.ir/Fonts/Sahel/6e6a49a9c1d148c3679b60f1144e05cf5651838df6362a04a463ce35556bade0.woff2") format("woff2"),
+          url("https://cdn.fontcdn.ir/Fonts/Sahel/dfd636fba3156757d528d11a1795d3678df53380e289486a9872b83f6efa687c.woff") format("woff"),
+          url("https://cdn.fontcdn.ir/Fonts/Sahel/057565800e34caa88eba7b1786162c6362cb0141f7f0f87551b9d83252c34319.ttf") format("truetype");
+     font-weight: 600;
+     font-style: normal;
+}
+@font-face {
+     font-family: "Sahel";
+     src: url("https://cdn.fontcdn.ir/Fonts/Sahel/02957ea827a547bf6c0f4de28cc75c1bc032231b073a8be63c6df8d498e1ccd6.eot");
+     src: url("https://cdn.fontcdn.ir/Fonts/Sahel/162c05c4a6c2e975b07390f923425bb5e170e00c8bd3deccd784f6cb4326d289.woff2") format("woff2"),
+          url("https://cdn.fontcdn.ir/Fonts/Sahel/530ad69347d125da028d23939b9ecab82f53eb88ce64e3adac5229f1df1d3cdd.woff") format("woff"),
+          url("https://cdn.fontcdn.ir/Fonts/Sahel/d714fa224c92bc51d0e477337ef69e8818c2eff8f41e6698de35639e3857ae7b.ttf") format("truetype");
+     font-weight: 700;
+     font-style: normal;
+}
+@font-face {
+     font-family: "Sahel";
+     src: url("https://cdn.fontcdn.ir/Fonts/Sahel/2c70db29c4350ad5f78a2ab3569741cfa0c829c9fd229df6e8b97ab121f5867a.eot");
+     src: url("https://cdn.fontcdn.ir/Fonts/Sahel/12c8dcad8a4269d0be152c74db9116837a5c47f5327c64eb422a5bc6e606f0f2.woff2") format("woff2"),
+          url("https://cdn.fontcdn.ir/Fonts/Sahel/396d3c6eb71f5b64ab5eb0dcb9d49c27c10e5652f166af3f384a3f4a86c67e5b.woff") format("woff"),
+          url("https://cdn.fontcdn.ir/Fonts/Sahel/6560f9bfec26c96ae322ee15767da077267035fce2a0b3820ab82c1dee50d754.ttf") format("truetype");
+     font-weight: 900;
+     font-style: normal;
+}
+/* CACHED: 2025-03-30T03:00:51+00:00 */
+/* Powered by FontServer.ir */
