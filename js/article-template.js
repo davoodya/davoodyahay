@@ -194,3 +194,35 @@ document.querySelectorAll('.article-body pre').forEach(pre => {
     });
     pre.appendChild(button);
 });
+
+// تابع کپی لینک مقاله
+function copyArticleLink() {
+    const linkInput = document.getElementById('article-link');
+    linkInput.select();
+    document.execCommand('copy');
+    alert('لینک مقاله کپی شد!');
+}
+
+// تابع اشتراک در اینستاگرام
+function shareToInstagram() {
+    alert('برای اشتراک در اینستاگرام، لینک مقاله را در استوری یا پست خود قرار دهید.');
+    return false;
+}
+
+// تابع اشتراک در یوتیوب
+function shareToYouTube() {
+    alert('برای اشتراک در یوتیوب، لینک مقاله را در توضیحات ویدیو قرار دهید.');
+    return false;
+}
+
+// جایگزینی متغیرهای ARTICLE_URL و ARTICLE_TITLE با مقادیر واقعی
+document.addEventListener('DOMContentLoaded', function() {
+    const articleUrl = encodeURIComponent(window.location.href);
+    const articleTitle = encodeURIComponent(document.title);
+
+    document.querySelectorAll('[href*="ARTICLE_URL"], [href*="ARTICLE_TITLE"]').forEach(link => {
+        link.href = link.href.replace('ARTICLE_URL', articleUrl).replace('ARTICLE_TITLE', articleTitle);
+    });
+
+    document.getElementById('article-link').value = window.location.href;
+});

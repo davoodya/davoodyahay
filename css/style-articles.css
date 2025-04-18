@@ -1136,77 +1136,176 @@
   background-color: rgba(0, 255, 65, 0.2);
 }
 
+/*.article-share {*/
+/*  margin-top: 30px;*/
+/*}*/
+
+/*.article-share h3 {*/
+/*  font-size: 1.3rem;*/
+/*  color: var(--accent-green);*/
+/*  margin-bottom: 15px;*/
+/*  font-family: var(--Vazir);*/
+/*}*/
+
+/*.share-buttons {*/
+/*  display: flex;*/
+/*  gap: 15px;*/
+/*}*/
+
+/*.share-button {*/
+/*  width: 40px;*/
+/*  height: 40px;*/
+/*  border-radius: 50%;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  color: var(--main-text);*/
+/*  font-size: 1.2rem;*/
+/*  transition: all 0.3s ease;*/
+/*}*/
+
+/*.share-button:hover {*/
+/*  transform: translateY(-5px);*/
+/*}*/
+
+/*.share-button.twitter {*/
+/*  background-color: rgba(29, 161, 242, 0.2);*/
+/*  border: 1px solid #1da1f2;*/
+/*}*/
+
+/*.share-button.twitter:hover {*/
+/*  background-color: #1da1f2;*/
+/*  color: white;*/
+/*}*/
+
+/*.share-button.facebook {*/
+/*  background-color: rgba(59, 89, 152, 0.2);*/
+/*  border: 1px solid #3b5998;*/
+/*}*/
+
+/*.share-button.facebook:hover {*/
+/*  background-color: #3b5998;*/
+/*  color: white;*/
+/*}*/
+
+/*.share-button.linkedin {*/
+/*  background-color: rgba(0, 119, 181, 0.2);*/
+/*  border: 1px solid #0077b5;*/
+/*}*/
+
+/*.share-button.linkedin:hover {*/
+/*  background-color: #0077b5;*/
+/*  color: white;*/
+/*}*/
+
+/*.share-button.telegram {*/
+/*  background-color: rgba(0, 136, 204, 0.2);*/
+/*  border: 1px solid #0088cc;*/
+/*}*/
+
+/*.share-button.telegram:hover {*/
+/*  background-color: #0088cc;*/
+/*  color: white;*/
+/*}*/
+
+
+/* استایل‌های بخش اشتراک‌گذاری */
 .article-share {
-  margin-top: 30px;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
 }
 
-.article-share h3 {
-  font-size: 1.3rem;
+.share-title {
+  text-align: center;
+  margin-bottom: 20px;
   color: var(--accent-green);
-  margin-bottom: 15px;
-  font-family: var(--Vazir);
+  font-size: 1.2rem;
+  font-family: Shabnam, sans-serif;
 }
 
 .share-buttons {
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  font-family: Shabnam, sans-serif;
 }
 
 .share-button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--main-text);
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
+  width: 120px;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .share-button:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.share-button.twitter {
-  background-color: rgba(29, 161, 242, 0.2);
-  border: 1px solid #1da1f2;
+.share-button i {
+  margin-left: 8px;
+  font-size: 1.2rem;
 }
 
-.share-button.twitter:hover {
-  background-color: #1da1f2;
+.share-text {
+  font-size: 0.9rem;
+}
+
+/* رنگ‌های دکمه‌های مختلف */
+.twitter { background-color: #000000; } /* جدید برای X */
+.facebook { background-color: #1877f2; }
+.linkedin { background-color: #0a66c2; }
+.telegram { background-color: #0088cc; }
+.whatsapp { background-color: #25d366; }
+.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.youtube { background-color: #ff0000; }
+.email { background-color: #666666; }
+.copy-link { background-color: #6c757d; }
+
+.copy-link-container {
+  margin-top: 20px;
+  display: flex;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copy-link-container input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  font-size: 0.9rem;
+}
+
+.copy-link-container button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.share-button.facebook {
-  background-color: rgba(59, 89, 152, 0.2);
-  border: 1px solid #3b5998;
+.copy-link-container button:hover {
+  background-color: #45a049;
 }
 
-.share-button.facebook:hover {
-  background-color: #3b5998;
-  color: white;
-}
 
-.share-button.linkedin {
-  background-color: rgba(0, 119, 181, 0.2);
-  border: 1px solid #0077b5;
-}
 
-.share-button.linkedin:hover {
-  background-color: #0077b5;
-  color: white;
-}
 
-.share-button.telegram {
-  background-color: rgba(0, 136, 204, 0.2);
-  border: 1px solid #0088cc;
-}
-
-.share-button.telegram:hover {
-  background-color: #0088cc;
-  color: white;
-}
 
 /* Related Articles */
 .related-articles {
@@ -1314,6 +1413,18 @@
   .related-articles-grid {
     grid-template-columns: 1fr;
   }
+  .share-buttons {
+    gap: 8px;
+  }
+
+  .share-button {
+    width: 100px;
+    padding: 8px;
+  }
+
+  .share-text {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1325,6 +1436,22 @@
     padding: 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .share-button {
+    width: 80px;
+    padding: 6px;
+  }
+
+  .share-text {
+    display: none;
+  }
+
+  .share-button i {
+    margin-left: 0;
+  }
+}
+
 
 /* Font Classes */
 .font-title-article {

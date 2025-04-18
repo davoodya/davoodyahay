@@ -541,15 +541,101 @@ bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked-Password.zip d@voo
                                     <a href="#" class="article-footer-tag">bkcrack</a>
                                 </div>
                             </div>
-                            
+
                             <!-- Article Share -->
                             <div class="article-share">
-                                <h3>اشتراک‌گذاری</h3>
+                                <h3 class="share-title">این مقاله را به اشتراک بگذارید</h3>
                                 <div class="share-buttons">
-                                    <a href="#" class="share-button twitter"><i class="fab fa-twitter"></i></a>
-                                    <a href="#" class="share-button facebook"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="share-button linkedin"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" class="share-button telegram"><i class="fab fa-telegram-plane"></i></a>
+                                    <!-- توییتر (X) -->
+                                    <a href="https://twitter.com/intent/tweet?url=ARTICLE_URL&text=ARTICLE_TITLE"
+                                       class="share-button twitter"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در توییتر">
+                                        <i class="fab fa-x-twitter"></i>
+                                        <span class="share-text">X توئیتر</span>
+                                    </a>
+
+                                    <!-- فیسبوک -->
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=ARTICLE_URL"
+                                       class="share-button facebook"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در فیسبوک">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <span class="share-text">فیسبوک</span>
+                                    </a>
+
+                                    <!-- لینکدین -->
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=ARTICLE_URL"
+                                       class="share-button linkedin"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در لینکدین">
+                                        <i class="fab fa-linkedin-in"></i>
+                                        <span class="share-text">لینکدین</span>
+                                    </a>
+
+                                    <!-- تلگرام -->
+                                    <a href="https://t.me/share/url?url=ARTICLE_URL&text=ARTICLE_TITLE"
+                                       class="share-button telegram"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در تلگرام">
+                                        <i class="fab fa-telegram-plane"></i>
+                                        <span class="share-text">تلگرام</span>
+                                    </a>
+
+                                    <!-- واتس‌اپ -->
+                                    <a href="https://wa.me/?text=ARTICLE_TITLE%20ARTICLE_URL"
+                                       class="share-button whatsapp"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در واتس‌اپ">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <span class="share-text">واتس‌اپ</span>
+                                    </a>
+
+                                    <!-- اینستاگرام -->
+                                    <a href="#"
+                                       class="share-button instagram"
+                                       onclick="shareToInstagram()"
+                                       aria-label="اشتراک در اینستاگرام">
+                                        <i class="fab fa-instagram"></i>
+                                        <span class="share-text">اینستاگرام</span>
+                                    </a>
+
+                                    <!-- یوتیوب -->
+                                    <a href="#"
+                                       class="share-button youtube"
+                                       onclick="shareToYouTube()"
+                                       aria-label="اشتراک در یوتیوب">
+                                        <i class="fab fa-youtube"></i>
+                                        <span class="share-text">یوتیوب</span>
+                                    </a>
+
+                                    <!-- ایمیل -->
+                                    <a href="mailto:?subject=ARTICLE_TITLE&body=ARTICLE_URL"
+                                       class="share-button email"
+                                       aria-label="اشتراک از طریق ایمیل">
+                                        <i class="fas fa-envelope"></i>
+                                        <span class="share-text">ایمیل</span>
+                                    </a>
+
+                                    <!-- کپی لینک -->
+                                    <a href="#"
+                                       class="share-button copy-link"
+                                       onclick="copyArticleLink()"
+                                       aria-label="کپی لینک مقاله">
+                                        <i class="fas fa-link"></i>
+                                        <span class="share-text">کپی لینک</span>
+                                    </a>
+                                </div>
+
+                                <!-- فیلد کپی لینک -->
+                                <div class="copy-link-container">
+                                    <input type="text" id="article-link" value="ARTICLE_URL" readonly>
+                                    <button onclick="copyArticleLink()">کپی</button>
                                 </div>
                             </div>
                         </div>
