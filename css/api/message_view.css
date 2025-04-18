@@ -1,0 +1,254 @@
+/* Body */
+body {
+    font-family: sans-serif;
+    background: #111;
+    color: #eee;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Contact section (اضافه کردن پس‌زمینه و انیمیشن) */
+.contact {
+    background:
+            radial-gradient(circle at 20% 30%, rgba(0, 40, 80, 0.15) 0%, transparent 40%),
+            radial-gradient(circle at 80% 70%, rgba(0, 80, 40, 0.15) 0%, transparent 40%),
+            linear-gradient(to bottom, #0a0a12, #050508);
+    position: relative;
+    overflow: hidden;
+}
+
+/* انیمیشن شبکه */
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+            linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: grid-move 60s linear infinite;
+}
+
+/* افکت پس‌زمینه که شبکه‌های متحرک را می‌سازد */
+.contact::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+            radial-gradient(circle at center, transparent 60%, rgba(0, 255, 65, 0.03)),
+            repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(0, 119, 255, 0.02) 2px,
+                    rgba(0, 119, 255, 0.02) 3px
+            );
+    pointer-events: none;
+}
+
+/* جدول فشرده و بهینه */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background: rgba(30, 30, 30, 0.8);
+    font-size: 0.85rem;
+    table-layout: auto;
+}
+
+th, td {
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    padding: 8px 10px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+th {
+    background: rgba(0, 255, 204, 0.2);
+    color: #00ffcc;
+    font-weight: 600;
+    padding: 8px 10px;
+}
+
+tr:nth-child(even) {
+    background: rgba(20, 20, 20, 0.5);
+}
+
+tr:hover {
+    background: rgba(0, 255, 204, 0.1);
+}
+
+/* ستون‌های عمل (دکمه‌ها) */
+td.actions {
+    padding: 5px;
+    white-space: nowrap;
+}
+
+/* استایل دکمه‌های داخل جدول */
+.table-btn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    min-width: 70px;
+    margin: 2px;
+    box-shadow: 0 0 5px rgba(0, 255, 204, 0.3);
+}
+
+.table-btn i {
+    font-size: 0.8rem;
+    margin-right: 3px;
+}
+
+/* کانتینر جدول */
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    background: rgba(15, 15, 15, 0.7);
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* هدر جدول */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
+
+/* پاورقی جدول */
+.table-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+/* استایل پایه دکمه‌ها */
+button, .btn {
+    background: linear-gradient(45deg, #00ffcc, #00cc66);
+    color: #111;
+    border: none;
+    padding: 10px 22px; /* کاهش سایز */
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem; /* کاهش سایز فونت */
+    cursor: pointer;
+    width: auto; /* عرض خودکار به جای 100% */
+    min-width: 120px; /* حداقل عرض */
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* سایه ملایم‌تر */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0.3rem; /* فاصله بین دکمه‌ها */
+}
+
+/* دکمه‌های کوچک‌تر برای موارد خاص */
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    min-width: 100px;
+}
+
+/* انیمیشن هورور */
+button::before, .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 255, 204, 0.8), rgba(0, 204, 102, 0.8));
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+button:hover::before, .btn:hover::before {
+    left: 0;
+}
+
+/* افکت اکتیو */
+button:active, .btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 5px rgba(0, 255, 204, 0.3);
+}
+
+/* حالت لودینگ */
+button.loading, .btn.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+button.loading::after, .btn.loading::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #111;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* حالت غیرفعال */
+button:disabled, .btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* انواع دکمه‌های مختلف */
+.btn-primary {
+    background: linear-gradient(45deg, #00ffcc, #00cc66);
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    background: rgba(0, 255, 204, 0.1);
+}
+
+/* Logout Button */
+.logout {
+    float: left;
+    background: #cc0000;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.logout:hover {
+    background-color: #990000;
+}
+
+

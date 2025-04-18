@@ -9,6 +9,26 @@ if (isset($_GET['logout'])) {
 
 $messagesFile = __DIR__ . '/messages.json';
 
+// هندل حذف پیام
+if (isset($_POST['delete_message'])) {
+    $dateToDelete = $_POST['delete_message'];
+
+    if (file_exists($messagesFile)) {
+        $messages = json_decode(file_get_contents($messagesFile), true);
+
+        // فیلتر کردن پیام‌ها بر اساس تاریخ و حذف پیام
+        $messages = array_filter($messages, function($msg) use ($dateToDelete) {
+            return $msg['date'] !== $dateToDelete;
+        });
+
+        // بازنویسی فایل بدون پیام حذف‌شده
+        file_put_contents($messagesFile, json_encode(array_values($messages), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        header("Location: messages_view.php");
+        exit;
+    }
+}
+
+
 // هندل خواندن پیام
 if (isset($_POST['mark_read'])) {
     $dateToMark = $_POST['mark_read'];
@@ -85,15 +105,8 @@ if (file_exists($messagesFile)) {
 <head>
     <meta charset="UTF-8">
     <title>پیام‌های دریافتی</title>
-    <style>
-        body { font-family: sans-serif; background: #111; color: #eee; padding: 20px; }
-        h1 { color: #00ffcc; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #222; }
-        th, td { border: 1px solid #00ffcc; padding: 10px; text-align: center; }
-        th { background: #00ffcc; color: #000; }
-        tr:nth-child(even) { background: #1a1a1a; }
-        .logout { float: left; background: #cc0000; color: #fff; padding: 5px 10px; text-decoration: none; }
-    </style>
+    <link rel="stylesheet" href="/css/api/message_view.css" type="text/css">
+
 </head>
 <body>
 <a href="?logout=1" class="logout">خروج</a>
@@ -101,36 +114,54 @@ if (file_exists($messagesFile)) {
 <?php if (empty($messages)): ?>
     <p>هیچ پیامی دریافت نشده است.</p>
 <?php else: ?>
-    <table>
-        <tr>
-            <th>تاریخ</th>
-            <th>نام</th>
-            <th>ایمیل</th>
-            <th>موضوع</th>
-            <th>پیام</th>
-        </tr>
-        <?php foreach ($messages as $msg): ?>
-            <tr style="<?= isset($msg['read']) && $msg['read'] ? 'opacity: 0.6;' : '' ?>">
-                <td><?= htmlspecialchars($msg['date']) ?></td>
-                <td><?= htmlspecialchars($msg['name']) ?></td>
-                <td><?= htmlspecialchars($msg['email']) ?></td>
-                <td><?= htmlspecialchars($msg['subject']) ?></td>
-                <td><?= nl2br(htmlspecialchars($msg['message'])) ?></td>
-                <td>
-                    <?php if (empty($msg['read']) || !$msg['read']): ?>
-                        <form method="post" style="margin:0;">
-                            <input type="hidden" name="mark_read" value="<?= $msg['date'] ?>">
-                            <button type="submit">✅ خوانده شده</button>
-                        </form>
-                    <?php else: ?>
-                        خوانده شده
-                    <?php endif; ?>
-                </td>
+    <div class="table-container">
+        <table class="messages-table">
+            <thead>
+            <tr>
+                <th width="12%">تاریخ</th>
+                <th width="15%">نام</th>
+                <th width="18%">ایمیل</th>
+                <th width="15%">موضوع</th>
+                <th width="30%">پیام</th>
+                <th width="5%">وضعیت</th>
+                <th width="5%">عملیات</th>
             </tr>
-
-
-        <?php endforeach; ?>
-    </table>
+            </thead>
+            <tbody>
+            <?php foreach ($messages as $msg): ?>
+                <tr class="<?= isset($msg['read']) && $msg['read'] ? 'read' : 'unread' ?>">
+                    <td><?= htmlspecialchars($msg['date']) ?></td>
+                    <td><?= htmlspecialchars($msg['name']) ?></td>
+                    <td><?= htmlspecialchars($msg['email']) ?></td>
+                    <td><?= htmlspecialchars($msg['subject']) ?></td>
+                    <td class="message-content"><?= nl2br(htmlspecialchars($msg['message'])) ?></td>
+                    <td>
+                        <?php if (empty($msg['read']) || !$msg['read']): ?>
+                            <form method="post" class="inline-form">
+                                <input type="hidden" name="mark_read" value="<?= $msg['date'] ?>">
+                                <button type="submit" class="table-btn btn-outline">
+                                    <span class="btn-icon">✅</span>
+                                    <span class="btn-text">خوانده شده</span>
+                                </button>
+                            </form>
+                        <?php else: ?>
+                            <span class="read-badge">خوانده شده</span>
+                        <?php endif; ?>
+                    </td>
+                    <td>
+                        <form method="post" class="inline-form">
+                            <input type="hidden" name="delete_message" value="<?= $msg['date'] ?>">
+                            <button type="submit" class="table-btn btn-secondary">
+                                <span class="btn-icon">❌</span>
+                                <span class="btn-text">حذف</span>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 <?php endif; ?>
 </body>
 </html>
