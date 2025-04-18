@@ -61,7 +61,16 @@
         <link rel="stylesheet" href="css/style-index.css" type="text/css">
         <link rel="stylesheet" href="css/header-footer.css" type="text/css">
 
-        <!-- Structured Data -->
+        <!-- JS for EmailJS Service -->
+        <script src="assets/js/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init("7ILWL54OoZjnIZneX"); // ID که از EmailJS می‌گیری
+            })();
+        </script>
+
+
+        <!-- Structured Data for SEO -->
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -587,14 +596,14 @@
                     <div class="footer-links">
                         <h3>دسترسی سریع</h3>
                         <ul>
-                            <li><a href="../index.html">خانه</a></li>
-                            <li><a href="../index.html#about">درباره من</a></li>
-                            <li><a href="../index.html#services">سرویس ها</a></li>
-                            <li><a href="../index.html#portfolio">نمونه ابزارها</a></li>
-                            <li><a href="courses.html">دوره‌های آموزشی</a></li>
-                            <li><a href="articles.html">مقالات</a></li>
-                            <li><a href="skills.html">مهارت‌ها و مدارک</a></li>
-                            <li><a href="../index.html#contact">تماس با من</a></li>
+                            <li><a href="index.html">خانه</a></li>
+                            <li><a href="index.html#about">درباره من</a></li>
+                            <li><a href="index.html#services">سرویس ها</a></li>
+                            <li><a href="index.html#portfolio">نمونه ابزارها</a></li>
+                            <li><a href="pages/courses.html">دوره‌های آموزشی</a></li>
+                            <li><a href="pages/articles.html">مقالات</a></li>
+                            <li><a href="pages/skills.html">مهارت‌ها و مدارک</a></li>
+                            <li><a href="index.html#contact">تماس با من</a></li>
                         </ul>
                     </div>
 

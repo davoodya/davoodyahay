@@ -94,6 +94,7 @@
 // // Initialize and start animation
 // initMatrix();
 // setInterval(drawMatrix, 50);
+
 const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -417,5 +418,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.style.overflow = 'auto';
             }, 400);
         }
+    });
+});
+
+// Send Email with EmailJS from Contact Form
+// مطمئن شو DOM کامل لود شده
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+
+    if (!form) {
+        console.error("فرم تماس پیدا نشد!");
+        return;
+    }
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // جلوگیری از رفرش صفحه
+
+        // ارسال اطلاعات با EmailJS
+        emailjs.send("service_59st306", "template_m0f8j8j", {
+            from_name: document.getElementById("name").value,
+            from_email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+        })
+            .then(function (response) {
+                alert("✅ پیام شما با موفقیت ارسال شد!");
+                form.reset(); // پاک کردن فرم
+            })
+            .catch(function (error) {
+                alert("❌ ارسال پیام با خطا مواجه شد. لطفاً دوباره تلاش کنید.");
+                console.error("EmailJS Error:", error);
+            });
     });
 });
