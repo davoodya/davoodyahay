@@ -421,6 +421,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Save Messages into /api/messages.json
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const payload = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+        };
+
+        fetch("api/save_message.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("✅ پیام با موفقیت در سرور ما ذخیره شد.");
+                    form.reset();
+                } else {
+                    alert("❌ ذخیره پیام در سرور ما ناموفق بود.");
+                }
+            })
+            .catch(error => {
+                alert("❌ خطا در در سرور ما ارسال درخواست.");
+                console.error(error);
+            });
+    });
+});
+
+
+
 // Send Email with EmailJS from Contact Form
 // مطمئن شو DOM کامل لود شده
 document.addEventListener("DOMContentLoaded", function () {
@@ -446,7 +485,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 form.reset(); // پاک کردن فرم
             })
             .catch(function (error) {
-                alert("❌ ارسال پیام با خطا مواجه شد. لطفاً دوباره تلاش کنید.");
+                alert("❌ ارسال پیام به ایمیل با خطا مواجه شد. لطفاً دوباره تلاش کنید.");
                 console.error("EmailJS Error:", error);
             });
     });
