@@ -1,12 +1,10 @@
 
 1. TODO(metric=0):
-   2. Skills.html: Remove Grid of Certificates
-   3. Articles.html: Remove Grid of other Articles
-   4. Import Used Libraries Locally
-   5. All Pages: Apply Locally G-Fonts, Fontawesome, prisms.js, Farsi Fonts
-   6. Add Other Articles
-   7. Check and fix all Certificates and Images
-   8. Check and Upload Certificates
+   1. Import Used Libraries Locally
+   2. All Pages: Apply Locally G-Fonts, Fontawesome, prisms.js, Farsi Fonts
+   3. Add Other Articles
+   4. skills.html: fix all Certificates and Images
+   5. Check and Upload Certificates
 
    
 1. Public and Deploy Website
