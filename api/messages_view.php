@@ -118,22 +118,24 @@ if (file_exists($messagesFile)) {
 
 </head>
 <body>
+
 <a href="?logout=1" class="logout">خروج</a>
-<h1>📩 پیام‌های دریافتی</h1>
+<h1 class="header-title">📩 پیام‌های دریافتی</h1>
 <?php if (empty($messages)): ?>
     <p>هیچ پیامی دریافت نشده است.</p>
 <?php else: ?>
+<div class="grid-move-bg message-container">
     <div class="table-container">
         <table class="messages-table">
             <thead>
             <tr>
-                <th width="12%">تاریخ</th>
-                <th width="15%">نام</th>
-                <th width="18%">ایمیل</th>
-                <th width="15%">موضوع</th>
-                <th width="30%">پیام</th>
-                <th width="5%">وضعیت</th>
-                <th width="5%">عملیات</th>
+                <th class="orange-title" width="12%">تاریخ</th>
+                <th class="orange-title" width="15%">نام</th>
+                <th class="orange-title" width="18%">ایمیل</th>
+                <th class="orange-title" width="15%">موضوع</th>
+                <th class="orange-title" width="30%">پیام</th>
+                <th class="orange-title" width="5%">وضعیت</th>
+                <th class="orange-title" width="5%">عملیات</th>
             </tr>
             </thead>
             <tbody>
@@ -172,6 +174,7 @@ if (file_exists($messagesFile)) {
         </table>
     </div>
 <?php endif; ?>
+</div>
 </body>
 </html>
 

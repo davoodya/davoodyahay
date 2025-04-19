@@ -200,7 +200,20 @@ table {
     table-layout: auto;
 }
 
-th, td {
+.orange-title {
+    color: orange;
+    font-weight: bold;
+}
+th {
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    color: orange;
+    padding: 8px 10px;
+    text-align: center;
+    line-height: 1.4;
+    font-family: Shabnam, sans-serif;
+}
+
+td {
     border: 1px solid rgba(0, 255, 204, 0.3);
     padding: 8px 10px;
     text-align: center;
@@ -393,6 +406,22 @@ button:disabled, .btn:disabled {
     background-color: #990000;
 }
 
+.message-container {
+    min-height: 100vh;
+    min-width: 100vh;
+    background: #111;
+    position: relative;
+    overflow: hidden;
+
+}
+.header-title {
+    color: #00ffcc;
+    text-align: right;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: Shabnam, sans-serif;
+}
 
 /* رسپانسیو برای دستگاه‌های کوچک */
 @media (max-width: 768px) {
