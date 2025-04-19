@@ -456,6 +456,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const payload = {
             name: document.getElementById("name").value,
             email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
             subject: document.getElementById("subject").value,
             message: document.getElementById("message").value,
         };
@@ -484,7 +485,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
+// Send contactForm Data to davoodya40 using EmailJS
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
 

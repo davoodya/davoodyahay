@@ -298,6 +298,82 @@ function setupFilterTagRemoval(courseData, filterState) {
     });
 }
 
+// Save Beginner-CEH Buying request into /api/messages.json
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("ceh-beg-waitlist-form");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const payload = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            subject: 'خرید CEH Beginner',
+            message: document.getElementById("message").value,
+        };
+
+        fetch("/api/save_message.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("✅ درخواست خرید دوره CEH مقدماتی با موفقیت در سرور ما ذخیره شد.");
+                    form.reset();
+                } else {
+                    alert("❌ ثبت درخواست خرید در سرور ما ناموفق بود.");
+                }
+            })
+            .catch(error => {
+                alert("❌ خطا در هنگام ارسال درخواست خرید به سرور ما");
+                console.error(error);
+            });
+    });
+});
+
+// Save Advance-CEH Buying request into /api/messages.json
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("ceh-adv-waitlist-form");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const payload = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            subject: 'خرید CEH Advance',
+            message: document.getElementById("message").value,
+        };
+
+        fetch("/api/save_message.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("✅ درخواست خرید دوره CEH پیشرفته با موفقیت در سرور ما ذخیره شد.");
+                    form.reset();
+                } else {
+                    alert("❌ ثبت درخواست خرید در سرور ما ناموفق بود.");
+                }
+            })
+            .catch(error => {
+                alert("❌ خطا در هنگام ارسال درخواست خرید به سرور ما");
+                console.error(error);
+            });
+    });
+});
+
 // Send CEH Beginner buy request to davoodya40@gmail.com
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("ceh-beg-waitlist-form");
