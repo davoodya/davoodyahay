@@ -63,32 +63,40 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 // اگر لاگین نیست، فرم ورود نمایش بده
 if (!isset($_SESSION['logged_in'])):
-    ?>
+?>
+
     <!DOCTYPE html>
     <html lang="fa" dir="rtl">
     <head>
         <meta charset="UTF-8">
         <title>ورود به مدیریت پیام‌ها</title>
-        <style>
-            body { font-family: sans-serif; background: #121212; color: #eee; display: flex; align-items: center; justify-content: center; height: 100vh; }
-            form { background: #1e1e1e; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px #00ffcc; }
-            input { display: block; margin: 10px 0; padding: 8px; width: 100%; background: #222; border: 1px solid #00ffcc; color: #fff; }
-            button { background: #00ffcc; color: #000; border: none; padding: 10px; cursor: pointer; width: 100%; }
-            .error { color: red; }
-        </style>
+        <link rel="stylesheet" href="/assets/css/fonts/Shabnam.css">
+        <link rel="stylesheet" href="/css/api/message_view.css">
     </head>
     <body>
-    <form method="POST">
-        <h2>ورود به مدیریت پیام‌ها</h2>
-        <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>
-        <input type="text" name="username" placeholder="نام کاربری" required>
-        <input type="password" name="password" placeholder="رمز عبور" required>
-        <button type="submit">ورود</button>
-    </form>
+    <div class="login-container">
+        <form class="login-form" method="POST">
+            <h2>ورود به مدیریت پیام‌ها</h2>
+            <?php if (isset($error)): ?>
+                <p class="error-message"><?= $error ?></p>
+            <?php endif; ?>
+
+            <div class="input-group">
+                <input type="text" name="username" placeholder="نام کاربری" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" name="password" placeholder="رمز عبور" required>
+            </div>
+
+            <button type="submit" class="login-btn">ورود</button>
+        </form>
+    </div>
     </body>
     </html>
+
     <?php
-    exit;
+exit;
 endif;
 
 // در اینجا لاگین شده‌ایم، پیام‌ها را نمایش بدهیم
@@ -105,6 +113,7 @@ if (file_exists($messagesFile)) {
 <head>
     <meta charset="UTF-8">
     <title>پیام‌های دریافتی</title>
+    <link rel="stylesheet" href="/assets/css/fonts/Shabnam.css">
     <link rel="stylesheet" href="/css/api/message_view.css" type="text/css">
 
 </head>
@@ -141,7 +150,7 @@ if (file_exists($messagesFile)) {
                                 <input type="hidden" name="mark_read" value="<?= $msg['date'] ?>">
                                 <button type="submit" class="table-btn btn-outline">
                                     <span class="btn-icon">✅</span>
-                                    <span class="btn-text">خوانده شده</span>
+                                    <span class="btn-text">خوانده</span>
                                 </button>
                             </form>
                         <?php else: ?>
