@@ -1,5 +1,7 @@
+
+
+---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/odyair/public_html
-    - git pull origin main
-    - cp -r * $DEPLOYPATH
+    - export DEPLOYPATH=/home/odyair/public_html/
+    - /bin/cp -R images $DEPLOYPATH
