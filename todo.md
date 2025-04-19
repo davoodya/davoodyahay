@@ -8,7 +8,6 @@
    6. Add Other Articles
    7. Check and fix all Certificates and Images
    8. Check and Upload Certificates
-   9. view_message.php: Add Show Message in new module
 
    
 1. Public and Deploy Website
