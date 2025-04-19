@@ -42,6 +42,19 @@
     <link rel="stylesheet" href="../../css/courses/ceh.css">
     <link rel="stylesheet" href="../../css/header-footer.css">
 
+    <script type="text/javascript"
+            src="/assets/js/4_dist_email.js">
+    </script>
+
+
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "7ILWL54OoZjnIZneX",
+            });
+        })();
+    </script>
+
 </head>
 <body>
     <!-- Preloader - Updated Element - checked -->
@@ -398,29 +411,29 @@
                     <div class="waitlist-form">
                         <h3>ثبت‌نام در لیست انتظار</h3>
                         <p>این دوره به زودی منتشر خواهد شد. برای اطلاع از زمان دقیق انتشار و دریافت تخفیف ویژه، در لیست انتظار ثبت‌نام کنید.</p>
-                        
-                        <form id="waitlist-form">
+
+                        <form id="ceh-adv-waitlist-form">
                             <div class="form-group">
                                 <label for="name">نام و نام خانوادگی</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="from_name" required>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="email">ایمیل</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="from_email" required>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="phone">شماره تماس</label>
-                                <input type="tel" id="phone" name="phone" required>
+                                <input type="tel" id="phone" name="from_phone" required>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="message">پیام (اختیاری)</label>
                                 <textarea id="message" name="message" rows="4"></textarea>
                             </div>
-                            
-                            <button type="submit" class="waitlist-btn">ثبت‌نام در لیست انتظار</button>
+
+                            <button type="submit" class="waitlist-btn">ثبت‌نام در دوره</button>
                         </form>
                     </div>
                     
@@ -603,6 +616,7 @@
     
     <!-- Custom JS -->
     <script src="../../js/main.js"></script>
+    <script src="../../js/courses.js"></script>
     <script src="../../js/main2.js"></script>
     
     <script>

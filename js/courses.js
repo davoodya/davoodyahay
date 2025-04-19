@@ -298,7 +298,7 @@ function setupFilterTagRemoval(courseData, filterState) {
     });
 }
 
-// Send CEH Begginer buy request to davoodya40@gmail.com
+// Send CEH Beginner buy request to davoodya40@gmail.com
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("ceh-beg-waitlist-form");
 
@@ -324,11 +324,47 @@ document.addEventListener("DOMContentLoaded", function () {
         // ارسال اطلاعات
         emailjs.send("service_59st306", "template_m0f8j8j", data)
             .then(function (response) {
-                alert("✅ درخواست خرید شما با موفقیت ارسال شد!");
+                alert("✅ درخواست خرید دوره CEH مقدماتی شما با موفقیت ارسال شد!");
                 form.reset(); // پاک کردن فرم پس از ارسال موفق
             })
             .catch(function (error) {
                 alert("❌ ارسال درخواست با خطا مواجه شد. لطفاً دوباره تلاش کنید.");
+                console.error("EmailJS Error:", error);
+            });
+    });
+});
+
+// Send CEH Advance buy request to davoodya40@gmail.com
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("ceh-adv-waitlist-form");
+
+    if (!form) {
+        console.error("فرم تماس پیدا نشد!");
+        return;
+    }
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // جلوگیری از رفرش صفحه
+
+        const formData = new FormData(form);
+
+        // تبدیل FormData به Object قابل استفاده در EmailJS
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        // افزودن کلید subject (مطمئن شو در template تعریف شده)
+        data["subject"] = "خرید دوره CEH پیشرفته";
+
+        // ارسال اطلاعات
+        emailjs.send("service_59st306", "template_m0f8j8j", data)
+            .then(function (response) {
+                alert("✅ درخواست خرید دوره CEH پیشرفته شما با موفقیت ارسال شد!");
+                form.reset(); // پاک کردن فرم پس از ارسال موفق
+            })
+            .catch(function (error) {
+                alert("❌ ارسال درخواستخرید  با خطا مواجه شد. لطفاً دوباره تلاش کنید.");
                 console.error("EmailJS Error:", error);
             });
     });
