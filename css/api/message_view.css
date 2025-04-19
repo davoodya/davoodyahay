@@ -265,6 +265,9 @@ td.actions {
 
 /* استایل دکمه‌های داخل جدول */
 .table-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 6px 12px;
     font-size: 0.75rem;
     min-width: 70px;
@@ -442,6 +445,104 @@ button:disabled, .btn:disabled {
     font-weight: 700;
     font-family: Shabnam, sans-serif;
 }
+
+/*Message Module styles*/
+/* استایل دکمه نمایش پیام */
+.show-message-btn {
+    background: rgba(0, 255, 204, 0.2);
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+
+.show-message-btn:hover {
+    background: rgb(224, 108, 17);
+    color: #0a0a0a;
+}
+
+.message-preview {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* استایل ماژول */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #111;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #00ffcc;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #ff6b6b;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #ff0000;
+}
+
+.modal-title {
+    color: #00ffcc;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 10px;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    border: 1px solid rgba(0, 255, 204, 0.2);
+    border-radius: 4px;
+}
+
+
+.actions {
+    white-space: nowrap;
+    padding: 5px !important;
+}
+
+.inline-form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.read-badge {
+    color: #00ffcc;
+    font-size: 0.8rem;
+}
+
 /* رسپانسیو برای دستگاه‌های مختلف */
 @media (max-width: 992px) {
     table {
@@ -454,8 +555,28 @@ button:disabled, .btn:disabled {
 }
 
 @media (max-width: 768px) {
+    .login-form {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+
+    .login-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-group input {
+        padding: 10px 12px;
+    }
+
+    .login-btn {
+        padding: 10px;
+    }
     .table-container {
         padding: 5px;
+    }
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
     }
 
     table {
@@ -497,26 +618,6 @@ button:disabled, .btn:disabled {
     .btn, button {
         width: 100%;
         margin: 5px 0;
-    }
-}
-
-/* رسپانسیو برای دستگاه‌های کوچک */
-@media (max-width: 768px) {
-    .login-form {
-        padding: 30px 20px;
-        max-width: 90%;
-    }
-
-    .login-form h2 {
-        font-size: 1.5rem;
-    }
-
-    .input-group input {
-        padding: 10px 12px;
-    }
-
-    .login-btn {
-        padding: 10px;
     }
 }
 

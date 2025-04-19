@@ -145,8 +145,13 @@ if (file_exists($messagesFile)) {
                     <td><?= htmlspecialchars($msg['name']) ?></td>
                     <td><?= htmlspecialchars($msg['email']) ?></td>
                     <td><?= htmlspecialchars($msg['subject']) ?></td>
-                    <td class="message-content"><?= nl2br(htmlspecialchars($msg['message'])) ?></td>
-                    <td>
+                    <td class="message-content">
+                        <span class="message-preview"><?= htmlspecialchars(substr($msg['message'], 0, 30)) ?>...</span>
+                        <button class="show-message-btn" data-message="<?= htmlspecialchars($msg['message']) ?>">
+                            نمایش کامل پیام
+                        </button>
+                    </td>
+                    <td class="actions">
                         <?php if (empty($msg['read']) || !$msg['read']): ?>
                             <form method="post" class="inline-form">
                                 <input type="hidden" name="mark_read" value="<?= $msg['date'] ?>">
@@ -159,7 +164,7 @@ if (file_exists($messagesFile)) {
                             <span class="read-badge">خوانده شده</span>
                         <?php endif; ?>
                     </td>
-                    <td>
+                    <td class="actions">
                         <form method="post" class="inline-form">
                             <input type="hidden" name="delete_message" value="<?= $msg['date'] ?>">
                             <button type="submit" class="table-btn btn-secondary">
@@ -173,6 +178,16 @@ if (file_exists($messagesFile)) {
             </tbody>
         </table>
     </div>
+
+    <!-- ماژول نمایش پیام -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 class="modal-title">متن کامل پیام</h3>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+    <script src="/js/api/messages_view.js"></script>
 <?php endif; ?>
 
 </body>
