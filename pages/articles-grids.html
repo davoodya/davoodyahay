@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مقالات تخصصی داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری، برنامه‌نویسی و لینوکس - متخصص با بیش از ده سال تجربه">
+    <meta name="keywords" content="داوود یاحی, امنیت سایبری, داوود یا, davoodya, برنامه نویسی, شبکه, لینوکس, مقالات امنیت سایبری, مقالات برنامه نویسی, مقالات شبکه کامپیوتری, تست نفوذ, هوش مصنوعی, فایروال, IDS, IPS, میکروتیک">
+    <meta name="author" content="داوود یاحی">
+    <meta name="robots" content="index, follow">
+    
+    <title>مقالات | داوود یاحی - متخصص امنیت سایبری و برنامه‌نویسی</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Other fonts -->
+    <!-- فونت Vazir برای عنوان‌ها -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Shabnam برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت YekanBakh برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Sahel برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-articles.css">
+    <link rel="stylesheet" href="../css/header-footer.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>DAVOOD<span>_</span>YAHAY</h1>
+                </div>
+                
+                <ul class="nav-links font-title-article">
+                    <li><a href="../index.html">خانه</a></li>
+                    <li><a href="../index.html#about">درباره من</a></li>
+                    <li><a href="../index.html#services">سرویس ها</a></li>
+                    <li><a href="../index.html#portfolio">نمونه ابزارها</a></li>
+                    <li><a href="courses.html">دوره‌های آموزشی</a></li>
+                    <li><a href="articles.html" class="active">مقالات</a></li>
+                    <li><a href="skills.html">مهارت‌ها و مدارک</a></li>
+                    <li><a href="../index.html#contact">تماس با من</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header - checked -->
+    <section class="page-header">
+        <canvas id="matrix-canvas2" class="matrix-animation"></canvas>
+        <div class="matrix-rain" id="matrix-rain"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="font-title-article">مقالات</h1>
+                <p class="font-description-article">مقالات تخصصی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی</p>
+
+                <div class="breadcrumb">
+                    <a href="../index.html" class="font-button-article">خانه</a>
+                    <span>/</span>
+                    <span class="active font-button-article">مقالات</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Articles Section - checked -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="font-title-article">مقالات تخصصی</h2>
+                <p class="font-description-article">آخرین مقالات و آموزش‌های تخصصی در حوزه‌های امنیت سایبری، شبکه‌های کامپیوتری، سیستم های عامل، تست نفوذ، برنامه‌نویسی و ابزارنویسی امنیتی، تحلیل بدافزار ها و ...</p>
+            </div>
+            
+            <!-- Articles Layout with Sidebar -->
+            <div class="articles-layout">
+                <!-- Sidebar -->
+                <div class="articles-sidebar">
+                    <!-- Search Widget - checked -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-search"></i>
+                            <h3 class="font-title-article">جستجو</h3>
+                        </div>
+                        <div class="search-bar">
+                            <input type="text" id="sidebar-search-input" class="search-input" placeholder="جستجو در مقالات...">
+                            <button id="sidebar-search-btn" class="search-btn font-button-article">جستجو</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories Widget - checked -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-folder"></i>
+                            <h3 class="font-title-article">دسته‌بندی‌ها</h3>
+                        </div>
+                        <ul class="categories-list">
+                            <!-- Security Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-shield-alt"></i>
+                                        امنیت سایبری
+                                    </div>
+                                    <div class="category-count">12</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="articles/hacking/CrackZIPFiles1.html" class="article-link">کرک فایلهای ZIP با ابزار BK-Crack</a>
+                                    <a href="articles/web-application-security.html" class="article-link">امنیت برنامه‌های تحت وب</a>
+                                    <a href="articles/network-security-best-practices.html" class="article-link">بهترین روش‌های امنیت شبکه</a>
+                                    <a href="articles/malware-analysis.html" class="article-link">تحلیل بدافزارها</a>
+                                </div>
+                            </li>
+                            
+                            <!-- Network Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-network-wired"></i>
+                                        شبکه‌های کامپیوتری
+                                    </div>
+                                    <div class="category-count">8</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="articles/mikrotik-firewall-configuration.html" class="article-link">پیکربندی پیشرفته فایروال در میکروتیک</a>
+                                    <a href="articles/cisco-routing-protocols.html" class="article-link">پروتکل‌های مسیریابی در سیسکو</a>
+                                    <a href="articles/vpn-setup-guide.html" class="article-link">راهنمای راه‌اندازی VPN</a>
+                                </div>
+                            </li>
+                            
+                            <!-- Programming Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-code"></i>
+                                        برنامه‌نویسی
+                                    </div>
+                                    <div class="category-count">10</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="articles/python-security-tools.html" class="article-link">توسعه ابزارهای امنیتی با پایتون</a>
+                                    <a href="articles/cpp-optimization.html" class="article-link">بهینه‌سازی کد در ++C</a>
+                                    <a href="articles/csharp-advanced.html" class="article-link">مفاهیم پیشرفته در #C</a>
+                                </div>
+                            </li>
+                            
+                            <!-- AI Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-brain"></i>
+                                        هوش مصنوعی
+                                    </div>
+                                    <div class="category-count">5</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="articles/ai-cybersecurity.html" class="article-link">کاربرد هوش مصنوعی در تشخیص حملات سایبری</a>
+                                    <a href="articles/machine-learning-security.html" class="article-link">یادگیری ماشین در امنیت</a>
+                                </div>
+                            </li>
+                            
+                            <!-- Linux Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fab fa-linux"></i>
+                                        لینوکس
+                                    </div>
+                                    <div class="category-count">7</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="category-dropdown">
+                                    <a href="articles/linux-virtualization.html" class="article-link">مجازی‌سازی پیشرفته در لینوکس</a>
+                                    <a href="articles/linux-security-hardening.html" class="article-link">امن‌سازی سیستم‌های لینوکس</a>
+                                    <a href="articles/bash-scripting-advanced.html" class="article-link">اسکریپت‌نویسی پیشرفته در بش</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recent Articles Widget - checked -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-clock"></i>
+                            <h3 class="font-title-article">مقالات اخیر</h3>
+                        </div>
+                        <ul class="recent-articles-list">
+                            <li class="recent-article-item">
+                                <div class="recent-article-image">
+                                    <img src="../images/articles/CrackZipFiles/CrackZipFiles1_1.png" alt="کرک فایلهای ZIP با ابزار BK-Crack">
+                                </div>
+                                <div class="recent-article-content">
+                                    <h4 class="recent-article-title">
+                                        <a href="articles/hacking/CrackZIPFiles1.html">کرک فایلهای ZIP با ابزار BK-Crack</a>
+                                    </h4>
+                                    <div class="recent-article-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        ۱۵ فروردین ۱۴۰۴
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="recent-article-item">
+                                <div class="recent-article-image">
+                                    <img src="https://via.placeholder.com/100x100" alt="پیکربندی میکروتیک">
+                                </div>
+                                <div class="recent-article-content">
+                                    <h4 class="recent-article-title">
+                                        <a href="articles/mikrotik-firewall-configuration.html">پیکربندی پیشرفته فایروال در میکروتیک</a>
+                                    </h4>
+                                    <div class="recent-article-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        ۵ فروردین ۱۴۰۴
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="recent-article-item">
+                                <div class="recent-article-image">
+                                    <img src="https://via.placeholder.com/100x100" alt="برنامه نویسی پایتون">
+                                </div>
+                                <div class="recent-article-content">
+                                    <h4 class="recent-article-title">
+                                        <a href="articles/python-security-tools.html">توسعه ابزارهای امنیتی با پایتون</a>
+                                    </h4>
+                                    <div class="recent-article-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        ۲۰ اسفند ۱۴۰۳
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Popular Tags Widget - checked -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-tags"></i>
+                            <h3 class="font-title-article">برچسب‌های محبوب</h3>
+                        </div>
+                        <div class="tags-cloud">
+                            <div class="tag-cloud-item" data-tag="امنیت سایبری">امنیت سایبری</div>
+                            <div class="tag-cloud-item" data-tag="تست نفوذ">تست نفوذ</div>
+                            <div class="tag-cloud-item" data-tag="میکروتیک">میکروتیک</div>
+                            <div class="tag-cloud-item" data-tag="فایروال">فایروال</div>
+                            <div class="tag-cloud-item" data-tag="پایتون">پایتون</div>
+                            <div class="tag-cloud-item" data-tag="لینوکس">لینوکس</div>
+                            <div class="tag-cloud-item" data-tag="شبکه">شبکه</div>
+                            <div class="tag-cloud-item" data-tag="برنامه‌نویسی">برنامه‌نویسی</div>
+                            <div class="tag-cloud-item" data-tag="هوش مصنوعی">هوش مصنوعی</div>
+                            <div class="tag-cloud-item" data-tag="مجازی‌سازی">مجازی‌سازی</div>
+                            <div class="tag-cloud-item" data-tag="داکر">داکر</div>
+                            <div class="tag-cloud-item" data-tag="سیسکو">سیسکو</div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Main Content -->
+                <div class="articles-main-content">
+                    <!-- Search and Filter Container -->
+                    <div class="search-filter-container">
+                        <div class="search-bar">
+                            <input type="text" id="search-input" class="search-input" placeholder="جستجو در مقالات...">
+                            <button id="search-btn" class="search-btn font-button-article">جستجو</button>
+                        </div>
+
+                        <div class="filter-options">
+                            <div class="filter-group">
+                                <h4>دسته‌بندی</h4>
+                                <div class="custom-select-wrapper">
+                                    <select id="category-filter" class="filter-select">
+                                        <option value="all">همه دسته‌ها</option>
+                                        <option value="security">امنیت سایبری</option>
+                                        <option value="network">شبکه‌های کامپیوتری</option>
+                                        <option value="programming">برنامه‌نویسی</option>
+                                        <option value="ai">هوش مصنوعی</option>
+                                        <option value="linux">لینوکس</option>
+                                    </select>
+                                    <div class="custom-select-arrow">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter-group">
+                                <h4>مرتب‌سازی</h4>
+                                <div class="custom-select-wrapper">
+                                    <select id="sort-filter" class="filter-select">
+                                        <option value="newest">جدیدترین</option>
+                                        <option value="oldest">قدیمی‌ترین</option>
+                                        <option value="popular">محبوب‌ترین</option>
+                                    </select>
+                                    <div class="custom-select-arrow">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter-group">
+                                <h4>برچسب‌ها</h4>
+                                <div class="custom-select-wrapper">
+                                    <select id="tag-filter" class="filter-select">
+                                        <option value="all">همه برچسب‌ها</option>
+                                        <option value="penetration-testing">تست نفوذ</option>
+                                        <option value="firewall">فایروال</option>
+                                        <option value="mikrotik">میکروتیک</option>
+                                        <option value="python">پایتون</option>
+                                        <option value="c-plus-plus">سی پلاس پلاس</option>
+                                        <option value="linux">لینوکس</option>
+                                        <option value="virtualization">مجازی‌سازی</option>
+                                    </select>
+                                    <div class="custom-select-arrow">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-tags" id="active-filters">
+                            <!-- فیلترهای فعال اینجا نمایش داده می‌شوند -->
+                        </div>
+                    </div>
+                    
+                    <!-- Articles Grid -->
+                    <div class="articles-grid" id="articles-container">
+                        <!-- Article Card 1 - CrackZipFiles1 -->
+                        <div class="article-card" data-category="security" data-tags="penetration-testing,firewall">
+                            <div class="article-image">
+                                <img src="../images/articles/CrackZipFiles/CrackZipFiles1_1.png" alt="کرک فایلهای ZIP با ابزار BK-Crack">
+                                <div class="article-category">امنیت سایبری</div>
+                            </div>
+                            <div class="article-content">
+                                <h3>کرک فایلهای ZIP با ابزار BK-Crack</h3>
+                                <p>
+                                    در این مقاله به بررسی روش کرک فایل های فشرده ZIP که از الگوریتم ZIP-Crypto برای فشرده سازی استفاده میکنند میپردازیم و اینکار را با ابزار BK-Crack انجام میدهیم.
+                                </p>
+                                
+                                <div class="article-meta">
+                                    <div class="article-meta-item">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <span>26 فروردین 1404</span>
+                                    </div>
+                                    <div class="article-meta-item">
+                                        <i class="far fa-eye"></i>
+                                        <span>۱۲۵۰ بازدید</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="article-tags">
+                                    <span class="article-tag">تست نفوذ</span>
+                                    <span class="article-tag">Password Cracking</span>
+                                    <span class="article-tag">هک و امنیت</span>
+                                    <span class="article-tag">BKCrack</span>
+                                </div>
+                                
+                                <div class="article-actions">
+                                    <a href="articles/hacking/CrackZIPFiles1.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article Card 2 -->
+                        <div class="article-card" data-category="network" data-tags="mikrotik,firewall">
+                            <div class="article-image">
+                                <img src="https://via.placeholder.com/600x400" alt="پیکربندی میکروتیک">
+                                <div class="article-category">شبکه‌های کامپیوتری</div>
+                            </div>
+                            <div class="article-content">
+                                <h3>پیکربندی پیشرفته فایروال در میکروتیک</h3>
+                                <p>آموزش جامع پیکربندی فایروال در روترهای میکروتیک برای محافظت از شبکه در برابر انواع حملات و تهدیدات سایبری.</p>
+
+                                <div class="article-meta">
+                                    <div class="article-meta-item">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <span>۵ فروردین ۱۴۰۴</span>
+                                    </div>
+                                    <div class="article-meta-item">
+                                        <i class="far fa-eye"></i>
+                                        <span>۹۸۰ بازدید</span>
+                                    </div>
+                                </div>
+
+                                <div class="article-tags">
+                                    <span class="article-tag">میکروتیک</span>
+                                    <span class="article-tag">فایروال</span>
+                                    <span class="article-tag">امنیت شبکه</span>
+                                </div>
+
+                                <div class="article-actions">
+                                    <a href="articles/mikrotik-firewall-configuration.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article Card 3 -->
+                        <div class="article-card" data-category="programming" data-tags="python,security">
+                            <div class="article-image">
+                                <img src="https://via.placeholder.com/600x400" alt="برنامه نویسی پایتون">
+                                <div class="article-category">برنامه‌نویسی</div>
+                            </div>
+                            <div class="article-content">
+                                <h3>توسعه ابزارهای امنیتی با پایتون</h3>
+                                <p>در این مقاله نحوه استفاده از زبان برنامه‌نویسی پایتون برای توسعه ابزارهای امنیتی کاربردی و سفارشی را آموزش می‌دهیم.</p>
+
+                                <div class="article-meta">
+                                    <div class="article-meta-item">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <span>۲۰ اسفند ۱۴۰۳</span>
+                                    </div>
+                                    <div class="article-meta-item">
+                                        <i class="far fa-eye"></i>
+                                        <span>۱۵۶۰ بازدید</span>
+                                    </div>
+                                </div>
+
+                                <div class="article-tags">
+                                    <span class="article-tag">پایتون</span>
+                                    <span class="article-tag">امنیت سایبری</span>
+                                    <span class="article-tag">برنامه‌نویسی</span>
+                                </div>
+
+                                <div class="article-actions">
+                                    <a href="articles/python-security-tools.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article Card 4 -->
+                        <div class="article-card" data-category="ai" data-tags="python,security">
+                            <div class="article-image">
+                                <img src="https://via.placeholder.com/600x400" alt="هوش مصنوعی در امنیت">
+                                <div class="article-category">هوش مصنوعی</div>
+                            </div>
+                            <div class="article-content">
+                                <h3>کاربرد هوش مصنوعی در تشخیص حملات سایبری</h3>
+                                <p>بررسی نحوه استفاده از الگوریتم‌های هوش مصنوعی و یادگیری ماشین برای تشخیص و پیشگیری از حملات سایبری پیشرفته.</p>
+
+                                <div class="article-meta">
+                                    <div class="article-meta-item">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <span>۱۰ اسفند ۱۴۰۳</span>
+                                    </div>
+                                    <div class="article-meta-item">
+                                        <i class="far fa-eye"></i>
+                                        <span>۲۱۰۰ بازدید</span>
+                                    </div>
+                                </div>
+
+                                <div class="article-tags">
+                                    <span class="article-tag">هوش مصنوعی</span>
+                                    <span class="article-tag">امنیت سایبری</span>
+                                    <span class="article-tag">یادگیری ماشین</span>
+                                </div>
+
+                                <div class="article-actions">
+                                    <a href="articles/ai-cybersecurity.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article Card 5 -->
+                        <div class="article-card" data-category="linux" data-tags="linux,virtualization">
+                            <div class="article-image">
+                                <img src="https://via.placeholder.com/600x400" alt="لینوکس و مجازی‌سازی">
+                                <div class="article-category">لینوکس</div>
+                            </div>
+                            <div class="article-content">
+                                <h3>مجازی‌سازی پیشرفته در لینوکس</h3>
+                                <p>آموزش جامع پیاده‌سازی و مدیریت سیستم‌های مجازی‌سازی در لینوکس با استفاده از KVM، Docker و Kubernetes.</p>
+
+                                <div class="article-meta">
+                                    <div class="article-meta-item">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <span>۵ اسفند ۱۴۰۳</span>
+                                    </div>
+                                    <div class="article-meta-item">
+                                        <i class="far fa-eye"></i>
+                                        <span>۱۳۵۰ بازدید</span>
+                                    </div>
+                                </div>
+
+                                <div class="article-tags">
+                                    <span class="article-tag">لینوکس</span>
+                                    <span class="article-tag">مجازی‌سازی</span>
+                                    <span class="article-tag">داکر</span>
+                                </div>
+
+                                <div class="article-actions">
+                                    <a href="articles/linux-virtualization.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article Card 6 -->
+                        <div class="article-card" data-category="security" data-tags="web-security,penetration-testing">
+                            <div class="article-image">
+                                <img src="https://via.placeholder.com/600x400" alt="امنیت وب">
+                                <div class="article-category">امنیت سایبری</div>
+                            </div>
+                            <div class="article-content">
+                                <h3>امنیت برنامه‌های تحت وب</h3>
+                                <p>بررسی آسیب‌پذیری‌های رایج در برنامه‌های تحت وب و روش‌های محافظت از آن‌ها در برابر حملات مختلف.</p>
+
+                                <div class="article-meta">
+                                    <div class="article-meta-item">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <span>۲۵ بهمن ۱۴۰۳</span>
+                                    </div>
+                                    <div class="article-meta-item">
+                                        <i class="far fa-eye"></i>
+                                        <span>۱۸۲۰ بازدید</span>
+                                    </div>
+                                </div>
+
+                                <div class="article-tags">
+                                    <span class="article-tag">امنیت وب</span>
+                                    <span class="article-tag">تست نفوذ</span>
+                                    <span class="article-tag">OWASP</span>
+                                </div>
+
+                                <div class="article-actions">
+                                    <a href="articles/web-application-security.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="pagination-btn disabled" id="prev-page">&lt;</button>
+                        <div id="pagination-numbers"></div> <!-- این خط مهمه -->
+<!--                        <button class="pagination-btn active">1</button>-->
+<!--                        <button class="pagination-btn">2</button>-->
+<!--                        <button class="pagination-btn">3</button>-->
+                        <button class="pagination-btn" id="next-page">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dark-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 class="logo-glitch-footer">DAVOOD<span>_</span>YAHAY</h3>
+                    <img src="../images/davoodya.png" alt="Davood Yahay Image">
+                    <p class="footer-desc">مشاور و مدرس امنیت سایبری، برنامه نویسی، شبکه‌های کامپیوتری و سیستم های عامل</p>
+
+                </div>
+
+                <div class="footer-links">
+                    <h3>دسترسی سریع</h3>
+                    <ul>
+                        <li><a href="../index.html">خانه</a></li>
+                        <li><a href="../index.html#about">درباره من</a></li>
+                        <li><a href="../index.html#services">سرویس ها</a></li>
+                        <li><a href="../index.html#portfolio">نمونه ابزارها</a></li>
+                        <li><a href="courses.html">دوره‌های آموزشی</a></li>
+                        <li><a href="articles.html">مقالات</a></li>
+                        <li><a href="skills.html">مهارت‌ها و مدارک</a></li>
+                        <li><a href="../index.html#contact">تماس با من</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>اطلاعات تماس</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> ایران، اصفهان</p>
+                    <p><i class="fas fa-envelope"></i> info@davoodya.com</p>
+                    <p><i class="fas fa-phone"></i> +98 913 000 0000</p>
+
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                            <span class="social-tooltip">یوتیوب</span>
+                        </a>
+                        <a href="https://t.me/yakuzacybersec" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram"></i>
+                            <span class="social-tooltip">تلگرام</span>
+                        </a>
+                        <a href="https://www.instagram.com/yakuzalearn" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-tooltip">اینستاگرام</span>
+                        </a>
+                        <a href="https://github.com/davoodya" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                            <span class="social-tooltip">گیت‌هاب</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; تمامی حقوق محفوظ است | طراحی و توسعه توسط <span> داوود یاحی </span></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/main2.js"></script>
+    <script src="../js/articles.js"></script>
+</body>
+</html>
