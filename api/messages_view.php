@@ -124,7 +124,7 @@ if (file_exists($messagesFile)) {
 <?php if (empty($messages)): ?>
     <p>هیچ پیامی دریافت نشده است.</p>
 <?php else: ?>
-<div class="grid-move-bg message-container">
+
     <div class="table-container">
         <table class="messages-table">
             <thead>
@@ -174,7 +174,7 @@ if (file_exists($messagesFile)) {
         </table>
     </div>
 <?php endif; ?>
-</div>
+
 </body>
 </html>
 
