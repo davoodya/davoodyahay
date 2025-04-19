@@ -5,6 +5,12 @@
    3. Add Other Articles
    4. skills.html: fix all Certificates and Images
    5. Check and Upload Certificates
+   6. Fix on All Courses:
+      7. چه چیز هایی یاد میگیرد؟
+      8. سرفصل های دوره
+      9. عنوان هر قسمت
+      10. لینک هر قسمت
+      11. سایدبار: اطلاعات دوره
 
    
 1. Public and Deploy Website
