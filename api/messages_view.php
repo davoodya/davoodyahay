@@ -70,6 +70,8 @@ if (!isset($_SESSION['logged_in'])):
     <head>
         <meta charset="UTF-8">
         <title>ورود به مدیریت پیام‌ها</title>
+        <!-- Favicon -->
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/assets/css/fonts/Shabnam.css">
         <link rel="stylesheet" href="/css/api/message_view.css">
     </head>
@@ -113,6 +115,8 @@ if (file_exists($messagesFile)) {
 <head>
     <meta charset="UTF-8">
     <title>پیام‌های دریافتی</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/fonts/Shabnam.css">
     <link rel="stylesheet" href="/css/api/message_view.css" type="text/css">
 
