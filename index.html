@@ -61,12 +61,21 @@
         <link rel="stylesheet" href="css/style-index.css" type="text/css">
         <link rel="stylesheet" href="css/header-footer.css" type="text/css">
 
-        <!-- JS for EmailJS Service -->
-        <script src="assets/js/email.min.js"></script>
-        <script>
-            (function()
-            {
-                emailjs.init("7ILWL54OoZjnIZneX"); // ID که از EmailJS می‌گیری
+<!--         JS for EmailJS Service-->
+<!--        <script type="text/javascript"-->
+<!--                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">-->
+<!--        </script>-->
+
+        <script type="text/javascript"
+                src="/assets/js/4_dist_email.js">
+        </script>
+
+
+        <script type="text/javascript">
+            (function(){
+                emailjs.init({
+                    publicKey: "7ILWL54OoZjnIZneX",
+                });
             })();
         </script>
 
@@ -555,22 +564,22 @@
                         <form id="contactForm" class="neon-form">
                             <div class="form-group">
                                 <label class="font-title" for="name">نام و نام خانوادگی</label>
-                                <input class="font-description form-control" type="text" id="name" required>
+                                <input class="font-description form-control" type="text" id="name" name="from_name" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="font-title" for="email">ایمیل</label>
-                                <input class="form-control font-description" type="email" id="email" required>
+                                <input class="form-control font-description" type="email" id="email" name="from_email" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="font-title" for="subject">موضوع</label>
-                                <input class="form-control font-description" type="text" id="subject" required>
+                                <input class="form-control font-description" type="text" id="subject" name="subject" required>
                             </div>
 
                             <div class="form-group">
                                 <label class="font-title" for="message">پیام</label>
-                                <textarea id="message" class="form-control font-description" rows="5" required></textarea>
+                                <textarea id="message" class="form-control font-description" rows="5" name="message" required></textarea>
                             </div>
 
                             <button type="submit" class="submit-btn font-button hacker-btn">

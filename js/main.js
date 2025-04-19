@@ -485,8 +485,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// Send Email with EmailJS from Contact Form
-// مطمئن شو DOM کامل لود شده
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
 
@@ -498,13 +496,16 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // جلوگیری از رفرش صفحه
 
+        const formData = new FormData(form);
+
+        // ساخت یک آبجکت از داده‌های فرم برای ارسال
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
         // ارسال اطلاعات با EmailJS
-        emailjs.send("service_59st306", "template_m0f8j8j", {
-            from_name: document.getElementById("name").value,
-            from_email: document.getElementById("email").value,
-            subject: document.getElementById("subject").value,
-            message: document.getElementById("message").value,
-        })
+        emailjs.send("service_59st306", "template_m0f8j8j", data)
             .then(function (response) {
                 alert("✅ پیام شما با موفقیت ارسال شد!");
                 form.reset(); // پاک کردن فرم
@@ -515,3 +516,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+

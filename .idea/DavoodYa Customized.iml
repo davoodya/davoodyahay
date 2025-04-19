@@ -10,5 +10,6 @@
     <orderEntry type="library" name="Yekan-Bakh" level="application" />
     <orderEntry type="library" name="prism" level="application" />
     <orderEntry type="library" name="email" level="application" />
+    <orderEntry type="library" name="@emailjs/browser" level="application" />
   </component>
 </module>
