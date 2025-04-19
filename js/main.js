@@ -421,6 +421,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Zoomable Certificate
+document.addEventListener('DOMContentLoaded', function () {
+    const image = document.getElementById('zoomable-certificate'); // مطمئن شو که id در HTML هست
+
+    // زوم/آن‌زوم با کلیک
+    image.addEventListener('click', function (e) {
+        e.stopPropagation(); // جلوگیری از بسته شدن مودال هنگام کلیک روی عکس
+        image.classList.toggle('zoomed');
+    });
+
+    // اطمینان از ریست شدن زوم هنگام بستن مودال
+    const modal = document.getElementById('certificate-modal');
+    const closeBtn = document.querySelector('.close-modal');
+
+    closeBtn.addEventListener('click', () => {
+        image.classList.remove('zoomed');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            image.classList.remove('zoomed');
+        }
+    });
+});
+
 // Save Messages into /api/messages.json
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");

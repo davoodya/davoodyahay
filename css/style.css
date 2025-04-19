@@ -569,19 +569,26 @@ section {
 }
 
 .certificate-image {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
   border: 2px solid #00ff41;
   box-shadow: 0 0 20px rgba(0, 255, 65, 0.5),
   0 0 40px rgba(0, 255, 65, 0.3),
   0 0 60px rgba(0, 255, 65, 0.1);
   border-radius: 5px;
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
+  transform-origin: center;
+  cursor: zoom-in;
 }
 
 .certificate-image:hover {
-  transform: scale(0.95);
+  transform: scale(110%);
+}
+.certificate-image.zoomed {
+  transform: scale(2);
+  cursor: zoom-out;
 }
 
 .close-modal {
