@@ -1,6 +1,7 @@
 
 1. TODO(metric=0):
-   1. Import Used Libraries Locally
+   1. Fix راه های ارتباطی Button on Index Main Page
+   2. Import Used Libraries Locally
    2. All Pages: Apply Locally G-Fonts, Fontawesome, prisms.js, Farsi Fonts
    3. Add Other Articles
    4. skills.html: fix all Certificates and Images
