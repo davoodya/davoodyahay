@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="عنوان مقاله - مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی">
+    <meta name="keywords" content="داوود یاحی, امنیت سایبری, داوود یاحی, davoodsec, davoodya, برنامه نویسی, شبکه, لینوکس, تست نفوذ [کلمات کلیدی مقاله]">
+    <meta name="author" content="داوود یاحی">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="مفاهیم Encoding, Encryption, Hashing, Obfuscation | داوود یاحی">
+    <meta property="og:description" content="مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی">
+    <meta property="og:image" content="/images/davoodya.png">
+    <meta property="og:url" content="https://davoodya.com/pages/articles/Security/hash_encrypt.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content=" مفاهیم Encoding, Encryption, Hashing, Obfuscation | داوود یاحی">
+    <meta name="twitter:description" content="مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی">
+    <meta name="twitter:image" content="/images/davoodya.png">
+    
+    <title>مفاهیم Encoding, Encryption, Hashing, Obfuscation | داوود یاحی - مشاور و مدرس امنیت سایبری و برنامه‌نویسی</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon">
+
+    <!--    &lt;!&ndash; Font Awesome &ndash;&gt;-->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
+    <link rel="stylesheet" href="../../../assets/fontawesome/css/all.min.css">
+
+    <!--    &lt;!&ndash; Google Fonts &ndash;&gt;-->
+    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
+
+    <!-- Google fonts local -->
+    <link rel="stylesheet" href="../../../assets/fonts/fira-code/fira-code.css">
+    <link rel="stylesheet" href="../../../assets/fonts/Rajdhani/Rajdhani.css">
+
+    <!-- Other fonts -->
+    <!-- فونت Vazir برای عنوان‌ها -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Shabnam برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت YekanBakh برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Sahel برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css" rel="stylesheet" type="text/css" />
+
+    <!--    &lt;!&ndash; Prism.js for Code Highlighting &ndash;&gt;-->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">-->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">-->
+
+    <!-- Locally Prism.js for Code Highlighting -->
+    <link rel="stylesheet" href="../../../assets/css/prism/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="../../../assets/css/prism/prism-line-numbers.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/style-articles.css">
+    <link rel="stylesheet" href="../../../css/header-footer.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>DAVOOD<span>_</span>YAHAY</h1>
+                </div>
+                
+                <ul class="nav-links font-title-article">
+                    <li><a href="../../../index.html">خانه</a></li>
+                    <li><a href="../../../index.html#about">درباره من</a></li>
+                    <li><a href="../../../index.html#services">سرویس ها</a></li>
+                    <li><a href="../../../index.html#portfolio">نمونه ابزارها</a></li>
+                    <li><a href="../../courses.html">دوره‌های آموزشی</a></li>
+                    <li><a href="../../articles.html" class="active">مقالات</a></li>
+                    <li><a href="../../skills.html">مهارت‌ها و مدارک</a></li>
+                    <li><a href="../../../index.html#contact">تماس با من</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <canvas id="matrix-canvas" class="matrix-animation"></canvas>
+        <div class="matrix-rain" id="matrix-rain"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="font-title-article">مفاهیم Encoding, Encryption, Hashing, Obfuscation</h1>
+                <p class="font-description-article">در این مقاله مفاهیم بالا را بررسی میکنیم و سپس تفاوت هایی که بین این مفاهیم هست رو یاد میگیریم.</p>
+                
+                <div class="breadcrumb">
+                    <a href="../../../index.html" class="font-button-article">خانه</a>
+                    <span>/</span>
+                    <a href="../../articles.html" class="font-button-article">مقالات</a>
+                    <span>/</span>
+                    <span class="active font-button-article">مفاهیم Encoding, Encryption, Hashing, Obfuscation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Article Section -->
+    <section class="articles-section about">
+        <div class="container">
+            <!-- Articles Layout with Sidebar -->
+            <div class="articles-layout">
+                <!-- Sidebar -->
+                <div class="articles-sidebar">
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-folder"></i>
+                            <h3 class="font-title-article">دسته‌بندی‌ها</h3>
+                        </div>
+
+                        <!-- Articles Categories-->
+                        <ul class="categories-list">
+
+                            <!-- Hacking & Security Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-shield-alt"></i>
+                                        امنیت سایبری و هک قانونی
+                                    </div>
+                                    <div class="category-count">2</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../hacking/CrackZIPFiles1.html" class="article-link">کرک فایلهای فشرده ZIP با ابزار BK-Crack</a></li>
+                                    <li><a href="../Security/hash_encrypt.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Network Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-network-wired"></i>
+                                        شبکه‌های کامپیوتری
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../articles/mikrotik-firewall-configuration.html" class="article-link">پیکربندی پیشرفته فایروال در میکروتیک</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Programming Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-code"></i>
+                                        برنامه‌نویسی
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../Security/hash_encrypt.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- AI Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-brain"></i>
+                                        هوش مصنوعی
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../articles/ai-cybersecurity.html" class="article-link">کاربرد هوش مصنوعی در تشخیص حملات سایبری</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Linux Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fab fa-linux"></i>
+                                        لینوکس
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../hacking/CrackZIPFiles1.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recent Articles Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-clock"></i>
+                            <h3 class="font-title-article">مقالات اخیر</h3>
+                        </div>
+                        <ul class="recent-articles-list">
+
+                            <!-- Recent Article 1-->
+                            <li class="recent-article-item">
+                                <div class="recent-article-image">
+                                    <img src="../../../images/articles/CrackZipFiles/CrackZipFiles1_1.png" alt="کرک فایلهای فشرده ZIP با ابزار BK-Crack">
+                                </div>
+                                <div class="recent-article-content">
+                                    <h4 class="recent-article-title">
+                                        <a href="../hacking/CrackZIPFiles1.html">کرک فایلهای فشرده ZIP با ابزار BK-Crack</a>
+                                    </h4>
+                                    <div class="recent-article-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        15 فروردین 1404
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Recent Article 2-->
+                            <li class="recent-article-item">
+                                <div class="recent-article-image">
+                                    <img src="../../../images/articles/hash_encrypt/hash_enc3.jpg" alt="پیکربندی میکروتیک">
+                                </div>
+                                <div class="recent-article-content">
+                                    <h4 class="recent-article-title">
+                                        <a href="../Security/hash_encrypt.html">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a>
+                                    </h4>
+                                    <div class="recent-article-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        23 خرداد 1404
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    
+                    <!-- Popular Tags Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-tags"></i>
+                            <h3 class="font-title-article">برچسب‌های محبوب</h3>
+                        </div>
+                        <div class="tags-cloud">
+                            <div class="tag-cloud-item">امنیت سایبری</div>
+                            <div class="tag-cloud-item">تست نفوذ</div>
+                            <div class="tag-cloud-item">میکروتیک</div>
+                            <div class="tag-cloud-item">فایروال</div>
+                            <div class="tag-cloud-item">پایتون</div>
+                            <div class="tag-cloud-item">لینوکس</div>
+                            <div class="tag-cloud-item">شبکه</div>
+                            <div class="tag-cloud-item">برنامه‌نویسی</div>
+                            <div class="tag-cloud-item">هوش مصنوعی</div>
+                            <div class="tag-cloud-item">مجازی‌سازی</div>
+                            <div class="tag-cloud-item">داکر</div>
+                            <div class="tag-cloud-item">سیسکو</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="articles-main-content">
+                    <!-- Article Detail -->
+                    <div class="article-detail">
+
+                        <!-- Article Header -->
+                        <div class="article-header">
+                            <h1>مفاهیم Encoding, Encryption, Hashing, Obfuscation</h1>
+                            <div class="article-header-meta">
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>23 فروردین 1404</span>
+                                </div>
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-user"></i>
+                                    <span>داوود یاحی</span>
+                                </div>
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-folder"></i>
+                                    <span>امنیت سایبری، برنامه نویسی</span>
+                                </div>
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-eye"></i>
+                                    <span>560 بازدید</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article Featured Image -->
+                        <img src="../../../images/articles/hash_encrypt/hash_enc3.jpg" alt="مفاهیم Encoding, Encryption, Hashing, Obfuscation" class="article-featured-image">
+                        
+                        <!-- Article Body -->
+                        <div class="article-body">
+                            <p>خب Encryption و Encoding و Hashing و Obfuscation اصطلاح های شبیه به هم هستن و همین باعث میشه که خیلی وقت ها آدم رو گیج کنن. پس بریم که گره ها رو باز کنیم و دونه دونه بریم سراغشون.
+                                همچنین به توضیح Unicode ها و انواع آن هم میپردازیم.</p>
+
+
+                            <h2>اولین مورد: Encoding</h2>
+                            <p>توی روش Encoding، داده هامون از یک فرم به یک فرم دیگه تغییر پیدا میکنن. هدف اصلی Encode کردن اینه که داده رو به فرمی تبدیل کنیم که توسط اکثر سیستم ها قابل خوندن بشه یا برای هر پروسس externalای قابل استفاده بشه. این روش برای امن کردن داده نیست. الگوریتم های عمومی (Public) زیادی برای Encode کردن موجود هستند.</p>
+                            
+                            <p>یکی از استفاده های مهم Encoding **کاهش دادن سایز** فایل های صوتی و تصویریه. هر فرمت فایل صوتی و تصویری یک برنامه coded (که جمع و جور شده ی coder-decoderه) مربوط به خودش رو داره که برای code کردن فایل به فرمت مناسب و همینطور برای decode کردن در زمان پخش استفاده میشه.
+                            </p>
+
+                            <blockquote>
+                               وقتی هم که بخواهیم داده Encode شده را به حالت اولیه باز گردانیم  باید آن را به اصطلاح Decode کنیم.
+                            </blockquote>
+                            <p> مثال هاش: ASCII، BASE64، UNICODE </p>
+
+                            <img src="../../../images/articles/hash_encrypt/Encoding-process.jpg" alt="Encoding Process">
+
+                            <h2>دومین مورد: Encryption</h2>
+                            <p>در واقع Encryption یک تکنیک encodingه. منتها به نحوی که داده مون توسط یک الگوریتم encyption، encode میشه. این کار به نحوی انجام میشه که فقط آدم هایی که جوازش رو دارن بتونن به داده دسترسی پیدا کنن. قراره از Encryption به این خاطر استفاده کنیم که داده مون از چشم بقیه دور بمونه. </p>
+                            <p>شبیه به وقت هایی که با دوست های خیلی صمیمی مون توی دبستان یک زبان اختراع میکردیم که فقط خودمون تا دو تا میفهمیدیم چی میگی</p>
+                            <p>توی فرآیند Encryption داده ای که قراره Encrypt بشه (که بهش میگیم plain-text) توسط الگوریتم encryptionای مثل AES یا RAS با استفاده از یک secret key که بهش میگیم cipher انتقال داده میشه.</p>
+                            <blockquote>
+                                به داده encrypt شده cipher-text میگیم و در آخر کار هم سمتی که قراره داده رو بگیره با همون secret key داده رو به حالت plain-text بر میگردونه.
+                            </blockquote>
+                            <p>به صورت کلی دو نوع الگوریتم encryption داریم:</p>
+                            <ul>
+                                <li>رمزنگاری متقارن | symmetric encryption</li>
+                                <img src="../../../images/articles/hash_encrypt/symmetric-encryption.jpg" alt="Symmetric Encryption">
+                                <li>رمزنگاری نامتقارن | asymmetric encryption</li>
+                                <img src="../../../images/articles/hash_encrypt/asymmetric-encryption.jpg" alt="Asymmetric Encryption">
+                                <p>به نظر من فکر کردن به ترجمه هاشون شما رو الکی میترسونه، نسبتا بحث پیچیده ای هستن ولی نه اندازه ای که فارسیش میترسونه</p>
+                            </ul>
+                            
+                            <p>در حالت symmetric encryption برای رمزنگاری فقط از **یک کلید** هم برای encode و decode کردن استفاده میشه (مثلا الگوریتم AES همینطوریه)</p>
+                            <p>ولی در حالت asymmetric encryption داده با کمک دو کلید مختلف که به اسم private key و public key شناخته میشن، رمزنگاری رو انجام میدیم. (مثالش هم الگوریتم RSA).</p>
+                            <blockquote>
+                                وقتی هم که بخواهیم داده Encrypt شده را به حالت اولیه باز گردانیم  باید آن را به اصطلاح Decrypt کنیم.
+                            </blockquote>
+
+
+                            <h2>سومین مورد: Hashing</h2>
+
+                            <p>در فرآیند Hashingِ، داده با یه hashing function به یک hash تبدیل میشه که میتونه هر عبارت عجیب و غریبی که شامل کاراکتر هاست باشه. </p>
+                            <p>نکته اینجاست که هر عبارتی فقط به یک عبارت عجیب و غریب hash میشه و اگر کسی بخواد اون وسط تغییری توی داده ایجاد کنه کلا یک عبارت عجیب و غریب دیگه ایجاد میشه. ما از این طریق میتونیم به صحت داده مون یا همون Data Integrity پی ببریم.</p>
+                            <p>مثلا اگر پیامی یا عکسی به دوستامون توی پیام رسان های درست و حسابی بفرستیم اگر کسی اون وسط دستکاریش کنه، hash داده ای که به دوستمون رسیده با hash داده ای که ما فرستادیم فرق داره. یه استفاده دیگه از hash میتونه برایverify کردن پسورد هامون زمان وارد شدن به وبسایت های مختلف باشه.</p>
+                            <blockquote>
+                                برای تبدیل مقادیر هش شده به حالت اولیه راه هایی مانند استفاده از Rainbow Table ها و همچنین Reverse Cracking وجود دارد اما قطعی نیستند.
+                            </blockquote>
+                            <img src="../../../images/articles/hash_encrypt/hashing.png" alt="Hashing Process">
+
+
+                            <h2>چهارمین مورد: Obfuscation</h2>
+                            <p>فر آیند Obfuscation بر روی دیتا بدین منظور انجام می‌شود تا فهم آن دشوار شده و به سختی بتوان آن را کپی کرد و یا مورد سوء‌ استفاده قرار داد. یک کاربرد بسیار متدوال انجام Obfuscation بر روی سورس‌ کدهای اپلیکیشن‌ های مختلف است که هدف از این کار جلوگیری از تکثیر غیرمجاز محصولی است که به روش مهندسی معکوس قابلیت باز تولید داشته باشد.فر آیند Obfuscation بر روی دیتا بدین منظور انجام می‌شود تا فهم آن دشوار شده و به سختی بتوان آن را کپی کرد و یا مورد سوء‌ استفاده قرار داد. یک کاربرد بسیار متدوال انجام Obfuscation بر روی سورس‌ کدهای اپلیکیشن‌ های مختلف است که هدف از این کار جلوگیری از تکثیر غیرمجاز محصولی است که به روش مهندسی معکوس قابلیت باز تولید داشته باشد.</p>
+                            <p>باید به این نکته اشاره شود که Obfuscation در زمینۀ مراقبت از دیتا به اندازۀ Encryption قوی نیست اما می‌تواند به صورت یک مانع عمل کند. همان‌ طور که در Encoding می‌توانیم عمل عکس را انجام دهیم و دیتای اصلی را بازیابی کنیم، در Obfuscation نیز در بیشتر موارد این امکان وجود دارد.</p>
+                            <p>نکتهٔ کلیدی و مهمی که در مورد Obfuscation وجود دارد این است که چگونگی انجام این عمل، به محتوای دیتا بستگی دارد؛ مثلاً در صورتی که بخواهیم این عمل را بر روی بخشی از یک سورس‌ کد انجام دهیم، محدودیت ما این است که باید دیتایی که پروسهٔ Obfuscation بر روی آن اِعمال شده کماکان توسط کامپیوتر قابل‌ استفاده باشد و اگر اینچنین نباشد، مسلماً برنامه دیگر کار نخواهد کرد.</p>
+                            <blockquote>
+                                شاید این سؤال در مورد Obfuscation مطرح شود که «چه موقع به جای Encryption از Obfuscation استفاده می‌شود؟
+                            </blockquote>
+
+                            <p>در پاسخ به این سؤال می‌توان گفت که Obfuscation و Encryption در واقع دو کاربرد جدا دارند به طوری که هدف از Encryption این است که فردی که کلید ندارد قادر به بازیابی دیتای اصلی نباشد اما در Obfuscation هدف این است که استفاده از دیتای اصلی برای یک کاربر (که این کاربر می‌توان انسان، کامپیوتر یا هر چیزی باشد) دشوار و برای کاربری دیگر راحت و آسان باشد.</p>
+                            <p>مثلاً پس از انجام Obfuscation بر روی سورس‌ کد یک اپ موبایل، فهم سورس‌ کد و استفاده از آن برای انسان سخت می‌شود اما همان کد برای سیستم‌ عامل به راحتی قابل‌ استفاده است.</p>
+                            <img src="../../../images/articles/hash_encrypt/obfuscating.webp" alt="obfuscating description">
+                            <img src="../../../images/articles/hash_encrypt/obfuscated2.png" alt="obfuscating codes example">
+
+                            <p>مقاله مرتبط: <a href="../Security/unicode_asci.html"></a></p>
+                        </div>
+                        
+                        <!-- Article Footer -->
+                        <div class="article-footer">
+                            <!-- Article Tags -->
+                            <div class="article-tags-section">
+                                <h3>برچسب‌ها</h3>
+                                <div class="article-footer-tags">
+                                    <a href="#" class="article-footer-tag">امنیت سایبری</a>
+                                    <a href="#" class="article-footer-tag">تست نفوذ</a>
+                                    <a href="#" class="article-footer-tag">برنامه‌نویسی</a>
+                                    <a href="#" class="article-footer-tag">پایتون</a>
+                                </div>
+                            </div>
+
+                            <!-- Article Share -->
+                            <div class="article-share">
+                                <h3 class="share-title">این مقاله را به اشتراک بگذارید</h3>
+                                <div class="share-buttons">
+                                    <!-- توییتر (X) -->
+                                    <a href="https://twitter.com/intent/tweet?url=ARTICLE_URL&text=ARTICLE_TITLE"
+                                       class="share-button twitter"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در توییتر">
+                                        <i class="fab fa-x-twitter"></i>
+                                        <span class="share-text">X توئیتر</span>
+                                    </a>
+
+                                    <!-- فیسبوک -->
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=ARTICLE_URL"
+                                       class="share-button facebook"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در فیسبوک">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <span class="share-text">فیسبوک</span>
+                                    </a>
+
+                                    <!-- لینکدین -->
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=ARTICLE_URL"
+                                       class="share-button linkedin"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در لینکدین">
+                                        <i class="fab fa-linkedin-in"></i>
+                                        <span class="share-text">لینکدین</span>
+                                    </a>
+
+                                    <!-- تلگرام -->
+                                    <a href="https://t.me/share/url?url=ARTICLE_URL&text=ARTICLE_TITLE"
+                                       class="share-button telegram"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در تلگرام">
+                                        <i class="fab fa-telegram-plane"></i>
+                                        <span class="share-text">تلگرام</span>
+                                    </a>
+
+                                    <!-- واتس‌اپ -->
+                                    <a href="https://wa.me/?text=ARTICLE_TITLE%20ARTICLE_URL"
+                                       class="share-button whatsapp"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در واتس‌اپ">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <span class="share-text">واتس‌اپ</span>
+                                    </a>
+
+                                    <!-- اینستاگرام -->
+                                    <a href="#"
+                                       class="share-button instagram"
+                                       onclick="shareToInstagram()"
+                                       aria-label="اشتراک در اینستاگرام">
+                                        <i class="fab fa-instagram"></i>
+                                        <span class="share-text">اینستاگرام</span>
+                                    </a>
+
+                                    <!-- یوتیوب -->
+                                    <a href="#"
+                                       class="share-button youtube"
+                                       onclick="shareToYouTube()"
+                                       aria-label="اشتراک در یوتیوب">
+                                        <i class="fab fa-youtube"></i>
+                                        <span class="share-text">یوتیوب</span>
+                                    </a>
+
+                                    <!-- ایمیل -->
+                                    <a href="mailto:?subject=ARTICLE_TITLE&body=ARTICLE_URL"
+                                       class="share-button email"
+                                       aria-label="اشتراک از طریق ایمیل">
+                                        <i class="fas fa-envelope"></i>
+                                        <span class="share-text">ایمیل</span>
+                                    </a>
+
+                                    <!-- کپی لینک -->
+                                    <a href="#"
+                                       class="share-button copy-link"
+                                       onclick="copyArticleLink()"
+                                       aria-label="کپی لینک مقاله">
+                                        <i class="fas fa-link"></i>
+                                        <span class="share-text">کپی لینک</span>
+                                    </a>
+                                </div>
+
+                                <!-- فیلد کپی لینک -->
+                                <div class="copy-link-container">
+                                    <input type="text" id="article-link" value="ARTICLE_URL" readonly>
+                                    <button onclick="copyArticleLink()">کپی</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Articles -->
+                    <div class="related-articles">
+                        <h3>مقالات مرتبط</h3>
+                        <div class="related-articles-grid">
+                            <!-- Related Article 1 -->
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="مقاله مرتبط 1">
+                                    <div class="article-category">امنیت سایبری</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3>تست نفوذ پیشرفته در شبکه‌های سازمانی</h3>
+                                    <p>در این مقاله به بررسی تکنیک‌های پیشرفته تست نفوذ در شبکه‌های سازمانی می‌پردازیم.</p>
+                                    
+                                    <div class="article-meta">
+                                        <div class="article-meta-item">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>۱۵ فروردین ۱۴۰۴</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="article-actions">
+                                        <a href="../articles/penetration-testing-advanced.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Related Article 2 -->
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="مقاله مرتبط 2">
+                                    <div class="article-category">برنامه‌نویسی</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3>توسعه ابزارهای امنیتی با پایتون</h3>
+                                    <p>در این مقاله نحوه استفاده از زبان برنامه‌نویسی پایتون برای توسعه ابزارهای امنیتی را آموزش می‌دهیم.</p>
+                                    
+                                    <div class="article-meta">
+                                        <div class="article-meta-item">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>۲۰ اسفند ۱۴۰۳</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="article-actions">
+                                        <a href="../articles/python-security-tools.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Related Article 3 -->
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="مقاله مرتبط 3">
+                                    <div class="article-category">شبکه‌های کامپیوتری</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3>پیکربندی پیشرفته فایروال در میکروتیک</h3>
+                                    <p>آموزش جامع پیکربندی فایروال در روترهای میکروتیک برای محافظت از شبکه در برابر حملات.</p>
+                                    
+                                    <div class="article-meta">
+                                        <div class="article-meta-item">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>۵ فروردین ۱۴۰۴</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="article-actions">
+                                        <a href="../articles/mikrotik-firewall-configuration.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="dark-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>DAVOOD<span>_</span>YAHAY</h2>
+                    <p>متخصص و مشاور امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>دسترسی سریع</h3>
+                    <ul>
+                        <li><a href="../../index.html">خانه</a></li>
+                        <li><a href="../../index.html#about">درباره من</a></li>
+                        <li><a href="../../index.html#services">سرویس ها</a></li>
+                        <li><a href="../../index.html#portfolio">نمونه ابزارها</a></li>
+                        <li><a href="../courses.html">دوره‌های آموزشی</a></li>
+                        <li><a href="../articles.html">مقالات</a></li>
+                        <li><a href="../skills.html">مهارت‌ها و مدارک</a></li>
+                        <li><a href="../../index.html#contact">تماس با من</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>اطلاعات تماس</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> ایران، اصفهان</p>
+                    <p><i class="fas fa-envelope"></i> info@davoodya.com</p>
+                    <p><i class="fas fa-phone"></i> +98 913 000 0000</p>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; ۱۴۰۴ تمامی حقوق محفوظ است | طراحی و توسعه توسط داوود یاحی</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/main2.js"></script>
+    <script src="../../../js/articles.js"></script>
+    <script src="../../../js/article-template.js"></script>
+    
+<!--    &lt;!&ndash; Prism.js for Code Highlighting &ndash;&gt;-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>-->
+
+    <!-- Locally Prism.js for Code Highlighting -->
+    <script src="../../../assets/js/prism/prism-core.min.js"></script>
+    <script src="../../../assets/js/prism/prism-autoloader.min.js"></script>
+    <script src="../../../assets/js/prism/prism-line-numbers.min.js"></script>
+
+</body>
+</html>
