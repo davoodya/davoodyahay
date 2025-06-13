@@ -353,64 +353,14 @@
                                 <p>به نظر من فکر کردن به ترجمه هاشون شما رو الکی میترسونه، نسبتا بحث پیچیده ای هستن ولی نه اندازه ای که فارسیش میترسونه</p>
                             </ul>
                             
-                            <p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
-                            
-                            <h3>نمونه کد ++C</h3>
-                            <p>در ادامه نمونه‌ای از کد ++C برای پیاده‌سازی یک الگوریتم رمزنگاری ساده را مشاهده می‌کنید:</p>
-                            
-                            <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;string&gt;
-using namespace std;
+                            <p>در حالت symmetric encryption برای رمزنگاری فقط از **یک کلید** هم برای encode و decode کردن استفاده میشه (مثلا الگوریتم AES همینطوریه)</p>
+                            <p>ولی در حالت asymmetric encryption داده با کمک دو کلید مختلف که به اسم private key و public key شناخته میشن، رمزنگاری رو انجام میدیم. (مثالش هم الگوریتم RSA).</p>
+                            <blockquote>
+                                وقتی هم که بخواهیم داده Encrypt شده را به حالت اولیه باز گردانیم  باید آن را به اصطلاح Decrypt کنیم.
+                            </blockquote>
 
-// تابع رمزنگاری با الگوریتم سزار
-string encrypt(string text, int shift) {
-    string result = "";
-    
-    // پیمایش هر کاراکتر در متن
-    for (int i = 0; i < text.length(); i++) {
-        // رمزنگاری حروف بزرگ انگلیسی
-        if (isupper(text[i]))
-            result += char(int(text[i] + shift - 65) % 26 + 65);
-        
-        // رمزنگاری حروف کوچک انگلیسی
-        else if (islower(text[i]))
-            result += char(int(text[i] + shift - 97) % 26 + 97);
-        
-        // کاراکترهای دیگر بدون تغییر
-        else
-            result += text[i];
-    }
-    
-    return result;
-}
+                            <h2>سومین مورد: Hashing</h2>
 
-// تابع رمزگشایی با الگوریتم سزار
-string decrypt(string text, int shift) {
-    return encrypt(text, 26 - shift);
-}
-
-int main() {
-    string text;
-    int shift;
-    
-    cout << "متن مورد نظر برای رمزنگاری را وارد کنید: ";
-    getline(cin, text);
-    
-    cout << "مقدار شیفت را وارد کنید: ";
-    cin >> shift;
-    
-    // محدود کردن شیفت به محدوده 0-25
-    shift = shift % 26;
-    
-    string encrypted = encrypt(text, shift);
-    string decrypted = decrypt(encrypted, shift);
-    
-    cout << "متن رمزنگاری شده: " << encrypted << endl;
-    cout << "متن رمزگشایی شده: " << decrypted << endl;
-    
-    return 0;
-}</code></pre>
-                            
                             <p>این کد یک پیاده‌سازی ساده از الگوریتم رمزنگاری سزار است که می‌تواند برای آموزش مفاهیم اولیه رمزنگاری استفاده شود.</p>
                             
                             <h2>جمع‌بندی</h2>
