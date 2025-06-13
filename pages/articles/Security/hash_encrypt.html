@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="عنوان مقاله - مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی">
+    <meta name="keywords" content="داوود یاحی, امنیت سایبری, داوود یا, davoodya, برنامه نویسی, شبکه, لینوکس, [کلمات کلیدی مقاله]">
+    <meta name="author" content="داوود یاحی">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="مفاهیم Encoding, Encryption, Hashing, Obfuscation | داوود یاحی">
+    <meta property="og:description" content="مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی">
+    <meta property="og:image" content="/images/davoodya.png">
+    <meta property="og:url" content="https://davoodya.com/pages/articles/Security/article-title.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content=" مفاهیم Encoding, Encryption, Hashing, Obfuscation | داوود یاحی">
+    <meta name="twitter:description" content="مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی">
+    <meta name="twitter:image" content="/images/davoodya.png">
+    
+    <title>مفاهیم Encoding, Encryption, Hashing, Obfuscation | داوود یاحی - مشاور و مدرس امنیت سایبری و برنامه‌نویسی</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome -->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+<!--    &lt;!&ndash; Google Fonts &ndash;&gt;-->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
+
+    <!-- Google fonts local -->
+    <link rel="stylesheet" href="/assets/fonts/fira-code/fira-code.css">
+    <link rel="stylesheet" href="/assets/fonts/Rajdhani/Rajdhani.css">
+
+    <!-- Other fonts -->
+    <!-- فونت Vazir برای عنوان‌ها -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Shabnam برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت YekanBakh برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Sahel برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css" rel="stylesheet" type="text/css" />
+    
+<!--    &lt;!&ndash; Prism.js for Code Highlighting &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">-->
+
+    <!-- Locally Prism.js for Code Highlighting -->
+    <link rel="stylesheet" href="/assets/css/prism/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="/assets/css/prism/prism-line-numbers.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style-articles.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>DAVOOD<span>_</span>YAHAY</h1>
+                </div>
+                
+                <ul class="nav-links font-title-article">
+                    <li><a href="/index.html">خانه</a></li>
+                    <li><a href="/index.html#about">درباره من</a></li>
+                    <li><a href="/index.html#services">سرویس ها</a></li>
+                    <li><a href="/index.html#portfolio">نمونه ابزارها</a></li>
+                    <li><a href="/pages/courses.html">دوره‌های آموزشی</a></li>
+                    <li><a href="/pages/articles.html" class="active">مقالات</a></li>
+                    <li><a href="/pages/skills.html">مهارت‌ها و مدارک</a></li>
+                    <li><a href="/index.html#contact">تماس با من</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <canvas id="matrix-canvas" class="matrix-animation"></canvas>
+        <div class="matrix-rain" id="matrix-rain"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="font-title-article">مقاله اول</h1>
+                <p class="font-description-article">مقالات تخصصی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی</p>
+                
+                <div class="breadcrumb">
+                    <a href="/index.html" class="font-button-article">خانه</a>
+                    <span>/</span>
+                    <a href="/pages/articles.html" class="font-button-article">مقالات</a>
+                    <span>/</span>
+                    <span class="active font-button-article">مقاله اول</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Article Section -->
+    <section class="articles-section about">
+        <div class="container">
+            <!-- Articles Layout with Sidebar -->
+            <div class="articles-layout">
+                <!-- Sidebar -->
+                <div class="articles-sidebar">
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-folder"></i>
+                            <h3 class="font-title-article">دسته‌بندی‌ها</h3>
+                        </div>
+
+                        <!-- Articles Categories-->
+                        <ul class="categories-list">
+
+                            <!-- Hacking & Security Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-shield-alt"></i>
+                                        امنیت سایبری و هک قانونی
+                                    </div>
+                                    <div class="category-count">12</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="/pages/articles/hacking/CrackZIPFiles1.html" class="article-link">تست نفوذ پیشرفته در شبکه‌های سازمانی</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Network Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-network-wired"></i>
+                                        شبکه‌های کامپیوتری
+                                    </div>
+                                    <div class="category-count">8</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../articles/mikrotik-firewall-configuration.html" class="article-link">پیکربندی پیشرفته فایروال در میکروتیک</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Programming Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-code"></i>
+                                        برنامه‌نویسی
+                                    </div>
+                                    <div class="category-count">10</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../articles/python-security-tools.html" class="article-link">توسعه ابزارهای امنیتی با پایتون</a></li>
+                                    <li><a href="../articles/cpp-optimization.html" class="article-link">بهینه‌سازی کد در ++C</a></li>
+                                    <li><a href="../articles/csharp-advanced.html" class="article-link">مفاهیم پیشرفته در #C</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- AI Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-brain"></i>
+                                        هوش مصنوعی
+                                    </div>
+                                    <div class="category-count">5</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../articles/ai-cybersecurity.html" class="article-link">کاربرد هوش مصنوعی در تشخیص حملات سایبری</a></li>
+                                    <li><a href="../articles/machine-learning-security.html" class="article-link">یادگیری ماشین در امنیت</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Linux Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fab fa-linux"></i>
+                                        لینوکس
+                                    </div>
+                                    <div class="category-count">7</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../articles/linux-virtualization.html" class="article-link">مجازی‌سازی پیشرفته در لینوکس</a></li>
+                                    <li><a href="../articles/linux-security-hardening.html" class="article-link">امن‌سازی سیستم‌های لینوکس</a></li>
+                                    <li><a href="../articles/bash-scripting-advanced.html" class="article-link">اسکریپت‌نویسی پیشرفته در بش</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recent Articles Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-clock"></i>
+                            <h3 class="font-title-article">مقالات اخیر</h3>
+                        </div>
+                        <ul class="recent-articles-list">
+                            <li class="recent-article-item">
+                                <div class="recent-article-image">
+                                    <img src="https://via.placeholder.com/100x100" alt="تست نفوذ پیشرفته">
+                                </div>
+                                <div class="recent-article-content">
+                                    <h4 class="recent-article-title">
+                                        <a href="/pages/articles/hacking/CrackZIPFiles1.html">کرک فایلهای فشرده ZIP با ابزار BK-Crack</a>
+                                    </h4>
+                                    <div class="recent-article-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        ۱۵ فروردین ۱۴۰۴
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="recent-article-item">
+                                <div class="recent-article-image">
+                                    <img src="https://via.placeholder.com/100x100" alt="پیکربندی میکروتیک">
+                                </div>
+                                <div class="recent-article-content">
+                                    <h4 class="recent-article-title">
+                                        <a href="../articles/mikrotik-firewall-configuration.html">پیکربندی پیشرفته فایروال در میکروتیک</a>
+                                    </h4>
+                                    <div class="recent-article-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        ۵ فروردین ۱۴۰۴
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="recent-article-item">
+                                <div class="recent-article-image">
+                                    <img src="https://via.placeholder.com/100x100" alt="برنامه نویسی پایتون">
+                                </div>
+                                <div class="recent-article-content">
+                                    <h4 class="recent-article-title">
+                                        <a href="../articles/python-security-tools.html">توسعه ابزارهای امنیتی با پایتون</a>
+                                    </h4>
+                                    <div class="recent-article-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        ۲۰ اسفند ۱۴۰۳
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Popular Tags Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-tags"></i>
+                            <h3 class="font-title-article">برچسب‌های محبوب</h3>
+                        </div>
+                        <div class="tags-cloud">
+                            <div class="tag-cloud-item">امنیت سایبری</div>
+                            <div class="tag-cloud-item">تست نفوذ</div>
+                            <div class="tag-cloud-item">میکروتیک</div>
+                            <div class="tag-cloud-item">فایروال</div>
+                            <div class="tag-cloud-item">پایتون</div>
+                            <div class="tag-cloud-item">لینوکس</div>
+                            <div class="tag-cloud-item">شبکه</div>
+                            <div class="tag-cloud-item">برنامه‌نویسی</div>
+                            <div class="tag-cloud-item">هوش مصنوعی</div>
+                            <div class="tag-cloud-item">مجازی‌سازی</div>
+                            <div class="tag-cloud-item">داکر</div>
+                            <div class="tag-cloud-item">سیسکو</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="articles-main-content">
+                    <!-- Article Detail -->
+                    <div class="article-detail">
+                        <!-- Article Header -->
+                        <div class="article-header">
+                            <h1>عنوان مقاله</h1>
+                            <div class="article-header-meta">
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>۱۵ فروردین ۱۴۰۴</span>
+                                </div>
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-user"></i>
+                                    <span>داوود یاحی</span>
+                                </div>
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-folder"></i>
+                                    <span>دسته‌بندی مقاله</span>
+                                </div>
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-eye"></i>
+                                    <span>۱۲۵۰ بازدید</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article Featured Image -->
+                        <img src="https://via.placeholder.com/1200x600" alt="عنوان مقاله" class="article-featured-image">
+                        
+                        <!-- Article Body -->
+                        <div class="article-body">
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                            
+                            <h2>عنوان بخش اول</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                            
+                            <p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+                            
+                            <h3>زیرعنوان بخش اول</h3>
+                            <p>در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                            
+                            <blockquote>
+                                این یک نقل قول مهم است که می‌تواند به عنوان یک نکته کلیدی در مقاله مورد استفاده قرار گیرد.
+                            </blockquote>
+                            
+                            <h2>نمونه کد</h2>
+                            <p>در ادامه نمونه‌ای از کد پایتون برای اسکن پورت‌های باز یک سرور را مشاهده می‌کنید:</p>
+                            
+                            <pre><code class="language-python">#!/usr/bin/env python3
+import socket
+import sys
+from datetime import datetime
+
+# تعریف هدف
+if len(sys.argv) == 2:
+    target = socket.gethostbyname(sys.argv[1])  # تبدیل نام هاست به IPv4
+else:
+    print("تعداد آرگومان‌ها نادرست است.")
+    print("نحوه استفاده: python3 port_scanner.py [هاست هدف]")
+    sys.exit()
+
+# نمایش اطلاعات اسکن
+print("-" * 50)
+print(f"اسکن هدف: {target}")
+print(f"زمان شروع: {datetime.now()}")
+print("-" * 50)
+
+try:
+    # اسکن پورت‌ها
+    for port in range(1, 1025):
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        socket.setdefaulttimeout(1)
+        result = s.connect_ex((target, port))  # بررسی اتصال
+        if result == 0:
+            print(f"پورت {port}: باز")
+        s.close()
+
+except KeyboardInterrupt:
+    print("\nاسکن متوقف شد.")
+    sys.exit()
+
+except socket.gaierror:
+    print("نام هاست قابل حل نیست.")
+    sys.exit()
+
+except socket.error:
+    print("امکان اتصال به سرور وجود ندارد.")
+    sys.exit()
+
+print(f"زمان پایان: {datetime.now()}")
+</code></pre>
+
+                            <p>این کد یک اسکنر پورت ساده است که می‌تواند برای شناسایی پورت‌های باز در یک سرور استفاده شود.</p>
+                            
+                            <h3>نمونه کد بش</h3>
+                            <p>در ادامه نمونه‌ای از یک اسکریپت بش برای بررسی امنیت سیستم لینوکس را مشاهده می‌کنید:</p>
+                            
+                            <pre><code class="language-bash">#!/bin/bash
+
+# اسکریپت بررسی امنیت سیستم لینوکس
+echo "شروع بررسی امنیت سیستم..."
+echo "-------------------------"
+
+# بررسی کاربران با دسترسی root
+echo "کاربران با دسترسی root:"
+grep -Po '^sudo.+:\K.*$' /etc/group | tr ',' '\n'
+
+# بررسی سرویس‌های در حال اجرا
+echo -e "\nسرویس‌های حساس در حال اجرا:"
+ps -ef | grep -E "sshd|httpd|nginx|mysql|postgresql" | grep -v grep
+
+# بررسی پورت‌های باز
+echo -e "\nپورت‌های باز:"
+netstat -tuln | grep LISTEN
+
+# بررسی آخرین لاگین‌ها
+echo -e "\nآخرین لاگین‌ها:"
+last | head -n 10
+
+# بررسی فایل‌های با دسترسی نامناسب
+echo -e "\nفایل‌های با دسترسی نامناسب در /etc:"
+find /etc -type f -perm -o+w 2>/dev/null
+
+echo -e "\nبررسی امنیت به پایان رسید."
+</code></pre>
+
+                            <h2>عنوان بخش دوم</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                            
+                            <ul>
+                                <li>مورد اول در لیست</li>
+                                <li>مورد دوم در لیست</li>
+                                <li>مورد سوم در لیست با توضیحات بیشتر که می‌تواند شامل جزئیات فنی باشد</li>
+                            </ul>
+                            
+                            <p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+                            
+                            <h3>نمونه کد ++C</h3>
+                            <p>در ادامه نمونه‌ای از کد ++C برای پیاده‌سازی یک الگوریتم رمزنگاری ساده را مشاهده می‌کنید:</p>
+                            
+                            <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+// تابع رمزنگاری با الگوریتم سزار
+string encrypt(string text, int shift) {
+    string result = "";
+    
+    // پیمایش هر کاراکتر در متن
+    for (int i = 0; i < text.length(); i++) {
+        // رمزنگاری حروف بزرگ انگلیسی
+        if (isupper(text[i]))
+            result += char(int(text[i] + shift - 65) % 26 + 65);
+        
+        // رمزنگاری حروف کوچک انگلیسی
+        else if (islower(text[i]))
+            result += char(int(text[i] + shift - 97) % 26 + 97);
+        
+        // کاراکترهای دیگر بدون تغییر
+        else
+            result += text[i];
+    }
+    
+    return result;
+}
+
+// تابع رمزگشایی با الگوریتم سزار
+string decrypt(string text, int shift) {
+    return encrypt(text, 26 - shift);
+}
+
+int main() {
+    string text;
+    int shift;
+    
+    cout << "متن مورد نظر برای رمزنگاری را وارد کنید: ";
+    getline(cin, text);
+    
+    cout << "مقدار شیفت را وارد کنید: ";
+    cin >> shift;
+    
+    // محدود کردن شیفت به محدوده 0-25
+    shift = shift % 26;
+    
+    string encrypted = encrypt(text, shift);
+    string decrypted = decrypt(encrypted, shift);
+    
+    cout << "متن رمزنگاری شده: " << encrypted << endl;
+    cout << "متن رمزگشایی شده: " << decrypted << endl;
+    
+    return 0;
+}</code></pre>
+                            
+                            <p>این کد یک پیاده‌سازی ساده از الگوریتم رمزنگاری سزار است که می‌تواند برای آموزش مفاهیم اولیه رمزنگاری استفاده شود.</p>
+                            
+                            <h2>جمع‌بندی</h2>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                        </div>
+                        
+                        <!-- Article Footer -->
+                        <div class="article-footer">
+                            <!-- Article Tags -->
+                            <div class="article-tags-section">
+                                <h3>برچسب‌ها</h3>
+                                <div class="article-footer-tags">
+                                    <a href="#" class="article-footer-tag">امنیت سایبری</a>
+                                    <a href="#" class="article-footer-tag">تست نفوذ</a>
+                                    <a href="#" class="article-footer-tag">برنامه‌نویسی</a>
+                                    <a href="#" class="article-footer-tag">پایتون</a>
+                                </div>
+                            </div>
+
+                            <!-- Article Share -->
+                            <div class="article-share">
+                                <h3 class="share-title">این مقاله را به اشتراک بگذارید</h3>
+                                <div class="share-buttons">
+                                    <!-- توییتر (X) -->
+                                    <a href="https://twitter.com/intent/tweet?url=ARTICLE_URL&text=ARTICLE_TITLE"
+                                       class="share-button twitter"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در توییتر">
+                                        <i class="fab fa-x-twitter"></i>
+                                        <span class="share-text">X توئیتر</span>
+                                    </a>
+
+                                    <!-- فیسبوک -->
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=ARTICLE_URL"
+                                       class="share-button facebook"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در فیسبوک">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <span class="share-text">فیسبوک</span>
+                                    </a>
+
+                                    <!-- لینکدین -->
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=ARTICLE_URL"
+                                       class="share-button linkedin"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در لینکدین">
+                                        <i class="fab fa-linkedin-in"></i>
+                                        <span class="share-text">لینکدین</span>
+                                    </a>
+
+                                    <!-- تلگرام -->
+                                    <a href="https://t.me/share/url?url=ARTICLE_URL&text=ARTICLE_TITLE"
+                                       class="share-button telegram"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در تلگرام">
+                                        <i class="fab fa-telegram-plane"></i>
+                                        <span class="share-text">تلگرام</span>
+                                    </a>
+
+                                    <!-- واتس‌اپ -->
+                                    <a href="https://wa.me/?text=ARTICLE_TITLE%20ARTICLE_URL"
+                                       class="share-button whatsapp"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در واتس‌اپ">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <span class="share-text">واتس‌اپ</span>
+                                    </a>
+
+                                    <!-- اینستاگرام -->
+                                    <a href="#"
+                                       class="share-button instagram"
+                                       onclick="shareToInstagram()"
+                                       aria-label="اشتراک در اینستاگرام">
+                                        <i class="fab fa-instagram"></i>
+                                        <span class="share-text">اینستاگرام</span>
+                                    </a>
+
+                                    <!-- یوتیوب -->
+                                    <a href="#"
+                                       class="share-button youtube"
+                                       onclick="shareToYouTube()"
+                                       aria-label="اشتراک در یوتیوب">
+                                        <i class="fab fa-youtube"></i>
+                                        <span class="share-text">یوتیوب</span>
+                                    </a>
+
+                                    <!-- ایمیل -->
+                                    <a href="mailto:?subject=ARTICLE_TITLE&body=ARTICLE_URL"
+                                       class="share-button email"
+                                       aria-label="اشتراک از طریق ایمیل">
+                                        <i class="fas fa-envelope"></i>
+                                        <span class="share-text">ایمیل</span>
+                                    </a>
+
+                                    <!-- کپی لینک -->
+                                    <a href="#"
+                                       class="share-button copy-link"
+                                       onclick="copyArticleLink()"
+                                       aria-label="کپی لینک مقاله">
+                                        <i class="fas fa-link"></i>
+                                        <span class="share-text">کپی لینک</span>
+                                    </a>
+                                </div>
+
+                                <!-- فیلد کپی لینک -->
+                                <div class="copy-link-container">
+                                    <input type="text" id="article-link" value="ARTICLE_URL" readonly>
+                                    <button onclick="copyArticleLink()">کپی</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Articles -->
+                    <div class="related-articles">
+                        <h3>مقالات مرتبط</h3>
+                        <div class="related-articles-grid">
+                            <!-- Related Article 1 -->
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="مقاله مرتبط 1">
+                                    <div class="article-category">امنیت سایبری</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3>تست نفوذ پیشرفته در شبکه‌های سازمانی</h3>
+                                    <p>در این مقاله به بررسی تکنیک‌های پیشرفته تست نفوذ در شبکه‌های سازمانی می‌پردازیم.</p>
+                                    
+                                    <div class="article-meta">
+                                        <div class="article-meta-item">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>۱۵ فروردین ۱۴۰۴</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="article-actions">
+                                        <a href="../articles/penetration-testing-advanced.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Related Article 2 -->
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="مقاله مرتبط 2">
+                                    <div class="article-category">برنامه‌نویسی</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3>توسعه ابزارهای امنیتی با پایتون</h3>
+                                    <p>در این مقاله نحوه استفاده از زبان برنامه‌نویسی پایتون برای توسعه ابزارهای امنیتی را آموزش می‌دهیم.</p>
+                                    
+                                    <div class="article-meta">
+                                        <div class="article-meta-item">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>۲۰ اسفند ۱۴۰۳</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="article-actions">
+                                        <a href="../articles/python-security-tools.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Related Article 3 -->
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="https://via.placeholder.com/600x400" alt="مقاله مرتبط 3">
+                                    <div class="article-category">شبکه‌های کامپیوتری</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3>پیکربندی پیشرفته فایروال در میکروتیک</h3>
+                                    <p>آموزش جامع پیکربندی فایروال در روترهای میکروتیک برای محافظت از شبکه در برابر حملات.</p>
+                                    
+                                    <div class="article-meta">
+                                        <div class="article-meta-item">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>۵ فروردین ۱۴۰۴</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="article-actions">
+                                        <a href="../articles/mikrotik-firewall-configuration.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="dark-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>DAVOOD<span>_</span>YAHAY</h2>
+                    <p>متخصص و مشاور امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>دسترسی سریع</h3>
+                    <ul>
+                        <li><a href="../../index.html">خانه</a></li>
+                        <li><a href="../../index.html#about">درباره من</a></li>
+                        <li><a href="../../index.html#services">سرویس ها</a></li>
+                        <li><a href="../../index.html#portfolio">نمونه ابزارها</a></li>
+                        <li><a href="../courses.html">دوره‌های آموزشی</a></li>
+                        <li><a href="../articles.html">مقالات</a></li>
+                        <li><a href="../skills.html">مهارت‌ها و مدارک</a></li>
+                        <li><a href="../../index.html#contact">تماس با من</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>اطلاعات تماس</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> ایران، اصفهان</p>
+                    <p><i class="fas fa-envelope"></i> info@davoodya.com</p>
+                    <p><i class="fas fa-phone"></i> +98 913 000 0000</p>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; ۱۴۰۴ تمامی حقوق محفوظ است | طراحی و توسعه توسط داوود یاحی</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/main2.js"></script>
+    <script src="../../js/articles.js"></script>
+    <script src="../../js/article-template.js"></script>
+    
+<!--    &lt;!&ndash; Prism.js for Code Highlighting &ndash;&gt;-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>-->
+
+    <!-- Locally Prism.js for Code Highlighting -->
+    <script src="../../assets/js/prism/prism-core.min.js"></script>
+    <script src="../../assets/js/prism/prism-autoloader.min.js"></script>
+    <script src="../../assets/js/prism/prism-line-numbers.min.js"></script>
+
+</body>
+</html>
