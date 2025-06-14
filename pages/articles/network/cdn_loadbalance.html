@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="کدگذاری Unicode و استاندارد ASCII - مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی">
+    <meta name="keywords" content="برنامه نویسی، امنیت سایبری، هک قانونی، رمزنگاری، داوودیاحی، DavoodSec، DavoodYa [کلمات کلیدی مقاله]">
+    <meta name="author" content="داوود یاحی">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="کدگذاری Unicode و استاندارد  | داوود یاحی">
+    <meta property="og:description" content="مقاله تخصصی برنامه نویسی، امنیت سایبری، هک قانونی | کدگذاری Unicode و استاندارد ">
+    <meta property="og:image" content="../../../images/davoodya.png">
+    <meta property="og:url" content="https://davoodya.ir/pages/articles/Security/unicode_ascii.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content=" کدگذاری Unicode و استاندارد ASCII | داوود یاحی">
+    <meta name="twitter:description" content="مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی | کدگذاری Unicode و استاندارد ASCII ">
+    <meta name="twitter:image" content="../../../images/davoodya.png">
+    
+    <title>کدگذاری Unicode و استاندارد ASCII | داوود یاحی - مشاور و مدرس امنیت سایبری و برنامه‌نویسی</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
+    <link rel="stylesheet" href="../../../assets/fontawesome/css/all.min.css">
+
+    <!-- Google Fonts Online -->
+    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
+
+    <!-- Google fonts Local -->
+    <link rel="stylesheet" href="../../../assets/fonts/fira-code/fira-code.css">
+    <link rel="stylesheet" href="../../../assets/fonts/Rajdhani/Rajdhani.css">
+
+    <!-- Other Online fonts | Farsi -->
+    <!-- فونت Vazir برای عنوان‌ها -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Shabnam برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت YekanBakh برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css" rel="stylesheet" type="text/css" />
+
+    <!-- فونت Sahel برای توضیحات -->
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css" rel="stylesheet" type="text/css" />
+
+    <!-- Prism.js for Code Highlighting | Online -->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">-->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">-->
+
+    <!-- Prism.js for Code Highlighting | Local -->
+    <link rel="stylesheet" href="../../../assets/css/prism/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="../../../assets/css/prism/prism-line-numbers.min.css">
+
+    <!-- Custom CSS Importing -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/style-articles.css">
+    <link rel="stylesheet" href="../../../css/header-footer.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
+    </div>
+    
+    <!-- Header(Nav-Bar & Logo) -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>DAVOOD<span>_</span>YAHAY</h1>
+                </div>
+                
+                <ul class="nav-links font-title-article">
+                    <li><a href="../../../index.html">خانه</a></li>
+                    <li><a href="../../../index.html#about">درباره من</a></li>
+                    <li><a href="../../../index.html#services">سرویس ها</a></li>
+                    <li><a href="../../../index.html#portfolio">نمونه ابزارها</a></li>
+                    <li><a href="../../courses.html">دوره‌های آموزشی</a></li>
+                    <li><a href="../../articles.html" class="active">مقالات</a></li>
+                    <li><a href="../../skills.html">مهارت‌ها و مدارک</a></li>
+                    <li><a href="../../../index.html#contact">تماس با من</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Header(Matrix Header & Breadcrumb Menu) -->
+    <section class="page-header">
+        <canvas id="matrix-canvas" class="matrix-animation"></canvas>
+        <div class="matrix-rain" id="matrix-rain"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="font-title-article">کدگذاری Unicode و استاندارد ASCII</h1>
+                <p class="font-description-article">                                    در این مقاله ابتدا مجموعه کاراکترهای Unicode رو بررسی میکنیم و سپس به سراغ توضیح یک استاندارد اصلی آن بنام ASCII میریم.</p>
+                
+                <div class="breadcrumb">
+                    <a href="../../../index.html" class="font-button-article">خانه</a>
+                    <span>/</span>
+                    <a href="../../articles.html" class="font-button-article">مقالات</a>
+                    <span>/</span>
+                    <span class="active font-button-article">کدگذاری Unicode و استاندارد ASCII</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Article Section -->
+    <section class="articles-section about">
+        <div class="container">
+            <!-- Articles Layout with Sidebar -->
+            <div class="articles-layout">
+
+                <!-- Sidebar | Article Categories, Recent Articles, Popular Tags -->
+                <div class="articles-sidebar">
+
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-folder"></i>
+                            <h3 class="font-title-article">دسته‌بندی‌ها</h3>
+                        </div>
+
+                        <!-- Articles Categories-->
+                        <ul class="categories-list">
+
+                            <!-- Hacking & Security Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-shield-alt"></i>
+                                        هک و امنیت
+                                    </div>
+                                    <div class="category-count">3</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../hacking/CrackZIPFiles1.html" class="article-link">کرک فایلهای فشرده ZIP با ابزار BK-Crack</a></li>
+                                    <li><a href="hash_encrypt.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
+                                    <li><a href="unicode_ascii.html" class="article-link">کدگذاری Unicode و استاندارد ASCII</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Network Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-network-wired"></i>
+                                        شبکه‌های کامپیوتری
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../articles/mikrotik-firewall-configuration.html" class="article-link">پیکربندی پیشرفته فایروال در میکروتیک</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Programming Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-code"></i>
+                                        برنامه‌نویسی
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="hash_encrypt.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
+                                    <li><a href="unicode_ascii.html" class="article-link">کدگذاری Unicode و استاندارد ASCII</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- AI Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fas fa-brain"></i>
+                                        هوش مصنوعی
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../articles/ai-cybersecurity.html" class="article-link">کاربرد هوش مصنوعی در تشخیص حملات سایبری</a></li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Linux Category -->
+                            <li class="category-item">
+                                <div class="category-item-header">
+                                    <div class="category-name">
+                                        <i class="fab fa-linux"></i>
+                                        لینوکس
+                                    </div>
+                                    <div class="category-count">1</div>
+                                    <div class="category-toggle">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <ul class="category-dropdown">
+                                    <li><a href="../hacking/CrackZIPFiles1.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Recent Articles Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-clock"></i>
+                            <h3 class="font-title-article">مقالات اخیر</h3>
+                        </div>
+                        <ul class="recent-articles-list">
+
+                            <!-- Recent Article 3: Unicode and ASCII -->
+                            <li class="recent-article-item">
+                                <div class="recent-article-image">
+                                    <img src="../../../images/articles/unicode_ascii/Unicode.png" alt="پیکربندی میکروتیک">
+                                </div>
+                                <div class="recent-article-content">
+                                    <h4 class="recent-article-title">
+                                        <a href="unicode_ascii.html">کدگذاری Unicode و استاندارد ASCII</a>
+                                    </h4>
+                                    <div class="recent-article-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        24 خرداد 1404
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Recent Article 2: Encoding, Encryption, Hashing, Obfuscation -->
+                            <li class="recent-article-item">
+                                <div class="recent-article-image">
+                                    <img src="../../../images/articles/hash_encrypt/hash_enc3.jpg" alt="پیکربندی میکروتیک">
+                                </div>
+                                <div class="recent-article-content">
+                                    <h4 class="recent-article-title">
+                                        <a href="hash_encrypt.html">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a>
+                                    </h4>
+                                    <div class="recent-article-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        23 خرداد 1404
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Recent Article 1: Crack ZIP files using BKCrack -->
+                            <li class="recent-article-item">
+                                <div class="recent-article-image">
+                                    <img src="../../../images/articles/CrackZipFiles/CrackZipFiles1_1.png" alt="کرک فایلهای فشرده ZIP با ابزار BK-Crack">
+                                </div>
+                                <div class="recent-article-content">
+                                    <h4 class="recent-article-title">
+                                        <a href="../hacking/CrackZIPFiles1.html">کرک فایلهای فشرده ZIP با ابزار BK-Crack</a>
+                                    </h4>
+                                    <div class="recent-article-date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        15 فروردین 1404
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    
+                    <!-- Popular Tags Widget -->
+                    <div class="sidebar-widget">
+                        <div class="sidebar-widget-title">
+                            <i class="fas fa-tags"></i>
+                            <h3 class="font-title-article">برچسب‌های محبوب</h3>
+                        </div>
+                        <div class="tags-cloud">
+                            <div class="tag-cloud-item">امنیت سایبری</div>
+                            <div class="tag-cloud-item">تست نفوذ</div>
+                            <div class="tag-cloud-item">شبکه</div>
+                            <div class="tag-cloud-item">میکروتیک</div>
+                            <div class="tag-cloud-item">هک قانونی</div>
+                            <div class="tag-cloud-item">برنامه نویسی</div>
+                            <div class="tag-cloud-item">هوش مصنوعی</div>
+                            <div class="tag-cloud-item">مجازی‌سازی</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Article Main Content -->
+                <div class="articles-main-content">
+                    <!-- Article Details -->
+                    <div class="article-detail">
+
+                        <!-- Article Header -->
+                        <div class="article-header">
+                            <h1>کدگذاری Unicode و استاندارد ASCII</h1>
+                            <div class="article-header-meta">
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>24 فروردین 1404</span>
+                                </div>
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-user"></i>
+                                    <span>داوود یاحی</span>
+                                </div>
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-folder"></i>
+                                    <span>هک و امنیت، برنامه نویسی، رمزنگاری</span>
+                                </div>
+                                <div class="article-header-meta-item">
+                                    <i class="far fa-eye"></i>
+                                    <span>300 بازدید</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article Featured Image -->
+                        <img src="../../../images/articles/unicode_ascii/Unicode.png" alt="کدگذاری Unicode و استاندارد ASCII" class="article-featured-image">
+                        
+                        <!-- Article Body -->
+                        <div class="article-body">
+                            <p>
+                                در این مقاله ابتدا مجموعه کاراکترهای Unicode رو بررسی میکنیم و سپس به سراغ توضیح یک استاندارد اصلی Unicode ها بنام ASCII میریم.
+                            </p>
+
+                            <h2>مجموعه کاراکترهای UNICODE</h2>
+                            <p>وقتی شما، کاراکتری را در یک برنامه ویرایش متن یا اپلیکیشن وب قرار می‌دهید، این کاراکتر با استفاده از مجموعه‌ ای از اعداد، کد گذاری می‌شود که به اصطلاح به آن یونیکد (UNICODE) گفته می شود.</p>
+                            <p>زمانی که مرورگر، محتوای اپلیکیشن وب را دریافت می‌کند، این اعداد رمزگشایی شده، بر روی نمایشگر نشان داده می‌شوند.</p>
+                            <blockquote>محوریت اصلی این مقاله هم دقیقا همین اعداد و نشانه ها و بررسی پرسش یونیکد چیست و چگونگی رمزگشایی آن است و در نهایت به مبحث utf-8 پرداخته خواهد شد و به این پرسش که UTF-8 چیست پاسخ خواهیم داد.</blockquote>
+
+                            <img src="../../../images/articles/unicode_ascii/UnicodeProcess.png" alt="Encoding Process">
+
+                            <h3 class="yellow-h3">یونیکد یا Unicode چیست؟</h3>
+                            <p>
+                                در پاسخ به پرسش unicode چیست ؟ بایستی گفت حروف، اعداد و علائمی‌‌ که در اپلیکیشن‌ های وب استفاده می‌شوند، به همان شکلی که شما آنها را می‌بینید، در کامپیوتر مدیریت نمی‌شوند. کامپیوترها فقط با اعداد سر و‌ کار دارند. پس این حروف و کاراکتر ها، باید به مجموعه‌ ای از اعداد ۰ و ۱ تبدیل ‌شوند تا مدیریت آنها آسان باشد. لذا استاندارد واحدی باید وجود داشته باشد.
+                            </p>
+                            <p>
+                                بر همین اساس، مشخص می‌شود که هر کدام از این اعداد چه کاراکتر هایی را نمایش دهند و چگونه بر روی دیسک ذخیره شوند. به این استاندارد اصطلاحا UNICODE گفته می شود.
+                            </p>
+
+                            <blockquote>
+                                در واقع Unicode، مجموعه‌ ای از charset یا کاراکتر ست با اعداد منحصر به فرد است، که به آن در اصطلاح پوینت کد (Point Code) گفته می‌شود. هر پوینت کد، کاراکتر واحدی را نمایش می‌دهد. بر این اساس، استاندارد یونی کد سه نوع روش کد گذاری را تعیین می‌کند.
+                            </blockquote>
+                            <p>بر این اساس، استاندارد یونی کد سه نوع روش کد گذاری را تعیین می‌کند، و به یک کاراکتر اجازه می‌دهد در داخل یک یا چند بایت کد گذاری شود. یعنی:</p>
+                            <ul>
+                                <li>در 8 بیت</li>
+                                <li>در 16 بیت</li>
+                                <li>در 32 بیت</li>
+                                <img src="../../../images/articles/unicode_ascii/Unicode_types.png" alt="Unicode Types | UTF8 UTF16 UTF32">
+                                <img src="../../../images/articles/unicode_ascii/Unicodes.jpg" alt="Unicode Types | UTF8 UTF16 UTF32">
+                            </ul>
+                            <strong>باید بدانید که کاراکتر در علوم کامپیوتر برابر با حروف و اعداد در سیستم نوشتاری است.</strong>
+
+                            <h2>کد ASCII اسکی</h2>
+
+                            <p>برای استاندارد Encoding اینکودینگ، که در بالا به آن اشاره کردیم، انجمن استانداردهای آمریکا در سال ۱۹۶۰ یک روش کدگذاری 7 بیتی، با نام ASCII که مخفف عبارت American Standard Code for Information Interchange است را معرفی کرد.</p>
+                            <p>در آن زمان، مجموعه کاراکترهای ASCII شامل 128 کاراکتر (7 بیت) که بیشتر مخصوص زبان‌های لاتین بود، تعریف گردید.</p>
+                            <p>در دهه ۱۹۸۰، تصمیم بر این شد که در مجموعه کاراکتر ASCII به جای 7 بیت، از یک بایت کامل (یعنی 8 بیت)، برای کدگذاری استفاده شود. لذا تعداد کاراکترها به 256 عدد می‌رسید. بر این اساس، کاراکترهای بعد از 127 تا 255 نیز، به عنوان کدهای رزرو شده در نظر گرفته شدند و زبان‌های دیگر، عموما در این بازه قرار می‌گرفتند.</p>
+                            <blockquote>
+                                اما در این محدوده بین زبان‌های مختلف، استاندارد واحدی وجود نداشت و هر زبانی، کد مختصِ الفبایِ خودش را نشان می‌داد. به عبارت دیگر کد 200 در یک زبان، حرف متفاوتی را در زبان دیگر برمی‌گرداند. در نتیجه، نیاز به استاندارد واحدی بود تا ضمن سازگاری با تمامی‌ زبان‌ها، کدهای منحصر به فردی را برای هر کاراکتر در نظر بگیرد.
+                            </blockquote>
+                            <img src="../../../images/articles/unicode_ascii/Ascii_table.png" alt="US-ASCII Table">
+
+                            <h3 class="yellow-h3">تلاش برای ایجاد مجموعه کاراکتر های واحد برای زبان های مختلف</h3>
+                            <p>در ابتدا دو تلاش مستقل برای ایجاد مجموعه کاراکتر های واحد صورت گرفت:</p>
+                            <ol>
+                                <li>ISO-10646: </li>
+                                <p>استاندارد “ISO-10646” پروژه سازمان بین‌ المللی استاندارد بود.</p>
+                                <li>Unicode: </li>
+                                <p>پروژه بعدی Unicode نام داشت که توسط کنسرسیومی ‌به نام
+                                    <a href="https://home.unicode.org/" target="_blank">کنسرسیوم یونیکد</a>
+                                    سازماندهی می‌شد.
+                                </p>
+                            </ol>
+                            <blockquote>داشتن دو نوع استاندارد مطمئنا چیزی نبود که بتوان آن را استاندارد واحدی نامید. ISO و Unicode این مطلب را دریافتند و تصمیم گرفتند در سال ۱۹۹۱ به یکدیگر بپیوندند.</blockquote>
+                            <h3 class="yellow-h3">تفاوت کد ASCII با Unicode</h3>
+                            <p>استاندارد Unicode و ASCII هر دو از استاندارد هایی هستند که برای Encoding متن ها استفاده می شوند. در واقع این دو استاندارد در برنامه نویسی باعث می شوند تا بین زبان های مختلف ارتباط برقرار شود.</p>
+
+                            <h2>انواع روش های کد گذاری Unicode</h2>
+                            <p>همانطور که در بالا اشاره شد، Unicode به سه روش کد گذاری را انجام می دهد که عبارتند از:</p>
+                            <ol>
+                                <li>UTF-8</li>
+                                <li>UTF-16</li>
+                                <li>UTF-32</li>
+                                <p>تفاوت این روش‌ های کد گذاری، در نحوه ارایه حروف، اعداد و علائم، بین زبان‌ های کشورهای مختلف است. به طوری که نحوه ارایه کاراکتر ها در یک کشور با کشور دیگر متفاوت است.</p>
+                            </ol>
+                            <strong>در واقع UTF مخفف عبارت Unicode Transfer Format و به معنای فرمت انتقال Unicode است.</strong>
+                            <img src="../../../images/articles/unicode_ascii/Unicode_types_2.png" alt="Unicode Types | UTF8 UTF16 UTF32">
+                            <img src="../../../images/articles/unicode_ascii/Unicodes2.png" alt="Unicode Types | UTF8 UTF16 UTF32">
+
+                            <h2>استاندارد UTF-8 چیست؟</h2>
+                            <p>در پاسخ به پرسش utf-8 چیست بایستی گفت، اولین بار بطور رسمی ‌در کنفرانس USENIX در سال 1993 معرفی شد. در حال حاضر UTF-8 ، غالب‌ترین روش کدگذاری کاراکتر در میان وب‌سایت‌ها است.</p>
+                            <p>کدگذاری Utf-8، روشی است که قابلیت کدگذاری تمامی‌ کاراکترهای موجود، و یا به عبارتی تمامی‌ Point Codes های موجود در Unicode را دارد.</p>
+                            <blockquote>این استاندارد UTF-8، همانطور که گفته شد الگوریتمی است که اعداد مربوط به Point Codes را به باینری تبدیل می‌کند، بطوری که بتوان آنها را بر روی دیسک ذخیره کرد.</blockquote>
+                            <img src="../../../images/articles/unicode_ascii/UTF8-2.webp" alt="Unicode UTF-8 Example">
+                            <img src="../../../images/articles/unicode_ascii/UTF8.png" alt="Unicode UTF-8 Chars Encoding">
+
+                            <h3 class="yellow-h3">تفاوت UTF-16 و UTF-32 با UTF-8 چیست؟</h3>
+                            <p>در بیان اینکه تفاوت بین UTF-16 و UTF-32 با utf-8 چیست این نکته را باید گفت که UTF-8، نیاز به فضای اضافی برای ذخیره کد ASCII زبان انگلیسی ندارد، و بیشتر زبان‌ های غرب اروپا را پوشش می‌دهد.</p>
+                            <p>برای زبان‌ های چینی، ژاپنی و کره‌ ای نیز، به 50 درصد فضای بیشتر نیاز دارد، و برای زبان یونانی و سریلیک، به 100 درصد فضای اضافه‌ تر نیازمند است.</p>
+                            <p>در مقابل، UTF-16 ‌ به فضای اضافه برای زبان های چینی، ژاپنی، کره ای نیاز ندارد، ولی برای زبان‌ های ASCII و زبان‌ های غرب اروپا ، یونانی و سریلیک نیاز به 100 درصد کل فضای خود دارد.</p>
+                            <strong>استاندارد UTF-32 ، طول ثابتی دارد و بیشترین فضا را اشغال می‌کند.</strong>
+                            <img src="../../../images/articles/unicode_ascii/unicode_symbols.gif" alt="UTF-32 Unicode Symbols">
+
+                            <h2 style="color: #ee2158">سخن پایانی</h2>
+                            <p>با توضیحات ارایه شده در مورد Unicode چیست و همینطور utf8 چیست، می‌توان دریافت چرا UTF-8 پرکابرد ترین روش کد گذاری در فضای وب است و محبوبیت آن نیز روز به‌ روز در حال افزایش است.</p>
+                            <p>این مورد حتی در هاست ایمیل نیز مهم است بطوری که عدم انتخاب استاندارد مناسب، می تواند باعث ناخوانا بودن ایمیل‌ های شما شود.</p>
+                            <blockquote>در نظر داشته باشید با وجود وب‌ سایت‌ های چند زبانه، سازگاری وب سایت با استانداردهای موجود، مهم‌ ترین عاملی است که در انتخاب نوع روش کد گذاری خود باید آن را در نظر بگیرید.</blockquote>
+
+                        </div>
+                        
+                        <!-- Article Footer -->
+                        <div class="article-footer">
+                            <!-- Article Tags -->
+                            <div class="article-tags-section">
+                                <h3>برچسب‌ها</h3>
+                                <div class="article-footer-tags">
+                                    <a href="#" class="article-footer-tag">امنیت سایبری</a>
+                                    <a href="#" class="article-footer-tag">تست نفوذ</a>
+                                    <a href="#" class="article-footer-tag">برنامه‌نویسی</a>
+                                    <a href="#" class="article-footer-tag">رمزنگاری</a>
+                                    <a href="#" class="article-footer-tag">شبکه</a>
+                                    <a href="#" class="article-footer-tag">وب</a>
+                                </div>
+                            </div>
+
+                            <!-- Article Share -->
+                            <div class="article-share">
+                                <h3 class="share-title">این مقاله را به اشتراک بگذارید</h3>
+                                <div class="share-buttons">
+                                    <!-- توییتر (X) -->
+                                    <a href="https://twitter.com/intent/tweet?url=https://davoodya.ir/pages/articles/Security/unicode_ascii.html&text=کدگذاری Unicode و استاندارد ASCII"
+                                       class="share-button twitter"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در توییتر">
+                                        <i class="fab fa-x-twitter"></i>
+                                        <span class="share-text">(X) توئیتر</span>
+                                    </a>
+
+                                    <!-- فیسبوک -->
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://davoodya.ir/pages/articles/Security/unicode_ascii.html"
+                                       class="share-button facebook"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در فیسبوک">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <span class="share-text">فیسبوک</span>
+                                    </a>
+
+                                    <!-- لینکدین -->
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://davoodya.ir/pages/articles/Security/unicode_ascii.html"
+                                       class="share-button linkedin"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در لینکدین">
+                                        <i class="fab fa-linkedin-in"></i>
+                                        <span class="share-text">لینکدین</span>
+                                    </a>
+
+                                    <!-- تلگرام -->
+                                    <a href="https://t.me/share/url?url=https://davoodya.ir/pages/articles/Security/unicode_ascii.html&text=کدگذاری Unicode و استاندارد ASCII"
+                                       class="share-button telegram"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در تلگرام">
+                                        <i class="fab fa-telegram-plane"></i>
+                                        <span class="share-text">تلگرام</span>
+                                    </a>
+
+                                    <!-- واتس‌اپ -->
+                                    <a href="https://wa.me/?text=کدگذاری Unicode و استاندارد ASCII%20https://davoodya.ir/pages/articles/Security/unicode_ascii.html"
+                                       class="share-button whatsapp"
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="اشتراک در واتس‌اپ">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <span class="share-text">واتس‌اپ</span>
+                                    </a>
+
+                                    <!-- اینستاگرام -->
+                                    <a href="#"
+                                       class="share-button instagram"
+                                       onclick="shareToInstagram()"
+                                       aria-label="اشتراک در اینستاگرام">
+                                        <i class="fab fa-instagram"></i>
+                                        <span class="share-text">اینستاگرام</span>
+                                    </a>
+
+                                    <!-- یوتیوب -->
+                                    <a href="#"
+                                       class="share-button youtube"
+                                       onclick="shareToYouTube()"
+                                       aria-label="اشتراک در یوتیوب">
+                                        <i class="fab fa-youtube"></i>
+                                        <span class="share-text">یوتیوب</span>
+                                    </a>
+
+                                    <!-- ایمیل -->
+                                    <a href="mailto:?subject=کدگذاری Unicode و استاندارد ASCII&body=https://davoodya.ir/pages/articles/Security/unicode_ascii.html"
+                                       class="share-button email"
+                                       aria-label="اشتراک از طریق ایمیل">
+                                        <i class="fas fa-envelope"></i>
+                                        <span class="share-text">ایمیل</span>
+                                    </a>
+
+                                    <!-- کپی لینک -->
+                                    <a href="#"
+                                       class="share-button copy-link"
+                                       onclick="copyArticleLink()"
+                                       aria-label="کپی لینک مقاله">
+                                        <i class="fas fa-link"></i>
+                                        <span class="share-text">کپی لینک</span>
+                                    </a>
+                                </div>
+
+                                <!-- فیلد کپی لینک -->
+                                <div class="copy-link-container">
+                                    <input type="text" id="article-link" name="article-link" value="https://davoodya.ir/pages/articles/Security/unicode_ascii.html" readonly>
+                                    <label for="article-link"></label>
+                                    <button onclick="copyArticleLink()">کپی</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Articles -->
+                    <div class="related-articles">
+                        <h3>مقالات مرتبط</h3>
+                        <div class="related-articles-grid">
+
+                            <!-- Related Article 1: Encoding, Encryption, Hashing, Obfuscation -->
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="../../../images/articles/hash_encrypt/hash_enc3.jpg" alt="مفاهیم Encoding, Encryption, Hashing, Obfuscation">
+                                    <div class="article-category">امنیت سایبری</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3>مفاهیم Encoding, Encryption, Hashing, Obfuscation</h3>
+                                    <p>در این مقاله به بررسی مفاهیم ذکر شده و تفاوت هایی که بین آنها وجود دارد میپردازیم.</p>
+                                    
+                                    <div class="article-meta">
+                                        <div class="article-meta-item">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>23 خرداد 1404</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="article-actions">
+                                        <a href="hash_encrypt.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Related Article 2: Crack ZIP Files using BKCrack -->
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="../../../images/articles/CrackZipFiles/CrackZipFiles1_1.png" alt="Crack ZIP Files using BKCrack">
+                                    <div class="article-category">تست نفوذ</div>
+                                </div>
+                                <div class="article-content">
+                                    <h3>کرک فایلهای فشرده ZIP با ابزار BKCrack</h3>
+                                    <p>در این مقاله روش کرک فایل های فشرده(الگوریتم ZIP-Crypto) با ابزار Bkcrack یاد میگیریم.</p>
+                                    
+                                    <div class="article-meta">
+                                        <div class="article-meta-item">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>15 فروردین 1404</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="article-actions">
+                                        <a href="../articles/python-security-tools.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="dark-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>DAVOOD<span>_</span>YAHAY</h2>
+                    <p>متخصص و مشاور امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>دسترسی سریع</h3>
+                    <ul>
+                        <li><a href="../../../index.html">خانه</a></li>
+                        <li><a href="../../../index.html#about">درباره من</a></li>
+                        <li><a href="../../../index.html#services">سرویس ها</a></li>
+                        <li><a href="../../../index.html#portfolio">نمونه ابزارها</a></li>
+                        <li><a href="../../courses.html">دوره‌های آموزشی</a></li>
+                        <li><a href="../../articles.html">مقالات</a></li>
+                        <li><a href="../../skills.html">مهارت‌ها و مدارک</a></li>
+                        <li><a href="../../../index.html#contact">تماس با من</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>اطلاعات تماس</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> ایران، اصفهان</p>
+                    <p><i class="fas fa-envelope"></i> info@davoodya.com</p>
+                    <!-- <p><i class="fas fa-phone"></i> +98 913 000 0000</p>-->
+
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/davoodsec" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-tooltip">اینستاگرام</span>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                            <span class="social-tooltip">یوتیوب</span>
+                        </a>
+                        <a href="https://t.me/davoodsec" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram"></i>
+                            <span class="social-tooltip">تلگرام</span>
+                        </a>
+                        <a href="https://linkedin.com/davoodya" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                            <span class="social-tooltip">لینکدین</span>
+                        </a>
+
+                        <a href="https://github.com/davoodya" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                            <span class="social-tooltip">گیت‌هاب</span>
+                        </a>
+
+                        <a href="https://t.me/yakuzacyberforum" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram-plane"></i>
+                            <span class="social-tooltip">انجمن تلگرام</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; ۱۴۰۴ تمامی حقوق محفوظ است | طراحی و توسعه توسط داوود یاحی</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/main2.js"></script>
+    <script src="../../../js/articles.js"></script>
+    <script src="../../../js/article-template.js"></script>
+    
+<!--    &lt;!&ndash; Prism.js for Code Highlighting &ndash;&gt;-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>-->
+
+    <!-- Locally Prism.js for Code Highlighting -->
+    <script src="../../../assets/js/prism/prism-core.min.js"></script>
+    <script src="../../../assets/js/prism/prism-autoloader.min.js"></script>
+    <script src="../../../assets/js/prism/prism-line-numbers.min.js"></script>
+
+</body>
+</html>
