@@ -1286,6 +1286,7 @@
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px 0 0 5px;
+  font-family: Shabnam, sans-serif;
   font-size: 0.9rem;
 }
 
@@ -1296,6 +1297,7 @@
   border: none;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
+  font-family: Shabnam, sans-serif;
   transition: background-color 0.2s;
 }
 
