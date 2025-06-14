@@ -867,13 +867,13 @@
 }
 
 .article-body h4 {
-  color: #3aaddf;
+  color: #ff9c48;
   margin: 30px 0 15px;
   font-family: var(--Vazir);
 }
 
 .article-body h5 {
-  color: #ff9c48;
+  color: #66eb6a;
   margin: 30px 0 15px;
   font-family: var(--Vazir);
 }
@@ -883,7 +883,7 @@
 }
 
 .article-body h6 {
-  color: #f1f1f1;
+  color: #e04545;
   margin: 30px 0 15px;
   font-family: var(--Vazir);
 }
