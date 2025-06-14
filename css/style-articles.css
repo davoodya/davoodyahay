@@ -1213,9 +1213,9 @@
 .article-share {
   margin: 40px 0;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: rgba(109, 109, 109, 0.14);
   border-radius: 10px;
-  border: 1px solid #e9ecef;
+  border: 1px solid #00bc00;
 }
 
 .share-title {
