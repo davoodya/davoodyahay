@@ -45,3 +45,10 @@
    8. Link Article into pages/articles.html => <a>, <img>, <p> & <h3> + a ادامه مطلب
    9. Fixed Tags and Categories of article
    10. Fixed Related Articles
+   
+   
+   
+## New Todos
+1. Add Canonical tags
+2. Impelement Minify CSS, JS, PHP, html
+3. Add versioning for import CSS and JS
