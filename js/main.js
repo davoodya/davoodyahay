@@ -518,3 +518,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Configure RTL for Tailwind
+tailwind.config = {
+    theme: {
+        extend: {},
+    },
+    corePlugins: {
+        preflight: false,
+    },
+    plugins: [],
+}
+
