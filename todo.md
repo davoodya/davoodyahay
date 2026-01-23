@@ -52,3 +52,4 @@
 1. Add Canonical tags
 2. Impelement Minify CSS, JS, PHP, html
 3. Add versioning for import CSS and JS
+4. Localization Persian Fonts, Vazir, Sahel, Shabnam, Yekan Bakh
