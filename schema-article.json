@@ -5,22 +5,28 @@
   "author": {
     "@type": "Person",
     "name": "داوود یاحی",
-    "url": "https://davoodya.com"
+    "url": "https://davoodya.ir"
+	"alternateName": "Davood Yahay",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://davoodya.ir/images/davoodya.png"
+    }
   },
   "publisher": {
     "@type": "Organization",
     "name": "داوود یاحی",
+	"alternateName": "Davood Yahay",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://davoodya.com/images/logo.png"
+      "url": "https://davoodya.ir/images/yakuzaIcon2.png"
     }
   },
   "datePublished": "2025-04-09",
   "dateModified": "2025-04-09",
-  "image": "https://davoodya.com/images/article-image.jpg",
+  "image": "https://davoodya.ir/images/articles/CrackZipFiles/CrackZipFiles1_1.png",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://davoodya.com/pages/articles/article-title.html"
+    "@id": "https://davoodya.ir/pages/articles/hacking/CrackZIPFiles1.html"
   },
   "description": "مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی",
   "keywords": "داوود یاحی, امنیت سایبری, داوود یا, davoodya, برنامه نویسی, شبکه, لینوکس"

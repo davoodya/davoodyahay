@@ -3,27 +3,36 @@
   "@type": "Person",
   "name": "داوود یاحی",
   "alternateName": "Davood Yahay",
-  "url": "https://davoodya.com",
-  "image": "https://davoodya.com/images/davood-yahay.jpg",
-  "jobTitle": "متخصص امنیت سایبری و برنامه‌نویسی",
+  "url": "https://davoodya.ir",
+  "image": "https://davoodya.ir/images/davoodya.png",
+  "jobTitle": "متخصص مشاور و مدرس امنیت سایبری تست نفوذ و برنامه نویسی",
   "worksFor": {
     "@type": "Organization",
-    "name": "داوود یاحی"
+    "name": "داوود یاحی",
+	"alternateName": "DSecurity Academy from Davood Yahay",
   },
   "sameAs": [
     "https://www.linkedin.com/in/davoodya/",
     "https://github.com/davoodya",
-    "https://twitter.com/davoodya",
-    "https://instagram.com/davoodya"
+    "https://x.com/davood_yahay",
+	"https://youtube.com/@DavoodSec",
+	"https://t.me/yakuzacybersec",
+    "https://instagram.com/davoodsec"
   ],
   "knowsAbout": [
     "امنیت سایبری",
+	"تست نفوذ",
+	"ابزار نویسی امنیتی",
     "برنامه‌نویسی",
     "شبکه‌های کامپیوتری",
     "لینوکس",
-    "تست نفوذ",
+    "سیستم عامل",
     "میکروتیک",
-    "سیسکو"
+    "سیسکو",
+	"تدریس",
+	"آموزش امنیت سایبری",
+	"مشاوره امنیت سایبری",
+	"آکادمی DSecurity"
   ],
   "description": "داوود یاحی، متخصص و مشاور امنیت سایبری، برنامه‌نویسی و شبکه‌های کامپیوتری با بیش از ده سال تجربه در زمینه‌های مختلف فناوری اطلاعات و امنیت سایبری"
 }
