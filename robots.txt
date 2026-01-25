@@ -1,35 +1,13 @@
-User-agent: *
-Allow: /
-Sitemap: https://davoodya.com/sitemap.xml
+Sitemap: https://davoodya.ir/sitemap.xml
 
 # Allow all web crawlers to access all content
 User-agent: *
-Disallow:
-
-# Specific rules for major search engines
-User-agent: Googlebot
-Allow: /
-User-agent: Bingbot
-Allow: /
-User-agent: Yandexbot
 Allow: /
 
-# Prevent crawling of certain file types
-User-agent: *
-Disallow: /*.pdf$
-Disallow: /*.doc$
-Disallow: /*.docx$
-Disallow: /*.xls$
-Disallow: /*.xlsx$
-Disallow: /*.zip$
-Disallow: /*.rar$
 
 # Prevent crawling of admin or private areas
 User-agent: *
+Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /temp/
 
-# Crawl delay to prevent server overload
-User-agent: *
-Crawl-delay: 10
