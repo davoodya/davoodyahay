@@ -29,7 +29,7 @@
 /* VazirMatn Bold */
 @font-face {
      font-family: 'Vazir';
-     src: url('assets/fonts/VazirMatn/Vazirmatn-Bold.woff2') format('woff2');
+     src: url('/assets/fonts/VazirMatn/Vazirmatn-Bold.woff2') format('woff2');
      font-weight: 700;
      font-style: normal;
      font-display: swap;
