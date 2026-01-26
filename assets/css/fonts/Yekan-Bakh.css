@@ -1,21 +1,27 @@
-/* Generated for PhpStorm v242.23339.16 on  */
+/* IRANYekanX Light */
 @font-face {
-     font-family: "Yekan";
-     src: url("https://cdn.fontcdn.ir/Fonts/Yekan/cf3e1c6d356e2d1522cca7374a6af32bc86a90fc2d2aff8fcfdcee0a073b31da.eot");
-     src: url("https://cdn.fontcdn.ir/Fonts/Yekan/1cdce741b89d94b75c1b52dfbfc7bc3b1eb1a8d2ecb9da71753e17219a1b8057.woff2") format("woff2"),
-          url("https://cdn.fontcdn.ir/Fonts/Yekan/b45ac895ca2c026fe30f8a2a1f9fce5653392665b62dc9f3faa94a50caa5205b.woff") format("woff"),
-          url("https://cdn.fontcdn.ir/Fonts/Yekan/d19e1fc6deb9b0f870091484972b731ab487c6ab05e1096df117dcf2a3e3d055.ttf") format("truetype");
+     font-family: 'Yekan';
+     src: url('/assets/fonts/IRANYekanX/IRANYekanX-Light.woff2') format('woff2');
+     font-weight: 300;
+     font-style: normal;
+     font-display: swap;
+}
+
+/* IRANYekanX Regular */
+@font-face {
+     font-family: 'Yekan';
+     src: url('/assets/fonts/IRANYekanX/IRANYekanX-Regular.woff2') format('woff2');
      font-weight: 400;
      font-style: normal;
+     font-display: swap;
 }
+
+/* IRANYekanX Bold */
 @font-face {
-     font-family: "Yekan";
-     src: url("https://cdn.fontcdn.ir/Fonts/Yekan/7cd8ee0477e1ec735362aeda241dbefdf3fb92ae9575b5248b035e03e8a42e5d.eot");
-     src: url("https://cdn.fontcdn.ir/Fonts/Yekan/8b3d4ccc94807967874f481b0ea82d0f26cda739c2fad3b923f28d8915af064f.woff2") format("woff2"),
-          url("https://cdn.fontcdn.ir/Fonts/Yekan/0f5b918a4aa8d041889e83d2b10c11cbbfa24fda325e6444f99ef312ee6eae08.woff") format("woff"),
-          url("https://cdn.fontcdn.ir/Fonts/Yekan/a296eab90770875f0b9ebe65a3c9edb766e250936281cd5ec281f331f8ddc9a3.ttf") format("truetype");
+     font-family: 'Yekan';
+     src: url('/assets/fonts/IRANYekanX/IRANYekanX-Bold.woff2') format('woff2');
      font-weight: 700;
      font-style: normal;
+     font-display: swap;
 }
-/* CACHED: 2025-03-30T03:38:40+00:00 */
-/* Powered by FontServer.ir */
+
