@@ -1,6 +1,15 @@
+/* VazirMatn Thin */
+@font-face {
+     font-family: 'Vazir';
+     src: url('/assets/fonts/VazirMatn/Vazirmatn-Thin.woff2') format('woff2');
+     font-weight: 100;
+     font-style: normal;
+     font-display: swap;
+}
+
 /* VazirMatn Light */
 @font-face {
-     font-family: 'Vazirmatn';
+     font-family: 'Vazir';
      src: url('/assets/fonts/VazirMatn/Vazirmatn-Light.woff2') format('woff2');
      font-weight: 300;
      font-style: normal;
@@ -9,7 +18,7 @@
 
 /* VazirMatn Regular */
 @font-face {
-     font-family: 'Vazirmatn';
+     font-family: 'Vazir';
      src: url('/assets/fonts/VazirMatn/Vazirmatn-Regular.woff2') format('woff2');
      font-weight: 400;
      font-style: normal;
@@ -18,17 +27,16 @@
 
 /* VazirMatn Medium */
 @font-face {
-     font-family: 'Vazirmatn';
+     font-family: 'Vazir';
      src: url('/assets/fonts/VazirMatn/Vazirmatn-Medium.woff2') format('woff2');
      font-weight: 500;
      font-style: normal;
      font-display: swap;
 }
 
-
 /* VazirMatn Bold */
 @font-face {
-     font-family: 'Vazirmatn';
+     font-family: 'Vazir';
      src: url('/assets/fonts/VazirMatn/Vazirmatn-Bold.woff2') format('woff2');
      font-weight: 700;
      font-style: normal;
