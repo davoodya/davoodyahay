@@ -11,52 +11,61 @@
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="کدگذاری Unicode و استاندارد  | داوود یاحی">
     <meta property="og:description" content="مقاله تخصصی برنامه نویسی، امنیت سایبری، هک قانونی | کدگذاری Unicode و استاندارد ">
-    <meta property="og:image" content="../../../images/davoodya.png">
+    <meta property="og:image" content="https://davoodya.ir/images/yakuzaicon2.png">
     <meta property="og:url" content="https://davoodya.ir/pages/articles/Security/unicode_ascii.html">
     <meta property="og:type" content="article">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content=" کدگذاری Unicode و استاندارد ASCII | داوود یاحی">
     <meta name="twitter:description" content="مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی | کدگذاری Unicode و استاندارد ASCII ">
-    <meta name="twitter:image" content="../../../images/davoodya.png">
+    <meta name="twitter:image" content="https://davoodya.ir/images/yakuzaicon2.png">
     
     <title>کدگذاری Unicode و استاندارد ASCII | داوود یاحی - مشاور و مدرس امنیت سایبری و برنامه‌نویسی</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../../../images/favicon.png" type="image/x-icon">
 
-    <!-- Font Awesome -->
+    <!-- ################## Fontawesome Local & Online ################## -->
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css?v=2.0.1">
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
-    <link rel="stylesheet" href="../../../assets/fontawesome/css/all.min.css">
 
-    <!-- Google Fonts Online -->
-    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-    <!--    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
+    <!-- ################## Google Fonts Local & Online ################## -->
+    <link rel="stylesheet" href="/assets/fonts/fira-code/fira-code.css?v=2.0.1">
+    <link rel="stylesheet" href="/assets/fonts/Rajdhani/Rajdhani.css?v=2.0.1">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">-->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
 
-    <!-- Google fonts Local -->
-    <link rel="stylesheet" href="../../../assets/fonts/fira-code/fira-code.css">
-    <link rel="stylesheet" href="../../../assets/fonts/Rajdhani/Rajdhani.css">
+    <!-- ################## Preload Fonts ################## -->
+    <!--     If fonts not loaded using <preload> for all local fonts in all weights-->
+    <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Other Online fonts | Farsi -->
+    <!-- ################## Persian Farsi Local Fonts + Online Version ################## -->
     <!-- فونت Vazir برای عنوان‌ها -->
-    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/fonts/Vazir.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css?v=2.0.1" rel="stylesheet" type="text/css" />-->
 
     <!-- فونت Shabnam برای توضیحات -->
-    <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/fonts/Shabnam.css?v=2.0.1" type="text/css" />
+    <!-- <link href="assets/css/fonts/Shabnam.css" rel="stylesheet" type="text/css">-->
+    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />-->
 
     <!-- فونت YekanBakh برای توضیحات -->
-    <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/fonts/Yekan-Bakh.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css?v=2.0.1" rel="stylesheet" type="text/css" />-->
 
     <!-- فونت Sahel برای توضیحات -->
-    <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/fonts/Sahel.css" rel="stylesheet">
+    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css?v=2.0.1" rel="stylesheet" type="text/css" />-->
 
-    <!-- Prism.js for Code Highlighting | Online -->
+    <!-- ################## Locally Prism.js for Code Highlighting ################## -->
+    <link rel="stylesheet" href="../../../assets/css/prism/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="../../../assets/css/prism/prism-line-numbers.min.css">
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">-->
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">-->
 
-    <!-- Prism.js for Code Highlighting | Local -->
-    <link rel="stylesheet" href="../../../assets/css/prism/prism-tomorrow.min.css">
-    <link rel="stylesheet" href="../../../assets/css/prism/prism-line-numbers.min.css">
 
     <!-- Custom CSS Importing -->
     <link rel="stylesheet" href="../../../css/style.css">
