@@ -74,51 +74,60 @@
         </noscript>
 
         <!-- Override Fontawesome -->
-        <link rel="preload"
-              href="assets/fontawesome/css/fontawesome-override.css?v=2.0.1"
-              as="style"
-              onload="this.onload=null;this.rel='stylesheet'">
-        <noscript>
-            <link rel="stylesheet" href="assets/fontawesome/css/fontawesome-override.css?v=2.0.1">
-        </noscript>
+<!--        <link rel="preload"-->
+<!--              href="assets/fontawesome/css/fontawesome-override.css?v=2.0.1"-->
+<!--              as="style"-->
+<!--              onload="this.onload=null;this.rel='stylesheet'">-->
+<!--        <noscript>-->
+<!--            <link rel="stylesheet" href="/assets/fontawesome/css/fontawesome-override.css?v=2.0.1">-->
+<!--        </noscript>-->
 
 
         <!-- ================ Persian Fonts Importing ==================== -->
         <!-- Preloading Main Page Font - Shabnam & Vazir - Page Speed Optimization -->
-        <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Regular.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<!--        <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Regular.woff2" as="font" type="font/woff2" crossorigin>-->
+<!--        <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>-->
         <!-- <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Bold.woff2" as="font" type="font/woff2" crossorigin>-->
 
         <!-- Other - Farsi & English Fonts -->
         <link rel="preload"
-              href="assets/css/fonts/fonts.css?v=2.0.1"
+              href="assets/css/fonts/fonts.min.css?v=2.0.1"
               as="style"
               onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
-            <link rel="stylesheet" href="assets/css/fonts/fonts.css?v=2.0.1">
+            <link rel="stylesheet" href="assets/css/fonts/fonts.min.css?v=2.0.1">
         </noscript>
 
 
         <!-- ================ MAIN CSS Importing ==================== -->
         <!-- Main CSS - Critical - Normal Import -->
-        <link rel="stylesheet" href="css/style.css?v=2.0.1" type="text/css">
+<!--        <link rel="stylesheet" href="/css/style.css?v=2.0.1" type="text/css">-->
 
-        <!-- Style Index CSS - Speed Optimization method  -->
-        <link rel="preload"
-              href="/css/style-index.css?v=2.0.1"
-              as="style"
-              onload="this.onload=null;this.rel='stylesheet'">
-        <noscript>
-            <link rel="stylesheet" href="/css/style-index.css?v=2.0.1">
-        </noscript>
+<!--        &lt;!&ndash; Style Index CSS - Speed Optimization method  &ndash;&gt;-->
+<!--        <link rel="preload"-->
+<!--              href="/css/style-index.css?v=2.0.1"-->
+<!--              as="style"-->
+<!--              onload="this.onload=null;this.rel='stylesheet'">-->
+<!--        <noscript>-->
+<!--            <link rel="stylesheet" href="/css/style-index.css?v=2.0.1">-->
+<!--        </noscript>-->
+
+<!--        &lt;!&ndash; Header Footer CSS - Speed Optimization method  &ndash;&gt;-->
+<!--        <link rel="preload"-->
+<!--              href="/css/header-footer.css?v=2.0.1"-->
+<!--              as="style"-->
+<!--              onload="this.onload=null;this.rel='stylesheet'">-->
+<!--        <noscript>-->
+<!--            <link rel="stylesheet" href="/css/header-footer.css?v=2.0.1">-->
+<!--        </noscript>-->
 
         <!-- Header Footer CSS - Speed Optimization method  -->
         <link rel="preload"
-              href="/css/header-footer.css?v=2.0.1"
+              href="dist/css/main.min.css?v=1.0.0"
               as="style"
               onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
-            <link rel="stylesheet" href="/css/header-footer.css?v=2.0.1">
+            <link rel="stylesheet" href="dist/css/main.min.css?v=1.0.0">
         </noscript>
 
     </head>
@@ -704,17 +713,24 @@
         <!-- Custom JS -->
         <script src="js/main.js?v=2.0.1" defer></script>
 
-        <!-- JS for EmailJS Service -->
-        <script type="text/javascript">
+
+        <!-- EmailJS External Script + Safe Init -->
+        <script>
             (function(){
-                emailjs.init({
-                    publicKey: "7ILWL54OoZjnIZneX",
-                });
+                const script = document.createElement('script');
+                script.src = "assets/js/4_dist_email.js?v=2.0.1"; // فایل MailJS محلی شما
+                script.async = true; // دانلود غیرمسدودکننده
+                script.onload = () => {
+                    // مطمئن می‌شویم DOM آماده است قبل از init
+                    document.addEventListener("DOMContentLoaded", () => {
+                        emailjs.init({
+                            publicKey: "7ILWL54OoZjnIZneX",
+                        });
+                    });
+                };
+                document.head.appendChild(script);
             })();
         </script>
-
-        <!-- JS from Head -->
-        <script type="text/javascript" src="assets/js/4_dist_email.js?v=2.0.1" defer></script>
 
         <!-- ################## ############### ################## -->
         <!-- ################## Structured Data ################## -->
@@ -814,6 +830,18 @@
         <!-- ################## ########### ################## -->
         <!-- ################## ARCHIVED JS ################## -->
         <!-- ################## ########### ################## -->
+
+        <!-- JS from Head -->
+        <!--        <script type="text/javascript" src="assets/js/4_dist_email.js?v=2.0.1" defer></script>-->
+
+        <!--        &lt;!&ndash; JS for EmailJS Service &ndash;&gt;-->
+        <!--        <script type="text/javascript">-->
+        <!--            (function(){-->
+        <!--                emailjs.init({-->
+        <!--                    publicKey: "7ILWL54OoZjnIZneX",-->
+        <!--                });-->
+        <!--            })();-->
+        <!--        </script>-->
 
         <!-- Tailwind CDN Attach -->
         <!-- <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio,line-clamp"></script>-->
