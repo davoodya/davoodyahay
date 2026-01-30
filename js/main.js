@@ -310,7 +310,19 @@ window.addEventListener('load', () => {
 });
 
 /* Scroll Event Listener */
-window.addEventListener('scroll', checkScroll);
+// window.addEventListener('scroll', checkScroll);
+
+let scrollTicking = false;
+
+window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+        requestAnimationFrame(() => {
+            checkScroll();
+            scrollTicking = false;
+        });
+        scrollTicking = true;
+    }
+});
 
 /* Initialize on load */
 document.addEventListener('DOMContentLoaded', () => {
@@ -376,10 +388,11 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSkill = (currentSkill + 1) % skills.length;
         skills[currentSkill].classList.add('active');
 
-// فعال کردن افکت glitch هنگام تغییر
-        skills[currentSkill].style.animation = 'none';
-        void skills[currentSkill].offsetWidth; // Trigger reflow
-        skills[currentSkill].style.animation = 'glitch-switch 0.5s linear';
+        // فعال کردن افکت glitch هنگام تغییر
+        skills[currentSkill].classList.remove('glitch');
+        requestAnimationFrame(() => {
+            skills[currentSkill].classList.add('glitch');
+        });
 
         setTimeout(rotateSkills, 2000); // تغییر هر 2 ثانیه
     }
@@ -517,6 +530,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+
 
 // Configure RTL for Tailwind
 tailwind.config = {
