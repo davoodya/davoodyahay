@@ -62,8 +62,17 @@
         <!-- ################## ######################## ################## -->
 
         <!-- ################## Fontawesome Local & Online ################## -->
-        <link rel="stylesheet" href="assets/fontawesome/css/all.min.css?v=2.0.1">
+        <!-- <link rel="stylesheet" href="assets/fontawesome/css/all.min.css?v=2.0.1">-->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
+
+        <link rel="preload"
+              href="assets/fontawesome/css/all.min.css?v=2.0.1"
+              as="style"
+              onload="this.onload=null;this.rel='stylesheet'">
+
+        <noscript>
+            <link rel="stylesheet" href="assets/fontawesome/css/all.min.css?v=2.0.1">
+        </noscript>
 
         <!-- ################## Google Fonts Local & Online ################## -->
         <link rel="stylesheet" href="assets/fonts/fira-code/fira-code.css?v=2.0.1">
@@ -97,23 +106,32 @@
         <link href="assets/css/fonts/Sahel.css" rel="stylesheet">
         <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css?v=2.0.1" rel="stylesheet" type="text/css" />-->
 
-        <!-- JS for EmailJS Service-->
-        <!-- <script type="text/javascript"-->
-        <!-- src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">-->
-        <!-- </script>-->
 
-        
-        <!-- ################## ######## ################## -->
-        <!-- ################## MAIN CSS ################## -->
-        <!-- ################## ######## ################## -->
-        <!-- Main CSS -->
+        <!-- ======================================================== -->
+        <!-- ================ MAIN CSS Importing ==================== -->
+        <!-- ======================================================== -->
+
+        <!-- Main CSS - Normal Import -->
         <link rel="stylesheet" href="css/style.css?v=2.0.1" type="text/css">
-        <link rel="stylesheet" href="css/style-index.css?v=2.0.1" type="text/css">
 
-        <!-- Header Footer Importing - Speed Optimization method    -->
-        <link rel="preload" href="/css/header-footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/css/header-footer.css"></noscript>
-        <!-- <link rel="stylesheet" href="css/header-footer.css?v=2.0.1" type="text/css">-->
+        <!-- Style Index CSS - Speed Optimization method  -->
+        <link rel="preload"
+              href="/css/style-index.css?v=2.0.1"
+              as="style"
+              onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/css/style-index.css?v=2.0.1">
+        </noscript>
+
+        <!-- Header Footer Importing - Speed Optimization method  -->
+        <link rel="preload"
+              href="/css/header-footer.css?v=2.0.1"
+              as="style"
+              onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/css/header-footer.css?v=2.0.1">
+        </noscript>
+
 
     </head>
 
