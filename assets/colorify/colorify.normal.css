@@ -1,0 +1,74 @@
+#fluidbg {
+  background-color: rgb(23, 23, 23);
+}
+#fluidbg {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #E7EDF4;
+}
+
+
+element {
+}
+:root {
+}
+:root {
+  --darkreader-neutral-background: var(--darkreader-background-ffffff, #181a1b);
+  --darkreader-neutral-text: var(--darkreader-text-000000, #e8e6e3);
+  --darkreader-selection-background: var(--darkreader-background-0060d4, #004daa);
+  --darkreader-selection-text: var(--darkreader-text-ffffff, #e8e6e3);
+  --darkreader-background-ffffff: #181a1b;
+  --darkreader-text-ffffff: #e8e6e3;
+  --darkreader-border-404040: #776e62;
+  --darkreader-text-000000: #e8e6e3;
+  --darkreader-border-4c4c4c: #736b5e;
+  --darkreader-text-0040ff: #3391ff;
+  --darkreader-border-808080: #545b5e;
+  --darkreader-text-a9a9a9: #b2aba1;
+  --darkreader-background-faffbd: #e2f000;
+  --darkreader-background-f1f1f1: #202324;
+  --darkreader-background-b0b0b0: #454a4d;
+  --darkreader-background-0060d4: #004daa;
+  --darkreader-background-ffd76e: #684b00;
+  --darkreader-background-c59d00: #9e7e00;
+  --darkreader-text-302505: #d7d4cf;
+  --darkreader-background-add8e6: #1b4958;
+  --darkreader-background-cfecf5: #0f3a47;
+  --darkreader-background-f5f5f5: #1e2021;
+  --darkreader-background-faedda: #432c09;
+  --darkreader-background-85c3d8: #245d70;
+  --darkreader-background-e7edf4: #222526;
+  --darkreader-text-ff0000: #ff1a1a;
+  --darkreader-border-ff0000: #b30000;
+  --darkreader-background-00000080: rgba(187, 0, 0, 0.5);
+  --darkreader-text-00000080: rgba(232, 230, 227, 0.5);
+}
+@layer {
+  html, body {
+    border-color: var(--darkreader-border-4c4c4c, #736b5e);
+    color: var(--darkreader-text-000000, #e8e6e3);
+  }
+}
+@layer {
+  html, body {
+    background-color: var(--darkreader-background-ffffff, #181a1b);
+  }
+}
+@layer {
+  html {
+    color-scheme: dark !important;
+  }
+}
+@layer {
+  html {
+    background-color: var(--darkreader-background-ffffff, #181a1b) !important;
+  }
+}
+@layer {
+  * {
+    scrollbar-color: var(--darkreader-background-b0b0b0, #454a4d) var(--darkreader-background-f1f1f1, #202324);
+  }
