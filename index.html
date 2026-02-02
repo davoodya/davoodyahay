@@ -184,6 +184,19 @@
                 </nav>
             </div>
         </header>
+        <!-- Enable Animations after LCP Loaded - added to main.js => window.addEventListener('load', () - line 336 -->
+        <script>
+            if ('PerformanceObserver' in window) {
+                const po = new PerformanceObserver((list) => {
+                    if (list.getEntries().length) {
+                        document.body.classList.remove('pre-lcp');
+                        po.disconnect();
+                    }
+                });
+
+                po.observe({ type: 'largest-contentful-paint', buffered: true });
+            }
+        </script>
 
         <!-- Hero Section -->
         <section id="home" class="hero effect-section services">
@@ -982,19 +995,7 @@
         <!-- Custom JS -->
         <script src="/dist/js/main.min.js?v=2.0.1" defer></script>
 
-        <!-- Enable Animations after LCP Loaded - added to main.js => window.addEventListener('load', () - line 336 -->
-<!--        <script>-->
-<!--            if ('PerformanceObserver' in window) {-->
-<!--                const po = new PerformanceObserver((list) => {-->
-<!--                    if (list.getEntries().length) {-->
-<!--                        document.body.classList.remove('pre-lcp');-->
-<!--                        po.disconnect();-->
-<!--                    }-->
-<!--                });-->
 
-<!--                po.observe({ type: 'largest-contentful-paint', buffered: true });-->
-<!--            }-->
-<!--        </script>-->
 
         <!-- EmailJS Loading - Normal Version-->
         <script type="text/javascript" src="assets/js/4_dist_email.js"></script>

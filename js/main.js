@@ -333,16 +333,16 @@ window.addEventListener('load', () => {
         startApp();
     }
     // Load animations after lcp loading
-    if ('PerformanceObserver' in window) {
-        const po = new PerformanceObserver((list) => {
-            if (list.getEntries().length) {
-                document.body.classList.remove('pre-lcp');
-                po.disconnect();
-            }
-        });
-
-        po.observe({ type: 'largest-contentful-paint', buffered: true });
-    }
+    // if ('PerformanceObserver' in window) {
+    //     const po = new PerformanceObserver((list) => {
+    //         if (list.getEntries().length) {
+    //             document.body.classList.remove('pre-lcp');
+    //             po.disconnect();
+    //         }
+    //     });
+    //
+    //     po.observe({ type: 'largest-contentful-paint', buffered: true });
+    // }
 
 });
 
