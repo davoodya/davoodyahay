@@ -47,6 +47,7 @@ RewriteRule ^ https://davoodya.ir%{REQUEST_URI} [L,R=301]
   ExpiresByType application/javascript "access plus 3 months"
 </IfModule>
 
+
 # =====================================
 # CACHE-CONTROL HEADERS
 # =====================================
