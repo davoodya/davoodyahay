@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://davoodya.ir/</loc>
+  <lastmod>2026-01-26T12:59:46+00:00</lastmod>
+  <priority>1.00</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/articles.html</loc>
+  <lastmod>2026-01-25T20:48:44+00:00</lastmod>
+  <priority>0.90</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/skills.html</loc>
+  <lastmod>2026-01-25T20:39:58+00:00</lastmod>
+  <priority>0.90</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/services.html</loc>
+  <lastmod>2026-01-25T20:39:15+00:00</lastmod>
+  <priority>0.90</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/portfolio.html</loc>
+  <lastmod>2026-01-25T20:39:30+00:00</lastmod>
+  <priority>0.90</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/courses.html</loc>
+  <lastmod>2026-01-25T20:39:43+00:00</lastmod>
+  <priority>0.90</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/index.html</loc>
+  <lastmod>2026-01-26T12:59:46+00:00</lastmod>
+  <priority>1.00</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/articles/hacking/CrackZIPFiles1.html</loc>
+  <lastmod>2026-01-25T20:43:03+00:00</lastmod>
+  <priority>0.84</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/articles/network/cdn_lb.html</loc>
+  <lastmod>2026-01-25T20:43:03+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/articles/Security/hash_encrypt.html</loc>
+  <lastmod>2026-01-25T20:43:03+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/articles/Security/unicode_ascii.html</loc>
+  <lastmod>2026-01-25T20:43:03+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/courses/advanced-ceh.html</loc>
+  <lastmod>2026-01-25T20:48:44+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/courses/beginner-ceh.html</loc>
+  <lastmod>2026-01-25T20:43:50+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/courses/ceh-plus-plus.html</loc>
+  <lastmod>2026-01-25T20:48:44+00:00</lastmod>
+  <priority>0.84</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/courses/linux-lpic1.html</loc>
+  <lastmod>2026-01-25T20:48:44+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/courses/network-plus.html</loc>
+  <lastmod>2026-01-25T20:45:05+00:00</lastmod>
+  <priority>0.84</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/courses/virtualization.html</loc>
+  <lastmod>2026-01-25T20:45:32+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/tools/backdoor.html</loc>
+  <lastmod>2026-01-25T20:48:44+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/tools/c2.html</loc>
+  <lastmod>2026-01-25T20:46:34+00:00</lastmod>
+  <priority>0.84</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/tools/cracker.html</loc>
+  <lastmod>2026-01-25T20:48:44+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/tools/malware.html</loc>
+  <lastmod>2026-01-25T20:48:44+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://davoodya.ir/pages/tools/python.html</loc>
+  <lastmod>2026-01-25T20:51:35+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>yearly</changefreq>
+</url>
+</urlset>
