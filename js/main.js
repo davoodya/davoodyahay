@@ -292,22 +292,60 @@ if (hamburger) {
 }
 
 /* Preloader */
+// window.addEventListener('load', () => {
+//     const preloader = document.querySelector('.preloader');
+//     if (preloader) {
+//         // Wait a bit for a more dramatic effect
+//         setTimeout(() => {
+//             preloader.style.opacity = '0';
+//             setTimeout(() => {
+//                 preloader.style.display = 'none';
+//
+//                 // Trigger animations after preloader
+//                 advancedTypingEffect();
+//                 checkScroll();
+//             }, 600); // matches CSS transition
+//         }, 1500); // total visible duration
+//     }
+// });
+
 window.addEventListener('load', () => {
+
+    const startApp = () => {
+        advancedTypingEffect();
+        checkScroll();
+    };
+
     const preloader = document.querySelector('.preloader');
+
     if (preloader) {
-        // Wait a bit for a more dramatic effect
+        // IF preloader exist
         setTimeout(() => {
             preloader.style.opacity = '0';
+
             setTimeout(() => {
                 preloader.style.display = 'none';
-
-                // Trigger animations after preloader
-                advancedTypingEffect();
-                checkScroll();
-            }, 600); // matches CSS transition
-        }, 1500); // total visible duration
+                startApp();
+            }, 600);
+        }, 1500);
+    } else {
+        // if preloader doesn't exist
+        startApp();
     }
+    // Load animations after lcp loading
+    if ('PerformanceObserver' in window) {
+        const po = new PerformanceObserver((list) => {
+            if (list.getEntries().length) {
+                document.body.classList.remove('pre-lcp');
+                po.disconnect();
+            }
+        });
+
+        po.observe({ type: 'largest-contentful-paint', buffered: true });
+    }
+
 });
+
 
 /* Scroll Event Listener */
 // window.addEventListener('scroll', checkScroll);
@@ -397,7 +435,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(rotateSkills, 2000); // تغییر هر 2 ثانیه
     }
 
-    setTimeout(rotateSkills, 2000); // شروع پس از 2 ثانیه
+    setTimeout(rotateSkills, 1000); // شروع پس از 2 ثانیه
 });
 
 // Show and Close Certificate Modal
@@ -542,4 +580,5 @@ tailwind.config = {
     },
     plugins: [],
 }
+
 
