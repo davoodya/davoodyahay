@@ -521,6 +521,20 @@ nav {
         opacity: .8
     }
 }
+@keyframes logoAnimation-smaller {
+    0% {
+        transform: scale(.9) rotate(0deg);
+        opacity: .7
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.9
+    }
+    100% {
+        transform: scale(0.9) rotate(0deg);
+        opacity: 0.6
+    }
+}
 
 #matrix-canvas {
     animation: logoAnimation 5s infinite ease-in-out
@@ -3039,7 +3053,8 @@ nav {
 .matrix-animation {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 60px !important;
+    /*left: 0;*/
     width: 100%;
     height: 100%;
     z-index: 0
@@ -3321,6 +3336,19 @@ h1.h1-seo {
     pointer-events: none;
 }
 
+@media (max-width: 462px) {
+    .matrix-animation {
+        position: absolute;
+        top: 70px;
+        right: 370px;
+        width: 15%;
+        height: 15%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
 @media (max-width: 992px) {
     .hero h1 {
         font-size: 2.8rem
@@ -3412,9 +3440,6 @@ h1.h1-seo {
         font-size: 2rem
     }
 
-    .matrix-animation {
-        display: none
-    }
     .page-header {
         padding: 120px 0 60px
     }
@@ -3498,7 +3523,7 @@ h1.h1-seo {
 
 /* Terminal Responsive Styles */
 
-@media (max-width: 450px) {
+@media (max-width: 420px) {
     .terminal {
         padding: 12px;
         margin-bottom: 20px;
@@ -3688,4 +3713,280 @@ h1.h1-seo {
     .terminal-line {
         flex-wrap: nowrap;
     }
+}
+
+/* Responsive Styles for Davood Ya Picture */
+@media (max-width: 1700px) {
+    .matrix-animation {
+        position: absolute;
+        top: 50px;
+        right: 250px;
+        width: 90%;
+        height: 90%;
+    }
+}
+@media (max-width: 1300px) {
+    .matrix-animation {
+        position: absolute;
+        top: 120px;
+        right: 350px;
+        width: 80%;
+        height: 80%;
+    }
+}
+@media (max-width: 1200px) {
+    .matrix-animation {
+        position: absolute;
+        top: 160px;
+        right: 450px;
+        width: 70%;
+        height: 70%;
+    }
+}
+@media (max-width: 1140px) {
+    .matrix-animation {
+        position: absolute;
+        top: 170px;
+        right: 550px;
+        width: 57%;
+        height: 57%;
+    }
+}
+@media (max-width: 1050px) {
+    .matrix-animation {
+        position: absolute;
+        top: 210px;
+        right: 590px;
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 990px) {
+    .matrix-animation {
+        position: absolute;
+        top: 160px;
+        right: 630px;
+        width: 40%;
+        height: 40%;
+    }
+}
+
+@media (max-width: 920px) {
+    .matrix-animation {
+        position: absolute;
+        top: 50px;
+        right: 550px;
+        width: 30%;
+        height: 30%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+
+@media (max-width: 794px) {
+    .matrix-animation {
+        position: absolute;
+        top: 50px;
+        right: 570px;
+        width: 25%;
+        height: 25%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 768px) {
+    .matrix-animation {
+        position: absolute;
+        top: 90px;
+        right: 550px;
+        width: 25%;
+        height: 25%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 768px) {
+    .matrix-animation {
+        position: absolute;
+        top: 110px;
+        right: 550px;
+        width: 22%;
+        height: 22%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 715px) {
+    .matrix-animation {
+        position: absolute;
+        top: 90px;
+        right: 530px;
+        width: 22%;
+        height: 22%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 685px) {
+    .matrix-animation {
+        position: absolute;
+        top: 90px;
+        right: 510px;
+        width: 22%;
+        height: 22%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+
+@media (max-width: 660px) {
+    .matrix-animation {
+        position: absolute;
+        top: 90px;
+        right: 490px;
+        width: 22%;
+        height: 22%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+
+@media (max-width: 633px) {
+    .matrix-animation {
+        position: absolute;
+        top: 90px;
+        right: 470px;
+        width: 22%;
+        height: 22%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+
+@media (max-width: 607px) {
+    .matrix-animation {
+        position: absolute;
+        top: 90px;
+        right: 450px;
+        width: 22%;
+        height: 22%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 580px) {
+    .matrix-animation {
+        position: absolute;
+        top: 70px;
+        right: 420px;
+        width: 22%;
+        height: 22%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 538px) {
+    .matrix-animation {
+        position: absolute;
+        top: 50px;
+        right: 400px;
+        width: 20%;
+        height: 20%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 538px) {
+    .matrix-animation {
+        position: absolute;
+        top: 80px;
+        right: 400px;
+        width: 15%;
+        height: 15%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 485px) {
+    .matrix-animation {
+        position: absolute;
+        top: 70px;
+        right: 380px;
+        width: 15%;
+        height: 15%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 445px) {
+    .matrix-animation {
+        position: absolute;
+        top: 70px;
+        right: 360px !important;
+        width: 15%;
+        height: 15%;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 430px) {
+    .matrix-animation {
+        position: absolute;
+        top: 70px;
+        right: 355px !important;
+        width: 12% !important;
+        height: 12% !important;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 421px) {
+    .matrix-animation {
+        position: absolute;
+        top: 80px;
+        right: 340px !important;
+        width: 12% !important;
+        height: 12% !important;
+        z-index: 100;
+    }
+    #matrix-canvas {
+        animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+}
+@media (max-width: 400px) {
+    .matrix-animation {
+        display: none;
+    }
+
 }
