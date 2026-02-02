@@ -288,6 +288,15 @@ const navLinks = document.querySelector('.nav-links');
 if (hamburger) {
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active'); // اضافه کردن toggle برای آیکون X
+    });
+
+    // بستن منو وقتی روی لینک کلیک شد (موبایل)
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
     });
 }
 

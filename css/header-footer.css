@@ -774,7 +774,7 @@ nav {
 }
 
 /* Responsive Styles */
-@media (max-width: 992px) {
+@media (max-width: 992px) and (min-width: 300px) {
   .nav-links {
     position: fixed;
     top: 70px;
@@ -851,6 +851,25 @@ nav {
     font-size: 1.8rem;
   }
   
+  .footer-logo h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .page-header-content h1 {
+    font-size: 1.8rem;
+  }
+
   .footer-logo h2 {
     font-size: 1.8rem;
   }

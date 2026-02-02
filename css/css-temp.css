@@ -1640,72 +1640,6 @@ input.form-control {
     }
 }
 
-@media (max-width: 992px) {
-    .hero h1 {
-        font-size: 2.8rem
-    }
-
-    .section-title h2 {
-        font-size: 2.2rem
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: var(--darker-bg);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: left 0.5s ease
-    }
-
-    .nav-links.active {
-        left: 0
-    }
-
-    .nav-links li {
-        margin: 20px 0
-    }
-
-    .hamburger {
-        display: block
-    }
-
-    .hero h1 {
-        font-size: 2.5rem
-    }
-
-    .hero p {
-        font-size: 1.1rem
-    }
-
-    .section-title h2 {
-        font-size: 2rem
-    }
-
-    .matrix-animation {
-        display: none
-    }
-}
-
-@media (max-width: 576px) {
-    .hero h1 {
-        font-size: 2.2rem
-    }
-
-    .section-title h2 {
-        font-size: 1.8rem
-    }
-
-    .service-card, .portfolio-item, .contact-form {
-        padding: 20px
-    }
-}
 
 .fade-in {
     animation: fadeIn 1s ease forwards;
@@ -2696,6 +2630,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center
+
 }
 
 .nav-links {
@@ -3274,89 +3209,7 @@ nav {
     }
 }
 
-@media (max-width: 992px) {
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 250px;
-        height: calc(100vh - 70px);
-        background-color: var(--darker-bg);
-        flex-direction: column;
-        align-items: center;
-        padding-top: 30px;
-        transition: right 0.3s ease;
-        box-shadow: -5px 0 15px rgb(0 0 0 / .2);
-        z-index: 999
-    }
 
-    .nav-links.active {
-        right: 0
-    }
-
-    .nav-links li {
-        margin: 15px 0
-    }
-
-    .hamburger {
-        display: block
-    }
-
-    .hamburger.active i::before {
-        content: "\f00d"
-    }
-
-    .footer-content {
-        flex-direction: column
-    }
-
-    .page-header-content h1 {
-        font-size: 2.5rem
-    }
-
-    .section-title h2 {
-        font-size: 2rem
-    }
-}
-
-@media (max-width: 768px) {
-    .page-header {
-        padding: 120px 0 60px
-    }
-
-    .page-header-content h1 {
-        font-size: 2rem
-    }
-
-    .page-header-content p {
-        font-size: 1rem
-    }
-
-    .section-title h2 {
-        font-size: 1.8rem
-    }
-}
-
-@media (max-width: 576px) {
-    .container {
-        width: 95%;
-        padding: 0 10px;
-        content-visibility: auto;
-        contain-intrinsic-size: 300px;
-    }
-
-    .logo h1 {
-        font-size: 1.5rem
-    }
-
-    .page-header-content h1 {
-        font-size: 1.8rem
-    }
-
-    .footer-logo h2 {
-        font-size: 1.8rem
-    }
-}
 
 /*!* استایل لینک‌های فوتر *!*/
 
@@ -3466,4 +3319,373 @@ h1.h1-seo {
     left: 800px;
     margin: 0;
     pointer-events: none;
+}
+
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.8rem
+    }
+
+    .section-title h2 {
+        font-size: 2.2rem
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 250px;
+        height: calc(100vh - 70px);
+        background-color: var(--darker-bg);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgb(0 0 0 / .2);
+        z-index: 999
+    }
+
+    .nav-links.active {
+        right: 0
+    }
+
+    .nav-links li {
+        margin: 15px 0
+    }
+
+    .hamburger {
+        display: block
+    }
+
+    .hamburger.active i::before {
+        content: "\f00d"
+    }
+
+    .footer-content {
+        flex-direction: column
+    }
+
+    .page-header-content h1 {
+        font-size: 2.5rem
+    }
+
+    .section-title h2 {
+        font-size: 2rem
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 60%;
+        height: calc(100vh - 70px);
+        background-color: var(--darker-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.5s ease
+    }
+
+    .nav-links.active {
+        left: 0
+    }
+
+    .nav-links li {
+        margin: 20px 0
+    }
+
+    .hamburger {
+        display: block
+    }
+
+    .hero h1 {
+        font-size: 2.5rem
+    }
+
+    .hero p {
+        font-size: 1.1rem
+    }
+
+    .section-title h2 {
+        font-size: 2rem
+    }
+
+    .matrix-animation {
+        display: none
+    }
+    .page-header {
+        padding: 120px 0 60px
+    }
+
+    .page-header-content h1 {
+        font-size: 2rem
+    }
+
+    .page-header-content p {
+        font-size: 1rem
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem
+    }
+    .cta-button, .cta-button2 {
+        font-size: 0.8rem !important;
+        align-content: center;
+    }
+
+
+}
+
+@media (max-width: 300px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+        content-visibility: auto;
+        contain-intrinsic-size: 300px;
+    }
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 70%;
+        height: calc(100vh - 70px);
+        background-color: var(--darker-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.5s ease
+    }
+
+    .nav-links.active {
+        left: 0
+    }
+
+    .nav-links li {
+        margin: 20px 0
+    }
+
+    .hamburger {
+        display: block
+    }
+
+
+    .logo h1 {
+        font-size: 1.5rem
+    }
+
+    .page-header-content h1 {
+        font-size: 1.8rem
+    }
+
+    .footer-logo h2 {
+        font-size: 1.8rem
+    }
+
+    .hero h1 {
+        font-size: 2.2rem
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem
+    }
+
+    .service-card, .portfolio-item, .contact-form {
+        padding: 20px
+    }
+}
+
+/* Terminal Responsive Styles */
+
+@media (max-width: 450px) {
+    .terminal {
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        overflow-x: auto;
+        max-width: 100vw;
+        margin-left: -10px;
+        margin-right: -10px;
+        width: calc(100% + 20px);
+    }
+
+    .terminal::before {
+        height: 22px;
+    }
+
+    .terminal-header {
+        height: 22px;
+        top: -12px;
+        font-size: 50px;
+    }
+
+    .terminal-buttons {
+        left: 10px;
+    }
+
+    .terminal-button {
+        width: 7px;
+        height: 7px;
+        margin-right: 4px;
+    }
+
+    .terminal-title {
+        font-size: 0.7rem;
+        padding: 0 5px;
+    }
+
+    .terminal-title-aboutme {
+        font-size: 16px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .terminal-content {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    .terminal-line {
+        margin-bottom: 6px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .terminal-prompt {
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 13px;
+        display: inline-block;
+    }
+
+    .terminal-cmd {
+        font-size: 14px;
+        width: 100%;
+        word-break: break-word;
+    }
+
+    .terminal-text,
+    .terminal-text-white {
+        font-size: 14px;
+        width: 100%;
+        word-break: break-word;
+    }
+
+    .terminal-list-item {
+        font-size: 14px;
+    }
+
+    .terminal-description {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 400px) {
+    .terminal {
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .terminal-header {
+        font-size: 20px;
+        height: 20px;
+        top: -30px;
+    }
+
+    .terminal-title-aboutme {
+        font-size: 14px;
+    }
+
+    .terminal-content {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .terminal-cmd {
+        font-size: 16px;
+    }
+
+    .terminal-text,
+    .terminal-text-white {
+        font-size: 16px;
+    }
+
+    .terminal-prompt {
+        font-size: 12px;
+        min-width: 18px;
+    }
+}
+
+/* برای صفحات عمودی کوچک */
+@media (max-width: 350px) {
+    .terminal {
+        padding: 8px;
+    }
+
+    .terminal-content {
+        font-size: 12px;
+    }
+
+    .terminal-cmd {
+        font-size: 12px;
+    }
+
+    .terminal-title-aboutme {
+        font-size: 13px;
+    }
+}
+
+/* بهبود اسکرول در موبایل */
+.terminal {
+    -webkit-overflow-scrolling: touch; /* اسکرول نرم در iOS */
+    scrollbar-width: thin; /* اسکرول‌بار باریک در فایرفاکس */
+    scrollbar-color: var(--accent-green) rgba(0, 0, 0, 0.5);
+}
+
+.terminal::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.terminal::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.terminal::-webkit-scrollbar-thumb {
+    background-color: var(--accent-green);
+    border-radius: 3px;
+}
+
+/* جلوگیری از overflow در خطوط */
+.terminal-line {
+    max-width: 100%;
+}
+
+/* قابلیت کپی‌پیست در موبایل */
+@media (max-width: 768px) {
+    .terminal {
+        user-select: text;
+        -webkit-user-select: text;
+    }
+}
+
+/* بهبود ظاهر در حالت landscape موبایل */
+@media (max-width: 992px) and (orientation: landscape) {
+    .terminal {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    .terminal-content {
+        font-size: 15px;
+    }
+
+    .terminal-line {
+        flex-wrap: nowrap;
+    }
 }

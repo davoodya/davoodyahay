@@ -1,13 +1,6 @@
 Sitemap: https://davoodya.ir/sitemap.xml
 
-# Allow all web crawlers to access all content
 User-agent: *
 Allow: /
-
-
-# Prevent crawling of admin or private areas
-User-agent: *
 Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
 

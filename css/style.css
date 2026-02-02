@@ -83,8 +83,23 @@ nav {
 }
 
 .nav-links {
+  position: fixed;
+  top: 70px;           /* فاصله از هدر */
+  left: -100%;         /* مخفی سمت چپ */
+  width: 100%;         /* عرض کامل */
+  height: calc(100vh - 70px);
+  background-color: var(--darker-bg);
   display: flex;
-  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 30px;
+  transition: left 0.3s ease;
+  z-index: 9999;
+}
+/* وقتی منو باز شد */
+.nav-links.active {
+  left: 0;
 }
 
 .nav-links li {
@@ -121,8 +136,9 @@ nav {
 }
 
 .hamburger {
-  display: none;
+  display: block;
   cursor: pointer;
+  z-index: 10000;
 }
 
 /* Hero Section */
@@ -1708,21 +1724,48 @@ input.form-control{
   }
 }
 
-@media (max-width: 576px) {
-  .hero h1 {
-    font-size: 2.2rem;
+/* Media Query برای موبایل کوچک (400px تا 576px) */
+@media (max-width: 576px)  {
+  .nav-links {
+    position: fixed;            /* ثابت روی صفحه */
+    top: 70px;                  /* پایین هدر */
+    left: -100%;                /* مخفی سمت چپ */
+    width: 100%;                /* عرض کامل روی موبایل کوچک */
+    height: calc(100vh - 70px);
+    background-color: var(--darker-bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
+    transition: left 0.3s ease;
+    z-index: 9999;
+    display: flex;              /* مطمئن شدن از نمایش flex */
   }
-  
-  .section-title h2 {
-    font-size: 1.8rem;
+
+  .nav-links.active {
+    left: 0;
   }
-  
-  .service-card,
-  .portfolio-item,
-  .contact-form {
-    padding: 20px;
+
+  .nav-links li {
+    margin: 20px 0;
+    width: 90%;                 /* مطمئن شدن از اینکه آیتم‌ها داخل منو هستند */
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 10000;
+    cursor: pointer;
+  }
+
+  /* فونت و اندازه متن‌ها برای موبایل کوچک */
+  .nav-links a {
+    font-size: 1rem;
+    padding: 10px 0;
+    width: 100%;
   }
 }
+
 
 /* Animation Classes */
 .fade-in {
