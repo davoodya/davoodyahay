@@ -3400,7 +3400,67 @@ h1.h1-seo {
         font-size: 2rem
     }
 }
+/* Responsive Styles for menus */
+@media (max-width: 1196px) {
+    .nav-links {
+        margin-right: 15px;
+    }
+    .nav-links a {
+        font-size: 1rem
+    }
+    h1.h1-seo {
+        position: absolute;
+        top: 50px;
+        left: 400px;
+        pointer-events: none;
+    }
 
+    .seo-subtext {
+        position: absolute;
+        top: 50px;
+        left: 400px;
+    }
+}
+@media (max-width: 1136px) {
+    .nav-links {
+        margin-right: 15px;
+    }
+    .nav-links a {
+        font-size: 0.95rem
+    }
+}
+@media (max-width: 1104px) {
+    .nav-links {
+        margin-right: 15px;
+    }
+    .nav-links a {
+        font-size: 0.9rem
+    }
+}
+@media (max-width: 1073px) {
+    .nav-links {
+        margin-right: 15px;
+    }
+    .nav-links a {
+        font-size: 0.85rem
+    }
+}
+@media (max-width: 1041px) {
+    .nav-links {
+        margin-right: 15px;
+    }
+    .nav-links a {
+        font-size: 0.80rem
+    }
+}
+@media (max-width: 1010px) {
+    .nav-links {
+        margin-right: 15px;
+    }
+    .nav-links a {
+        font-size: 0.77rem
+    }
+}
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
@@ -3520,7 +3580,78 @@ h1.h1-seo {
     }
 }
 
+
 /* Terminal Responsive Styles */
+@media (max-width: 605px) {
+    .terminal {
+        background: rgb(0 0 0 / .9);
+        border: 1px solid var(--accent-green);
+        box-shadow: 0 0 15px rgb(0 255 65 / .3);
+        border-radius: 10px;
+        padding: 20px;
+        font-family: var(--terminal-font);
+        margin-bottom: 30px;
+        position: relative;
+        margin-top: 30px;
+        overflow: hidden;
+        overflow-y: auto;
+        backdrop-filter: blur(2px)
+    }
+
+}
+@media (max-width: 570px) {
+    .terminal {
+        background: rgb(0 0 0 / .9);
+        border: 1px solid var(--accent-green);
+        box-shadow: 0 0 15px rgb(0 255 65 / .3);
+        border-radius: 10px;
+        padding: 20px;
+        font-family: var(--terminal-font);
+        margin-bottom: 40px;
+        position: relative;
+        margin-top: 70px;
+        overflow: hidden;
+        overflow-y: auto;
+        backdrop-filter: blur(2px)
+    }
+
+}
+@media (max-width: 516px) {
+    .terminal {
+        background: rgb(0 0 0 / .9);
+        border: 1px solid var(--accent-green);
+        box-shadow: 0 0 15px rgb(0 255 65 / .3);
+        border-radius: 10px;
+        padding: 20px;
+        font-family: var(--terminal-font);
+        margin-bottom: 30px;
+        position: relative;
+        margin-top: 95px;
+        overflow: hidden;
+        overflow-y: auto;
+        backdrop-filter: blur(2px)
+    }
+
+}
+
+@media (max-width: 480px) {
+    .terminal {
+        background: rgb(0 0 0 / .9);
+        border: 1px solid var(--accent-green);
+        box-shadow: 0 0 15px rgb(0 255 65 / .3);
+        border-radius: 10px;
+        padding: 20px;
+        font-family: var(--terminal-font);
+        margin-bottom: 30px;
+        position: relative;
+        margin-top: 120px;
+        overflow: hidden;
+        overflow-y: auto;
+        backdrop-filter: blur(2px)
+    }
+
+}
+
 
 @media (max-width: 420px) {
     .terminal {
@@ -3798,23 +3929,11 @@ h1.h1-seo {
         animation: logoAnimation-smaller 5s infinite ease-in-out
     }
 }
+
 @media (max-width: 768px) {
     .matrix-animation {
         position: absolute;
-        top: 90px;
-        right: 550px;
-        width: 25%;
-        height: 25%;
-        z-index: 100;
-    }
-    #matrix-canvas {
-        animation: logoAnimation-smaller 5s infinite ease-in-out
-    }
-}
-@media (max-width: 768px) {
-    .matrix-animation {
-        position: absolute;
-        top: 110px;
+        top: 95px;
         right: 550px;
         width: 22%;
         height: 22%;
@@ -3822,6 +3941,18 @@ h1.h1-seo {
     }
     #matrix-canvas {
         animation: logoAnimation-smaller 5s infinite ease-in-out
+    }
+    h1.h1-seo {
+        position: absolute;
+        top: 50px;
+        left: 200px;
+        pointer-events: none;
+    }
+
+    .seo-subtext {
+        position: absolute;
+        top: 50px;
+        left: 200px;
     }
 }
 @media (max-width: 715px) {
@@ -3868,7 +3999,7 @@ h1.h1-seo {
 @media (max-width: 633px) {
     .matrix-animation {
         position: absolute;
-        top: 90px;
+        top: 75px;
         right: 470px;
         width: 22%;
         height: 22%;
@@ -3895,7 +4026,7 @@ h1.h1-seo {
 @media (max-width: 580px) {
     .matrix-animation {
         position: absolute;
-        top: 70px;
+        top: 80px;
         right: 420px;
         width: 22%;
         height: 22%;
@@ -3908,7 +4039,7 @@ h1.h1-seo {
 @media (max-width: 538px) {
     .matrix-animation {
         position: absolute;
-        top: 50px;
+        top: 70px;
         right: 400px;
         width: 20%;
         height: 20%;
@@ -3921,8 +4052,8 @@ h1.h1-seo {
 @media (max-width: 538px) {
     .matrix-animation {
         position: absolute;
-        top: 80px;
-        right: 400px;
+        top: 100px;
+        right: 410px;
         width: 15%;
         height: 15%;
         z-index: 100;
@@ -3934,7 +4065,7 @@ h1.h1-seo {
 @media (max-width: 485px) {
     .matrix-animation {
         position: absolute;
-        top: 70px;
+        top: 90px;
         right: 380px;
         width: 15%;
         height: 15%;
@@ -3947,7 +4078,7 @@ h1.h1-seo {
 @media (max-width: 445px) {
     .matrix-animation {
         position: absolute;
-        top: 70px;
+        top: 90px;
         right: 360px !important;
         width: 15%;
         height: 15%;
@@ -3960,7 +4091,7 @@ h1.h1-seo {
 @media (max-width: 430px) {
     .matrix-animation {
         position: absolute;
-        top: 70px;
+        top: 90px;
         right: 355px !important;
         width: 12% !important;
         height: 12% !important;
@@ -3973,7 +4104,7 @@ h1.h1-seo {
 @media (max-width: 421px) {
     .matrix-animation {
         position: absolute;
-        top: 80px;
+        top: 120px;
         right: 340px !important;
         width: 12% !important;
         height: 12% !important;
@@ -3989,3 +4120,4 @@ h1.h1-seo {
     }
 
 }
+
