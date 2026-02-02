@@ -1,0 +1,2 @@
+HTML: https://www.minifier.org/html-minifier
+CSS & JS: https://www.minifier.org/
