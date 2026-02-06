@@ -24,6 +24,247 @@
     <!-- Favicon -->
     <link rel="icon" href="../../../images/favicon.png" type="image/x-icon">
 
+    <!-- ========================================================= -->
+    <!-- ================ RICH RESULT SCHEMAS ==================== -->
+    <!-- ========================================================= -->
+
+    <!-- BlogPosting Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "@id": "https://davoodya.ir/pages/articles/hacking/CrackZIPFiles1.html#article",
+            "headline": "کرک فایلهای فشرده ZIP با ابزار BKCrack - حمله Plain Text Attack",
+            "alternativeHeadline": "آموزش کامل شکستن رمز فایل‌های ZIP با الگوریتم ZipCrypto",
+            "description": "در این مقاله آموزش کامل کرک فایل‌های فشرده ZIP که از الگوریتم قدیمی ZipCrypto استفاده می‌کنند را با ابزار BKCrack و تکنیک Known Plain Text Attack یاد می‌گیریم. شامل مثال‌های عملی گام به گام.",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://davoodya.ir/images/articles/CrackZipFiles/CrackZipFiles1_1.png",
+                "width": 1200,
+                "height": 630
+            },
+            "author": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person",
+                "name": "داوود یاحی",
+                "alternateName": "Davood Yahay"
+            },
+            "publisher": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person",
+                "name": "داوود یاحی",
+                "alternateName": "Davood Yahay"
+            },
+            "datePublished": "2025-07-15",
+            "dateModified": "2026-02-06",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://davoodya.ir/pages/articles/hacking/CrackZIPFiles1.html"
+            },
+            "keywords": [
+                "BKCrack",
+                "ZIP Cracking",
+                "ZipCrypto",
+                "Plain Text Attack",
+                "Password Cracking",
+                "Penetration Testing",
+                "Ethical Hacking",
+                "کرک فایل ZIP",
+                "تست نفوذ",
+                "امنیت سایبری"
+            ],
+            "articleSection": "تست نفوذ و امنیت سایبری",
+            "inLanguage": "fa",
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "BKCrack Tool",
+                    "description": "ابزار کرک فایل‌های ZIP با الگوریتم ZipCrypto"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Plain Text Attack",
+                    "description": "حمله متن معمولی برای شکستن رمز"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ZipCrypto Algorithm",
+                    "description": "الگوریتم قدیمی رمزنگاری ZIP"
+                }
+            ],
+            "wordCount": 2000,
+            "commentCount": 0,
+            "url": "https://davoodya.ir/pages/articles/hacking/CrackZIPFiles1.html"
+        }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://davoodya.ir/pages/articles/hacking/CrackZIPFiles1.html",
+            "url": "https://davoodya.ir/pages/articles/hacking/CrackZIPFiles1.html",
+            "name": "کرک فایلهای فشرده ZIP با BKCrack | داوود یاحی",
+            "description": "آموزش گام به گام کرک فایل‌های ZIP با الگوریتم ZipCrypto به کمک ابزار BKCrack و تکنیک Plain Text Attack",
+            "inLanguage": "fa",
+            "isPartOf": {
+                "@type": "WebSite",
+                "@id": "https://davoodya.ir/#website",
+                "url": "https://davoodya.ir/"
+            },
+            "about": {
+                "@type": "BlogPosting",
+                "@id": "https://davoodya.ir/pages/articles/hacking/CrackZIPFiles1.html#article"
+            },
+            "author": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "publisher": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "datePublished": "2025-07-15",
+            "dateModified": "2026-02-06"
+        }
+    </script>
+
+    <!-- HowTo Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://davoodya.ir/pages/articles/hacking/CrackZIPFiles1.html#howto",
+            "name": "How to Crack ZIP Files with BKCrack Using Plain Text Attack",
+            "description": "A comprehensive step-by-step guide to cracking password-protected ZIP files that use the old ZipCrypto encryption algorithm with BKCrack tool and Known Plain Text Attack technique.",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://davoodya.ir/images/articles/CrackZipFiles/CrackZipFiles1_1.png"
+            },
+            "totalTime": "PT30M",
+            "supply": [
+                {
+                    "@type": "HowToSupply",
+                    "name": "Target ZIP file encrypted with ZipCrypto"
+                },
+                {
+                    "@type": "HowToSupply",
+                    "name": "Plain text file containing known content from encrypted file"
+                },
+                {
+                    "@type": "HowToSupply",
+                    "name": "Windows or Linux operating system"
+                }
+            ],
+            "tool": [
+                {
+                    "@type": "HowToTool",
+                    "name": "BKCrack"
+                },
+                {
+                    "@type": "HowToTool",
+                    "name": "7-Zip (for creating vulnerable archives)"
+                },
+                {
+                    "@type": "HowToTool",
+                    "name": "Command Line Terminal"
+                }
+            ],
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "name": "Download BKCrack tool",
+                    "text": "Download BKCrack from GitHub releases page (https://github.com/kimci86/bkcrack/releases) based on your operating system.",
+                    "url": "https://github.com/kimci86/bkcrack/releases"
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "name": "List archive contents",
+                    "text": "Use command 'bkcrack -L test.zip' to list all files inside the encrypted ZIP archive and identify the target file you want to crack.",
+                    "itemListElement": [
+                        {
+                            "@type": "HowToDirection",
+                            "text": "Open terminal/CMD in the BKCrack directory"
+                        },
+                        {
+                            "@type": "HowToDirection",
+                            "text": "Run: bkcrack -L test.zip"
+                        }
+                    ]
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "name": "Create plain text file",
+                    "text": "Create a file (pl.txt) containing at least 12 bytes of known plain text content that exists in the target encrypted file. This is critical for the Plain Text Attack.",
+                    "itemListElement": [
+                        {
+                            "@type": "HowToDirection",
+                            "text": "Identify known content in target file (e.g., file headers, common text)"
+                        },
+                        {
+                            "@type": "HowToDirection",
+                            "text": "Create pl.txt with this content"
+                        }
+                    ]
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "name": "Get Recovery Key",
+                    "text": "Execute 'bkcrack -C test.zip -c test.txt -p pl.txt' to perform brute-force attack and obtain the internal encryption keys. This may take several minutes.",
+                    "itemListElement": [
+                        {
+                            "@type": "HowToDirection",
+                            "text": "Run: bkcrack -C test.zip -c test.txt -p pl.txt"
+                        },
+                        {
+                            "@type": "HowToDirection",
+                            "text": "Wait for the tool to find the recovery keys (format: key0 key1 key2)"
+                        }
+                    ]
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 5,
+                    "name": "Decrypt target file",
+                    "text": "Use the obtained recovery keys to decrypt the target file: 'bkcrack -C test.zip -c test.txt -k KEY0 KEY1 KEY2 -d decrypt.txt' where KEY0 KEY1 KEY2 are the keys from previous step.",
+                    "itemListElement": [
+                        {
+                            "@type": "HowToDirection",
+                            "text": "Run: bkcrack -C test.zip -c test.txt -k f04945f4 3018d661 edc704a6 -d decrypt.txt"
+                        },
+                        {
+                            "@type": "HowToDirection",
+                            "text": "The decrypted file will be saved as decrypt.txt"
+                        }
+                    ]
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 6,
+                    "name": "Create new unlocked archive (Optional)",
+                    "text": "Create a new ZIP archive without password: 'bkcrack -C test.zip -k KEY0 KEY1 KEY2 -D unlocked.zip' or with a new password: 'bkcrack -C test.zip -k KEY0 KEY1 KEY2 -U unlocked.zip newpassword'",
+                    "itemListElement": [
+                        {
+                            "@type": "HowToDirection",
+                            "text": "Without password: bkcrack -C test.zip -k KEYS -D unlocked.zip"
+                        },
+                        {
+                            "@type": "HowToDirection",
+                            "text": "With password: bkcrack -C test.zip -k KEYS -U unlocked.zip newpass"
+                        }
+                    ]
+                }
+            ],
+            "performTime": "PT30M",
+            "prepTime": "PT5M"
+        }
+    </script>
+
     <!-- BreadcrumbList -->
     <script type="application/ld+json">
         {

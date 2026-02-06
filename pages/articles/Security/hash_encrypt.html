@@ -24,6 +24,178 @@
     <!-- Favicon -->
     <link rel="icon" href="../../../images/favicon.png" type="image/x-icon">
 
+    <!-- ========================================================= -->
+    <!-- ================ RICH RESULT SCHEMAS ==================== -->
+    <!-- ========================================================= -->
+
+    <!-- BlogPosting Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "@id": "https://davoodya.ir/pages/articles/Security/hash_encrypt.html#article",
+            "headline": "مفاهیم Encoding, Encryption, Hashing, Obfuscation و تفاوت‌های آنها",
+            "alternativeHeadline": "آموزش کامل تفاوت Encoding, Encryption, Hashing و Obfuscation",
+            "description": "در این مقاله به بررسی کامل مفاهیم Encoding، Encryption، Hashing و Obfuscation می‌پردازیم و تفاوت‌های اساسی بین این روش‌های امنیتی و کدگذاری را توضیح می‌دهیم.",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://davoodya.ir/images/articles/hash_encrypt/hash_enc3.jpg",
+                "width": 1200,
+                "height": 630
+            },
+            "author": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person",
+                "name": "داوود یاحی",
+                "alternateName": "Davood Yahay"
+            },
+            "publisher": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person",
+                "name": "داوود یاحی",
+                "alternateName": "Davood Yahay"
+            },
+            "datePublished": "2025-06-12",
+            "dateModified": "2026-02-06",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://davoodya.ir/pages/articles/Security/hash_encrypt.html"
+            },
+            "keywords": [
+                "Encoding",
+                "Encryption",
+                "Hashing",
+                "Obfuscation",
+                "رمزنگاری",
+                "کدگذاری",
+                "امنیت سایبری",
+                "Base64",
+                "AES",
+                "RSA",
+                "SHA256",
+                "MD5"
+            ],
+            "articleSection": "امنیت سایبری و برنامه‌نویسی",
+            "inLanguage": "fa",
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "Encryption",
+                    "description": "رمزنگاری داده‌ها برای حفظ امنیت"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Hashing",
+                    "description": "تبدیل داده به یک رشته ثابت برای یکپارچگی داده"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Encoding",
+                    "description": "تبدیل فرمت داده برای سازگاری"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Obfuscation",
+                    "description": "مبهم‌سازی کد برای محافظت از سورس"
+                }
+            ],
+            "wordCount": 1200,
+            "commentCount": 0,
+            "url": "https://davoodya.ir/pages/articles/Security/hash_encrypt.html"
+        }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://davoodya.ir/pages/articles/Security/hash_encrypt.html",
+            "url": "https://davoodya.ir/pages/articles/Security/hash_encrypt.html",
+            "name": "مفاهیم Encoding, Encryption, Hashing, Obfuscation | داوود یاحی",
+            "description": "آموزش کامل و کاربردی تفاوت Encoding، Encryption، Hashing و Obfuscation در امنیت سایبری و برنامه‌نویسی",
+            "inLanguage": "fa",
+            "isPartOf": {
+                "@type": "WebSite",
+                "@id": "https://davoodya.ir/#website",
+                "url": "https://davoodya.ir/"
+            },
+            "about": {
+                "@type": "BlogPosting",
+                "@id": "https://davoodya.ir/pages/articles/Security/hash_encrypt.html#article"
+            },
+            "author": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "publisher": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "datePublished": "2025-06-12",
+            "dateModified": "2026-02-06"
+        }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://davoodya.ir/pages/articles/Security/hash_encrypt.html#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Encoding چیست؟",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Encoding فرآیند تبدیل داده از یک فرمت به فرمت دیگر است. هدف اصلی Encoding این است که داده را به فرمی تبدیل کنیم که توسط اکثر سیستم‌ها قابل خواندن باشد. این روش برای امن کردن داده نیست. مثال‌های آن عبارتند از: ASCII، BASE64، UNICODE. برای بازگرداندن داده Encode شده به حالت اولیه، باید آن را Decode کنیم."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Encryption چیست؟",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Encryption یک تکنیک رمزنگاری است که داده را با استفاده از یک الگوریتم و کلید مخفی (cipher) به صورتی تبدیل می‌کند که فقط افراد مجاز بتوانند به آن دسترسی پیدا کنند. دو نوع اصلی Encryption وجود دارد: symmetric encryption (رمزنگاری متقارن با یک کلید مانند AES) و asymmetric encryption (رمزنگاری نامتقارن با دو کلید Public و Private مانند RSA). برای بازگرداندن داده رمزشده به حالت اولیه، باید آن را Decrypt کنیم."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Hashing چیست؟",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Hashing فرآیند تبدیل داده به یک رشته ثابت با طول مشخص (hash) است که با استفاده از یک تابع hash انجام می‌شود. ویژگی مهم hashing این است که یک‌طرفه است و نمی‌توان hash را به داده اصلی بازگرداند. از hashing برای اطمینان از یکپارچگی داده (Data Integrity)، ذخیره رمز عبور، و تأیید صحت فایل‌ها استفاده می‌شود. الگوریتم‌های معروف: MD5، SHA-1، SHA-256."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Obfuscation چیست؟",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Obfuscation فرآیند مبهم‌سازی کد یا داده است به گونه‌ای که فهم آن دشوار شود و از کپی یا سوءاستفاده غیرمجاز جلوگیری کند. معمولاً برای محافظت از سورس کد نرم‌افزارها در برابر مهندسی معکوس استفاده می‌شود. Obfuscation به اندازه Encryption قوی نیست اما می‌تواند به عنوان یک مانع عمل کند و بازگشت به حالت اصلی در بیشتر موارد امکان‌پذیر است."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "تفاوت Hashing و Encryption چیست؟",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "تفاوت اصلی این است که Encryption یک فرآیند دوطرفه است (می‌توان داده را رمز و رمزگشایی کرد) در حالی که Hashing یک‌طرفه است (نمی‌توان hash را به داده اصلی بازگرداند). Encryption برای محرمانگی داده استفاده می‌شود در حالی که Hashing برای یکپارچگی و تأیید صحت داده به کار می‌رود. در Encryption نیاز به کلید برای رمزگشایی داریم اما در Hashing کلیدی وجود ندارد."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "چه زمانی از Encoding استفاده کنیم؟",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "از Encoding زمانی استفاده می‌کنیم که می‌خواهیم داده را به فرمتی تبدیل کنیم که توسط سیستم‌های مختلف قابل پردازش باشد. مثال‌ها: تبدیل متن به Base64 برای ارسال در URL، کدگذاری فایل‌های صوتی و تصویری برای کاهش حجم (مثل MP3، JPEG)، و تبدیل کاراکترها به UTF-8 برای نمایش درست در وب."
+                    }
+                }
+            ]
+        }
+    </script>
+
     <!-- BreadcrumbList -->
     <script type="application/ld+json">
         {

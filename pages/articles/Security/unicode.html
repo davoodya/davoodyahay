@@ -21,6 +21,163 @@
     
     <title>کد گذاری UNICODE چیست؟</title>
 
+    <!-- ========================================================= -->
+    <!-- ================ RICH RESULT SCHEMAS ==================== -->
+    <!-- ========================================================= -->
+
+    <!-- BlogPosting Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "@id": "https://davoodya.ir/pages/articles/Security/unicode.html#article",
+            "headline": "کدگذاری Unicode چیست؟ مبانی و مفاهیم یونیکد",
+            "alternativeHeadline": "آموزش جامع استاندارد Unicode و روش‌های کدگذاری UTF",
+            "description": "در این مقاله به بررسی کامل مجموعه کاراکترهای Unicode، تفاوت با ASCII، و روش‌های کدگذاری UTF-8، UTF-16 و UTF-32 می‌پردازیم. Unicode استاندارد جهانی برای کدگذاری تمام زبان‌ها و نمادهای دنیا است.",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://davoodya.ir/images/articles/unicode_ascii/Unicode.png",
+                "width": 1200,
+                "height": 630
+            },
+            "author": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person",
+                "name": "داوود یاحی",
+                "alternateName": "Davood Yahay"
+            },
+            "publisher": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person",
+                "name": "داوود یاحی",
+                "alternateName": "Davood Yahay"
+            },
+            "datePublished": "2025-07-13",
+            "dateModified": "2026-02-06",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://davoodya.ir/pages/articles/Security/unicode.html"
+            },
+            "keywords": [
+                "Unicode",
+                "UTF-8",
+                "UTF-16",
+                "UTF-32",
+                "کدگذاری کاراکتر",
+                "Point Code",
+                "Character Encoding",
+                "یونیکد",
+                "استاندارد Unicode",
+                "برنامه‌نویسی"
+            ],
+            "articleSection": "امنیت و برنامه‌نویسی",
+            "inLanguage": "fa",
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "Unicode",
+                    "description": "استاندارد جهانی کدگذاری کاراکتر"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "UTF-8",
+                    "description": "متداول‌ترین روش کدگذاری Unicode"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Character Encoding",
+                    "description": "کدگذاری کاراکترها در کامپیوتر"
+                }
+            ],
+            "wordCount": 800,
+            "commentCount": 0,
+            "url": "https://davoodya.ir/pages/articles/Security/unicode.html"
+        }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://davoodya.ir/pages/articles/Security/unicode.html",
+            "url": "https://davoodya.ir/pages/articles/Security/unicode.html",
+            "name": "کدگذاری Unicode چیست؟ | داوود یاحی",
+            "description": "آموزش کامل استاندارد Unicode، Point Code، و روش‌های کدگذاری UTF-8، UTF-16 و UTF-32",
+            "inLanguage": "fa",
+            "isPartOf": {
+                "@type": "WebSite",
+                "@id": "https://davoodya.ir/#website",
+                "url": "https://davoodya.ir/"
+            },
+            "about": {
+                "@type": "BlogPosting",
+                "@id": "https://davoodya.ir/pages/articles/Security/unicode.html#article"
+            },
+            "author": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "publisher": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "datePublished": "2025-07-13",
+            "dateModified": "2026-02-06"
+        }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://davoodya.ir/pages/articles/Security/unicode.html#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Unicode چیست؟",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Unicode یک استاندارد جهانی برای کدگذاری کاراکترها، اعداد و نمادهای همه زبان‌های دنیا است. این استاندارد مجموعه‌ای از اعداد منحصر به فرد (Point Code) به هر کاراکتر اختصاص می‌دهد. Unicode در سال ۱۹۹۱ با ادغام دو پروژه ISO-10646 و کنسرسیوم Unicode ایجاد شد و هدف آن رفع محدودیت‌های ASCII و ایجاد استاندارد واحد برای تمام زبان‌ها بود."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Point Code در Unicode چیست؟",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Point Code (کد نقطه) یک عدد منحصر به فرد است که Unicode به هر کاراکتر اختصاص می‌دهد. به عنوان مثال U+0041 نشان‌دهنده حرف A است. این اعداد سپس توسط روش‌های کدگذاری مانند UTF-8، UTF-16 یا UTF-32 به باینری تبدیل می‌شوند تا بتوان آنها را در کامپیوتر ذخیره کرد."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "انواع روش‌های کدگذاری Unicode کدامند؟",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Unicode سه نوع روش کدگذاری اصلی دارد: 1) UTF-8: کدگذاری متغیر 1 تا 4 بایتی، متداول‌ترین روش در وب. 2) UTF-16: کدگذاری 2 یا 4 بایتی، مناسب برای زبان‌های آسیایی. 3) UTF-32: کدگذاری ثابت 4 بایتی، ساده‌ترین اما پرحجم‌ترین روش. UTF مخفف Unicode Transfer Format است."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "چرا UTF-8 محبوب‌ترین روش کدگذاری است؟",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "UTF-8 به دلایل زیر محبوب‌ترین روش است: 1) سازگاری کامل با ASCII (کاراکترهای ASCII در UTF-8 همان کد ASCII را دارند). 2) استفاده بهینه از حافظه برای زبان‌های لاتین. 3) پشتیبانی از تمام کاراکترهای Unicode. 4) استاندارد غالب در وب و ایمیل. 5) عدم نیاز به Byte Order Mark (BOM)."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "تفاوت Unicode با ASCII چیست؟",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "ASCII یک استاندارد محدود با 128 کاراکتر (یا 256 در نسخه توسعه یافته) است که عمدتاً برای زبان انگلیسی طراحی شده، در حالی که Unicode می‌تواند میلیون‌ها کاراکتر از تمام زبان‌ها را پوشش دهد. Unicode شامل ASCII است و 128 کاراکتر اول Unicode دقیقاً همان ASCII هستند. Unicode برای حل مشکل عدم سازگاری بین زبان‌های مختلف ایجاد شد."
+                    }
+                }
+            ]
+        }
+    </script>
+
     <!-- BreadcrumbList -->
     <script type="application/ld+json">
         {
