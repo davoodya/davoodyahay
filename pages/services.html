@@ -733,10 +733,236 @@
     }
     </script>
 
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://davoodya.ir/#website",
+        "url": "https://davoodya.ir/",
+        "name": "Davood Yahay – Cybersecurity & Penetration Testing Specialist",
+        "alternateName": ["داوود یاحی", "DavoodSec"],
+        "description": "Official personal website of Davood Yahay, cybersecurity specialist.",
+        "publisher": {"@type": "Person", "@id": "https://davoodya.ir/#person"},
+        "inLanguage": ["fa", "en"]
+    }
+    </script>
+
+    <!-- Person Schema with Services -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://davoodya.ir/#person",
+        "name": "داوود یاحی",
+        "alternateName": ["Davood Yahay", "DavoodSec"],
+        "url": "https://davoodya.ir/",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://davoodya.ir/images/davoodyahay.jpg",
+            "caption": "Davood Yahay – Cybersecurity Specialist"
+        },
+        "description": "داوود یاحی متخصص، مشاور و مدرس امنیت سایبری و تست نفوذ با بیش از ده سال تجربه حرفه‌ای.",
+        "jobTitle": [
+            "Cybersecurity Specialist",
+            "Penetration Testing Specialist",
+            "Offensive Security Tool Developer",
+            "Cybersecurity Instructor",
+            "Red Team"
+        ],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Cybersecurity and Penetration Testing Specialist",
+            "occupationLocation": {"@type": "Country", "name": "Iran"}
+        },
+        "makesOffer": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "ساخت و توسعه ابزارهای امنیتی",
+                    "description": "طراحی و توسعه ابزارهای امنیتی سفارشی متناسب با نیازهای سازمان‌ها شامل ابزارهای تست نفوذ، اسکنرهای آسیب‌پذیری، IDS/IPS و ابزارهای مانیتورینگ امنیتی",
+                    "serviceType": "Security Tool Development",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran", "خاورمیانه"],
+                    "serviceOutput": "ابزارهای امنیتی سفارشی + مستندات فنی + آموزش"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "راه‌اندازی شبکه‌های کامپیوتری",
+                    "description": "پیاده‌سازی و راه‌اندازی انواع شبکه‌های کامپیوتری در مقیاس‌های مختلف از LAN تا WAN و شبکه‌های رادیویی",
+                    "serviceType": "Network Setup and Configuration",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran"]
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "راه‌اندازی سیستم‌های فایروال و IDS/IPS",
+                    "description": "نصب و پیکربندی سیستم‌های فایروال، تشخیص نفوذ (IDS) و پیشگیری از نفوذ (IPS) برای محافظت از شبکه‌ها",
+                    "serviceType": "Firewall and IDS/IPS Setup",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran"]
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "راه‌اندازی شبکه میکروتیک",
+                    "description": "راه‌اندازی حرفه‌ای انواع شبکه بر مبنای میکروتیک شامل RouterOS، SwOS، شبکه‌های بی‌سیم و VPN",
+                    "serviceType": "MikroTik Network Setup",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran"]
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "امن‌سازی (Hardening)",
+                    "description": "امن‌سازی شبکه‌ها، سیستم‌ها و نرم‌افزارها شامل سیستم‌عامل‌ها، سرورها، پایگاه‌های داده و تجهیزات شبکه",
+                    "serviceType": "Security Hardening",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran"]
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "تصحیح امنیتی کدنویسی",
+                    "description": "بررسی و تصحیح امنیتی کدنویسی نرم‌افزارهای منتشر شده شامل تحلیل کد، شناسایی آسیب‌پذیری‌ها و رفع مشکلات امنیتی",
+                    "serviceType": "Secure Code Review",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran", "جهان"]
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "ساخت ربات‌های معامله‌گر",
+                    "description": "طراحی و توسعه ربات‌های معامله‌گر مجهز به هوش مصنوعی برای بازارهای مالی و ارزهای دیجیتال",
+                    "serviceType": "Trading Bot Development",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["جهان", "Global"]
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "ادغام ابزارهای هوش مصنوعی",
+                    "description": "پیاده‌سازی و ادغام ابزارهای هوش مصنوعی شامل NLP، چت‌بات‌ها، بینایی ماشین و الگوریتم‌های یادگیری ماشین",
+                    "serviceType": "AI Integration",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran", "جهان"]
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "تست نفوذ قانونی",
+                    "description": "انجام تست‌های نفوذ قانونی (Black Box, Gray Box, White Box) برای شبکه‌ها، برنامه‌های تحت وب، موبایل و API‌ها",
+                    "serviceType": "Penetration Testing",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran", "خاورمیانه"],
+                    "serviceOutput": "گزارش جامع امنیتی + راهکارهای رفع آسیب‌پذیری + جلسه ارائه"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "مشاوره امنیت سایبری",
+                    "description": "ارائه مشاوره تخصصی در زمینه امنیت سایبری شامل ارزیابی ریسک، تدوین استراتژی‌ها و سیاست‌های امنیتی",
+                    "serviceType": "Cybersecurity Consulting",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran", "جهان"]
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "جرم‌یابی و بازیابی سیستم",
+                    "description": "انجام جرم‌یابی دیجیتال (Digital Forensics) و بازیابی سیستم‌ها پس از حملات سایبری",
+                    "serviceType": "Digital Forensics and Recovery",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran"]
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "تدریس علوم امنیت سایبری",
+                    "description": "آموزش و تدریس علوم امنیت سایبری در تمام سطوح از مبتدی تا پیشرفته",
+                    "serviceType": "TrainingService",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran"],
+                    "audience": {
+                        "@type": "Audience",
+                        "audienceType": "Security Professionals, Students, IT Professionals"
+                    }
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "پیاده‌سازی مجازی‌سازی و دیتاسنتر",
+                    "description": "طراحی، پیاده‌سازی و پیکربندی سیستم‌های مجازی‌سازی (VMware, Hyper-V, KVM) و دیتاسنتر",
+                    "serviceType": "Virtualization and Data Center Setup",
+                    "provider": {"@id": "https://davoodya.ir/#person"},
+                    "areaServed": ["ایران", "Iran"]
+                }
+            }
+        ],
+        "knowsAbout": [
+            "Cybersecurity", "Penetration Testing", "Ethical Hacking", "Network Security",
+            "Security Tool Development", "امنیت سایبری", "تست نفوذ", "شبکه کامپیوتری"
+        ],
+        "sameAs": [
+            "https://github.com/davoodya",
+            "https://linkedin.com/in/davoodyahay",
+            "https://x.com/davood_yahay",
+            "https://instagram.com/davoodsec"
+        ],
+        "mainEntityOfPage": {
+            "@type": "ProfilePage",
+            "@id": "https://davoodya.ir/pages/services.html"
+        }
+    }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://davoodya.ir/pages/services.html#webpage",
+        "url": "https://davoodya.ir/pages/services.html",
+        "name": "سرویس ها و تخصص‌ها | داوود یاحی",
+        "description": "خدمات تخصصی امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی توسط داوود یاحی - متخصص با بیش از ده سال تجربه",
+        "inLanguage": "fa-IR",
+        "isPartOf": {"@type": "WebSite", "@id": "https://davoodya.ir/#website"},
+        "about": {"@type": "Thing", "name": "خدمات امنیت سایبری"},
+        "author": {"@id": "https://davoodya.ir/#person"}
+    }
+    </script>
+
     <!-- Custom JS -->
     <script src="../js/main.js"></script>
     <script src="../js/main2.js"></script>
     <script src="../js/services.js"></script>
 </body>
-=======
+
 </html>

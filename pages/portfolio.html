@@ -587,6 +587,196 @@
     }
     </script>
 
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://davoodya.ir/#website",
+        "url": "https://davoodya.ir/",
+        "name": "Davood Yahay – Cybersecurity & Penetration Testing Specialist",
+        "alternateName": [
+            "داوود یاحی",
+            "Davood Yahay Cybersecurity",
+            "DavoodSec",
+            "Davood Yahay Penetration Test"
+        ],
+        "description": "Official personal website of Davood Yahay, cybersecurity and penetration testing specialist, offensive security tools developer, consultant, and instructor.",
+        "publisher": {
+            "@type": "Person",
+            "@id": "https://davoodya.ir/#person"
+        },
+        "inLanguage": ["fa", "en"]
+    }
+    </script>
+
+    <!-- Person & CreativeWork Schema for Portfolio -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://davoodya.ir/#person",
+        "name": "داوود یاحی",
+        "alternateName": ["Davood Yahay", "DavoodSec"],
+        "url": "https://davoodya.ir/",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://davoodya.ir/images/davoodyahay.jpg",
+            "caption": "Davood Yahay – Cybersecurity Specialist"
+        },
+        "description": "داوود یاحی متخصص، مشاور و مدرس امنیت سایبری و تست نفوذ، توسعه‌دهنده ابزارهای امنیت تهاجمی و فریم‌ورک‌های تست نفوذ با بیش از ده سال تجربه حرفه‌ای.",
+        "jobTitle": [
+            "Cybersecurity Specialist",
+            "Penetration Testing Specialist",
+            "Offensive Security Tool Developer",
+            "Cybersecurity Instructor",
+            "Red Team"
+        ],
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Cybersecurity and Penetration Testing Specialist",
+            "description": "Professional specializing in cybersecurity, penetration testing, red teaming, and development of offensive security tools.",
+            "skills": ["Penetration Testing", "Vulnerability Assessment", "Security Tool Development", "Malware Analysis", "Network Security"],
+            "occupationLocation": {
+                "@type": "Country",
+                "name": "Iran"
+            }
+        },
+        "creatorOf": [
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://davoodya.ir/pages/tools/backdoor.html",
+                "name": "Yakuza Undetectable Backdoor",
+                "description": "بک‌دور پیشرفته و غیرقابل تشخیص برای اهداف تست نفوذ قانونی که قابلیت دور زدن آنتی‌ویروس‌ها و سیستم‌های امنیتی را دارد.",
+                "applicationCategory": "SecurityApplication",
+                "operatingSystem": ["Windows", "Linux"],
+                "downloadUrl": "https://github.com/davoodya/YakuzaBackdoor_Undetectable",
+                "license": "MIT License",
+                "programmingLanguage": ["C++", "Assembly"],
+                "creator": {
+                    "@id": "https://davoodya.ir/#person"
+                }
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://davoodya.ir/pages/tools/c2.html",
+                "name": "C&C Yakuza Design",
+                "description": "سیستم فرماندهی و کنترل (C2) پیشرفته برای مدیریت عملیات تست نفوذ با قابلیت کنترل از راه دور.",
+                "applicationCategory": "SecurityApplication",
+                "operatingSystem": ["Linux", "Windows"],
+                "downloadUrl": "https://github.com/davoodya/C2-YakuzaDesign",
+                "programmingLanguage": ["Python", "Flask", "WebSocket"],
+                "creator": {
+                    "@id": "https://davoodya.ir/#person"
+                }
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://davoodya.ir/pages/tools/cracker.html",
+                "name": "Yakuza Password Cracker",
+                "description": "ابزار پیشرفته برای تست امنیت رمزهای عبور با استفاده از الگوریتم‌های بهینه‌سازی شده.",
+                "applicationCategory": "SecurityApplication",
+                "operatingSystem": ["Linux", "Windows"],
+                "downloadUrl": "https://github.com/davoodya/YakuzaCracker",
+                "programmingLanguage": ["C", "CUDA", "OpenCL"],
+                "creator": {
+                    "@id": "https://davoodya.ir/#person"
+                }
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://davoodya.ir/pages/tools/python.html",
+                "name": "Python in Black Scripts",
+                "description": "مجموعه‌ای از اسکریپت‌های پایتون برای عملیات امنیتی و تست نفوذ.",
+                "applicationCategory": "SecurityApplication",
+                "operatingSystem": ["Linux", "Windows", "macOS"],
+                "downloadUrl": "https://github.com/davoodya/pythonInBlack",
+                "programmingLanguage": ["Python"],
+                "creator": {
+                    "@id": "https://davoodya.ir/#person"
+                }
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://davoodya.ir/pages/tools/malware.html",
+                "name": "YakuzaMalware Arsenal",
+                "description": "مجموعه ابزارهای تحلیل بدافزار برای اهداف آموزشی و پژوهشی.",
+                "applicationCategory": "SecurityApplication",
+                "operatingSystem": ["Linux", "Windows"],
+                "downloadUrl": "https://github.com/davoodya/Yakuza_Malwares_Arsenal",
+                "programmingLanguage": ["C++", "Python", "Assembly"],
+                "creator": {
+                    "@id": "https://davoodya.ir/#person"
+                }
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "Yakuza WiFi Auditor",
+                "description": "ابزار تست امنیت شبکه‌های بی‌سیم با قابلیت شناسایی آسیب‌پذیری‌ها.",
+                "applicationCategory": "SecurityApplication",
+                "operatingSystem": ["Linux"],
+                "programmingLanguage": ["Python"],
+                "creator": {
+                    "@id": "https://davoodya.ir/#person"
+                }
+            }
+        ],
+        "knowsAbout": [
+            "Penetration Testing",
+            "Ethical Hacking",
+            "Red Teaming",
+            "Security Tool Development",
+            "C2 Framework Development",
+            "Malware Analysis",
+            "امنیت سایبری",
+            "تست نفوذ",
+            "توسعه ابزار امنیتی"
+        ],
+        "knowsLanguage": [
+            {"@type": "Language", "name": "Persian", "alternateName": "fa"},
+            {"@type": "Language", "name": "English", "alternateName": "en"}
+        ],
+        "sameAs": [
+            "https://github.com/davoodya",
+            "https://linkedin.com/in/davoodyahay",
+            "https://x.com/davood_yahay",
+            "https://instagram.com/davoodsec",
+            "https://youtube.com/@DavoodSec"
+        ],
+        "mainEntityOfPage": {
+            "@type": "ProfilePage",
+            "@id": "https://davoodya.ir/pages/portfolio.html"
+        }
+    }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://davoodya.ir/pages/portfolio.html#webpage",
+        "url": "https://davoodya.ir/pages/portfolio.html",
+        "name": "نمونه ابزارها | داوود یاحی - متخصص امنیت سایبری",
+        "description": "نمونه ابزارها و ابزارهای امنیتی توسعه داده شده توسط داوود یاحی - متخصص امنیت سایبری با بیش از ده سال تجربه",
+        "inLanguage": "fa-IR",
+        "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://davoodya.ir/#website"
+        },
+        "about": {
+            "@type": "Thing",
+            "name": "ابزارهای امنیت سایبری"
+        },
+        "author": {
+            "@id": "https://davoodya.ir/#person"
+        },
+        "breadcrumb": {
+            "@id": "https://davoodya.ir/pages/portfolio.html#breadcrumb"
+        }
+    }
+    </script>
+
     <!-- Custom JS -->
     <script src="../js/main.js"></script>
     <script src="../js/portfolio.js"></script>
