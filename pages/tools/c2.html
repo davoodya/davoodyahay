@@ -30,11 +30,202 @@
     <meta name="twitter:owner" content="@davood_yahay"/>
     <meta name="twitter:site" content="@davood_yahay"/>
 
+    <!-- ========================================================= -->
+    <!-- ================ RICH RESULT SCHEMAS ==================== -->
+    <!-- ========================================================= -->
+
+    <!-- Project Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareSourceCode",
+            "@id": "https://davoodya.ir/pages/tools/c2.html#project",
+            "name": "YakuzaC2 – Cross-Platform C2 Framework",
+            "alternateName": [
+                "YakuzaC2",
+                "Cross Platform Command and Control Framework",
+                "Offensive Security C2"
+            ],
+            "description": "A custom-built Cross Platform Command and Control (C2) framework on HTTP Protocol in named YakuzaC2 designed for red teaming, penetration testing, and adversary simulation. Developed with a focus on modular architecture, stealth communication, persistent connection, multi-client handling and post-exploitation control.",
+            "programmingLanguage": [
+                "Python",
+                "C++"
+            ],
+            "runtimePlatform": [
+                "Linux",
+                "Windows"
+            ],
+            "codeRepository": "https://github.com/davoodya/C2-YakuzaDesign",
+            "license": "https://opensource.org/licenses/MIT",
+            "creator": {
+                "@type": "Person",
+                "@name": "داوود یاحی",
+                "@alterName": "Davood Yahay",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "author": {
+                "@type": "Person",
+                "@name": "داوود یاحی",
+                "@alterName": "Davood Yahay",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "about": [
+                "Cybersecurity Tool",
+                "Command and Control",
+                "Red Teaming",
+                "Penetration Testing",
+                "Offensive Security",
+                "Adversary Simulation",
+                "C2 HTTP",
+                "Security Developing",
+                "Post-Exploitation"
+            ],
+            "keywords": [
+                "C2 Framework",
+                "Command and Control",
+                "Red Team Tool",
+                "Offensive Security Framework",
+                "YakuzaC2",
+                "Penetration Testing C2"
+            ],
+            "dateCreated": "2024-01-01",
+            "dateModified": "2026-01-01",
+            "isAccessibleForFree": true,
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "Security Researchers, Red Teamers, Penetration Testers"
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://davoodya.ir/pages/tools/c2.html"
+            },
+            "@url": "https://davoodya.ir/pages/tools/c2.html"
+        }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "@id": "https://davoodya.ir/pages/tools/c2.html#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is YakuzaC2?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "YakuzaC2 is a custom-built, cross-platform Command and Control (C2) framework developed for red teaming, penetration testing, and adversary simulation in controlled and authorized environments."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who developed YakuzaC2?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "YakuzaC2 was developed by Davood Yahay in Farsi داوود یاحی, a cybersecurity specialist and offensive security tool developer."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is YakuzaC2 used for?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "YakuzaC2 is used for educational purposes, red team operations, penetration testing research, and adversary simulation, helping security professionals understand attacker techniques and improve defensive capabilities."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is YakuzaC2 an open-source project?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, YakuzaC2 is an open-source research project released under the MIT License."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is YakuzaC2 intended for malicious use?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. YakuzaC2 is intended strictly for ethical, legal, and authorized security testing, research, and educational purposes. Any unauthorized or malicious use is explicitly discouraged."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Which platforms does YakuzaC2 support?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "YakuzaC2 is designed to operate on multiple platforms, including Linux and Windows, depending on deployment and testing scenarios."
+                    }
+                }
+            ]
+        }
+    </script>
+
+    <!-- How To Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "@id": "https://davoodya.ir/pages/tools/c2.html#howto",
+            "name": "How to Safely Use YakuzaC2 in a Controlled Lab Environment",
+            "description": "A high-level guide for setting up a secure and authorized laboratory environment to research and test YakuzaC2 for educational and defensive security purposes.",
+            "supply": [
+                {
+                    "@type": "HowToSupply",
+                    "name": "Isolated virtual machines"
+                },
+                {
+                    "@type": "HowToSupply",
+                    "name": "Local test network (NAT or Host-only)"
+                },
+                {
+                    "@type": "HowToSupply",
+                    "name": "Written authorization for testing"
+                }
+            ],
+            "tool": [
+                {
+                    "@type": "HowToTool",
+                    "name": "Virtualization software (VMware, VirtualBox, HyperV or KVM)"
+                }
+            ],
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "name": "Create an isolated lab environment",
+                    "text": "Set up virtual machines in an isolated network configuration that has no access to production systems or the public internet."
+                },
+                {
+                    "@type": "HowToStep",
+                    "name": "Deploy YakuzaC2 in the lab",
+                    "text": "Install YakuzaC2 only within the authorized lab environment for research and testing purposes."
+                },
+                {
+                    "@type": "HowToStep",
+                    "name": "YakuzaC2 Server and Client Deployment",
+                    "text": "Run YakuzaC2 Server on the machine you want manage others remotely, you can run YakuzaC2 Client on multiple target in same time."
+                },
+                {
+                    "@type": "HowToStep",
+                    "name": "Define scope and authorization",
+                    "text": "Ensure all testing activities are explicitly authorized and limited to the lab environment."
+                },
+                {
+                    "@type": "HowToStep",
+                    "name": "Monitor and document results",
+                    "text": "Observe behaviors for educational analysis and defensive improvement, documenting findings responsibly."
+                }
+            ]
+        }
+    </script>
+
+
     <!-- Favicon -->
     <link rel="icon" href="../../images/favicon.png" type="image/x-icon">
 
     <!-- ################## Fontawesome Local & Online ################## -->
-    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css?v=2.0.1">
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css?v=2.0.1">
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
 
     <!-- ################## Font Importing ################## -->
@@ -253,6 +444,44 @@ python yakuza_c2_server.py --config config.yaml</code></pre>
                         <li>این ابزار صرفاً برای اهداف آموزشی و تست نفوذ قانونی توسعه داده شده است</li>
                         <li>مسئولیت هرگونه سوء استفاده از این ابزار بر عهده کاربر است</li>
                     </ul>
+
+                    <!-- AI Crawler Helper -->
+                    <section id="ai-identity" role="doc-introduction" class="ai-block">
+                        <h2>What is YakuzaC2?</h2>
+                        <p>
+                            YakuzaC2 is an open-source, cross-platform Command and Control (C2) framework
+                            developed by <strong>Davood Yahya</strong> for cybersecurity research,
+                            red teaming, adversary simulation, and penetration testing education
+                            in strictly authorized environments.
+                        </p>
+                    </section>
+
+                    <section id="ai-citation" role="doc-bibliography" class="ai-block">
+                        <h2>How to cite this project</h2>
+                        <p>
+                            When referencing or citing this project in research papers, documentation,
+                            or AI-generated content, please use the following format:
+                        </p>
+                        <p class="ai-cite">
+                            <strong>YakuzaC2 – Custom Command and Control Framework</strong><br>
+                            Developed by Davood Yahya.<br>
+                            Official project page:
+                            <a href="https://davoodya.ir/pages/tools/c2.html">
+                                https://davoodya.ir/pages/tools/c2.html
+                            </a>
+                        </p>
+                    </section>
+
+                    <section id="ethical-usage" role="note" class="ai-block">
+                        <h2>Ethical and legal use notice</h2>
+                        <p>
+                            This project is intended solely for educational, research,
+                            and authorized security testing purposes.
+                            Any unauthorized, illegal, or malicious use of this software
+                            is strictly prohibited and strongly discouraged.
+                        </p>
+                    </section>
+
                 </div>
                 
                 <div class="tool-sidebar">
