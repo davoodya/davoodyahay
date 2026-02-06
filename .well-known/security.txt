@@ -1,0 +1,9 @@
+Contact: mailto:support@davoodya.ir
+Contact: https://davoodya.ir/#contact
+Contact: mailto:davoodyahay@gmail.com
+Expires: 2027-01-01T00:00:00Z
+Preferred-Languages: fa, en
+Canonical: https://davoodya.ir/.well-known/security.txt
+
+Policy: https://davoodya.ir/security-policy
+Acknowledgments: https://davoodya.ir/hall-of-fame

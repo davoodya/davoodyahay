@@ -1,0 +1,45 @@
+# llms.txt for davoodya.ir
+# Owner: Davood Yahay
+
+User-Agent: *
+Allow: /
+
+Canonical: https://davoodya.ir/
+
+Allow: /pages/
+Allow: /pages/articles/
+Allow: /pages/courses/
+Allow: /pages/tools/
+
+
+Disallow: /api/
+
+# Attribution
+Attribution: Required
+Attribution-Name: Davood Yahay
+Attribution-URL: https://davoodya.ir
+
+# Image usage
+Images: Allowed
+Image-Attribution: Required
+Image-Modification: Not Allowed
+
+# Structured data
+Structured-Data: Preferred
+Schema: Person, Project, SoftwareSourceCode
+
+# Content usage
+Usage: Informational, Educational
+Modification: Not Allowed
+Training: Allowed with Attribution
+Training-Scope: Public-Web
+
+# Freshness
+Update-Frequency: Monthly
+Critical-Pages: /resume, /projects
+
+# Contact
+Contact: https://davoodya.ir/contact
+Contact: mailto:davoodyahay@gmail.com
+Contact: mailto:support@davoodya.ir
+Contact: https://t.me/davoodyahay

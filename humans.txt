@@ -1,0 +1,32 @@
+/* TEAM */
+
+Developer & Owner: Davood Yahay
+Role: Cybersecurity Specialist, Penetration Tester, Security Tool Developer, Teacher
+Website: https://davoodya.ir
+GitHub: https://github.com/davoodya
+Location: Iran Isfahan
+Contact: https://davoodya.ir/#contact
+Contact: https://t.me/davoodyahay
+Contact: mailto:davoodyahay@gmail.com
+Contact: mailto:support@davoodya.ir
+
+/* SITE */
+
+Site Name: Davood Yahay – Personal Website
+Type: Personal Website / Resume / Portfolio
+Tech Stack: HTML, CSS, JavaScript, PHP (No CMS)
+Hosting: Linux-based Server
+Encoding: UTF-8
+Language: fa-IR
+Direction: RTL
+
+/* SEO & PERFORMANCE */
+
+SEO Strategy: White-hat, Content-driven, Technical SEO
+Performance: Optimized for Core Web Vitals
+Accessibility: Semantic HTML, ARIA-aware
+Security: Hardened, No CMS, Minimal attack surface
+
+/* THANKS */
+
+Inspired by open-source community and security researchers worldwide.
