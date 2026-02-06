@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{@emailjs/browser, Sahel, Shabnam, Vazir, Yekan-Bakh, email, prism}" />
+    <file url="PROJECT" libraries="{@emailjs/browser, Sahel, Shabnam, Vazir, Yekan-Bakh, analytics, email, prism}" />
   </component>
 </project>

@@ -13,5 +13,6 @@
     <orderEntry type="library" name="prism" level="application" />
     <orderEntry type="library" name="email" level="application" />
     <orderEntry type="library" name="@emailjs/browser" level="application" />
+    <orderEntry type="library" name="analytics" level="application" />
   </component>
 </module>
