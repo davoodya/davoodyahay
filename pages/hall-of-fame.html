@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://davoodya.ir/hall-of-fame.html" />
+    <meta name="title" content="تالار افتخار گزارشگران امنیتی | داوود یاحی" />
+    <meta name="description" content="تالار افتخار گزارشگران امنیتی داوود یاحی - قدردانی از پژوهشگران امنیتی که با گزارش آسیب پذیری ها به ایمن تر شدن کمک می کنند.">
+    <meta name="keywords" content="Hall of Fame, امنیت سایبری, گزارش آسیب پذیری, Responsible Disclosure, Davood Yahay">
+    <meta name="author" content="داوود یاحی">
+    <meta name="robots" content="index, follow">
+    <title>تالار افتخار گزارشگران امنیتی | داوود یاحی</title>
+
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css?v=2.0.1">
+    <link rel="stylesheet" href="../assets/css/fonts/fonts.min.css?v=2.0.1">
+    <link rel="stylesheet" href="../dist/css/main.min.css?v=2.0.2">
+    <link rel="stylesheet" href="../css/header-footer.css">
+
+    <style>
+        .page-shell {
+            padding: 80px 0 100px;
+            background: radial-gradient(circle at top, rgba(0, 255, 65, 0.08), transparent 55%),
+                        linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(10, 12, 16, 0.9));
+        }
+
+        .hof-intro {
+            max-width: 760px;
+            margin: 0 auto 40px;
+            text-align: center;
+            color: var(--main-text);
+            font-family: var(--Shabnam);
+            line-height: 1.9;
+        }
+
+        .hof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .hof-card {
+            background: linear-gradient(145deg, rgba(18, 20, 25, 0.9), rgba(8, 10, 14, 0.95));
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hof-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 35px rgba(0, 255, 65, 0.15);
+        }
+
+        .hof-card h3 {
+            color: var(--accent-green);
+            font-family: var(--Vazir);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .hof-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-family: var(--Shabnam);
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.95rem;
+        }
+
+        .hof-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hof-meta i {
+            color: var(--accent-orange);
+        }
+
+        .hof-empty {
+            text-align: center;
+            background: rgba(0, 255, 65, 0.08);
+            border: 1px dashed rgba(0, 255, 65, 0.35);
+            border-radius: 16px;
+            padding: 32px;
+            margin-top: 30px;
+            font-family: var(--Shabnam);
+            color: var(--main-text);
+        }
+
+        .hof-cta {
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 22px;
+            border-radius: 40px;
+            border: 1px solid rgba(0, 255, 65, 0.5);
+            color: var(--accent-green);
+            text-decoration: none;
+            font-family: var(--Vazir);
+            transition: all 0.3s ease;
+        }
+
+        .hof-cta:hover {
+            background: rgba(0, 255, 65, 0.15);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="spinner">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>DAVOOD<span>_</span>YAHAY</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">خانه</a></li>
+                    <li><a href="../index.html#about">درباره من</a></li>
+                    <li><a href="../index.html#services">سرویس ها</a></li>
+                    <li><a href="../index.html#portfolio">نمونه ابزارها</a></li>
+                    <li><a href="courses.html">دوره های آموزشی</a></li>
+                    <li><a href="../index.html#contact">تماس با من</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <canvas id="matrix-canvas" class="matrix-animation"></canvas>
+        <div class="matrix-rain" id="matrix-rain"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>تالار افتخار گزارشگران امنیتی</h1>
+                <p>قدردانی از پژوهشگران امنیتی که با گزارش مسئولانه، به ایمن تر شدن سرویس ها کمک می کنند.</p>
+                <div class="breadcrumb">
+                    <a href="../index.html">خانه</a>
+                    <span>/</span>
+                    <span class="active">تالار افتخار</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-shell">
+        <div class="container">
+            <div class="section-title">
+                <h2>قدردانی از همکاری شما</h2>
+                <p>در این بخش نام پژوهشگرانی که با گزارش آسیب پذیری ها به امنیت وب سایت کمک کرده اند ثبت می شود.</p>
+            </div>
+
+            <p class="hof-intro">
+                اگر گزارش شما پذیرفته شود، با رضایت شما نام و جزئیات کلی همکاری در این صفحه درج می شود. برای اطلاعات بیشتر درباره
+                نحوه گزارش، صفحه سیاست امنیتی را مشاهده کنید.
+            </p>
+
+            <div class="hof-grid">
+                <div class="hof-card">
+                    <h3>گزارشگر اول شما</h3>
+                    <div class="hof-meta">
+                        <span><i class="fas fa-user"></i> نام: در انتظار اعلام</span>
+                        <span><i class="fas fa-shield-alt"></i> نوع گزارش: -</span>
+                        <span><i class="fas fa-calendar-alt"></i> تاریخ: -</span>
+                    </div>
+                </div>
+                <div class="hof-card">
+                    <h3>گزارشگر دوم شما</h3>
+                    <div class="hof-meta">
+                        <span><i class="fas fa-user"></i> نام: در انتظار اعلام</span>
+                        <span><i class="fas fa-shield-alt"></i> نوع گزارش: -</span>
+                        <span><i class="fas fa-calendar-alt"></i> تاریخ: -</span>
+                    </div>
+                </div>
+                <div class="hof-card">
+                    <h3>گزارشگر سوم شما</h3>
+                    <div class="hof-meta">
+                        <span><i class="fas fa-user"></i> نام: در انتظار اعلام</span>
+                        <span><i class="fas fa-shield-alt"></i> نوع گزارش: -</span>
+                        <span><i class="fas fa-calendar-alt"></i> تاریخ: -</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hof-empty">
+                هنوز گزارشی ثبت نشده است. اگر موردی مشاهده کردید، لطفا از طریق سیاست امنیتی اقدام کنید.
+                <div>
+                    <a class="hof-cta" href="security-policy.html">
+                        <i class="fas fa-bug"></i>
+                        مشاهده سیاست امنیتی
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="dark-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 class="logo-glitch-footer">DAVOOD<span>_</span>YAHAY</h3>
+                    <img src="../images/davoodya.png" alt="Davood Yahay Image">
+                    <p class="footer-desc">مشاور و مدرس امنیت سایبری، برنامه نویسی، شبکه های کامپیوتری و سیستم های عامل</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>دسترسی سریع</h3>
+                    <ul>
+                        <li><a href="../index.html">خانه</a></li>
+                        <li><a href="../index.html#about">درباره من</a></li>
+                        <li><a href="../index.html#services">سرویس ها</a></li>
+                        <li><a href="../index.html#portfolio">نمونه ابزارها</a></li>
+                        <li><a href="courses.html">دوره های آموزشی</a></li>
+                        <li><a href="articles.html">مقالات</a></li>
+                        <li><a href="skills.html">مهارت ها و مدارک</a></li>
+                        <li><a href="../index.html#contact">تماس با من</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>اطلاعات تماس</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> ایران، اصفهان</p>
+                    <p><i class="fas fa-envelope"></i> support@davoodya.com</p>
+                    <p><i class="fas fa-phone"></i> +98 913 3104629</p>
+
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                            <span class="social-tooltip">یوتیوب</span>
+                        </a>
+                        <a href="https://t.me/davoodsec" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram"></i>
+                            <span class="social-tooltip">تلگرام</span>
+                        </a>
+                        <a href="https://www.instagram.com/davoodsec" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-tooltip">اینستاگرام</span>
+                        </a>
+                        <a href="https://github.com/davoodya" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                            <span class="social-tooltip">گیت هاب</span>
+                        </a>
+                        <a href="https://x.com/davood_yahay" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            <span class="social-tooltip">توئیتر X</span>
+                        </a>
+                        <a href="https://linkedin.com/in/davoodya" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            <span class="social-tooltip">لینکدین</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; تمامی حقوق محفوظ است | طراحی و توسعه توسط <span> داوود یاحی </span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/main2.js"></script>
+</body>
+</html>

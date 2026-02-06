@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://davoodya.ir/security-policy.html" />
+    <meta name="title" content="سیاست امنیتی و گزارش آسیب پذیری | داوود یاحی" />
+    <meta name="description" content="سیاست امنیتی و دستورالعمل گزارش آسیب پذیری در وب سایت داوود یاحی. گزارش مسئولانه به ایمن تر شدن کمک می کند.">
+    <meta name="keywords" content="سیاست امنیتی, گزارش آسیب پذیری, Responsible Disclosure, امنیت سایبری">
+    <meta name="author" content="داوود یاحی">
+    <meta name="robots" content="index, follow">
+    <title>سیاست امنیتی و گزارش آسیب پذیری | داوود یاحی</title>
+
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css?v=2.0.1">
+    <link rel="stylesheet" href="../assets/css/fonts/fonts.min.css?v=2.0.1">
+    <link rel="stylesheet" href="../dist/css/main.min.css?v=2.0.2">
+    <link rel="stylesheet" href="../css/header-footer.css">
+
+    <style>
+        .page-shell {
+            padding: 80px 0 100px;
+            background: radial-gradient(circle at 10% 20%, rgba(0, 119, 255, 0.08), transparent 45%),
+                        radial-gradient(circle at 90% 10%, rgba(0, 255, 65, 0.08), transparent 40%),
+                        linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(12, 14, 18, 0.95));
+        }
+
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .policy-card {
+            background: linear-gradient(160deg, rgba(18, 20, 25, 0.9), rgba(8, 10, 14, 0.95));
+            border: 1px solid rgba(0, 255, 65, 0.18);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .policy-card h3 {
+            color: var(--accent-green);
+            font-family: var(--Vazir);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .policy-card p,
+        .policy-card li {
+            font-family: var(--Shabnam);
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.9;
+        }
+
+        .policy-card ul {
+            list-style: none;
+            padding-right: 0;
+            margin: 0;
+        }
+
+        .policy-card li {
+            position: relative;
+            padding-right: 26px;
+            margin-bottom: 10px;
+        }
+
+        .policy-card li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            color: var(--accent-orange);
+        }
+
+        .policy-steps {
+            margin-top: 40px;
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px dashed rgba(0, 255, 65, 0.35);
+            border-radius: 16px;
+            padding: 28px;
+            font-family: var(--Shabnam);
+            color: var(--main-text);
+        }
+
+        .policy-steps h3 {
+            color: var(--accent-green);
+            margin-bottom: 15px;
+            font-family: var(--Vazir);
+        }
+
+        .policy-steps ol {
+            margin: 0;
+            padding-right: 20px;
+        }
+
+        .policy-steps li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .policy-contact {
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .policy-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 18px;
+            border-radius: 30px;
+            border: 1px solid rgba(0, 255, 65, 0.4);
+            color: var(--accent-green);
+            text-decoration: none;
+            font-family: var(--Vazir);
+            transition: all 0.3s ease;
+        }
+
+        .policy-pill:hover {
+            background: rgba(0, 255, 65, 0.15);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .policy-note {
+            margin-top: 30px;
+            font-family: var(--Shabnam);
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="spinner">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>DAVOOD<span>_</span>YAHAY</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">خانه</a></li>
+                    <li><a href="../index.html#about">درباره من</a></li>
+                    <li><a href="../index.html#services">سرویس ها</a></li>
+                    <li><a href="../index.html#portfolio">نمونه ابزارها</a></li>
+                    <li><a href="courses.html">دوره های آموزشی</a></li>
+                    <li><a href="../index.html#contact">تماس با من</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <canvas id="matrix-canvas" class="matrix-animation"></canvas>
+        <div class="matrix-rain" id="matrix-rain"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>سیاست امنیتی و گزارش آسیب پذیری</h1>
+                <p>ممنون از اینکه مسئولانه گزارش می دهید؛ این همکاری باعث امن تر شدن سرویس ها می شود.</p>
+                <div class="breadcrumb">
+                    <a href="../index.html">خانه</a>
+                    <span>/</span>
+                    <span class="active">سیاست امنیتی</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-shell">
+        <div class="container">
+            <div class="section-title">
+                <h2>چارچوب همکاری امنیتی</h2>
+                <p>لطفا قبل از ارسال گزارش، این دستورالعمل را مطالعه کنید تا روند بررسی سریع تر و شفاف تر انجام شود.</p>
+            </div>
+
+            <div class="policy-grid">
+                <div class="policy-card">
+                    <h3>دامنه مجاز</h3>
+                    <ul>
+                        <li>دامنه اصلی و زیر دامنه های متعلق به davoodya.ir</li>
+                        <li>صفحات وب، فرم ها و تعاملات سمت کاربر</li>
+                        <li>API ها و سرویس های عمومی مرتبط با سایت</li>
+                    </ul>
+                </div>
+                <div class="policy-card">
+                    <h3>خارج از دامنه</h3>
+                    <ul>
+                        <li>حملات منع سرویس (DoS/DDoS)</li>
+                        <li>مهندسی اجتماعی، فیشینگ یا حمله به کاربران</li>
+                        <li>دسترسی فیزیکی یا حملات به تجهیزات شخص ثالث</li>
+                    </ul>
+                </div>
+                <div class="policy-card">
+                    <h3>قوانین تعامل</h3>
+                    <ul>
+                        <li>از دستکاری یا حذف داده های واقعی خودداری کنید</li>
+                        <li>فقط حداقل داده لازم برای اثبات آسیب پذیری را جمع آوری کنید</li>
+                        <li>اطلاعات را تا زمان رفع مشکل محرمانه نگه دارید</li>
+                    </ul>
+                </div>
+                <div class="policy-card">
+                    <h3>تعهد ما</h3>
+                    <ul>
+                        <li>پاسخ اولیه حداکثر تا 3 روز کاری</li>
+                        <li>به روزرسانی وضعیت در طول بررسی</li>
+                        <li>ثبت نام شما در تالار افتخار با رضایت</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="policy-steps">
+                <h3>چطور گزارش کنیم؟</h3>
+                <ol>
+                    <li>شرح آسیب پذیری، مسیر بازتولید و تاثیر آن را آماده کنید.</li>
+                    <li>اسکرین شات یا ویدیو کوتاه (بدون داده های حساس) اضافه کنید.</li>
+                    <li>آدرس صفحه یا سرویس آسیب پذیر و مرورگر/سیستم را ذکر کنید.</li>
+                    <li>گزارش را به ایمیل امنیتی ارسال کنید تا بررسی شروع شود.</li>
+                </ol>
+
+                <div class="policy-contact">
+                    <a class="policy-pill" href="mailto:support@davoodya.com">
+                        <i class="fas fa-envelope"></i>
+                        support@davoodya.com
+                    </a>
+                    <a class="policy-pill" href="hall-of-fame.html">
+                        <i class="fas fa-trophy"></i>
+                        مشاهده تالار افتخار
+                    </a>
+                </div>
+            </div>
+
+            <p class="policy-note">
+                اگر گزارش شما با حسن نیت و مطابق این سیاست انجام شود، ما اقدامی حقوقی علیه شما انجام نخواهیم داد و تلاش می کنیم
+                مشکل را در سریع ترین زمان ممکن برطرف کنیم.
+            </p>
+        </div>
+    </section>
+
+    <footer class="dark-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 class="logo-glitch-footer">DAVOOD<span>_</span>YAHAY</h3>
+                    <img src="../images/davoodya.png" alt="Davood Yahay Image">
+                    <p class="footer-desc">مشاور و مدرس امنیت سایبری، برنامه نویسی، شبکه های کامپیوتری و سیستم های عامل</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>دسترسی سریع</h3>
+                    <ul>
+                        <li><a href="../index.html">خانه</a></li>
+                        <li><a href="../index.html#about">درباره من</a></li>
+                        <li><a href="../index.html#services">سرویس ها</a></li>
+                        <li><a href="../index.html#portfolio">نمونه ابزارها</a></li>
+                        <li><a href="courses.html">دوره های آموزشی</a></li>
+                        <li><a href="articles.html">مقالات</a></li>
+                        <li><a href="skills.html">مهارت ها و مدارک</a></li>
+                        <li><a href="../index.html#contact">تماس با من</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>اطلاعات تماس</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> ایران، اصفهان</p>
+                    <p><i class="fas fa-envelope"></i> support@davoodya.com</p>
+                    <p><i class="fas fa-phone"></i> +98 913 3104629</p>
+
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                            <span class="social-tooltip">یوتیوب</span>
+                        </a>
+                        <a href="https://t.me/davoodsec" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram"></i>
+                            <span class="social-tooltip">تلگرام</span>
+                        </a>
+                        <a href="https://www.instagram.com/davoodsec" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-tooltip">اینستاگرام</span>
+                        </a>
+                        <a href="https://github.com/davoodya" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                            <span class="social-tooltip">گیت هاب</span>
+                        </a>
+                        <a href="https://x.com/davood_yahay" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            <span class="social-tooltip">توئیتر X</span>
+                        </a>
+                        <a href="https://linkedin.com/in/davoodya" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            <span class="social-tooltip">لینکدین</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; تمامی حقوق محفوظ است | طراحی و توسعه توسط <span> داوود یاحی </span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/main2.js"></script>
+</body>
+</html>
