@@ -209,21 +209,29 @@ $personSchema = @'
 # List of HTML files to process
 $files = @(
     "pages\articles\hacking\CrackZIPFiles1.html",
+    "pages\articles\network\ascii.html",
+    "pages\articles\Security\hash_encrypt.html",
+    "pages\articles\Security\unicode.html",
     "pages\courses\linux-lpic1.html",
     "pages\courses\advanced-ceh.html",
     "pages\courses\beginner-ceh.html",
     "pages\courses\network-plus.html",
     "pages\courses\ceh-plus-plus.html",
     "pages\courses\virtualization.html",
+    "pages\tools\backdoor.html",
     "pages\tools\c2.html",
-    "pages\tools\python.html",
     "pages\tools\cracker.html",
     "pages\tools\malware.html",
-    "pages\tools\backdoor.html",
+    "pages\tools\python.html",
     "pages\about.html",
     "pages\contact.html",
     "pages\hall-of-fame.html",
-    "pages\security-policy.html"
+    "pages\security-policy.html",
+    "pages\articles.html",
+    "pages\courses.html",
+    "pages\portfolio.html",
+    "pages\services.html",
+    "pages\skills.html",
 )
 
 # Counters

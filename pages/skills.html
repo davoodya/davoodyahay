@@ -33,6 +33,261 @@
     <!-- Favicon -->
     <link rel="icon" href="../images/favicon.png" type="image/x-icon">
 
+    <!-- ========================================================= -->
+    <!-- ================ RICH RESULT SCHEMAS ==================== -->
+    <!-- ========================================================= -->
+
+    <!-- Person Schema with Skills -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "@id": "https://davoodya.ir/#person",
+            "name": "داوود یاحی",
+            "alternateName": ["Davood Yahay", "DavoodSec"],
+            "url": "https://davoodya.ir/",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://davoodya.ir/images/davoodyahay.jpg",
+                "caption": "Davood Yahay – Cybersecurity Specialist"
+            },
+            "description": "داوود یاحی متخصص، مشاور و مدرس امنیت سایبری و تست نفوذ با بیش از ده سال تجربه حرفه‌ای.",
+            "jobTitle": [
+                "Cybersecurity Specialist",
+                "Penetration Testing Specialist",
+                "Offensive Security Tool Developer",
+                "Cybersecurity Instructor"
+            ],
+            "hasOccupation": {
+                "@type": "Occupation",
+                "name": "Cybersecurity and Penetration Testing Specialist",
+                "description": "متخصص امنیت سایبری، تست نفوذ و توسعه ابزارهای امنیتی",
+                "skills": [
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Penetration Testing",
+                        "description": "تست نفوذ شبکه‌ها، برنامه‌های تحت وب و موبایل",
+                        "inDefinedTermSet": "Cybersecurity Skills"
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Security Tool Development",
+                        "description": "توسعه ابزارهای امنیتی، بک‌دورها و C2 فریم‌ورک‌ها",
+                        "inDefinedTermSet": "Cybersecurity Skills"
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Network Security",
+                        "description": "امنیت شبکه‌های کامپیوتری، فایروال و IDS/IPS",
+                        "inDefinedTermSet": "Cybersecurity Skills"
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Malware Analysis",
+                        "description": "تحلیل بدافزار و مهندسی معکوس",
+                        "inDefinedTermSet": "Cybersecurity Skills"
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Python Programming",
+                        "description": "برنامه‌نویسی پایتون برای ابزارهای امنیتی",
+                        "inDefinedTermSet": "Programming Skills"
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "C++ Programming",
+                        "description": "برنامه‌نویسی C++ برای ابزارهای سطح پایین",
+                        "inDefinedTermSet": "Programming Skills"
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Network Administration",
+                        "description": "مدیریت شبکه‌های میکروتیک و سیسکو",
+                        "inDefinedTermSet": "Network Skills"
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Linux Administration",
+                        "description": "مدیریت سیستم‌های لینوکس و یونیکس",
+                        "inDefinedTermSet": "Operating System Skills"
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Virtualization",
+                        "description": "مجازی‌سازی با VMware، Docker و Kubernetes",
+                        "inDefinedTermSet": "Virtualization Skills"
+                    }
+                ],
+                "occupationLocation": {"@type": "Country", "name": "Iran"}
+            },
+            "hasCredential": [
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "CCNA (Cisco Certified Network Associate)",
+                    "description": "مدرک شبکه سیسکو",
+                    "credentialCategory": "certificate",
+                    "recognizedBy": {
+                        "@type": "Organization",
+                        "name": "Cisco Systems"
+                    },
+                    "dateCreated": "1400"
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "CEH V12 (Certified Ethical Hacker)",
+                    "description": "مدرک هکر اخلاقی نسخه 12",
+                    "credentialCategory": "certificate",
+                    "recognizedBy": {
+                        "@type": "Organization",
+                        "name": "EC-Council"
+                    },
+                    "dateCreated": "1401"
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "OSCP (Offensive Security Certified Professional)",
+                    "description": "مدرک حرفه‌ای امنیت تهاجمی",
+                    "credentialCategory": "certificate",
+                    "recognizedBy": {
+                        "@type": "Organization",
+                        "name": "Offensive Security"
+                    },
+                    "dateCreated": "1401"
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "LPIC-1 (Linux Professional Institute Certification)",
+                    "description": "مدرک حرفه‌ای لینوکس سطح 1",
+                    "credentialCategory": "certificate",
+                    "recognizedBy": {
+                        "@type": "Organization",
+                        "name": "Linux Professional Institute"
+                    },
+                    "dateCreated": "1398"
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "LPIC-2 (Linux Professional Institute Certification)",
+                    "description": "مدرک حرفه‌ای لینوکس سطح 2",
+                    "credentialCategory": "certificate",
+                    "recognizedBy": {
+                        "@type": "Organization",
+                        "name": "Linux Professional Institute"
+                    },
+                    "dateCreated": "1400"
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "MTCNA (MikroTik Certified Network Associate)",
+                    "description": "مدرک شبکه میکروتیک",
+                    "credentialCategory": "certificate",
+                    "recognizedBy": {
+                        "@type": "Organization",
+                        "name": "MikroTik"
+                    },
+                    "dateCreated": "1398"
+                }
+            ],
+            "knowsAbout": [
+                {
+                    "@type": "Thing",
+                    "name": "Metasploit Framework",
+                    "description": "فریم‌ورک تست نفوذ"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Burp Suite",
+                    "description": "ابزار تست امنیت وب"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Wireshark",
+                    "description": "آنالیزور شبکه"
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Nmap",
+                    "description": "ابزار اسکن شبکه"
+                },
+                "Python Security Scripting",
+                "Linux Security Hardening",
+                "Network Penetration Testing",
+                "Web Application Security",
+                "Malware Analysis",
+                "امنیت سایبری",
+                "تست نفوذ",
+                "برنامه‌نویسی امن"
+            ],
+            "knowsLanguage": [
+                {"@type": "Language", "name": "Persian", "alternateName": "fa"},
+                {"@type": "Language", "name": "English", "alternateName": "en"}
+            ],
+            "sameAs": [
+                "https://github.com/davoodya",
+                "https://linkedin.com/in/davoodyahay",
+                "https://x.com/davood_yahay",
+                "https://instagram.com/davoodsec",
+                "https://youtube.com/@DavoodSec"
+            ],
+            "mainEntityOfPage": {
+                "@type": "ProfilePage",
+                "@id": "https://davoodya.ir/pages/skills.html"
+            }
+        }
+    </script>
+
+
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://davoodya.ir/#website",
+            "url": "https://davoodya.ir/",
+            "name": "Davood Yahay – Cybersecurity & Penetration Testing Specialist",
+            "alternateName": [
+                "داوود یاحی",
+                "Davood Yahay Cybersecurity",
+                "Davood Yahay Personal Website",
+                "DavoodSec",
+                "Davood Yahay Penetration Test"
+            ],
+            "description": "Official personal website of Davood Yahay, cybersecurity and penetration testing specialist, offensive security tools developer, consultant, and instructor.",
+            "publisher": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "inLanguage": [
+                "fa",
+                "en"
+            ]
+        }
+    </script>
+
+    <!-- BreadcrumbList Schema for SEO -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "خانه",
+                    "item": "https://davoodya.ir/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "مهارت‌ها و مدارک",
+                    "item": "https://davoodya.ir/pages/skills.html"
+                }
+            ]
+        }
+    </script>
+
+
+
     <!-- ################## Fontawesome Local & Online ################## -->
     <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css?v=2.0.1">
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
@@ -951,258 +1206,9 @@
             </div>
         </div>
     </footer>
-    
-    <!-- BreadcrumbList Schema for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "خانه",
-                "item": "https://davoodya.ir/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "مهارت‌ها و مدارک",
-                "item": "https://davoodya.ir/pages/skills.html"
-            }
-        ]
-    }
-    </script>
 
-    <!-- WebSite Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": "https://davoodya.ir/#website",
-        "url": "https://davoodya.ir/",
-        "name": "Davood Yahay – Cybersecurity & Penetration Testing Specialist",
-        "alternateName": ["داوود یاحی", "DavoodSec"],
-        "description": "Official personal website of Davood Yahay, cybersecurity specialist.",
-        "publisher": {"@type": "Person", "@id": "https://davoodya.ir/#person"},
-        "inLanguage": ["fa", "en"]
-    }
-    </script>
 
-    <!-- Person Schema with Skills -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://davoodya.ir/#person",
-        "name": "داوود یاحی",
-        "alternateName": ["Davood Yahay", "DavoodSec"],
-        "url": "https://davoodya.ir/",
-        "image": {
-            "@type": "ImageObject",
-            "url": "https://davoodya.ir/images/davoodyahay.jpg",
-            "caption": "Davood Yahay – Cybersecurity Specialist"
-        },
-        "description": "داوود یاحی متخصص، مشاور و مدرس امنیت سایبری و تست نفوذ با بیش از ده سال تجربه حرفه‌ای.",
-        "jobTitle": [
-            "Cybersecurity Specialist",
-            "Penetration Testing Specialist",
-            "Offensive Security Tool Developer",
-            "Cybersecurity Instructor"
-        ],
-        "hasOccupation": {
-            "@type": "Occupation",
-            "name": "Cybersecurity and Penetration Testing Specialist",
-            "description": "متخصص امنیت سایبری، تست نفوذ و توسعه ابزارهای امنیتی",
-            "skills": [
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Penetration Testing",
-                    "description": "تست نفوذ شبکه‌ها، برنامه‌های تحت وب و موبایل",
-                    "inDefinedTermSet": "Cybersecurity Skills"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Security Tool Development",
-                    "description": "توسعه ابزارهای امنیتی، بک‌دورها و C2 فریم‌ورک‌ها",
-                    "inDefinedTermSet": "Cybersecurity Skills"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Network Security",
-                    "description": "امنیت شبکه‌های کامپیوتری، فایروال و IDS/IPS",
-                    "inDefinedTermSet": "Cybersecurity Skills"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Malware Analysis",
-                    "description": "تحلیل بدافزار و مهندسی معکوس",
-                    "inDefinedTermSet": "Cybersecurity Skills"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Python Programming",
-                    "description": "برنامه‌نویسی پایتون برای ابزارهای امنیتی",
-                    "inDefinedTermSet": "Programming Skills"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "name": "C++ Programming",
-                    "description": "برنامه‌نویسی C++ برای ابزارهای سطح پایین",
-                    "inDefinedTermSet": "Programming Skills"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Network Administration",
-                    "description": "مدیریت شبکه‌های میکروتیک و سیسکو",
-                    "inDefinedTermSet": "Network Skills"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Linux Administration",
-                    "description": "مدیریت سیستم‌های لینوکس و یونیکس",
-                    "inDefinedTermSet": "Operating System Skills"
-                },
-                {
-                    "@type": "DefinedTerm",
-                    "name": "Virtualization",
-                    "description": "مجازی‌سازی با VMware، Docker و Kubernetes",
-                    "inDefinedTermSet": "Virtualization Skills"
-                }
-            ],
-            "occupationLocation": {"@type": "Country", "name": "Iran"}
-        },
-        "hasCredential": [
-            {
-                "@type": "EducationalOccupationalCredential",
-                "name": "CCNA (Cisco Certified Network Associate)",
-                "description": "مدرک شبکه سیسکو",
-                "credentialCategory": "certificate",
-                "recognizedBy": {
-                    "@type": "Organization",
-                    "name": "Cisco Systems"
-                },
-                "dateCreated": "1400"
-            },
-            {
-                "@type": "EducationalOccupationalCredential",
-                "name": "CEH V12 (Certified Ethical Hacker)",
-                "description": "مدرک هکر اخلاقی نسخه 12",
-                "credentialCategory": "certificate",
-                "recognizedBy": {
-                    "@type": "Organization",
-                    "name": "EC-Council"
-                },
-                "dateCreated": "1401"
-            },
-            {
-                "@type": "EducationalOccupationalCredential",
-                "name": "OSCP (Offensive Security Certified Professional)",
-                "description": "مدرک حرفه‌ای امنیت تهاجمی",
-                "credentialCategory": "certificate",
-                "recognizedBy": {
-                    "@type": "Organization",
-                    "name": "Offensive Security"
-                },
-                "dateCreated": "1401"
-            },
-            {
-                "@type": "EducationalOccupationalCredential",
-                "name": "LPIC-1 (Linux Professional Institute Certification)",
-                "description": "مدرک حرفه‌ای لینوکس سطح 1",
-                "credentialCategory": "certificate",
-                "recognizedBy": {
-                    "@type": "Organization",
-                    "name": "Linux Professional Institute"
-                },
-                "dateCreated": "1398"
-            },
-            {
-                "@type": "EducationalOccupationalCredential",
-                "name": "LPIC-2 (Linux Professional Institute Certification)",
-                "description": "مدرک حرفه‌ای لینوکس سطح 2",
-                "credentialCategory": "certificate",
-                "recognizedBy": {
-                    "@type": "Organization",
-                    "name": "Linux Professional Institute"
-                },
-                "dateCreated": "1400"
-            },
-            {
-                "@type": "EducationalOccupationalCredential",
-                "name": "MTCNA (MikroTik Certified Network Associate)",
-                "description": "مدرک شبکه میکروتیک",
-                "credentialCategory": "certificate",
-                "recognizedBy": {
-                    "@type": "Organization",
-                    "name": "MikroTik"
-                },
-                "dateCreated": "1398"
-            }
-        ],
-        "knowsAbout": [
-            {
-                "@type": "Thing",
-                "name": "Metasploit Framework",
-                "description": "فریم‌ورک تست نفوذ"
-            },
-            {
-                "@type": "Thing",
-                "name": "Burp Suite",
-                "description": "ابزار تست امنیت وب"
-            },
-            {
-                "@type": "Thing",
-                "name": "Wireshark",
-                "description": "آنالیزور شبکه"
-            },
-            {
-                "@type": "Thing",
-                "name": "Nmap",
-                "description": "ابزار اسکن شبکه"
-            },
-            "Python Security Scripting",
-            "Linux Security Hardening",
-            "Network Penetration Testing",
-            "Web Application Security",
-            "Malware Analysis",
-            "امنیت سایبری",
-            "تست نفوذ",
-            "برنامه‌نویسی امن"
-        ],
-        "knowsLanguage": [
-            {"@type": "Language", "name": "Persian", "alternateName": "fa"},
-            {"@type": "Language", "name": "English", "alternateName": "en"}
-        ],
-        "sameAs": [
-            "https://github.com/davoodya",
-            "https://linkedin.com/in/davoodyahay",
-            "https://x.com/davood_yahay",
-            "https://instagram.com/davoodsec",
-            "https://youtube.com/@DavoodSec"
-        ],
-        "mainEntityOfPage": {
-            "@type": "ProfilePage",
-            "@id": "https://davoodya.ir/pages/skills.html"
-        }
-    }
-    </script>
 
-    <!-- WebPage Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "@id": "https://davoodya.ir/pages/skills.html#webpage",
-        "url": "https://davoodya.ir/pages/skills.html",
-        "name": "مهارت‌ها و مدارک | داوود یاحی - متخصص امنیت سایبری و برنامه‌نویسی",
-        "description": "مهارت‌ها و مدارک تخصصی داوود یاحی - متخصص امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری با بیش از ده سال تجربه",
-        "inLanguage": "fa-IR",
-        "isPartOf": {"@type": "WebSite", "@id": "https://davoodya.ir/#website"},
-        "about": {"@type": "Thing", "name": "مهارت‌های امنیت سایبری و مدارک حرفه‌ای"},
-        "author": {"@id": "https://davoodya.ir/#person"}
-    }
-    </script>
 
     <!-- JavaScript -->
     <script src="../js/main.js"></script>

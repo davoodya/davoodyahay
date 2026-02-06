@@ -31,6 +31,37 @@
     <link rel="stylesheet" href="../dist/css/main.min.css?v=2.0.2">
     <link rel="stylesheet" href="../css/header-footer.css">
 
+    <!-- ========================================================= -->
+    <!-- ================ RICH RESULT SCHEMAS ==================== -->
+    <!-- ========================================================= -->
+
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://davoodya.ir/#website",
+            "url": "https://davoodya.ir/",
+            "name": "Davood Yahay – Cybersecurity & Penetration Testing Specialist",
+            "alternateName": [
+                "داوود یاحی",
+                "Davood Yahay Cybersecurity",
+                "Davood Yahay Personal Website",
+                "DavoodSec",
+                "Davood Yahay Penetration Test"
+            ],
+            "description": "Official personal website of Davood Yahay, cybersecurity and penetration testing specialist, offensive security tools developer, consultant, and instructor.",
+            "publisher": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "inLanguage": [
+                "fa",
+                "en"
+            ]
+        }
+    </script>
+
     <!-- Person Schema -->
     <script type="application/ld+json">
         {
@@ -201,33 +232,6 @@
         }
     </script>
 
-    <!-- Website Schema -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "@id": "https://davoodya.ir/#website",
-            "url": "https://davoodya.ir/",
-            "name": "Davood Yahay – Cybersecurity & Penetration Testing Specialist",
-            "alternateName": [
-                "داوود یاحی",
-                "Davood Yahay Cybersecurity",
-                "Davood Yahay Personal Website",
-                "DavoodSec",
-                "Davood Yahay Penetration Test"
-            ],
-            "description": "Official personal website of Davood Yahay, cybersecurity and penetration testing specialist, offensive security tools developer, consultant, and instructor.",
-            "publisher": {
-                "@type": "Person",
-                "@id": "https://davoodya.ir/#person"
-            },
-            "inLanguage": [
-                "fa",
-                "en"
-            ]
-        }
-    </script>
-
     <!-- Profile Page Schema -->
     <script type="application/ld+json">
         {
@@ -272,9 +276,42 @@
                     "@type": "ListItem",
                     "position": 2,
                     "name": "درباره من",
-                    "item": "https://davoodya.ir/about.html"
+                    "item": "https://davoodya.ir/pages/about.html"
                 }
             ]
+        }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://davoodya.ir/pages/about.html#webpage",
+            "url": "https://davoodya.ir/",
+            "name": "صفحه درباره ما وبسایت داوود یاحی",
+            "alternateName": [
+                "About Us Davood Yahay Website Page",
+                "About Davood Yahay Cybersecurity",
+                "About  DavoodSec"
+            ],
+            "description": "صفحه درباره داوود یاحی که به معرفی داوود یاحی Davood Yahay میپردازد.",
+            "isPartOf": {
+                "@type": "WebSite",
+                "@id": "https://davoodya.ir/#website"
+            },
+            "about": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "inLanguage": [
+                "fa",
+                "en"
+            ],
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://davoodya.ir/images/davoodyahay.jpg"
+            }
         }
     </script>
 

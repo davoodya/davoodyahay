@@ -31,6 +31,37 @@
     <link rel="stylesheet" href="../dist/css/main.min.css?v=2.0.2">
     <link rel="stylesheet" href="../css/header-footer.css">
 
+    <!-- ========================================================= -->
+    <!-- ================ RICH RESULT SCHEMAS ==================== -->
+    <!-- ========================================================= -->
+
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://davoodya.ir/#website",
+            "url": "https://davoodya.ir/",
+            "name": "Davood Yahay – Cybersecurity & Penetration Testing Specialist",
+            "alternateName": [
+                "داوود یاحی",
+                "Davood Yahay Cybersecurity",
+                "Davood Yahay Personal Website",
+                "DavoodSec",
+                "Davood Yahay Penetration Test"
+            ],
+            "description": "Official personal website of Davood Yahay, cybersecurity and penetration testing specialist, offensive security tools developer, consultant, and instructor.",
+            "publisher": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "inLanguage": [
+                "fa",
+                "en"
+            ]
+        }
+    </script>
+
     <!-- Person Schema -->
     <script type="application/ld+json">
         {
@@ -48,45 +79,156 @@
                 "url": "https://davoodya.ir/images/davoodyahay.jpg",
                 "caption": "Davood Yahay – Cybersecurity Specialist"
             },
-            "description": "داوود یاحی متخصص، مشاور و مدرس امنیت سایبری و تست نفوذ.",
+            "description": "داوود یاحی متخصص، مشاور و مدرس امنیت سایبری و تست نفوذ، توسعه‌دهنده ابزارهای امنیت تهاجمی و فریم‌ورک‌های تست نفوذ با بیش از ده سال تجربه حرفه‌ای در حوزه فناوری اطلاعات و آموزش امنیت سایبری.",
             "jobTitle": [
                 "Cybersecurity Specialist",
                 "Penetration Testing Specialist",
-                "Cybersecurity Instructor"
+                "Offensive Security Tool Developer",
+                "Cybersecurity Instructor",
+                "Red Team",
+                "Cyber Security and Penetration Test Teacher",
+                "Cyber Security Consultant"
             ],
+            "hasOccupation": {
+                "@type": "Occupation",
+                "name": "Cybersecurity and Penetration Testing Specialist",
+                "description": "Professional specializing in cybersecurity, penetration testing, red teaming, and development of offensive security tools.",
+                "occupationLocation": {
+                    "@type": "Country",
+                    "name": "Iran"
+                }
+            },
+            "knowsAbout": [
+                "Cybersecurity",
+                "Penetration Testing",
+                "Ethical Hacking",
+                "Red Teaming",
+                "Offensive Security",
+                "Security Tool Development",
+                "C2 Framework Development",
+                "Linux",
+                "Networking",
+                "Cybersecurity Training",
+                "امنیت سایبری",
+                "تست نفوذ",
+                "هک قانونی",
+                "تیم قرمز",
+                "برنامه نویسی ابزارهای امنیتی",
+                "شبکه کامپیوتری",
+                "لینوکس",
+                "میکروتیک",
+                "برنامه نویس",
+                "توسعه دهنده ابزار امنیتی",
+                "مدرس امنیت سایبری",
+                "توسعه دهنده مرکز کنترل و فرمان تخصصی",
+                "مشاوره امنیت سایبری",
+                "مشاوره تست نفوذ"
+            ],
+            "knowsLanguage": [
+                {
+                    "@type": "Language",
+                    "name": "Persian",
+                    "alternateName": "fa"
+                },
+                {
+                    "@type": "Language",
+                    "name": "English",
+                    "alternateName": "en"
+                }
+            ],
+            "hasCredential": {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Professional Experience",
+                "name": "Self-taught Cybersecurity Specialist",
+                "description": "Over 10 years of independent and professional experience in cybersecurity, penetration testing, and offensive security tool development."
+            },
+            "owns": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://davoodya.ir/#dsecurity",
+                    "name": "DSecurity",
+                    "url": "https://davoodya.ir"
+                },
+                {
+                    "@type": "Organization",
+                    "@id": "https://davoodya.ir/#yakuzadev",
+                    "name": "YakuzaDev"
+                },
+                {
+                    "@type": "Organization",
+                    "@id": "https://davoodya.ir/#yaweb",
+                    "name": "YaWeb"
+                }
+            ],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Cybersecurity Professional Services",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Penetration Testing & Red Teaming",
+                            "description": "Professional penetration testing and offensive security assessments."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Cybersecurity Consulting",
+                            "description": "Strategic and technical cybersecurity consulting services."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Offensive Security Tools Developing",
+                            "description": "Design and Develop Penetration Test and Red Team Tools Special Expert in all type of C2(Command & Controllers)"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Networking Administration",
+                            "description": "Run and manage small, medium and big computer networks"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Linux Administration and Sys admin",
+                            "description": "Davood Yahay have Lpic1, Lpic2, Lpic3 Certificates Handle any Linux distro such as debian and redhat based linux."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Cybersecurity Training",
+                            "description": "Professional cybersecurity and penetration testing training and mentoring."
+                        }
+                    }
+                ]
+            },
             "sameAs": [
                 "https://github.com/davoodya",
                 "https://linkedin.com/in/davoodyahay",
                 "https://x.com/davood_yahay",
                 "https://instagram.com/davoodsec",
+                "https://facebook.com/davoodsec",
                 "https://youtube.com/@DavoodSec",
-                "https://t.me/davoodsec"
-            ]
-        }
-    </script>
-
-    <!-- Website Schema -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "@id": "https://davoodya.ir/#website",
-            "url": "https://davoodya.ir/",
-            "name": "Davood Yahay – Cybersecurity & Penetration Testing Specialist",
-            "alternateName": [
-                "داوود یاحی",
-                "Davood Yahay Cybersecurity",
-                "DavoodSec"
+                "https://t.me/davoodsec",
+                "https://t.me/davoodsec_forum",
+                "https://pinterest.com/davoodya"
             ],
-            "description": "Official personal website of Davood Yahay, cybersecurity and penetration testing specialist.",
-            "publisher": {
-                "@type": "Person",
-                "@id": "https://davoodya.ir/#person"
-            },
-            "inLanguage": [
-                "fa",
-                "en"
-            ]
+            "mainEntityOfPage": {
+                "@type": "ProfilePage",
+                "@id": "https://davoodya.ir/"
+            }
         }
     </script>
 
@@ -94,26 +236,56 @@
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "ContactPage",
-            "@id": "https://davoodya.ir/contact.html#webpage",
-            "url": "https://davoodya.ir/contact.html",
-            "name": "تماس با داوود یاحی | مشاور امنیت سایبری",
-            "description": "صفحه تماس و راه های ارتباط با داوود یاحی برای مشاوره امنیت سایبری.",
+            "@type": ["ContactPage", "Person"],
+            "@id": "https://davoodya.ir/pages/contact.html#contact",
+            "url": "https://davoodya.ir/pages/contact.html",
+            "name": "داوود یاحی",
+            "alternateName": [
+                "Davood Yahay",
+                "مشاور امنیت سایبری",
+                "Davood Sec"
+            ],
+            "description": "صفحه تماس و راه‌های ارتباط با داوود یاحی برای مشاوره امنیت سایبری، تست نفوذ و آموزش امنیت.",
+            "image": "https://davoodya.ir/images/davoodyahay.jpg",
+            "jobTitle": "مشاور امنیت سایبری | متخصص تست نفوذ",
+            "email": "support@davoodya.ir",
+            "telephone": "+98-913-310-4629",
+            "contactType": "Cybersecurity Consulting",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "IR",
+                "addressRegion": "اصفهان",
+                "addressLocality": "اصفهان"
+            },
+            "sameAs": [
+                "https://github.com/davoodyahay",
+                "https://linkedin.com/in/davoodyahay",
+                "https://twitter.com/davoodyahay"
+            ],
+            "knowsAbout": [
+                "Cyber Security",
+                "Penetration Test",
+                "Offensive Security",
+                "Red Team Developer",
+                "تست نفوذ",
+                "امنیت وب اپلیکیشن",
+                "مشاوره امنیت سایبری",
+                "آموزش امنیت",
+                "ارزیابی آسیب‌پذیری"
+            ],
+            "availableLanguage": ["fa-IR", "en"],
+            "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00",
+                "timeZone": "Asia/Tehran"
+            },
             "isPartOf": {
                 "@type": "WebSite",
-                "@id": "https://davoodya.ir/#website"
-            },
-            "about": {
-                "@type": "Person",
-                "@id": "https://davoodya.ir/#person"
-            },
-            "inLanguage": [
-                "fa",
-                "en"
-            },
-            "primaryImageOfPage": {
-                "@type": "ImageObject",
-                "url": "https://davoodya.ir/images/davoodyahay.jpg"
+                "@id": "https://davoodya.ir/#website",
+                "name": "داوود یاحی - امنیت سایبری",
+                "url": "https://davoodya.ir"
             }
         }
     </script>
@@ -134,9 +306,41 @@
                     "@type": "ListItem",
                     "position": 2,
                     "name": "تماس با من",
-                    "item": "https://davoodya.ir/contact.html"
+                    "item": "https://davoodya.ir/pages/contact.html"
                 }
             ]
+        }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://davoodya.ir/pages/contact.html#webpage",
+            "url": "https://davoodya.ir/pages/contact.html",
+            "name": "تماس با داوود یاحی | مشاور امنیت سایبری",
+            "alternateName": [
+                "Contact with Davood Yahay",
+                "Contact with DavoodSec"
+            ],
+            "description": "صفحه تماس و راه های ارتباط با داوود یاحی برای مشاوره امنیت سایبری.",
+            "isPartOf": {
+                "@type": "WebSite",
+                "@id": "https://davoodya.ir/#website"
+            },
+            "about": {
+                "@type": "Person",
+                "@id": "https://davoodya.ir/#person"
+            },
+            "inLanguage": [
+                "fa",
+                "en"
+            ],
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://davoodya.ir/images/davoodyahay.jpg"
+            }
         }
     </script>
 
