@@ -3,7 +3,7 @@
   --dark-bg: #0a0a0a;
   --darker-bg: #050505;
   --main-text: #e0e0e0;
-  --accent-green: rgba(183, 0, 255, 0.43);
+  --accent-green: rgb(0, 255, 65);
   --accent-blue: #3aaddf;
   --accent-orange: #e06c11;
   --glow-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
@@ -1469,4 +1469,14 @@
 .font-button-article {
   font-family: var(--Shabnam);
   font-weight: bold;
+}
+.footer-logo img {
+  margin-top: 10px !important;
+  border-radius: 30%;
+  /*margin-top: -20px;*/
+}
+
+.footer-logo img:hover {
+  transition: all 0.5s ease;
+  transform: scaleX(125%)
 }

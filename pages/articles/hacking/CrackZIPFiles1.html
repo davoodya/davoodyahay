@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://davoodya.ir/pages/articles/hacking/CrackZIPFiles1.html" />
-    <meta name="title" content="کرک فایل های فشرده BKCrack" />
+<!--    <meta name="title" content="کرک فایل های فشرده BKCrack" />-->
     <meta name="description" content="کرک فایل های فشرده(الگوریتم ZIP-Crypto) با ابزار Bkcrack">
     <meta name="keywords" content="داوود یاحی, امنیت سایبری, داوود یا, davoodya, davoodsec, برنامه نویسی, شبکه, لینوکس, [کلمات کلیدی مقاله]">
     <meta name="author" content="داوود یاحی">
@@ -19,57 +19,60 @@
     <meta name="twitter:description" content="مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی">
     <meta name="twitter:image" content="https://davoodya.ir/images/yakuzaicon2.png">
     
-    <title>کرک فایل های zip | داوود یاحی - مشاور و مدرس امنیت سایبری و برنامه‌نویسی</title>
+    <title>کرک فایل های فشرده ZIP با BKCrack - مقالات داوود یاحی</title>
     
     <!-- Favicon -->
     <link rel="icon" href="../../../images/favicon.png" type="image/x-icon">
 
     <!-- ################## Fontawesome Local & Online ################## -->
-    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css?v=2.0.1">
+    <link rel="stylesheet" href="../../../assets/fontawesome/css/all.min.css?v=2.0.1">
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
 
-    <!-- ################## Google Fonts Local & Online ################## -->
-    <link rel="stylesheet" href="/assets/fonts/fira-code/fira-code.css?v=2.0.1">
-    <link rel="stylesheet" href="/assets/fonts/Rajdhani/Rajdhani.css?v=2.0.1">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">-->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
+    <!-- ################## Font Importing ################## -->
+    <link rel="stylesheet" href="../../../assets/css/fonts/fonts.min.css?v=2.0.1">
 
-    <!-- ################## Preload Fonts ################## -->
-    <!--     If fonts not loaded using <preload> for all local fonts in all weights-->
-    <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<!--    &lt;!&ndash; ################## Google Fonts Local & Online ################## &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="/assets/fonts/fira-code/fira-code.css?v=2.0.1">-->
+<!--    <link rel="stylesheet" href="/assets/fonts/Rajdhani/Rajdhani.css?v=2.0.1">-->
+<!--    &lt;!&ndash; <link rel="preconnect" href="https://fonts.googleapis.com">&ndash;&gt;-->
+<!--    &lt;!&ndash; <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>&ndash;&gt;-->
+<!--    &lt;!&ndash; <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">&ndash;&gt;-->
 
-    <!-- ################## Persian Farsi Local Fonts + Online Version ################## -->
-    <!-- فونت Vazir برای عنوان‌ها -->
-    <link href="/assets/css/fonts/Vazir.css" rel="stylesheet" type="text/css">
-    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css?v=2.0.1" rel="stylesheet" type="text/css" />-->
+<!--    &lt;!&ndash; ################## Preload Fonts ################## &ndash;&gt;-->
+<!--    &lt;!&ndash;     If fonts not loaded using <preload> for all local fonts in all weights&ndash;&gt;-->
+<!--    <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Regular.woff2" as="font" type="font/woff2" crossorigin>-->
+<!--    <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Bold.woff2" as="font" type="font/woff2" crossorigin>-->
+<!--    <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>-->
+<!--    <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>-->
 
-    <!-- فونت Shabnam برای توضیحات -->
-    <link rel="stylesheet" href="/assets/css/fonts/Shabnam.css?v=2.0.1" type="text/css" />
-    <!-- <link href="assets/css/fonts/Shabnam.css" rel="stylesheet" type="text/css">-->
-    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />-->
+<!--    &lt;!&ndash; ################## Persian Farsi Local Fonts + Online Version ################## &ndash;&gt;-->
+<!--    &lt;!&ndash; فونت Vazir برای عنوان‌ها &ndash;&gt;-->
+<!--    <link href="/assets/css/fonts/Vazir.css" rel="stylesheet" type="text/css">-->
+<!--    &lt;!&ndash; <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css?v=2.0.1" rel="stylesheet" type="text/css" />&ndash;&gt;-->
 
-    <!-- فونت YekanBakh برای توضیحات -->
-    <link href="/assets/css/fonts/Yekan-Bakh.css" rel="stylesheet" type="text/css">
-    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css?v=2.0.1" rel="stylesheet" type="text/css" />-->
+<!--    &lt;!&ndash; فونت Shabnam برای توضیحات &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="/assets/css/fonts/Shabnam.css?v=2.0.1" type="text/css" />-->
+<!--    &lt;!&ndash; <link href="assets/css/fonts/Shabnam.css" rel="stylesheet" type="text/css">&ndash;&gt;-->
+<!--    &lt;!&ndash; <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />&ndash;&gt;-->
 
-    <!-- فونت Sahel برای توضیحات -->
-    <link href="/assets/css/fonts/Sahel.css" rel="stylesheet">
-    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css?v=2.0.1" rel="stylesheet" type="text/css" />-->
+<!--    &lt;!&ndash; فونت YekanBakh برای توضیحات &ndash;&gt;-->
+<!--    <link href="/assets/css/fonts/Yekan-Bakh.css" rel="stylesheet" type="text/css">-->
+<!--    &lt;!&ndash; <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css?v=2.0.1" rel="stylesheet" type="text/css" />&ndash;&gt;-->
 
-    <!-- ################## Locally Prism.js for Code Highlighting ################## -->
-    <link rel="stylesheet" href="../../../assets/css/prism/prism-tomorrow.min.css">
-    <link rel="stylesheet" href="../../../assets/css/prism/prism-line-numbers.min.css">
+<!--    &lt;!&ndash; فونت Sahel برای توضیحات &ndash;&gt;-->
+<!--    <link href="/assets/css/fonts/Sahel.css" rel="stylesheet">-->
+<!--    &lt;!&ndash; <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css?v=2.0.1" rel="stylesheet" type="text/css" />&ndash;&gt;-->
+
+<!--    &lt;!&ndash; ################## Locally Prism.js for Code Highlighting ################## &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="../../../assets/css/prism/prism-tomorrow.min.css">-->
+<!--    <link rel="stylesheet" href="../../../assets/css/prism/prism-line-numbers.min.css">-->
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">-->
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">-->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="stylesheet" href="../../../css/style-articles.css">
-    <link rel="stylesheet" href="../../../css/header-footer.css">
+    <link rel="stylesheet" href="../../../dist/css/main.min.css?v=2.0.1">
+    <link rel="stylesheet" href="../../../dist/css/style-article.min.css?v=2.0.1">
+    <link rel="stylesheet" href="../../../css/header-footer.css?v=2.0.1">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -167,7 +170,7 @@
                                 </div>
                                 <ul class="category-dropdown">
                                     <li><a href="../Security/hash_encrypt.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
-                                    <li><a href="../Security/unicode_ascii.html" class="article-link">مفاهیم Unicode و توضیح ASCII</a></li>
+                                    <li><a href="../Security/unicode.html" class="article-link">مفاهیم Unicode و توضیح ASCII</a></li>
                                 </ul>
                             </li>
 
@@ -184,7 +187,7 @@
                                     </div>
                                 </div>
                                 <ul class="category-dropdown">
-                                    <li><a href="../articles/mikrotik-firewall-configuration.html" class="article-link">پیکربندی پیشرفته فایروال در میکروتیک</a></li>
+                                    <li><a href="#" class="article-link">پیکربندی پیشرفته فایروال در میکروتیک</a></li>
 
                                 </ul>
                             </li>
@@ -203,7 +206,7 @@
                                 </div>
                                 <ul class="category-dropdown">
                                     <li><a href="../Security/hash_encrypt.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
-                                    <li><a href="../Security/unicode_ascii.html" class="article-link">مفاهیم Unicode و توضیح ASCII</a></li>
+                                    <li><a href="../Security/unicode.html" class="article-link">مفاهیم Unicode و توضیح ASCII</a></li>
                                 </ul>
                             </li>
                             
@@ -220,7 +223,7 @@
                                     </div>
                                 </div>
                                 <ul class="category-dropdown">
-                                    <li><a href="../articles/ai-cybersecurity.html" class="article-link">کاربرد هوش مصنوعی در تشخیص حملات سایبری</a></li>
+                                    <li><a href="#" class="article-link">کاربرد هوش مصنوعی در تشخیص حملات سایبری</a></li>
                                 </ul>
                             </li>
                             
@@ -273,7 +276,7 @@
                                 </div>
                                 <div class="recent-article-content">
                                     <h4 class="recent-article-title">
-                                        <a href="../Security/unicode_ascii.html">مفاهیم Unicode توضیح ASCII</a>
+                                        <a href="../Security/unicode.html">مفاهیم Unicode توضیح ASCII</a>
                                     </h4>
                                     <div class="recent-article-date">
                                         <i class="far fa-calendar-alt"></i>
@@ -687,7 +690,7 @@ bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked-Password.zip d@voo
                                     </div>
                                     
                                     <div class="article-actions">
-                                        <a href="../Security/unicode_ascii.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                        <a href="../Security/unicode.html" class="read-more-btn font-button-article">ادامه مطلب</a>
                                     </div>
                                 </div>
                             </div>
@@ -706,6 +709,7 @@ bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked-Password.zip d@voo
                 <div class="footer-logo">
                     <h2>DAVOOD<span>_</span>YAHAY</h2>
                     <p>متخصص و مشاور امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
+                    <img src="../../../images/davoodya.png" alt="Davood Yahay Image">
                 </div>
                 
                 <div class="footer-links">
@@ -721,18 +725,14 @@ bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked-Password.zip d@voo
                         <li><a href="../../../index.html#contact">تماس با من</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-contact">
                     <h3>اطلاعات تماس</h3>
                     <p><i class="fas fa-map-marker-alt"></i> ایران، اصفهان</p>
-                    <p><i class="fas fa-envelope"></i> info@davoodya.com</p>
-<!--                    <p><i class="fas fa-phone"></i> +98 913 000 0000</p>-->
+                    <p><i class="fas fa-envelope"></i> support@davoodya.com</p>
+                    <p><i class="fas fa-phone"></i> +98 913 3104629</p>
 
                     <div class="social-links">
-                        <a href="https://www.instagram.com/davoodsec" target="_blank" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                            <span class="social-tooltip">اینستاگرام</span>
-                        </a>
                         <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank" class="social-icon">
                             <i class="fab fa-youtube"></i>
                             <span class="social-tooltip">یوتیوب</span>
@@ -741,19 +741,21 @@ bkcrack -C test.zip -k f04945f4 3018d661 edc704a6 -U Unlocked-Password.zip d@voo
                             <i class="fab fa-telegram"></i>
                             <span class="social-tooltip">تلگرام</span>
                         </a>
-                        <a href="https://linkedin.com/davoodya" target="_blank" class="social-icon">
-                            <i class="fab fa-linkedin"></i>
-                            <span class="social-tooltip">لینکدین</span>
+                        <a href="https://www.instagram.com/davoodsec" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-tooltip">اینستاگرام</span>
                         </a>
-
                         <a href="https://github.com/davoodya" target="_blank" class="social-icon">
                             <i class="fab fa-github"></i>
                             <span class="social-tooltip">گیت‌هاب</span>
                         </a>
-
-                        <a href="https://t.me/yakuzacyberforum" target="_blank" class="social-icon">
-                            <i class="fab fa-telegram-plane"></i>
-                            <span class="social-tooltip">انجمن تلگرام</span>
+                        <a href="https://x.com/davood_yahay" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            <span class="social-tooltip">توئیتر X</span>
+                        </a>
+                        <a href="https://linkedin.com/in/davoodya" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            <span class="social-tooltip">لینکدین</span>
                         </a>
                     </div>
                 </div>

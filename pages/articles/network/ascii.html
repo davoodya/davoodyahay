@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://davoodya.ir/pages/articles/network/cdn_lb.html" />
-    <meta name="title" content="Load Balancing و CDN چیست؟" />
+<!--    <meta name="title" content="Load Balancing و CDN چیست؟" />-->
     <meta name="description" content="فناوری CDN و Load Balancing - مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری و برنامه‌نویسی ">
     <meta name="keywords" content="شبکه، امنیت سایبری، هک قانونی، Network, مقاله تخصصی، داوودیاحی، DavoodSec، DavoodYa [کلمات کلیدی مقاله]">
     <meta name="author" content="داوود یاحی | DavoodSec">
@@ -19,58 +19,61 @@
     <meta name="twitter:description" content="مقاله تخصصی از داوود یاحی در زمینه امنیت سایبری، شبکه‌های کامپیوتری، هک قانونی و برنامه نویسی | مقاله فناوری CDN و Load Balancing چیست؟ ">
     <meta name="twitter:image" content="https://davoodya.ir/images/yakuzaicon2.png">
     
-    <title>فناوری CDN و Load Balancing چیست؟ | داوود یاحی - مشاور و مدرس امنیت سایبری و برنامه‌نویسی</title>
+    <title>استاندارد ASCII چیست؟</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../../../images/favicon.png" type="image/x-icon">
 
     <!-- ################## Fontawesome Local & Online ################## -->
-    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css?v=2.0.1">
+    <link rel="stylesheet" href="../../../assets/fontawesome/css/all.min.css?v=2.0.1">
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
 
+    <!-- ################## Font Importing ################## -->
+    <link rel="stylesheet" href="../../../assets/css/fonts/fonts.min.css?v=2.0.1">
+
     <!-- ################## Google Fonts Local & Online ################## -->
-    <link rel="stylesheet" href="/assets/fonts/fira-code/fira-code.css?v=2.0.1">
-    <link rel="stylesheet" href="/assets/fonts/Rajdhani/Rajdhani.css?v=2.0.1">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">-->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
+<!--    <link rel="stylesheet" href="/assets/fonts/fira-code/fira-code.css?v=2.0.1">-->
+<!--    <link rel="stylesheet" href="/assets/fonts/Rajdhani/Rajdhani.css?v=2.0.1">-->
+<!--    &lt;!&ndash; <link rel="preconnect" href="https://fonts.googleapis.com">&ndash;&gt;-->
+<!--    &lt;!&ndash; <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>&ndash;&gt;-->
+<!--    &lt;!&ndash; <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">&ndash;&gt;-->
 
-    <!-- ################## Preload Fonts ################## -->
-    <!--     If fonts not loaded using <preload> for all local fonts in all weights-->
-    <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<!--    &lt;!&ndash; ################## Preload Fonts ################## &ndash;&gt;-->
+<!--    &lt;!&ndash;     If fonts not loaded using <preload> for all local fonts in all weights&ndash;&gt;-->
+<!--    <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Regular.woff2" as="font" type="font/woff2" crossorigin>-->
+<!--    <link rel="preload" href="/assets/fonts/shabnam/Shabnam-Bold.woff2" as="font" type="font/woff2" crossorigin>-->
+<!--    <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>-->
+<!--    <link rel="preload" href="/assets/fonts/VazirMatn/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>-->
 
-    <!-- ################## Persian Farsi Local Fonts + Online Version ################## -->
-    <!-- فونت Vazir برای عنوان‌ها -->
-    <link href="/assets/css/fonts/Vazir.css" rel="stylesheet" type="text/css">
-    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css?v=2.0.1" rel="stylesheet" type="text/css" />-->
+<!--    &lt;!&ndash; ################## Persian Farsi Local Fonts + Online Version ################## &ndash;&gt;-->
+<!--    &lt;!&ndash; فونت Vazir برای عنوان‌ها &ndash;&gt;-->
+<!--    <link href="/assets/css/fonts/Vazir.css" rel="stylesheet" type="text/css">-->
+<!--    &lt;!&ndash; <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css?v=2.0.1" rel="stylesheet" type="text/css" />&ndash;&gt;-->
 
-    <!-- فونت Shabnam برای توضیحات -->
-    <link rel="stylesheet" href="/assets/css/fonts/Shabnam.css?v=2.0.1" type="text/css" />
-    <!-- <link href="assets/css/fonts/Shabnam.css" rel="stylesheet" type="text/css">-->
-    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />-->
+<!--    &lt;!&ndash; فونت Shabnam برای توضیحات &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="/assets/css/fonts/Shabnam.css?v=2.0.1" type="text/css" />-->
+<!--    &lt;!&ndash; <link href="assets/css/fonts/Shabnam.css" rel="stylesheet" type="text/css">&ndash;&gt;-->
+<!--    &lt;!&ndash; <link href="https://cdn.fontcdn.ir/Font/Persian/Shabnam/Shabnam.css" rel="stylesheet" type="text/css" />&ndash;&gt;-->
 
-    <!-- فونت YekanBakh برای توضیحات -->
-    <link href="/assets/css/fonts/Yekan-Bakh.css" rel="stylesheet" type="text/css">
-    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css?v=2.0.1" rel="stylesheet" type="text/css" />-->
+<!--    &lt;!&ndash; فونت YekanBakh برای توضیحات &ndash;&gt;-->
+<!--    <link href="/assets/css/fonts/Yekan-Bakh.css" rel="stylesheet" type="text/css">-->
+<!--    &lt;!&ndash; <link href="https://cdn.fontcdn.ir/Font/Persian/Yekan-Bakh/Yekan-Bakh.css?v=2.0.1" rel="stylesheet" type="text/css" />&ndash;&gt;-->
 
-    <!-- فونت Sahel برای توضیحات -->
-    <link href="/assets/css/fonts/Sahel.css" rel="stylesheet">
-    <!-- <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css?v=2.0.1" rel="stylesheet" type="text/css" />-->
+<!--    &lt;!&ndash; فونت Sahel برای توضیحات &ndash;&gt;-->
+<!--    <link href="/assets/css/fonts/Sahel.css" rel="stylesheet">-->
+<!--    &lt;!&ndash; <link href="https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css?v=2.0.1" rel="stylesheet" type="text/css" />&ndash;&gt;-->
 
     <!-- ################## Locally Prism.js for Code Highlighting ################## -->
-    <link rel="stylesheet" href="../../../assets/css/prism/prism-tomorrow.min.css">
-    <link rel="stylesheet" href="../../../assets/css/prism/prism-line-numbers.min.css">
+<!--    <link rel="stylesheet" href="../../../assets/css/prism/prism-tomorrow.min.css">-->
+<!--    <link rel="stylesheet" href="../../../assets/css/prism/prism-line-numbers.min.css">-->
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">-->
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">-->
 
 
-    <!-- Custom CSS Importing -->
-    <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="stylesheet" href="../../../css/style-articles.css">
-    <link rel="stylesheet" href="../../../css/header-footer.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../dist/css/main.min.css?v=2.0.1">
+    <link rel="stylesheet" href="../../../dist/css/style-article.min.css?v=2.0.1">
+    <link rel="stylesheet" href="../../../css/header-footer.css?v=2.0.1">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -125,15 +128,15 @@
         <div class="matrix-rain" id="matrix-rain"></div>
         <div class="container">
             <div class="page-header-content">
-                <h1 class="font-title-article">کدگذاری Unicode و استاندارد ASCII</h1>
-                <p class="font-description-article">                                    در این مقاله ابتدا مجموعه کاراکترهای Unicode رو بررسی میکنیم و سپس به سراغ توضیح یک استاندارد اصلی آن بنام ASCII میریم.</p>
+                <h1 class="font-title-article">استاندارد ASCII چیست؟ | توضیح کاربردی</h1>
+                <p class="font-description-article">                                    در این مقاله استاندارد کاراکتری ASCII را بصورت مفهومی و کاربردی با هم دیگه بررسی میکنیم و انواع اون را یاد میگیریم.</p>
                 
                 <div class="breadcrumb">
                     <a href="../../../index.html" class="font-button-article">خانه</a>
                     <span>/</span>
                     <a href="../../articles.html" class="font-button-article">مقالات</a>
                     <span>/</span>
-                    <span class="active font-button-article">کدگذاری Unicode و استاندارد ASCII</span>
+                    <span class="active font-button-article">استاندارد ASCII</span>
                 </div>
             </div>
         </div>
@@ -172,8 +175,8 @@
                                 </div>
                                 <ul class="category-dropdown">
                                     <li><a href="../hacking/CrackZIPFiles1.html" class="article-link">کرک فایلهای فشرده ZIP با ابزار BK-Crack</a></li>
-                                    <li><a href="hash_encrypt.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
-                                    <li><a href="unicode_ascii.html" class="article-link">کدگذاری Unicode و استاندارد ASCII</a></li>
+                                    <li><a href="../Security/hash_encrypt.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
+                                    <li><a href="../Security/unicode.html" class="article-link">کدگذاری Unicode چیست؟</a></li>
                                 </ul>
                             </li>
 
@@ -190,7 +193,7 @@
                                     </div>
                                 </div>
                                 <ul class="category-dropdown">
-                                    <li><a href="../articles/mikrotik-firewall-configuration.html" class="article-link">پیکربندی پیشرفته فایروال در میکروتیک</a></li>
+                                    <li><a href="#" class="article-link">پیکربندی پیشرفته فایروال در میکروتیک</a></li>
                                 </ul>
                             </li>
                             
@@ -207,8 +210,8 @@
                                     </div>
                                 </div>
                                 <ul class="category-dropdown">
-                                    <li><a href="hash_encrypt.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
-                                    <li><a href="unicode_ascii.html" class="article-link">کدگذاری Unicode و استاندارد ASCII</a></li>
+                                    <li><a href="../Security/hash_encrypt.html" class="article-link">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a></li>
+                                    <li><a href="../Security/unicode.html" class="article-link">کدگذاری Unicode چیست؟</a></li>
                                 </ul>
                             </li>
                             
@@ -225,7 +228,7 @@
                                     </div>
                                 </div>
                                 <ul class="category-dropdown">
-                                    <li><a href="../articles/ai-cybersecurity.html" class="article-link">کاربرد هوش مصنوعی در تشخیص حملات سایبری</a></li>
+                                    <li><a href="#" class="article-link">کاربرد هوش مصنوعی در تشخیص حملات سایبری</a></li>
                                 </ul>
                             </li>
                             
@@ -256,14 +259,14 @@
                         </div>
                         <ul class="recent-articles-list">
 
-                            <!-- Recent Article 3: Unicode and ASCII -->
+                            <!-- Recent Article 3: Unicode -->
                             <li class="recent-article-item">
                                 <div class="recent-article-image">
-                                    <img src="../../../images/articles/unicode_ascii/Unicode.png" alt="پیکربندی میکروتیک">
+                                    <img src="../../../images/articles/unicode_ascii/Unicode.png" alt=" UNICODE چیست؟ | توضیح کاربردی">
                                 </div>
                                 <div class="recent-article-content">
                                     <h4 class="recent-article-title">
-                                        <a href="unicode_ascii.html">کدگذاری Unicode و استاندارد ASCII</a>
+                                        <a href="../Security/unicode.html"> UNICODE چیست؟ | توضیح کاربردی</a>
                                     </h4>
                                     <div class="recent-article-date">
                                         <i class="far fa-calendar-alt"></i>
@@ -279,7 +282,7 @@
                                 </div>
                                 <div class="recent-article-content">
                                     <h4 class="recent-article-title">
-                                        <a href="hash_encrypt.html">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a>
+                                        <a href="../Security/hash_encrypt.html">مفاهیم Encoding, Encryption, Hashing, Obfuscation</a>
                                     </h4>
                                     <div class="recent-article-date">
                                         <i class="far fa-calendar-alt"></i>
@@ -333,7 +336,7 @@
 
                         <!-- Article Header -->
                         <div class="article-header">
-                            <h1>کدگذاری Unicode و استاندارد ASCII</h1>
+                            <h1>توضیح کاربردی استاندارد ASCII</h1>
                             <div class="article-header-meta">
                                 <div class="article-header-meta-item">
                                     <i class="far fa-calendar-alt"></i>
@@ -355,41 +358,10 @@
                         </div>
                         
                         <!-- Article Featured Image -->
-                        <img src="../../../images/articles/unicode_ascii/Unicode.png" alt="کدگذاری Unicode و استاندارد ASCII" class="article-featured-image">
+                        <img src="../../../images/articles/unicode_ascii/Ascii_table.png" alt="استاندارد ASCII" class="article-featured-image">
                         
                         <!-- Article Body -->
                         <div class="article-body">
-                            <p>
-                                در این مقاله ابتدا مجموعه کاراکترهای Unicode رو بررسی میکنیم و سپس به سراغ توضیح یک استاندارد اصلی Unicode ها بنام ASCII میریم.
-                            </p>
-
-                            <h2>مجموعه کاراکترهای UNICODE</h2>
-                            <p>وقتی شما، کاراکتری را در یک برنامه ویرایش متن یا اپلیکیشن وب قرار می‌دهید، این کاراکتر با استفاده از مجموعه‌ ای از اعداد، کد گذاری می‌شود که به اصطلاح به آن یونیکد (UNICODE) گفته می شود.</p>
-                            <p>زمانی که مرورگر، محتوای اپلیکیشن وب را دریافت می‌کند، این اعداد رمزگشایی شده، بر روی نمایشگر نشان داده می‌شوند.</p>
-                            <blockquote>محوریت اصلی این مقاله هم دقیقا همین اعداد و نشانه ها و بررسی پرسش یونیکد چیست و چگونگی رمزگشایی آن است و در نهایت به مبحث utf-8 پرداخته خواهد شد و به این پرسش که UTF-8 چیست پاسخ خواهیم داد.</blockquote>
-
-                            <img src="../../../images/articles/unicode_ascii/UnicodeProcess.png" alt="Encoding Process">
-
-                            <h3 class="yellow-h3">یونیکد یا Unicode چیست؟</h3>
-                            <p>
-                                در پاسخ به پرسش unicode چیست ؟ بایستی گفت حروف، اعداد و علائمی‌ که در اپلیکیشن‌ های وب استفاده می‌شوند، به همان شکلی که شما آنها را می‌بینید، در کامپیوتر مدیریت نمی‌شوند. کامپیوترها فقط با اعداد سر و کار دارند. پس این حروف و کاراکتر ها، باید به مجموعه‌ ای از اعداد ۰ و ۱ تبدیل ‌شوند تا مدیریت آنها آسان باشد. لذا استاندارد واحدی باید وجود داشته باشد.
-                            </p>
-                            <p>
-                                بر همین اساس، مشخص می‌شود که هر کدام از این اعداد چه کاراکتر هایی را نمایش دهند و چگونه بر روی دیسک ذخیره شوند. به این استاندارد اصطلاحا UNICODE گفته می شود.
-                            </p>
-
-                            <blockquote>
-                                در واقع Unicode، مجموعه‌ ای از charset یا کاراکتر ست با اعداد منحصر به فرد است، که به آن در اصطلاح پوینت کد (Point Code) گفته می‌شود. هر پوینت کد، کاراکتر واحدی را نمایش می‌دهد. بر این اساس، استاندارد یونی کد سه نوع روش کد گذاری را تعیین می‌کند.
-                            </blockquote>
-                            <p>بر این اساس، استاندارد یونی کد سه نوع روش کد گذاری را تعیین می‌کند، و به یک کاراکتر اجازه می‌دهد در داخل یک یا چند بایت کد گذاری شود. یعنی:</p>
-                            <ul>
-                                <li>در 8 بیت</li>
-                                <li>در 16 بیت</li>
-                                <li>در 32 بیت</li>
-                                <img src="../../../images/articles/unicode_ascii/Unicode_types.png" alt="Unicode Types | UTF8 UTF16 UTF32">
-                                <img src="../../../images/articles/unicode_ascii/Unicodes.jpg" alt="Unicode Types | UTF8 UTF16 UTF32">
-                            </ul>
-                            <strong>باید بدانید که کاراکتر در علوم کامپیوتر برابر با حروف و اعداد در سیستم نوشتاری است.</strong>
 
                             <h2>کد ASCII اسکی</h2>
 
@@ -470,7 +442,7 @@
                                 <h3 class="share-title">این مقاله را به اشتراک بگذارید</h3>
                                 <div class="share-buttons">
                                     <!-- توییتر (X) -->
-                                    <a href="https://twitter.com/intent/tweet?url=https://davoodya.ir/pages/articles/Security/unicode_ascii.html&text=کدگذاری Unicode و استاندارد ASCII"
+                                    <a href="https://twitter.com/intent/tweet?url=https://davoodya.ir/pages/articles/network/ascii.html&text=استاندارد ASCII چیست؟ | توضیح کاربردی"
                                        class="share-button twitter"
                                        target="_blank"
                                        rel="noopener noreferrer"
@@ -480,7 +452,7 @@
                                     </a>
 
                                     <!-- فیسبوک -->
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://davoodya.ir/pages/articles/Security/unicode_ascii.html"
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://davoodya.ir/pages/articles/network/ascii.html"
                                        class="share-button facebook"
                                        target="_blank"
                                        rel="noopener noreferrer"
@@ -490,7 +462,7 @@
                                     </a>
 
                                     <!-- لینکدین -->
-                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://davoodya.ir/pages/articles/Security/unicode_ascii.html"
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://davoodya.ir/pages/articles/network/ascii.html"
                                        class="share-button linkedin"
                                        target="_blank"
                                        rel="noopener noreferrer"
@@ -500,7 +472,7 @@
                                     </a>
 
                                     <!-- تلگرام -->
-                                    <a href="https://t.me/share/url?url=https://davoodya.ir/pages/articles/Security/unicode_ascii.html&text=کدگذاری Unicode و استاندارد ASCII"
+                                    <a href="https://t.me/share/url?url=https://davoodya.ir/pages/articles/network/ascii.html&text=استاندارد ASCII چیست؟ | توضیح کاربردی"
                                        class="share-button telegram"
                                        target="_blank"
                                        rel="noopener noreferrer"
@@ -510,7 +482,7 @@
                                     </a>
 
                                     <!-- واتس‌اپ -->
-                                    <a href="https://wa.me/?text=کدگذاری Unicode و استاندارد ASCII%20https://davoodya.ir/pages/articles/Security/unicode_ascii.html"
+                                    <a href="https://wa.me/?text=چیست؟ استاندارد ASCII%20https://davoodya.ir/pages/articles/network/ascii.html"
                                        class="share-button whatsapp"
                                        target="_blank"
                                        rel="noopener noreferrer"
@@ -538,7 +510,7 @@
                                     </a>
 
                                     <!-- ایمیل -->
-                                    <a href="mailto:?subject=کدگذاری Unicode و استاندارد ASCII&body=https://davoodya.ir/pages/articles/Security/unicode_ascii.html"
+                                    <a href="mailto:?subject=کدگذاری Unicode و استاندارد ASCII&body=https://davoodya.ir/pages/articles/network/ascii.html"
                                        class="share-button email"
                                        aria-label="اشتراک از طریق ایمیل">
                                         <i class="fas fa-envelope"></i>
@@ -588,7 +560,7 @@
                                     </div>
                                     
                                     <div class="article-actions">
-                                        <a href="hash_encrypt.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                        <a href="../Security/hash_encrypt.html" class="read-more-btn font-button-article">ادامه مطلب</a>
                                     </div>
                                 </div>
                             </div>
@@ -611,7 +583,7 @@
                                     </div>
                                     
                                     <div class="article-actions">
-                                        <a href="../articles/python-security-tools.html" class="read-more-btn font-button-article">ادامه مطلب</a>
+                                        <a href="#" class="read-more-btn font-button-article">ادامه مطلب</a>
                                     </div>
                                 </div>
                             </div>
@@ -630,6 +602,7 @@
                 <div class="footer-logo">
                     <h2>DAVOOD<span>_</span>YAHAY</h2>
                     <p>متخصص و مشاور امنیت سایبری، برنامه نویسی و شبکه‌های کامپیوتری</p>
+                    <img src="../../../images/davoodya.png" alt="Davood Yahay Image">
                 </div>
                 
                 <div class="footer-links">
@@ -645,18 +618,14 @@
                         <li><a href="../../../index.html#contact">تماس با من</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-contact">
                     <h3>اطلاعات تماس</h3>
                     <p><i class="fas fa-map-marker-alt"></i> ایران، اصفهان</p>
-                    <p><i class="fas fa-envelope"></i> info@davoodya.com</p>
-                    <!-- <p><i class="fas fa-phone"></i> +98 913 000 0000</p>-->
+                    <p><i class="fas fa-envelope"></i> support@davoodya.com</p>
+                    <p><i class="fas fa-phone"></i> +98 913 3104629</p>
 
                     <div class="social-links">
-                        <a href="https://www.instagram.com/davoodsec" target="_blank" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                            <span class="social-tooltip">اینستاگرام</span>
-                        </a>
                         <a href="https://www.youtube.com/channel/UCtDw_nCjYgpzQQE-nH4UALQ" target="_blank" class="social-icon">
                             <i class="fab fa-youtube"></i>
                             <span class="social-tooltip">یوتیوب</span>
@@ -665,19 +634,21 @@
                             <i class="fab fa-telegram"></i>
                             <span class="social-tooltip">تلگرام</span>
                         </a>
-                        <a href="https://linkedin.com/davoodya" target="_blank" class="social-icon">
-                            <i class="fab fa-linkedin"></i>
-                            <span class="social-tooltip">لینکدین</span>
+                        <a href="https://www.instagram.com/davoodsec" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-tooltip">اینستاگرام</span>
                         </a>
-
                         <a href="https://github.com/davoodya" target="_blank" class="social-icon">
                             <i class="fab fa-github"></i>
                             <span class="social-tooltip">گیت‌هاب</span>
                         </a>
-
-                        <a href="https://t.me/yakuzacyberforum" target="_blank" class="social-icon">
-                            <i class="fab fa-telegram-plane"></i>
-                            <span class="social-tooltip">انجمن تلگرام</span>
+                        <a href="https://x.com/davood_yahay" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            <span class="social-tooltip">توئیتر X</span>
+                        </a>
+                        <a href="https://linkedin.com/in/davoodya" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            <span class="social-tooltip">لینکدین</span>
                         </a>
                     </div>
                 </div>
