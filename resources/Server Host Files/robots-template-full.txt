@@ -1,0 +1,328 @@
+# ============================================
+# robots.txt - davoodya.ir | Cybersecurity Expert
+#
+# Using RFC 9309 Standard 
+#
+# Update Date: 2026/02/07
+# Contact: support@davoodya.ir
+# Contact: davoodyahay@gmail.com
+# Contact: https://t.me/davoodyahay
+# ============================================
+
+# ========== SITEMAP REFERENCES ==========
+Sitemap: https://davoodya.ir/sitemap.xml
+# Sitemap: https://davoodya.ir/sitemap-articles.xml
+# Sitemap: https://davoodya.ir/sitemap-tools.xml
+# Sitemap: https://davoodya.ir/sitemap-courses.xml
+
+# ========== GLOBAL RULES ==========
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+Disallow: /api/
+Disallow: /cgi-bin/
+Disallow: /logs/
+
+# Disallow BAD URL Parameters
+# Disallow: /*?*
+# Disallow: /*&*
+# Disallow: /*?sort=
+# Disallow: /*?filter=
+# Disallow: /*?page=
+# Disallow: /*?sessionid=
+# Disallow: /*?token=
+
+# Disallow Specific Files
+# Disallow: /*.php$
+# Disallow: /*.cgi$
+# Disallow: /*.sql$
+# Disallow: /*.log$
+# Disallow: /*.env$
+# Disallow: /*.bak$
+# Disallow: /*.tmp$
+# Disallow: /phpinfo.php
+# Disallow: /test.php
+# Disallow: /debug.php
+
+# Allow to Important Static Files
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.pdf$
+Allow: /*.doc$
+Allow: /*.docx$
+Allow: /images/
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Allow: /dist/
+Allow: /pages/
+
+# ========== SEARCH ENGINES RULES ==========
+
+# Google Bots
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+# Crawl-delay: 1
+# Request-rate: 10/1m
+
+User-agent: Googlebot-Image
+Allow: /
+# Disallow: /*.gif$
+
+User-agent: Googlebot-Video
+Allow: /
+# Disallow: /private/
+
+User-agent: AdsBot-Google
+Allow: /
+# Disallow: /private/
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+# Disallow: /private/
+
+# Microsoft Bots
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+Disallow: /api/
+
+User-agent: MSNBot
+Allow: /
+Crawl-delay: 2
+Disallow: /api/
+
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 3
+Disallow: /api/
+# Clean-param: ref /blog/
+# Clean-param: sessionid /private/
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+Disallow: /api/
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+Disallow: /api/
+
+# ========== SEO TOOLS (ALLOWED) ==========
+
+# Semrush - SEO Analyzer Tool
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 2
+# Request-rate: 5/1m
+Disallow: /api/
+
+User-agent: SemrushBot-SA
+Allow: /
+Crawl-delay: 2
+
+# Ahrefs - Backlinks Analyzer Tool
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 2
+# Request-rate: 5/1m
+Disallow: /api/
+# Disallow: /private/
+
+User-agent: AhrefsSiteAudit
+Allow: /
+Disallow: /api/
+Crawl-delay: 2
+
+# Moz - SEO Tool
+User-agent: Mozilla/5.0 (compatible; Mozilla/5.0)
+Allow: /
+Disallow: /api/
+Crawl-delay: 2
+
+# Majestic - Backlinks Analyzer
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 3
+Disallow: /api/
+
+# ========== AI & CONTENT CRAWLERS ==========
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+Allow: /pages/
+Allow: /images/
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Allow: /dist/
+
+Disallow: /api/
+Crawl-delay: 3
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /pages/
+Allow: /pages/courses/
+Allow: /pages/tools/
+Allow: /pages/artciles/hacking/
+Allow: /pages/artciles/Security/
+Allow: /pages/artciles/network/
+
+Disallow: /api/
+Crawl-delay: 3
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+Crawl-delay: 5
+Disallow: /api/
+
+# Apple
+User-agent: Applebot
+Allow: /
+Disallow: /api/
+Crawl-delay: 2
+
+# Facebook
+User-agent: facebookexternalhit
+Allow: /
+Disallow: /api/
+Crawl-delay: 2
+
+# Twitter
+User-agent: Twitterbot
+Allow: /
+Disallow: /api/
+Crawl-delay: 2
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+Disallow: /api/
+Crawl-delay: 2
+
+# ========== BAD & SPAM BOTS ==========
+
+# Disallow Hacking Bot 
+User-agent: DotBot
+User-agent: MauiBot
+User-agent: PetalBot
+User-agent: Bytespider
+User-agent: ZoominfoBot
+User-agent: Barkrowler
+User-agent: CensysInspect
+Disallow: /
+
+# Disallow Scrappers
+User-agent: WebCopier
+User-agent: Teleport
+User-agent: HTTrack
+Disallow: /
+
+# ========== SECURITY ENHANCEMENTS ==========
+
+# Avoid Vulnerability Scanners
+User-agent: Nessus
+User-agent: Nikto
+User-agent: sqlmap
+User-agent: w3af
+Disallow: /
+
+# Avoid Other Scanner
+User-agent: Masscan
+User-agent: Zmap
+User-agent: Gobuster
+User-agent: nmap
+Disallow: /
+
+# ========== PERFORMANCE OPTIMIZATION ==========
+
+# Control Crawl Budget For Old Posts
+# Disallow: /blog/?year=2020
+# Disallow: /blog/?year=2021
+Disallow: /pages/articles/template/
+
+# Get Priority to Newer Post
+Allow: /pages/articles/hacking/
+Allow: /pages/articles/Security/
+Allow: /pages/articles/network/
+Allow: /pages/courses/
+Allow: /pages/tools/
+
+# ========== ================== ==========
+# ========== ENTERPRISE SECTION ==========
+# ========== ================== ==========
+
+# ========== CRAWL HINTS ==========
+# استاندارد جدید گوگل برای کمک به کراولینگ
+
+# اولویت‌دهی به صفحات مهم
+Allow: /$  # صفحه اصلی
+Allow: /blog/cybersecurity-pentesting-guide/
+Allow: /courses/advanced-penetration-testing/
+Allow: /portfolio/web-application-security/
+
+# صفحات با تغییرات مکرر (بروزرسانی روزانه)
+Allow: /blog/latest/
+Allow: /security-news/
+Allow: /vulnerability-database/
+
+# صفحات با تغییرات کم (بروزرسانی ماهانه)
+Allow: /about/
+Allow: /contact/
+Allow: /services/
+
+# ========== SPECIAL INSTRUCTIONS ==========
+# Special Rules for Advance Crawling
+
+# New Standard for Google
+User-agent: Googlebot
+Crawl-delay: 1
+Allow: /*.html$
+Allow: /pages/tools/*.html$
+Allow: /pages/courses/*.html$
+Allow: /pages/artciles/hacking/*.html$
+Allow: /pages/artciles/Security/*.html$
+Allow: /pages/articles/network/*.html$
+Allow: /pages/*.html$
+
+Disallow: /api/*.php$
+Disallow: /api/*.json$
+
+# Special Contents Marking
+# User-agent: *
+# Allow: /category/cybersecurity/
+# Allow: /tag/pentesting/
+# Allow: /tag/owasp-top-10/
+# Allow: /tag/security-vulnerability/
+
+# Limit Access to Different Versions
+# Disallow: /print/
+# Disallow: /amp/
+# Disallow: /mobil/
+# Disallow: /amp/
+
+# ========== FINAL NOTES ==========
+
+# This File created base on RFC 9309 standard
+# if you have question contact me.
+# if you get security issues contact me.
+
+# Contact: support@davoodya.ir
+# Contact: davoodyahay@gmail.com
+# Contact: https://t.me/davoodyahay

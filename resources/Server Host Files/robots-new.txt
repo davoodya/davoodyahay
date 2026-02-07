@@ -1,0 +1,10 @@
+# ============================================
+# robots.txt - davoodya.ir | Cybersecurity Expert
+#
+# Using RFC 9309 Standard 
+#
+# Update Date: 2026/02/07
+# Contact: support@davoodya.ir
+# Contact: davoodyahay@gmail.com
+# Contact: https://t.me/davoodyahay
+# ============================================

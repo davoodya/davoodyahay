@@ -1,13 +1,30 @@
+# Created: 2024
+# Contact: support@davoodya.ir
+# Contact: davoodyahay@gmail.com
+# Contact: https://t.me/davoodyahay
+
 Sitemap: https://davoodya.ir/sitemap.xml
 
-# Allow all web crawlers to access all content
+# All Search Engines
 User-agent: *
 Allow: /
-
-
-# Prevent crawling of admin or private areas
-User-agent: *
 Disallow: /api/
 Disallow: /admin/
-Disallow: /private/
+Disallow: /cgi-bin/
 
+# Disallow BAD URL Parameters
+Disallow: /*?*
+Disallow: /*.php$
+
+# Allow SEO Analyzer Bots
+User-agent: SemrushBot
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 2
+
+# Control AI Bots
+User-agent: GPTBot
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Crawl-delay: 3
